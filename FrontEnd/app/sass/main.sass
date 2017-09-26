@@ -1,0 +1,431 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.75
+  font-family: $default-font
+  overflow-x: hidden
+  opacity: 1
+
+.symbol-wrapper
+  width: 0
+  height: 0
+
+  img
+    max-height: 100%
+    max-width: 100%
+    min-width: 71px
+    min-height: 64px
+
+.sign-in-button, .sign-up-button, .profile-button
+  width: 100%
+  background: none
+  border: none
+  padding: 10px 0 10px 0
+  min-height: 64px
+  outline: none
+
+  &:hover
+    background-color: $accent-color
+    color: $main-color
+
+.heading-section
+  background-color: $secondary-color
+
+.heading-div p
+  margin: 10px 0 10px 0
+  font-size: 2em
+  padding:
+    left: 20px
+
+  &::first-letter
+    color: $accent-color
+
+.flex-row
+  display: flex
+  align-items: center
+  
+.ad
+  width: 100%
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+  border-style: none
+  background-color: $accent-color
+  color: $main-color
+  outline: none
+
+  &:hover, &:focus
+    background-color: darken($accent-color, 10%)
+
+.filters
+  background-color: $main-color
+
+
+.custom-ui
+  border-color: $accent-color !important
+  i
+    outline: none
+
+.categories-wrapper, .regions-wrapper, .min-price-wrapper, .max-price-wrapper, .walls-wrapper, .buttons-wrapper
+  padding:
+    top: 20px
+    bottom: 20px
+
+#clear_button, #more_button, #search_button
+  width: 100%
+
+  //lib redefenition
+  border-radius: 10px
+  font-family: $default-font
+  font-weight: initial
+  font-size: 16px
+  padding: 10px
+  line-height: 0.7
+
+#search_button
+  background-color: $accent-color
+  color: $main-color
+
+  &:hover, &:focus
+    background-color: darken($accent-color, 10%)
+
+#clear_button
+  color: darken($secondary-color, 70%)
+  background-color: $secondary-color
+
+  &:hover, &:focus
+    background-color: darken($secondary-color, 10%)
+
+
+.offers
+  width: 100%
+  background-color: $main-color
+  padding: 10px 0 10px 0
+
+.estate-image
+  img
+    width: 204px
+    height: 154px
+
+.estate-information
+  width: 65%
+
+  a
+    color: black
+    h2
+      margin: 0 0 0 10px
+      text-decoration: none
+      word-break: break-all
+      
+    &:hover, &:visited, &:link, &:active
+      text-decoration: none
+
+  p
+    color: darken($accent-color, 10%)
+    margin: 0 0 0 10px
+    font-size: 12px
+
+  .estate
+    position: absolute
+    font-size: 16px
+    font-weight: bolder
+    color: black
+
+.estate-city
+  @extend  .estate
+  bottom: 45px
+
+.estate-date
+  @extend .estate
+  bottom: 20px
+
+.estate-price
+  p
+    font-size: 24px
+
+
+.flex-row-wrapper
+  display: flex
+  margin: 10px 0 10px 0
+  padding:
+    top: 10px
+    bottom: 10px
+  border-bottom: 1px solid darken($secondary-color, 10%)
+
+.top-attr
+  position: absolute
+  bottom: 0
+  width: 83px
+  height: 67px
+  background: url("../img/real estate/top-attr.png") 0 -83px no-repeat
+
+.top-ad
+  background-color: $top-color
+
+.cards
+    margin:
+      bottom: 10px !important
+
+.content
+  a
+    text-decoration: none
+
+#waterfall
+  padding: 0
+  li
+    .show
+        opacity: 1
+        transform: translateY(0)
+        transition: all 0.3s, top 1s
+
+#waterfall
+  li > div
+    font-size: 14px
+    border-radius: 3px
+    margin: 10px
+    padding: 5px
+    background: $main-color
+    border: 1px solid white
+    transition: all 0.5s
+
+#waterfall
+  li > div
+    &:hover
+      transform: translateY(-10px)
+      border: 1px solid lighten($accent-color, 20%)
+      box-shadow: 0 5px 10px darken($accent-color, 10%)
+      transition: all 0.3s
+
+.card
+  width: 100% !important
+
+#more_button
+  background-color: $accent-color
+  color: $main-color
+
+  &:hover, &:focus
+    background-color: darken($accent-color, 10%)
+
+
+.footer
+  width: 100%
+  height: 250px
+  line-height: 30px
+  background-color: $secondary-color
+
+.footer-info
+  text-align: center
+
+  span
+    font-size: 14px
+
+
+.footer-wrapper
+  margin:
+    top: 20px
+
+.footer-link
+  a
+    text-decoration: none
+    outline: none
+
+    i
+      font-size: 30px
+      color: $accent-color
+
+.custom-label
+  background-color: $secondary-color !important
+  color: darken($secondary-color, 70%) !important
+  i
+    outline: none
+
+.column
+  text-align: center
+
+.profile-links
+  outline: none !important
+  text-decoration: none !important
+  font-size: 14px
+  cursor: pointer
+  color: black
+  &:hover, &:focus
+    color: $accent-color
+
+.column
+  padding: 5px 0 5px 0
+
+.noty
+  display: inline-block
+  position: fixed !important
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  opacity: 0
+  width: fit-content
+  height: fit-content
+  margin: auto !important
+  -webkit-border-radius: 10px !important
+  -moz-border-radius: 10px !important
+  border-radius: 10px !important
+
+
+.enter-form-header
+  color: darken($accent-color, 10%)
+
+.buttons-wrapper-form
+  @extend .flex-row
+  justify-content: space-between
+
+  p
+    margin: 10px
+
+
+#sign_in_button, #change_profile, #change_password, #save_profile, #cancel_change_profile, #get_number
+  background-color: $accent-color
+  border-radius: 10px
+  color: $main-color
+  &:hover, &:focus
+    background-color: darken($accent-color, 10%)
+
+#main-signup-content
+  text-align: center
+  padding: 40px
+  margin:
+    left: 0
+    right: 0
+
+
+#divider
+  padding:
+    top: 10px
+
+.form-lay
+  width: fit-content
+
+
+.add-photo-button
+  background-color: $secondary-color
+  color: darken($secondary-color, 70%)
+
+  &:hover, &:focus
+    background-color: darken($secondary-color, 10%)
+
+#profile_info > div > label, #profile_info > div > div > p
+  font-size: 16px
+  line-height: 28px
+  font-weight: normal
+
+.edit-buttons
+  text-align: left
+
+
+#piled_segment > div
+  padding: 10px
+  > a
+    outline: none
+    text-decoration: none
+    font-size: 16px
+
+
+#main-content
+  padding:
+    top: 25px
+    bottom: 25px
+
+#main-card-wrapper, #secondary-card-wrapper, #added-card-content, #description-card-content
+    margin:
+      top: auto
+
+#secondary-card-content > div.meta > label, #added-card-content > div.meta > label
+  color: black
+
+header.with-border
+  border-bottom: 1px solid $secondary-color
+  padding:
+    bottom: 1px
+
+
+.global-page
+  margin:
+    top: 20px
+
+
+#account-wtrfl, #closed-wtrfl, #ad-wtrfl
+  padding: 0
+  li
+    .show
+        opacity: 1
+        transform: translateY(0)
+        transition: all 0.3s, top 1s
+
+#account-wtrfl, #closed-wtrfl, #ad-wtrfl
+  li > div
+    font-size: 14px
+    border-radius: 3px
+    margin: 10px
+    padding: 5px
+    background: $main-color
+    border: 1px solid white
+    transition: all 0.5s
+
+#close_ad
+  background-color: red
+  color: $main-color
+  border-radius: 10px
+  margin:
+    top: 10px
+
+
+#delete-ok-button
+  background-color: $accent-color
+  color: $main-color
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+  &:hover, &:focus
+    background-color: darken($accent-color, 10%)
+
+@import "media"
+// Всегда в конце

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Первый Риелторский Центр</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
+    <!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <style>body {
+        opacity: 0;
+        overflow-x: hidden;
+    }
+
+    html {
+        background-color: #fff;
+    }</style>
+
+    <style type="text/css">
+        /* Customization Style of SyoTimer */
+        .syotimer{
+            text-align: center;
+            margin: 30px auto 0;
+            padding: 0 0 10px;
+        }
+        .syotimer-cell{
+            display: inline-block;
+            margin: 0 5px;
+            width: 79px;
+            background: url(img/syo/timer.png) no-repeat 0 0;
+        }
+        .syotimer-cell__value{
+            font-size: 35px;
+            color: #80a3ca;
+            height: 81px;
+            line-height: 81px;
+            margin: 0 0 5px;
+        }
+        .syotimer-cell__unit{
+            font-family: Arial, serif;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        #simple-timer .syotimer-cell_type_day,
+        #periodic-timer_period_days .syotimer-cell_type_hour,
+        #layout-timer_only-seconds .syotimer-cell_type_second,
+        #layout-timer_mixed-units .syotimer-cell_type_minute{
+            width: 120px;
+            background-image: url(img/syo/timer_long.png);
+        }
+        .option{
+            font-weight: 700;
+        }
+        /* For layout demo page */
+        body{
+            font-family: Tahoma, serif;
+            font-size: 14px;
+            padding: 0 0 60px;
+        }
+        .row{
+            border-bottom: 2px solid #80a3ca;
+            /*padding-bottom: 10px;*/
+        }
+        .row blockquote{
+            border-left: 5px solid #999;
+            padding-left: 20px;
+            width: 600px;
+            margin: 0 auto;
+        }
+        pre{
+            width: 650px;
+            margin: 0 auto 10px;
+            padding: 5px;
+            border: 1px solid #e1e1e1;
+        }
+        .toggle-source-code{
+            width: 650px;
+            margin: 10px auto;
+            text-align: right;
+        }
+        .toggle-source-code:before{
+            font-size: .9em;
+            color: #666666;
+            border-bottom: 1px dashed #666666;
+        }
+        .toggle-source-code_action_show:before{
+            content: "Show code";
+        }
+        .toggle-source-code_action_hide:before{
+            content: "Hide code";
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div style="text-align: center; margin-top: 200px"><h1>Запуск сайта через: </h1></div>
+<div id="syo"></div>
+
+<link rel="stylesheet" href="css/main.min.css">
+<script src="js/scripts.min.js"></script>
+<!--<script src="js/common.min.js"></script>-->
+
+</body>
+</html>

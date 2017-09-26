@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Первый Риелторский Центр</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
+    <!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <style>body {
+        opacity: 0;
+        overflow-x: hidden;
+    }
+
+    html {
+        background-color: #fff;
+    }</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1 col-md-1 col-lg-1 symbol-wrapper">
+                <a href="/">
+                    <img src="img/Symbol.png" alt="symbol_dpr">
+                </a>
+            </div>
+            <div class="col-md-3 col-md-push-7 col-sm-3 col-sm-push-7 col-lg-3 col-lg-push-7 col-xs-7 col-xs-push-5">
+                <input id="profile_button" class="profile-button" type="button" value="Чернышов Богдан">
+                <div class="ui popup">
+                    <div class="column"><p id="settings_button" class="profile-links">Настройки</p></div>
+                    <div class="column"><p id="history_button" class="profile-links">Объявления</p></div>
+                    <div class="column"><p class="profile-links">Выйти</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="settings_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">
+                Настройки
+            </div>
+        </h2>
+        <form id="settings_form" class="ui form">
+            <div class="ui segment">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Имя</label>
+                        <div class="ui input">
+                            <input id="profile_first_name" readonly type="text" name="profile_first_name"
+                                   placeholder="Богдан">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Фамилия</label>
+                        <div class="ui input">
+                            <input id="profile_last_name" readonly type="text" name="profile_last_name"
+                                   placeholder="Чернышов">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="two fields">
+                    <div class="field">
+                        <label>Телефон</label>
+                        <input id="profile_phone" readonly placeholder="+38 050 240 92 92" name="profile_phone"
+                               type="text">
+                    </div>
+                    <div class="field">
+                        <label>Ваш E-mail</label>
+                        <input id="profile_email" readonly placeholder="avizuracharmer@gmail.com"
+                               name="profile_email" type="text">
+                    </div>
+                </div>
+
+                <div class="buttons-wrapper-form">
+                    <div id="change_profile" class="ui button">Изменить</div>
+                    <div id="change_password" class="ui button">Сменить пароль</div>
+                </div>
+
+                <div class="edit-buttons hidden">
+                    <div id="save_profile" class="ui submit button">Сохранить</div>
+                    <div id="cancel_change_profile" class="ui button">Отмена</div>
+                </div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+    </div>
+</div>
+
+<div id="history_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">
+                Мои объявления
+            </div>
+        </h2>
+        <div id="piled_segment" class="ui piled segment">
+            <div class="field">
+                <a href="#">Объявление №1 </a>
+            </div>
+            <div class="field">
+                <a href="#">Объявление №1 </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<section class="heading-section">
+    <div class="container">
+        <div class="row flex-row">
+            <div class="col-md-7 col-lg-7 col-sm-7 heading-div">
+                <p>Первый</p>
+                <p>Риелторский</p>
+                <p>Центр</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="divider" class="ui horizontal divider custom-divider">Создание объявления</div>
+
+<div id="main-signup-content" class="ui middle center aligned grid">
+    <form id="add_ad_form" class="ui form segment form-lay">
+        <p>Заполните указанные ниже поля</p>
+        <div class="field">
+            <label>Заголовок</label>
+            <input id="title" placeholder="Заголовок" name="title" type="text">
+        </div>
+
+        <div class="field">
+            <label>Рубрика</label>
+            <select id="ad_type" name="ad_type" class="ui dropdown">
+                <option value="">Рубрика</option>
+                <option value="1">Аренда</option>
+                <option value="0">Продажа</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Цена</label>
+            <div class="ui right labeled input">
+                <input id="estate_price" name="estate_price" type="text" placeholder="Цена">
+                <div class="ui dropdown label custom-label currency">
+                    <div class="text">RUB</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item">RUB</div>
+                        <div class="item">USD</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Количество комнат</label>
+            <select id="rooms" name="rooms" class="ui dropdown">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="0">2</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Площадь</label>
+            <div class="ui right labeled input">
+                <input id="square" name="square" type="text" placeholder="Площадь">
+                <div class="ui basic label">
+                    м
+                    <sup>2</sup>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Город</label>
+            <div id="city" name="city" class="ui selection dropdown custom-ui">
+                <i class="dropdown icon"></i>
+                <div class="default text">Город</div>
+                <div class="menu custom-ui">
+                    <div class="item" data-value="1">Донецк</div>
+                    <div class="item" data-value="0">Торез</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Район</label>
+            <div id="region" class="ui selection dropdown custom-ui">
+                <i class="dropdown icon"></i>
+                <div class="default text">Район</div>
+                <div class="menu custom-ui">
+                    <div class="item" data-value="1">Ворошиловский</div>
+                    <div class="item" data-value="0">Киевский</div>
+                    <div class="item" data-value="0">Кировский</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Местоположение</label>
+            <input id="location" placeholder="Адрес" name="location" type="text">
+        </div>
+
+
+        <div class="field">
+            <label>Описание</label>
+            <textarea id="description"></textarea>
+        </div>
+
+        <div class="three fields">
+            <div class="field">
+                <label for="hidden-new-file1" class="ui icon button add-photo-button">
+                    <i class="cloud icon"></i>
+                    Фотография
+                </label>
+                <input type="file" id="hidden-new-file1" style="display: none">
+            </div>
+
+            <div class="field">
+                <label for="hidden-new-file2" class="ui icon button add-photo-button">
+                    <i class="cloud icon"></i>
+                    Фотография
+                </label>
+                <input type="file" id="hidden-new-file2" style="display: none">
+            </div>
+
+            <div class="field">
+                <label for="hidden-new-file3" class="ui icon button add-photo-button">
+                    <i class="cloud icon"></i>
+                    Фотография
+                </label>
+                <input type="file" id="hidden-new-file3" style="display: none">
+            </div>
+        </div>
+
+        <div class="three fields">
+            <div class="field">
+                <label for="hidden-new-file4" class="ui icon button add-photo-button">
+                    <i class="cloud icon"></i>
+                    Фотография
+                </label>
+                <input type="file" id="hidden-new-file4" style="display: none">
+            </div>
+
+            <div class="field">
+                <label for="hidden-new-file5" class="ui icon button add-photo-button">
+                    <i class="cloud icon"></i>
+                    Фотография
+                </label>
+                <input type="file" id="hidden-new-file5" style="display: none">
+            </div>
+
+            <div class="field">
+                <label for="hidden-new-file6" class="ui icon button add-photo-button">
+                    <i class="cloud icon"></i>
+                    Фотография
+                </label>
+                <input type="file" id="hidden-new-file6" style="display: none">
+            </div>
+        </div>
+
+        <div class="ui small images">
+            <img id="test1" src="">
+        </div>
+
+
+        <div class="ui primary submit button">Отправить на модерацию</div>
+
+        <div class="ui error message"></div>
+    </form>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row footer-wrapper">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info">
+                <span>+38-(050)-240-92-92</span>
+            </div>
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info">
+                <span>rfrgwglkfwgpvbtgkhrdnfna@gmail.com</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row footer-wrapper">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info footer-link">
+                <a href="#"><i class="vk icon"></i></a>
+                <a href="#"><i class="odnoklassniki icon"></i></a>
+                <a href="#"><i class="facebook icon"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="css/main.min.css">
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
