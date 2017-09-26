@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'Realtor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Realtor',
+        'NAME': 'realtor',
         'USER': 'django',
         'PASSWORD': 'e1c9fd84a6eee9da02c3aacd9c7390a4',
         'HOST': '165.227.163.99',
