@@ -1,0 +1,289 @@
+<div id="settings_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">
+                Настройки
+            </div>
+        </h2>
+        <form id="settings_form" class="ui form" method="post" action="/configure_acc">
+            <div class="ui segment">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Имя</label>
+                        <div class="ui input">
+                            <input id="profile_first_name" readonly type="text" name="profile_first_name"
+                                   value="{{ user.first_name }}">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Фамилия</label>
+                        <div class="ui input">
+                            <input id="profile_last_name" readonly type="text" name="profile_last_name"
+                                   value="{{ user.last_name }}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="two fields">
+                    <div class="field">
+                        <label>Телефон</label>
+                        <input id="profile_phone" readonly value="{{ user.custom_data.phone }}" name="profile_phone"
+                               type="text">
+                    </div>
+                    <div class="field">
+                        <label>Ваш E-mail</label>
+                        <input id="profile_email" readonly value="{{ user.email }}"
+                               name="profile_email" type="text">
+                    </div>
+                </div>
+
+                <div class="buttons-wrapper-form">
+                    <div id="change_profile" class="ui button">Изменить</div>
+                    <div id="change_password" class="ui button">Сменить пароль</div>
+                </div>
+
+                <div class="edit-buttons hidden">
+                    <div id="save_profile" class="ui submit button">Сохранить</div>
+                    <div id="cancel_change_profile" class="ui button">Отмена</div>
+                </div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+    </div>
+</div>
+
+<div id="history_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">
+                Мои объявления
+            </div>
+        </h2>
+        <div id="piled_segment" class="ui piled segment">
+            {% for self_ad in self_adds %}
+                <div class="field">
+                    <a href="{{ self_ad.url }}">{{ self_ad.name }}</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div id="delete_ad_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">
+                Почему Вы решили удалить объявление?
+            </div>
+        </h2>
+        <form id="delete_form" class="ui form" method="post" action="/delete_ad">
+            <div class="ui segment">
+                <div class="field">
+                    <label>Причина удаления</label>
+                    <select id="reason" name="reason" class="ui dropdown">
+                        <option value=""></option>
+                        {% for reason in reasons %}
+                            <option value="{{ reason.id }}">{{ reason.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Комментарий</label>
+                    <textarea id="commentary" name="commentary"></textarea>
+                </div>
+                <div class="buttons-wrapper-form">
+                    <div id="delete-ok-button" class="ui submit button">ОК</div>
+                </div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+    </div>
+</div>
+
+<div id="ad_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">
+                Создание объявления
+            </div>
+        </h2>
+        <form id="add_ad_form" class="ui form" method="post" action="/send_request">
+            <p>Заполните указанные ниже поля</p>
+            <div class="field">
+                <label>Заголовок</label>
+                <input id="title" placeholder="Заголовок" name="title" type="text">
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Рубрика</label>
+                    <select id="ad_type" name="ad_type" class="ui dropdown">
+                        <option value="">Рубрика</option>
+                        {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Цена</label>
+                    <div class="ui right labeled input">
+                        <input id="estate_price" name="estate_price" type="text" placeholder="Цена">
+                        <div class="ui dropdown label custom-label currency">
+                            <div class="text">RUB</div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item">RUB</div>
+                                <div class="item">USD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Количество комнат</label>
+                    <select id="rooms" name="rooms" class="ui dropdown">
+                        <option value=""></option>
+                        {% for room in count_rooms %}
+                            <option value="{{ room.id }}">{{ room.count }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Площадь</label>
+                    <div class="ui right labeled input">
+                        <input id="square" name="square" type="text" placeholder="Площадь">
+                        <div class="ui basic label">
+                            м
+                            <sup>2</sup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="{% if regions %}three{% else %}two{% endif %} fields">
+                <div class="field">
+                    <label>Город</label>
+                    <select id="estate_city" name="estate_city" class="ui dropdown">
+                        <option value="">Город</option>
+                        {% for city in cities %}
+                            <option value="{{ city.id }}">{{ city.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                {% if regions %}
+                    <div class="field">
+                        <label>Район</label>
+                        <select id="estate_region" name="estate_region" class="ui dropdown">
+                            <option value="">Район</option>
+                            {% for region in regions %}
+                                <option value="{{ region.id }}">{{ region.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                {% endif %}
+
+                <div class="field">
+                    <label>Местоположение</label>
+                    <input id="location" placeholder="Адрес" name="location" type="text">
+                </div>
+            </div>
+
+
+            <div class="field">
+                <label>Описание</label>
+                <textarea id="description"></textarea>
+            </div>
+
+            <div class="three fields">
+                <div class="field">
+                    <label for="hidden-new-file1" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file1" style="display: none">
+                </div>
+
+                <div class="field">
+                    <label for="hidden-new-file2" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file2" style="display: none">
+                </div>
+
+                <div class="field">
+                    <label for="hidden-new-file3" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file3" style="display: none">
+                </div>
+            </div>
+
+            <div class="three fields">
+                <div class="field">
+                    <label for="hidden-new-file4" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file4" style="display: none">
+                </div>
+
+                <div class="field">
+                    <label for="hidden-new-file5" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file5" style="display: none">
+                </div>
+
+                <div class="field">
+                    <label for="hidden-new-file6" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file6" style="display: none">
+                </div>
+            </div>
+
+
+            <div class="ui primary submit button">Отправить на модерацию</div>
+
+            <div class="ui error message"></div>
+        </form>
+    </div>
+</div>
+
+<div id="sign_in_modal" class="ui modal grid">
+        <div class="column">
+            <h2 class="ui image header">
+                <div class="content enter-form-header">
+                    Войдите в свой аккаунт
+                </div>
+            </h2>
+            <form id="#sign_in_form" class="ui form">
+                <div class="ui segment">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input id="email" type="text" name="email" placeholder="E-mail адрес">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input id="password" type="password" name="password" placeholder="Пароль">
+                        </div>
+                    </div>
+                    <div class="buttons-wrapper-form">
+                        <div id="sign_in_button" class="ui submit button">Войти</div>
+                        <p><a href="#">Забыли пароль?</a></p>
+                    </div>
+                </div>
+                <div class="ui error message"></div>
+            </form>
+            <div class="ui message">
+                Впервые у нас? <a href="sign_up.html">Регистрация</a>
+            </div>
+        </div>
+    </div>

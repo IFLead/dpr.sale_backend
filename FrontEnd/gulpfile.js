@@ -12,7 +12,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     ftp = require('vinyl-ftp'),
     notify = require("gulp-notify"),
-    rsync = require('gulp-rsync');
+    rsync = require('gulp-rsync'),
+    livereload = require('gulp-livereload');
 
 // Скрипты проекта
 
@@ -137,43 +138,43 @@ gulp.task('clearcache', function () {
 gulp.task('default', ['watch']);
 
 //DEBUG
-gulp.task('debug-image', function () {
-    return gulp.src('app/img/**/*')
-        .pipe(gulp.dest('../static/img'));
-});
+// gulp.task('debug-image', function () {
+//     return gulp.src('app/img/**/*')
+//         .pipe(gulp.dest('../static/img'));
+// });
 
-gulp.task('debug-js', ['common-js'], function () {
-    return gulp.src([
-        'app/libs/jquery/dist/jquery.min.js',
-        'app/libs/semantic/dist/semantic.min.js',
-        'app/libs/jquery/dist/newWaterfall.js',
-        'app/libs/masked-input/jquery.mask.min.js',
-        'app/libs/UniteGallery/js/unitegallery.min.js',
-        'app/libs/UniteGallery/themes/default/ug-theme-default.js',
-        'app/libs/syo/jquery.syotimer.min.js',
-        'app/js/common.min.js' // Всегда в конце
-    ])
-        .pipe(concat('scripts.min.js'))
-        .pipe(gulp.dest('app/js'));
-});
+// gulp.task('debug-js', ['common-js'], function () {
+//     return gulp.src([
+//         'app/libs/jquery/dist/jquery.min.js',
+//         'app/libs/semantic/dist/semantic.min.js',
+//         'app/libs/jquery/dist/newWaterfall.js',
+//         'app/libs/masked-input/jquery.mask.min.js',
+//         'app/libs/UniteGallery/js/unitegallery.min.js',
+//         'app/libs/UniteGallery/themes/default/ug-theme-default.js',
+//         'app/libs/syo/jquery.syotimer.min.js',
+//         'app/js/common.min.js' // Всегда в конце
+//     ])
+//         .pipe(concat('scripts.min.js'))
+//         .pipe(gulp.dest('app/js'));
+// });
 
-gulp.task('debug', ['removefiles', 'debug-image', 'sass', 'debug-js'], function () {
-
-    var buildFiles = gulp.src([
-        'app/*.html',
-        'app/.htaccess',
-    ]).pipe(gulp.dest('../templates'));
-
-    var buildCss = gulp.src([
-        'app/css/main.min.css',
-    ]).pipe(gulp.dest('../static/css'));
-
-    var buildJs = gulp.src([
-        'app/js/scripts.min.js',
-    ]).pipe(gulp.dest('../static/js'));
-
-    var buildFonts = gulp.src([
-        'app/fonts/**/*',
-    ]).pipe(gulp.dest('../static/fonts'));
-
-});
+// gulp.task('debug', ['removefiles', 'debug-image', 'sass', 'debug-js'], function () {
+//
+//     var buildFiles = gulp.src([
+//         'app/*.html',
+//         'app/.htaccess',
+//     ]).pipe(gulp.dest('../templates'));
+//
+//     var buildCss = gulp.src([
+//         'app/css/main.min.css',
+//     ]).pipe(gulp.dest('../static/css'));
+//
+//     var buildJs = gulp.src([
+//         'app/js/scripts.min.js',
+//     ]).pipe(gulp.dest('../static/js'));
+//
+//     var buildFonts = gulp.src([
+//         'app/fonts/**/*',
+//     ]).pipe(gulp.dest('../static/fonts'));
+//
+// });

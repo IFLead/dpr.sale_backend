@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
+{% load staticfiles %}
 <head>
 
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}" type="image/x-icon">
     <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
     <!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
     <!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
@@ -39,171 +39,43 @@
 
 <body>
 
-<header class="with-border">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-1 col-md-1 col-lg-1 col-xs-1 symbol-wrapper">
-                <a href="/">
-                    <img src="img/Symbol.png" alt="symbol_dpr">
-                </a>
-            </div>
-            <!--todo Здесь правильный хедер-->
-            <!--<div class="col-md-2 col-md-push-6 col-lg-2 col-lg-push-6 col-sm-2 col-sm-push-6 col-xs-4 col-xs-push-2">-->
-            <!--<input id="sign_in" class="sign-in-button" type="button" value="Войти">-->
-            <!--</div>-->
-            <!--<div class="col-md-3 col-md-push-6 col-sm-3 col-sm-push-6 col-lg-3 col-lg-push-6 col-xs-5 col-xs-push-1">-->
-            <!--<input id="sign_up" class="sign-up-button" type="button" value="Регистрация">-->
-            <!--</div>-->
-
-
-            <div class="col-md-3 col-md-push-7 col-sm-3 col-sm-push-7 col-lg-3 col-lg-push-7 col-xs-7 col-xs-push-3">
-                <input id="profile_button" class="profile-button" type="button" value="Чернышов Богдан">
-                <div class="ui popup">
-                    <div class="column"><p id="settings_button" class="profile-links">Настройки</p></div>
-                    <div class="column"><p id="history_button" class="profile-links">Объявления</p></div>
-                    <div class="column"><p class="profile-links">Выйти</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="settings_modal" class="ui modal grid">
-        <div class="column">
-            <h2 class="ui image header">
-                <div class="content enter-form-header">
-                    Настройки
-                </div>
-            </h2>
-            <form id="settings_form" class="ui form">
-                <div class="ui segment">
-                    <div class="two fields">
-                        <div class="field">
-                            <label>Имя</label>
-                            <div class="ui input">
-                                <input id="profile_first_name" readonly type="text" name="profile_first_name"
-                                       value="Богдан">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label>Фамилия</label>
-                            <div class="ui input">
-                                <input id="profile_last_name" readonly type="text" name="profile_last_name"
-                                       value="Чернышов">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="two fields">
-                        <div class="field">
-                            <label>Телефон</label>
-                            <input id="profile_phone" readonly value="+38 050 240 92 92" name="profile_phone"
-                                   type="text">
-                        </div>
-                        <div class="field">
-                            <label>Ваш E-mail</label>
-                            <input id="profile_email" readonly value="avizuracharmer@gmail.com"
-                                   name="profile_email" type="text">
-                        </div>
-                    </div>
-
-                    <div class="buttons-wrapper-form">
-                        <div id="change_profile" class="ui button">Изменить</div>
-                        <div id="change_password" class="ui button">Сменить пароль</div>
-                    </div>
-
-                    <div class="edit-buttons hidden">
-                        <div id="save_profile" class="ui submit button">Сохранить</div>
-                        <div id="cancel_change_profile" class="ui button">Отмена</div>
-                    </div>
-                </div>
-                <div class="ui error message"></div>
-            </form>
-        </div>
-    </div>
-
-    <div id="history_modal" class="ui modal grid">
-        <div class="column">
-            <h2 class="ui image header">
-                <div class="content enter-form-header">
-                    Мои объявления
-                </div>
-            </h2>
-            <div id="piled_segment" class="ui piled segment">
-                <div class="field">
-                    <a href="#">Объявление №1 </a>
-                </div>
-                <div class="field">
-                    <a href="#">Объявление №1 </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="delete_ad_modal" class="ui modal grid">
-        <div class="column">
-            <h2 class="ui image header">
-                <div class="content enter-form-header">
-                    Почему Вы решили удалить объявление?
-                </div>
-            </h2>
-            <form id="delete_form" class="ui form">
-                <div class="ui segment">
-                    <div class="field">
-                        <label>Причина удаления</label>
-                        <select id="reason" name="reason" class="ui dropdown">
-                            <option value=""></option>
-                            <option value="1">Сделка совершена</option>
-                            <option value="2">Не актуально</option>
-                            <option value="3">Другая причина...</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>Комментарий</label>
-                        <textarea id="commentary" name="commentary"></textarea>
-                    </div>
-                    <div class="buttons-wrapper-form">
-                        <div id="delete-ok-button" class="ui submit button">ОК</div>
-                    </div>
-                </div>
-                <div class="ui error message"></div>
-            </form>
-        </div>
-    </div>
-</header>
+{% include 'header.html' %}
 
 <div id="main-content" class="container">
     <div id="sticky_parent" class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="gallery" style="display:none;">
-                <img alt="Image 1 Title" src="img/real%20estate/1.jpg"
-                     data-image="img/real%20estate/1.jpg">
-                <img alt="Image 2 Title" src="img/real%20estate/1.jpg"
-                     data-image="img/real%20estate/1.jpg">
+                {% for photo in post.photos %}
+                    <img src="{{ photo.url }}"
+                         data-image="{{ photo.url }}">
+                {% endfor %}
             </div>
         </div>
         <div id="sticky_child" class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ui sticky">
             <div id="main-card-wrapper" class="ui cards">
                 <div class="card">
                     <div class="content">
-                        <div class="header">Хата у Торезе</div>
-                        <div class="meta">Донецк, ул. Розы Люксембург 14/88</div>
+                        <div class="header">{{ post.title }}</div>
+                        <div class="meta">
+                            {{ post.city }}{% if post.region %}{{ post.region }}{% endif %}{{ post.address }}</div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="content">
-                        <div class="header">10 000 <i class="ruble icon"></i></div>
-                        <div class="meta">Категория: Аренда домов</div>
+                        <div class="header">{{ post.price }} <i class="{{ post.currency }} icon"></i></div>
+                        <div class="meta">Категория: {{ post.category }}</div>
                     </div>
                 </div>
             </div>
-            <div id="get_number" class="fluid ui button massive" data-title="+38-(050)-240-92-92"
+            <div id="get_number" class="fluid ui button massive" data-title="{{ owner.phone }}"
                  data-position="bottom center" data-variation="huge">
                 <i class="call icon"></i> Показать номер телефона
             </div>
+            {% if user.is_owner %}
             <div id="close_ad" class="fluid ui button massive">
                 <i class="window close icon"></i> Удалить объявление
             </div>
+            {% endif %}
         </div>
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="secondary-card-wrapper" class="ui cards">
@@ -212,10 +84,10 @@
                         <div class="header">
                             Основная информация
                         </div>
-                        <div class="meta">Создатель объявления: <label>Частное лицо</label></div>
-                        <div class="meta">Количество комнат: <label>2</label></div>
-                        <div class="meta">Количество этажей: <label>3</label></div>
-                        <div class="meta">Жилая площадь: <label>55 м<sup>2</sup></label></div>
+                        <div class="meta">Создатель объявления: <label>{{ owner.type }}</label></div>
+                        <div class="meta">Количество комнат: <label>{{ post.rooms }}</label></div>
+                        <div class="meta">Количество этажей: <label>{{ post.floors }}</label></div>
+                        <div class="meta">Жилая площадь: <label>{{ post.square }} м<sup>2</sup></label></div>
                     </div>
                 </div>
                 <div class="card">
@@ -223,8 +95,8 @@
                         <div class="header">
                             Дополнительная информация
                         </div>
-                        <div class="meta">Этажность: <label>14</label></div>
-                        <div class="meta">Удалённость от города: <label>50 км</label></div>
+                        <div class="meta">Этажность: <label>{{ post.number_of_storeys }}</label></div>
+                        <div class="meta">Удалённость от города: <label>{{ post.remoteness }} км</label></div>
                     </div>
                 </div>
                 <div class="card">
@@ -232,11 +104,7 @@
                         <div class="header">
                             Описание
                         </div>
-                        <div class="meta">Уютная , чистая двухкомнатная квартира на 3 эт. 10-ти этажного дома не далеко
-                            от Соц.защиты. В квартире имеется вся необход имая мебель, КОНДИЦИОНЕР холодильник,
-                            телевизор, стиральная машинка, чистое постельное, посуда. Есть горячая вода,vi fi. 4
-                            спальных мест. 1-комната 250грн. 2-комнаты 300 грн. Есть другие варианты квартир .
-                            Спрашивайте с удовольствием отвечу на все ваши вопросы !
+                        <div class="meta">{{ post.description }}
                         </div>
                     </div>
                 </div>
@@ -246,31 +114,8 @@
 </div>
 
 
-<footer class="footer">
-    <div class="container">
-        <div class="row footer-wrapper">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info">
-                <span>+38-(050)-240-92-92</span>
-            </div>
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info">
-                <span>rfrgwglkfwgpvbtgkhrdnfna@gmail.com</span>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row footer-wrapper">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info footer-link">
-                <a href="#"><i class="vk icon"></i></a>
-                <a href="#"><i class="odnoklassniki icon"></i></a>
-                <a href="#"><i class="facebook icon"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<link rel="stylesheet" href="css/main.min.css">
-<script src="js/scripts.min.js"></script>
-<!--<script src="js/common.min.js"></script>-->
+{% include 'footer.html' %}
+{% include 'block-scripts.html' %}
 
 </body>
 </html>

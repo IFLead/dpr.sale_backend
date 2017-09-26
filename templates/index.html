@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
+{% load staticfiles %}
 <head>
 
     <meta charset="utf-8">
@@ -11,10 +11,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
     <!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
     <!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
+
+    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}">
 
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#000">
@@ -35,312 +36,12 @@
 </head>
 
 <body>
+{% include 'header.html' %}
+{% include 'block-modals.html' %}
+{% include 'heading-section.html' %}
 
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-1 col-md-1 col-lg-1 symbol-wrapper">
-                <a href="/">
-                    <img src="img/Symbol.png" alt="symbol_dpr">
-                </a>
-            </div>
-            <!--<div class="col-md-2 col-md-push-6 col-lg-2 col-lg-push-6 col-sm-2 col-sm-push-6 col-xs-5">-->
-            <!--<input id="sign_in" class="sign-in-button" type="button" value="Войти">-->
-            <!--</div>-->
-            <!--<div class="col-md-3 col-md-push-6 col-sm-3 col-sm-push-6 col-lg-3 col-lg-push-6 col-xs-7">-->
-            <!--<input id="sign_up" class="sign-up-button" type="button" value="Регистрация">-->
-            <!--</div>-->
-
-
-            <div class="col-md-3 col-md-push-7 col-sm-3 col-sm-push-7 col-lg-3 col-lg-push-7 col-xs-7 col-xs-push-5">
-                <input id="profile_button" class="profile-button" type="button" value="Чернышов Богдан">
-                <div class="ui popup">
-                    <div class="column"><p id="settings_button" class="profile-links">Настройки</p></div>
-                    <div class="column"><p id="history_button" class="profile-links">Объявления</p></div>
-                    <div class="column"><p class="profile-links">Выйти</p></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="settings_modal" class="ui modal grid">
-        <div class="column">
-            <h2 class="ui image header">
-                <div class="content enter-form-header">
-                    Настройки
-                </div>
-            </h2>
-            <form id="settings_form" class="ui form">
-                <div class="ui segment">
-                    <div class="two fields">
-                        <div class="field">
-                            <label>Имя</label>
-                            <div class="ui input">
-                                <input id="profile_first_name" readonly type="text" name="profile_first_name"
-                                       value="Богдан">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label>Фамилия</label>
-                            <div class="ui input">
-                                <input id="profile_last_name" readonly type="text" name="profile_last_name"
-                                       value="Чернышов">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="two fields">
-                        <div class="field">
-                            <label>Телефон</label>
-                            <input id="profile_phone" readonly value="+38 050 240 92 92" name="profile_phone"
-                                   type="text">
-                        </div>
-                        <div class="field">
-                            <label>Ваш E-mail</label>
-                            <input id="profile_email" readonly value="avizuracharmer@gmail.com"
-                                   name="profile_email" type="text">
-                        </div>
-                    </div>
-
-                    <div class="buttons-wrapper-form">
-                        <div id="change_profile" class="ui button">Изменить</div>
-                        <div id="change_password" class="ui button">Сменить пароль</div>
-                    </div>
-
-                    <div class="edit-buttons hidden">
-                        <div id="save_profile" class="ui submit button">Сохранить</div>
-                        <div id="cancel_change_profile" class="ui button">Отмена</div>
-                    </div>
-                </div>
-                <div class="ui error message"></div>
-            </form>
-        </div>
-    </div>
-
-    <div id="history_modal" class="ui modal grid">
-        <div class="column">
-            <h2 class="ui image header">
-                <div class="content enter-form-header">
-                    Мои объявления
-                </div>
-            </h2>
-            <div id="piled_segment" class="ui piled segment">
-                <div class="field">
-                    <a href="#">Объявление №1 </a>
-                </div>
-                <div class="field">
-                    <a href="#">Объявление №1 </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div id="sign_in_modal" class="ui modal grid">
-        <div class="column">
-            <h2 class="ui image header">
-                <div class="content enter-form-header">
-                    Войдите в свой аккаунт
-                </div>
-            </h2>
-            <form id="#sign_in_form" class="ui form">
-                <div class="ui segment">
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="user icon"></i>
-                            <input id="email" type="text" name="email" placeholder="E-mail адрес">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="lock icon"></i>
-                            <input id="password" type="password" name="password" placeholder="Пароль">
-                        </div>
-                    </div>
-                    <div class="buttons-wrapper-form">
-                        <div id="sign_in_button" class="ui submit button">Войти</div>
-                        <p><a href="#">Забыли пароль?</a></p>
-                    </div>
-                </div>
-                <div class="ui error message"></div>
-            </form>
-            <div class="ui message">
-                Впервые у нас? <a href="sign_up.html">Регистрация</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="ad_modal" class="ui modal grid">
-        <div class="column">
-            <h2 class="ui image header">
-                <div class="content enter-form-header">
-                    Создание объявления
-                </div>
-            </h2>
-            <form id="add_ad_form" class="ui form">
-                <p>Заполните указанные ниже поля</p>
-                <div class="field">
-                    <label>Заголовок</label>
-                    <input id="title" placeholder="Заголовок" name="title" type="text">
-                </div>
-                <div class="two fields">
-                    <div class="field">
-                        <label>Рубрика</label>
-                        <select id="ad_type" name="ad_type" class="ui dropdown">
-                            <option value="">Рубрика</option>
-                            <option value="1">Аренда</option>
-                            <option value="0">Продажа</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>Цена</label>
-                        <div class="ui right labeled input">
-                            <input id="estate_price" name="estate_price" type="text" placeholder="Цена">
-                            <div class="ui dropdown label custom-label currency">
-                                <div class="text">RUB</div>
-                                <i class="dropdown icon"></i>
-                                <div class="menu">
-                                    <div class="item">RUB</div>
-                                    <div class="item">USD</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="two fields">
-                    <div class="field">
-                        <label>Количество комнат</label>
-                        <select id="rooms" name="rooms" class="ui dropdown">
-                            <option value=""></option>
-                            <option value="1">1</option>
-                            <option value="0">2</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label>Площадь</label>
-                        <div class="ui right labeled input">
-                            <input id="square" name="square" type="text" placeholder="Площадь">
-                            <div class="ui basic label">
-                                м
-                                <sup>2</sup>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="three fields">
-                    <div class="field">
-                        <label>Город</label>
-                        <select id="estate_city" name="estate_city" class="ui dropdown">
-                            <option value="">Город</option>
-                            <option value="1">Донецк</option>
-                            <option value="0">Торез</option>
-                        </select>
-                    </div>
-
-                    <div class="field">
-                        <label>Район</label>
-                        <select id="estate_region" name="estate_region" class="ui dropdown">
-                            <option value="">Район</option>
-                            <option value="1">Ворошиловский</option>
-                            <option value="0">Киевский</option>
-                        </select>
-                    </div>
-
-                    <div class="field">
-                        <label>Местоположение</label>
-                        <input id="location" placeholder="Адрес" name="location" type="text">
-                    </div>
-                </div>
-
-
-                <div class="field">
-                    <label>Описание</label>
-                    <textarea id="description"></textarea>
-                </div>
-
-                <div class="three fields">
-                    <div class="field">
-                        <label for="hidden-new-file1" class="ui icon button add-photo-button">
-                            <i class="cloud icon"></i>
-                            Фотография
-                        </label>
-                        <input type="file" id="hidden-new-file1" style="display: none">
-                    </div>
-
-                    <div class="field">
-                        <label for="hidden-new-file2" class="ui icon button add-photo-button">
-                            <i class="cloud icon"></i>
-                            Фотография
-                        </label>
-                        <input type="file" id="hidden-new-file2" style="display: none">
-                    </div>
-
-                    <div class="field">
-                        <label for="hidden-new-file3" class="ui icon button add-photo-button">
-                            <i class="cloud icon"></i>
-                            Фотография
-                        </label>
-                        <input type="file" id="hidden-new-file3" style="display: none">
-                    </div>
-                </div>
-
-                <div class="three fields">
-                    <div class="field">
-                        <label for="hidden-new-file4" class="ui icon button add-photo-button">
-                            <i class="cloud icon"></i>
-                            Фотография
-                        </label>
-                        <input type="file" id="hidden-new-file4" style="display: none">
-                    </div>
-
-                    <div class="field">
-                        <label for="hidden-new-file5" class="ui icon button add-photo-button">
-                            <i class="cloud icon"></i>
-                            Фотография
-                        </label>
-                        <input type="file" id="hidden-new-file5" style="display: none">
-                    </div>
-
-                    <div class="field">
-                        <label for="hidden-new-file6" class="ui icon button add-photo-button">
-                            <i class="cloud icon"></i>
-                            Фотография
-                        </label>
-                        <input type="file" id="hidden-new-file6" style="display: none">
-                    </div>
-                </div>
-
-                <div class="ui small images">
-                    <img id="test1" src="">
-                </div>
-
-
-                <div class="ui primary submit button">Отправить на модерацию</div>
-
-                <div class="ui error message"></div>
-            </form>
-        </div>
-    </div>
-
-</header>
-
-<section class="heading-section">
-    <div class="container">
-        <div class="row flex-row">
-            <div class="col-md-7 col-lg-7 col-sm-7 heading-div">
-                <p>Первый</p>
-                <p>Риелторский</p>
-                <p>Центр</p>
-            </div>
-            <div class="col-md-5 col-lg-5 col-sm-10 col-xs-12">
-                <input id="add_ad" type="button" class="ad mobile-ad" value="Разместить объявление">
-            </div>
-        </div>
-    </div>
-</section>
 <div class="main-content">
+
     <div class="container filters">
         <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 categories-wrapper">
@@ -350,14 +51,15 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Категория</div>
                             <div class="menu custom-ui">
-                                <div class="item" data-value="1">Посуточная аренда</div>
-                                <div class="item" data-value="0">Продажа</div>
-                                <div class="item" data-value="0">Долгосрочная аренда</div>
+                                {% for category in categories %}
+                                    <div class="item" data-value="{{ category.id }}">{{ category.name }}</div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 regions-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -365,14 +67,15 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Район</div>
                             <div class="menu custom-ui">
-                                <div class="item" data-value="1">Ворошиловский</div>
-                                <div class="item" data-value="0">Киевский</div>
-                                <div class="item" data-value="0">Кировский</div>
+                                {% for region in regions %}
+                                    <div class="item" data-value="{{ region.id }}">{{ region.name }}</div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 walls-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -380,16 +83,15 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Количество комнат от</div>
                             <div class="menu custom-ui">
-                                <div class="item" data-value="1">1</div>
-                                <div class="item" data-value="0">2</div>
-                                <div class="item" data-value="0">3</div>
-                                <div class="item" data-value="0">4</div>
-                                <div class="item" data-value="0">5+</div>
+                                {% for room in count_rooms %}
+                                    <div class="item" data-value="{{ room.id }}">{{ room.count }}</div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 walls-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -397,16 +99,15 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Количество комнат до</div>
                             <div class="menu custom-ui">
-                                <div class="item" data-value="1">1</div>
-                                <div class="item" data-value="0">2</div>
-                                <div class="item" data-value="0">3</div>
-                                <div class="item" data-value="0">4</div>
-                                <div class="item" data-value="0">5+</div>
+                                {% for room in count_rooms %}
+                                    <div class="item" data-value="{{ room.id }}">{{ room.count }}</div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 min-price-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -420,6 +121,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 min-price-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -433,6 +135,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 walls-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -440,16 +143,15 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Этаж от</div>
                             <div class="menu custom-ui">
-                                <div class="item" data-value="1">1</div>
-                                <div class="item" data-value="0">2</div>
-                                <div class="item" data-value="0">3</div>
-                                <div class="item" data-value="0">4</div>
-                                <div class="item" data-value="0">5</div>
+                                {% for floor in floors %}
+                                    <div class="item" data-value="{{ floor.id }}">{{ floor.name }}</div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 walls-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -457,16 +159,15 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Этаж до</div>
                             <div class="menu custom-ui">
-                                <div class="item" data-value="1">1</div>
-                                <div class="item" data-value="0">2</div>
-                                <div class="item" data-value="0">3</div>
-                                <div class="item" data-value="0">4</div>
-                                <div class="item" data-value="0">5</div>
+                                {% for floor in floors %}
+                                    <div class="item" data-value="{{ floor.id }}">{{ floor.name }}</div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 min-price-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -484,6 +185,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 min-price-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -501,6 +203,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-2 col-lg-2 col-sm-4 col-xs-5 buttons-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -510,6 +213,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4 col-lg-4 col-sm-8 col-xs-7 buttons-wrapper">
                 <div class="ui form">
                     <div class="field">
@@ -519,219 +223,47 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <!--<div class="offers">-->
-    <!--<div class="container">-->
-    <!--<div class="row">-->
-    <!--<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">-->
-    <!--<div class="flex-row-wrapper top-ad">-->
-    <!--<div class="estate-image">-->
-    <!--<a href="#"><img src="img/real%20estate/1.jpg"></a>-->
-    <!--<span class="top-attr"></span>-->
-    <!--</div>-->
-    <!--<div class="estate-information">-->
-    <!--<a href="#"><h2>Уютный дом на берегу моря, 5 минут от пляжа, покупайте, не жалейте!</h2></a>-->
-    <!--<p>Аренда квартир</p>-->
-    <!--<p class="estate-city">Торез</p>-->
-    <!--<p class="estate-date">09.11.2017 22:56</p>-->
-    <!--</div>-->
-    <!--<div class="estate-price">-->
-    <!--<p>10 000 руб.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">-->
-    <!--<div class="flex-row-wrapper">-->
-    <!--<div class="estate-image">-->
-    <!--<a href="#"><img src="img/real%20estate/1.jpg"></a>-->
-    <!--</div>-->
-    <!--<div class="estate-information">-->
-    <!--<a href="#"><h2>Уютный дом на берегу моря, 5 минут от пляжа, покупайте, не жалейте!</h2></a>-->
-    <!--<p>Аренда квартир</p>-->
-    <!--<p class="estate-city">Торез</p>-->
-    <!--<p class="estate-date">09.11.2017 22:56</p>-->
-    <!--</div>-->
-    <!--<div class="estate-price">-->
-    <!--<p>10 000 руб.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">-->
-    <!--<div class="flex-row-wrapper">-->
-    <!--<div class="estate-image">-->
-    <!--<a href="#"><img src="img/real%20estate/1.jpg"></a>-->
-    <!--</div>-->
-    <!--<div class="estate-information">-->
-    <!--<a href="#"><h2>Уютный дом на берегу моря, 5 минут от пляжа, покупайте, не жалейте!</h2></a>-->
-    <!--<p>Аренда квартир</p>-->
-    <!--<p class="estate-city">Торез</p>-->
-    <!--<p class="estate-date">09.11.2017 22:56</p>-->
-    <!--</div>-->
-    <!--<div class="estate-price">-->
-    <!--<p>10 000 руб.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-
     <ul id="waterfall">
-        <li>
-            <div>
-                <div class="ui card">
-                    <div class="image">
-                        <img src="img/real%20estate/1.jpg">
-                        <div class="ui orange ribbon label">
-                            Новинка !
+        {% for post in posts %}
+            <li>
+                <div>
+                    <div class="ui card">
+                        <div class="image">
+                            <img src="{{ post.main_photo.url }}">
+                            {% if post.is_top %}
+                                <div class="ui orange ribbon label">
+                                    <i class="star icon"></i>
+                                    В топе
+                                </div>
+                            {% endif %}
                         </div>
-                    </div>
-                    <div class="content">
-                        <a class="header" href="ad.html">Дом на краю севера. 5 комнат.</a>
-                        <div class="meta">
-                            <span class="date">Долгосрочная аренда</span>
+                        <div class="content">
+                            <a class="header" href="{{ post.link.url }}">{{ post.title }}</a>
+                            <div class="meta">
+                                <span class="date">{{ post.category }}</span>
+                            </div>
+                            <div class="meta">
+                                <span class="date">{{ post.city }} {% if post.region %}{{ post.region }}{% endif %}</span>
+                            </div>
+                            <div class="meta">
+                                <span class="date">{{ post.date }}</span>
+                            </div>
                         </div>
-                        <div class="meta">
-                            <span class="date">Ворошиловский район</span>
+                        <div class="extra content">
+                            <a>
+                                <!--todo Тут значения только ruble || dollar -->
+                                <i class="{{ post.currency }} icon"></i>
+                                {{ post.price }}
+                            </a>
                         </div>
-                        <div class="meta">
-                            <span class="date">Вчера 17:03</span>
-                        </div>
-                        <!--<div class="description">-->
-                        <!--</div>-->
-                    </div>
-                    <div class="extra content">
-                        <a>
-                            <i class="ruble icon"></i>
-                            4500
-                        </a>
                     </div>
                 </div>
-            </div>
-        </li>
-        <li>
-            <div>
-                <div class="ui card">
-                    <div class="image">
-                        <img src="img/real%20estate/1.jpg">
-                        <span class="top-attr"></span>
-                    </div>
-                    <div class="content">
-                        <a class="header">Kristy</a>
-                        <div class="meta">
-                            <span class="date">Joined in 2013</span>
-                        </div>
-                        <div class="description">
-                            Kristy is an art director living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <a>
-                            <i class="user icon"></i>
-                            22 Friends
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div>
-                <div class="ui card">
-                    <div class="image">
-                        <img src="img/real%20estate/1.jpg">
-                    </div>
-                    <div class="content">
-                        <a class="header">Kristy</a>
-                        <div class="meta">
-                            <span class="date">Joined in 2013</span>
-                        </div>
-                        <div class="description">
-                            Kristy is an art director living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <a>
-                            <i class="user icon"></i>
-                            22 Friends
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div>
-                <div class="ui card">
-                    <div class="image">
-                        <img src="img/real%20estate/1.jpg">
-                    </div>
-                    <div class="content">
-                        <a class="header">Kristy</a>
-                        <div class="meta">
-                            <span class="date">Joined in 2013</span>
-                        </div>
-                        <div class="description">
-                            Kristy is an art director living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <a>
-                            <i class="user icon"></i>
-                            22 Friends
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div>
-                <div class="ui card">
-                    <div class="image">
-                        <img src="img/real%20estate/1.jpg">
-                    </div>
-                    <div class="content">
-                        <a class="header">Kristy</a>
-                        <div class="meta">
-                            <span class="date">Joined in 2013</span>
-                        </div>
-                        <div class="description">
-                            Kristy is an art director living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <a>
-                            <i class="user icon"></i>
-                            22 Friends
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div>
-                <div class="ui card">
-                    <div class="image">
-                        <img src="img/real%20estate/1.jpg">
-                    </div>
-                    <div class="content">
-                        <a class="header">Kristy</a>
-                        <div class="meta">
-                            <span class="date">Joined in 2013</span>
-                        </div>
-                        <div class="description">
-                            Kristy is an art director living in New York.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <a>
-                            <i class="user icon"></i>
-                            22 Friends
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </li>
+            </li>
+        {% endfor %}
     </ul>
 
     <div class="container">
@@ -750,32 +282,8 @@
 
 </div>
 
-
-<footer class="footer">
-    <div class="container">
-        <div class="row footer-wrapper">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info">
-                <span>+38-(050)-240-92-92</span>
-            </div>
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info">
-                <span>rfrgwglkfwgpvbtgkhrdnfna@gmail.com</span>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row footer-wrapper">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info footer-link">
-                <a href="#"><i class="vk icon"></i></a>
-                <a href="#"><i class="odnoklassniki icon"></i></a>
-                <a href="#"><i class="facebook icon"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<link rel="stylesheet" href="css/main.min.css">
-<script src="js/scripts.min.js"></script>
-<!--<script src="js/common.min.js"></script>-->
+{% include 'footer.html' %}
+{% include 'block-scripts.html' %}
 
 </body>
 </html>

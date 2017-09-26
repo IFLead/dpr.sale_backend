@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
+{% load staticfiles %}
 <head>
 
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}" type="image/x-icon">
     <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
     <!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
     <!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
@@ -47,303 +47,90 @@
                 </div>
                 <div class="ui tab segment active" data-tab="ad">
                     <ul id="ad-wtrfl">
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
+                        {% for ad_request in ad_requests %}
+                            <li>
+                                <div>
+                                    <div class="ui card">
+                                        <div class="content">
+                                            <div class="header">
+                                                <a href="{{ ad_request.link.url }}">{{ ad_request.title }}</a>
+                                            </div>
+                                            <div class="meta">
+                                                Тип: {{ ad_request.type }}
+                                            </div>
+                                            <div class="description">
+                                                {{ ad_request.date }}
+                                            </div>
                                         </div>
-                                        <div class="meta">
-                                            Тип: Объявление от риелтора
-                                        </div>
-                                        <div class="description">
-                                            Вчера 18:01
-                                        </div>
-                                    </div>
-                                    <div class="extra content">
-                                        <div class="ui two buttons">
-                                            <button class="positive ui button accept_ad_button">Принять</button>
-                                            <button class="negative ui button decline_ad_button">Отклонить</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Тип: Объявление от риелтора
-                                        </div>
-                                        <div class="description">
-                                            Вчера 18:01
-                                        </div>
-                                    </div>
-                                    <div class="extra content">
-                                        <div class="ui two buttons">
-                                            <button class="positive ui button accept_ad_button">Принять</button>
-                                            <button class="negative ui button decline_ad_button">Отклонить</button>
+                                        <div class="extra content">
+                                            <div class="ui two buttons">
+                                                <button class="positive ui button accept_ad_button">Принять</button>
+                                                <button class="negative ui button decline_ad_button">Отклонить</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Тип: Объявление от риелтора
-                                        </div>
-                                        <div class="description">
-                                            Вчера 18:01
-                                        </div>
-                                    </div>
-                                    <div class="extra content">
-                                        <div class="ui two buttons">
-                                            <button class="positive ui button accept_ad_button">Принять</button>
-                                            <button class="negative ui button decline_ad_button">Отклонить</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Тип: Объявление от риелтора
-                                        </div>
-                                        <div class="description">
-                                            Вчера 18:01
-                                        </div>
-                                    </div>
-                                    <div class="extra content">
-                                        <div class="ui two buttons">
-                                            <button class="positive ui button accept_ad_button">Принять</button>
-                                            <button class="negative ui button decline_ad_button">Отклонить</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Тип: Объявление от риелтора
-                                        </div>
-                                        <div class="description">
-                                            Вчера 18:01
-                                        </div>
-                                    </div>
-                                    <div class="extra content">
-                                        <div class="ui two buttons">
-                                            <button class="positive ui button accept_ad_button">Принять</button>
-                                            <button class="negative ui button decline_ad_button">Отклонить</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="ui tab segment" data-tab="account">
                     <ul id="account-wtrfl">
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            Фоминых Игорь Дмитриевич
+                        {% for acc_request in acc_requests %}
+                            <li>
+                                <div>
+                                    <div class="ui card">
+                                        <div class="content">
+                                            <div class="header">
+                                                {{ acc_request.last_name }} {{ acc_request.first_name }}
+                                            </div>
+                                            <div class="meta">
+                                                Тип: {{ acc_request.type }}
+                                            </div>
+                                            <div class="description">
+                                                E-mail: {{ acc_request.email }}
+                                            </div>
+                                            <div class="description">
+                                                Телефон: {{ acc_request.custom_data.phone }}
+                                            </div>
                                         </div>
-                                        <div class="meta">
-                                            Тип: Риелтор
-                                        </div>
-                                        <div class="description">
-                                            E-mail: IGOS.321@gmail.com
-                                        </div>
-                                        <div class="description">
-                                            Телефон: +1488-1337-228-69
-                                        </div>
-                                    </div>
-                                    <div class="extra content">
-                                        <div class="ui two buttons">
-                                            <button class="positive ui button accept_acc_button">Принять</button>
-                                            <button class="negative ui button decline_acc_button">Отклонить</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            Рудак Леня
-                                        </div>
-                                        <div class="meta">
-                                            Тип: Риелтор
-                                        </div>
-                                        <div class="description">
-                                            E-mail: IGOS.321@gmail.com
-                                        </div>
-                                        <div class="description">
-                                            Телефон: +1488-1337-228-69
-                                        </div>
-                                    </div>
-                                    <div class="extra content">
-                                        <div class="ui two buttons">
-                                            <button data-who="Рудак Леня" class="positive ui button accept_acc_button">Принять</button>
-                                            <button class="negative ui button decline_acc_button">Отклонить</button>
+                                        <div class="extra content">
+                                            <div class="ui two buttons">
+                                                <button class="positive ui button accept_acc_button">Принять</button>
+                                                <button class="negative ui button decline_acc_button">Отклонить</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
+                        {% endfor %}
                         <!--todo Хранить данные в data атрибутах для быстрого доступа-->
                     </ul>
                 </div>
                 <div class="ui tab segment" data-tab="closed">
                     <ul id="closed-wtrfl">
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Статус: Закрыто
-                                        </div>
-                                        <div class="meta">
-                                            Номер объявления: 1488322228911
-                                        </div>
-                                        <div class="description">
-                                            Причина: Очень веская причина закрыть объявление
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Статус: Закрыто
-                                        </div>
-                                        <div class="meta">
-                                            Номер объявления: 1488322228911
-                                        </div>
-                                        <div class="description">
-                                            Причина: Очень веская причина закрыть объявление
+                        {% for closed_ad in closed_ads %}
+                            <li>
+                                <div>
+                                    <div class="ui card">
+                                        <div class="content">
+                                            <div class="header">
+                                                <a href="{{ closed_ad.link.url }}">{{ closed_ad.title }}</a>
+                                            </div>
+                                            <div class="meta">
+                                                Статус: {{ closed_ad.status }}
+                                            </div>
+                                            <div class="meta">
+                                                Номер объявления: {{ closed_ad.id }}
+                                            </div>
+                                            <div class="description">
+                                                Причина: {{ closed_ad.reason }}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Статус: Закрыто
-                                        </div>
-                                        <div class="meta">
-                                            Номер объявления: 1488322228911
-                                        </div>
-                                        <div class="description">
-                                            Причина: Очень веская причина закрыть объявление
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Статус: Закрыто
-                                        </div>
-                                        <div class="meta">
-                                            Номер объявления: 1488322228911
-                                        </div>
-                                        <div class="description">
-                                            Причина: Очень веская причина закрыть объявление
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Статус: Закрыто
-                                        </div>
-                                        <div class="meta">
-                                            Номер объявления: 1488322228911
-                                        </div>
-                                        <div class="description">
-                                            Причина: Очень веская причина закрыть объявление
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="ui card">
-                                    <div class="content">
-                                        <div class="header">
-                                            <a href="#">Ссылка на объявление</a>
-                                        </div>
-                                        <div class="meta">
-                                            Статус: Закрыто
-                                        </div>
-                                        <div class="meta">
-                                            Номер объявления: 1488322228911
-                                        </div>
-                                        <div class="description">
-                                            Причина: Очень веская причина закрыть объявление
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -351,9 +138,7 @@
     </div>
 </div>
 
-<link rel="stylesheet" href="css/main.min.css">
-<script src="js/scripts.min.js"></script>
-<!--<script src="js/common.min.js"></script>-->
+{% include 'block-scripts.html' %}
 
 </body>
 </html>
