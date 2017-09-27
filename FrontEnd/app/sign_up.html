@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-
+{% load staticfiles %}
 <head>
 
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}" type="image/x-icon">
     <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
     <!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
     <!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
@@ -36,34 +36,14 @@
 
 <body>
 
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-1 col-md-1 col-lg-1 symbol-wrapper">
-                <a href="/">
-                    <img src="img/Symbol.png" alt="symbol_dpr">
-                </a>
-            </div>
-        </div>
-    </div>
-</header>
-
-<section class="heading-section">
-    <div class="container">
-        <div class="row flex-row">
-            <div class="col-md-7 col-lg-7 col-sm-7 heading-div">
-                <p>Первый</p>
-                <p>Риелторский</p>
-                <p>Центр</p>
-            </div>
-        </div>
-    </div>
-</section>
+{% include 'header.html' %}
+{% include 'heading-section.html' %}
 
 <div id="divider" class="ui horizontal divider custom-divider">Регистрация</div>
 
 <div id="main-signup-content" class="ui middle center aligned grid">
-    <form id="sign_up_form" class="ui form segment form-lay">
+    <form id="sign_up_form" class="ui form segment form-lay" method="post" action="{% url 'sign_up' %}">
+        {% csrftoken %}
         <p>Расскажите нам о себе</p>
         <div class="two fields">
             <div class="field">
@@ -103,8 +83,9 @@
             <label>Кто вы?</label>
             <select id="user_type" name="user_type" class="ui dropdown">
                 <option value="">Тип пользователя</option>
-                <option value="1">Риелтор</option>
-                <option value="0">Частный владелец</option>
+                {% for type in types %}
+                <option value="{{ type.id }}">{{ type.name }}</option>
+                {% endfor %}
             </select>
         </div>
         <div class="ui primary submit button">Зарегистрироваться</div>
@@ -112,30 +93,8 @@
     </form>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <div class="row footer-wrapper">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info">
-                <span>+38-(050)-240-92-92</span>
-            </div>
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info">
-                <span>rfrgwglkfwgpvbtgkhrdnfna@gmail.com</span>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row footer-wrapper">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footer-info footer-link">
-                <a href="#"><i class="vk icon"></i></a>
-                <a href="#"><i class="odnoklassniki icon"></i></a>
-                <a href="#"><i class="facebook icon"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<link rel="stylesheet" href="css/main.min.css">
-<script src="js/scripts.min.js"></script>
+{% include 'footer.html' %}
+{% include 'block-scripts.html' %}
 
 </body>
 </html>
