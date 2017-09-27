@@ -56,14 +56,13 @@
                 <div class="card">
                     <div class="content">
                         <div class="header">{{ post.title }}</div>
-                        <div class="meta">
-                            {{ post.city }}{% if post.district %} {{ post.district }}{% endif %}</div>
+                        <div class="meta">{{ post.district.city.name }} {{ post.district.name }}</div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="content">
                         <div class="header">{{ post.price }} <i class="{{ post.currency }} icon"></i></div>
-                        <div class="meta">Категория: {{ post.category }}</div>
+                        <div class="meta">Категория: {{ post.category.name }}</div>
                     </div>
                 </div>
             </div>
