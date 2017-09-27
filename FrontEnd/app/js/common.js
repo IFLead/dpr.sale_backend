@@ -276,18 +276,11 @@ $(document).ready(function () {
                         prompt: 'Выберите район'
                     }
                 ]
-            },
-            location: {
-                identifier: 'location',
-                rules: [
-                    {
-                        type: 'empty',
-                        prompt: 'Укажите местоположение'
-                    }
-                ]
-            },
+            }
         }
     });
+
+    $('#estate_currency').dropdown('set selected', 'RUB');
 
 
     $('#add_ad').click(function () {

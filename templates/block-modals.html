@@ -79,15 +79,6 @@
         <form id="delete_form" class="ui form" method="post" action="/delete_ad">
             <div class="ui segment">
                 <div class="field">
-                    <label>Причина удаления</label>
-                    <select id="reason" name="reason" class="ui dropdown">
-                        <option value=""></option>
-                        {% for reason in reasons %}
-                            <option value="{{ reason.id }}">{{ reason.name }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="field">
                     <label>Комментарий</label>
                     <textarea id="commentary" name="commentary"></textarea>
                 </div>
@@ -128,7 +119,7 @@
                     <div class="ui right labeled input">
                         <input id="estate_price" name="estate_price" type="text" placeholder="Цена">
                         <div id="estate_currency" class="ui dropdown label custom-label currency">
-                            <div class="text" data-value="{% if currency == 0 %}0{% elif currency == 1 %}1{% endif %}">{% if currency == 0 %}RUB{% elif currency == 1 %}USD{% endif %}</div>
+                            <div class="text"></div>
                             <i class="dropdown icon"></i>
                             <div class="menu">
                                 <div class="item" data-value="0">RUB</div>
@@ -160,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="{% if regions %}three{% else %}two{% endif %} fields">
+            <div class="{% if regions %}two fields{% else %}one field{% endif %}">
                 <div class="field">
                     <label>Город</label>
                     <select id="estate_city" name="estate_city" class="ui dropdown">
@@ -181,11 +172,6 @@
                         </select>
                     </div>
                 {% endif %}
-
-                <div class="field">
-                    <label>Местоположение</label>
-                    <input id="location" placeholder="Адрес" name="location" type="text">
-                </div>
             </div>
 
 
@@ -245,8 +231,6 @@
                     <input type="file" id="hidden-new-file6" style="display: none">
                 </div>
             </div>
-
-
             <div class="ui primary submit button">Отправить на модерацию</div>
 
             <div class="ui error message"></div>
@@ -283,7 +267,7 @@
                 <div class="ui error message"></div>
             </form>
             <div class="ui message">
-                Впервые у нас? <a href="sign_up.html">Регистрация</a>
+                Впервые у нас? <a href="#">Регистрация</a>
             </div>
         </div>
     </div>

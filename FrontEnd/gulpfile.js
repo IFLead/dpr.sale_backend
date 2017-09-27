@@ -40,6 +40,7 @@ gulp.task('js', ['common-js'], function () {
         .pipe(concat('scripts.min.js'))
         .pipe(uglify()) // Минимизировать весь js (на выбор)
         .pipe(gulp.dest('app/js'))
+        .pipe(gulp.dest('../static/js'))
         .pipe(browserSync.reload({stream: true}));
 });
 
