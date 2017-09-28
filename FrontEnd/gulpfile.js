@@ -12,8 +12,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     ftp = require('vinyl-ftp'),
     notify = require("gulp-notify"),
-    rsync = require('gulp-rsync'),
-    livereload = require('gulp-livereload');
+    rsync = require('gulp-rsync');
 
 // Скрипты проекта
 
@@ -40,8 +39,7 @@ gulp.task('js', ['common-js'], function () {
         .pipe(concat('scripts.min.js'))
         .pipe(uglify()) // Минимизировать весь js (на выбор)
         .pipe(gulp.dest('app/js'))
-        .pipe(gulp.dest('../static/js'))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(gulp.dest('../static/js'));
 });
 
 gulp.task('browser-sync', function () {
@@ -49,7 +47,7 @@ gulp.task('browser-sync', function () {
         server: {
             baseDir: 'app'
         },
-        notify: false,
+        notify: false
         // tunnel: true,
         // tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
     });
@@ -65,10 +63,15 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function () {
+gulp.task('html', function () {
+   return gulp.src(['app/*.html','app/.htaccess'])
+       .pipe(gulp.dest('../templates'));
+});
+
+gulp.task('watch', ['sass', 'js', 'html'], function () {
     gulp.watch('app/sass/**/*.sass', ['sass']);
     gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/*.html');
 });
 
 gulp.task('imagemin', function () {
