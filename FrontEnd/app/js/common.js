@@ -3,11 +3,11 @@ $(document).ready(function () {
     $('.dropdown').dropdown();
 
     $('#clear_button').click(function () {
-        $('.dropdown').dropdown('clear');
-        $('#min_price').val('');
-        $('#max_price').val('');
-        $('#min_square').val('');
-        $('#max_square').val('');
+
+        $('#category, #city, #district').dropdown('clear');
+        $('#district').addClass('disabled');
+        $('#min_price, #min_walls, #max_walls, #max_price, #min_square, #max_square, #min_floor, #max_floor').val('');
+
     });
 
     $('.special.cards .image').dimmer({
@@ -377,6 +377,31 @@ $(document).ready(function () {
 
     $('#close_ad').click(function () {
         $('#delete_ad_modal').modal('show');
+    });
+
+    $('#city').dropdown({
+        onChange: function (value) {
+
+            $('#district-list div').remove();
+
+            if (value !== '') {
+                $.ajax({
+                    url: '/api/districts/',
+                    type: 'GET',
+                    data: {
+                        city_id: value
+                    },
+                    dataType: 'json',
+
+                    success: function (result) {
+                        $('#district').removeClass('disabled');
+                        for (var i = 0; i < result.length; i++) {
+                            $('#district-list').append('<div class="item" data-value=" ' + result.id + ' ">' + result.name + '</div>');
+                        }
+                    }
+                });
+            }
+        }
     });
 
 });

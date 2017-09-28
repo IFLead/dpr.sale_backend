@@ -65,8 +65,9 @@
                     <div class="field">
                         <div id="city" class="ui selection dropdown custom-ui">
                             <i class="dropdown icon"></i>
-                            <div class="default text">Город</div>
+                            <div class="default text" data-value="-1">Все города</div>
                             <div class="menu custom-ui">
+                                <div class="item" data-value="1">France</div>
                                 {% for city in cities %}
                                     <div class="item" data-value="{{ city.id }}">{{ city.name }}</div>
                                 {% endfor %}
@@ -82,10 +83,7 @@
                         <div id="district" class="ui selection dropdown custom-ui disabled">
                             <i class="dropdown icon"></i>
                             <div class="default text">Район</div>
-                            <div class="menu custom-ui">
-                                {% for region in regions %}
-                                    <div class="item" data-value="{{ region.id }}">{{ region.name }}</div>
-                                {% endfor %}
+                            <div id="district-list" class="menu custom-ui">
                             </div>
                         </div>
                     </div>
