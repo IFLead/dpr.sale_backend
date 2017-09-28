@@ -49,8 +49,9 @@
                     <div class="field">
                         <div id="category" class="ui selection dropdown custom-ui">
                             <i class="dropdown icon"></i>
-                            <div class="default text">Категория</div>
+                            <div class="default text">Все категории</div>
                             <div class="menu custom-ui">
+                                <div class="item" data-value="-1">Все категории</div>
                                 {% for category in categories %}
                                     <div class="item" data-value="{{ category.id }}">{{ category.name }}</div>
                                 {% endfor %}
@@ -65,9 +66,9 @@
                     <div class="field">
                         <div id="city" class="ui selection dropdown custom-ui">
                             <i class="dropdown icon"></i>
-                            <div class="default text" data-value="-1">Все города</div>
+                            <div class="default text">Все города</div>
                             <div class="menu custom-ui">
-                                <div class="item" data-value="1">France</div>
+                                <div class="item" data-value="-1">Все города</div>
                                 {% for city in cities %}
                                     <div class="item" data-value="{{ city.id }}">{{ city.name }}</div>
                                 {% endfor %}
@@ -82,8 +83,34 @@
                     <div class="field">
                         <div id="district" class="ui selection dropdown custom-ui disabled">
                             <i class="dropdown icon"></i>
-                            <div class="default text">Район</div>
+                            <div class="default text">Все районы</div>
                             <div id="district-list" class="menu custom-ui">
+                                <div class="item" data-value="-1">Все районы</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 min-price-wrapper">
+                <div class="ui form">
+                    <div class="two fields">
+                        <div class="field">
+                            <div class="ui right labeled input">
+                                <input id="min_square" type="number" min="0" placeholder="От">
+                                <div class="ui basic label">
+                                    м
+                                    <sup>2</sup>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui right labeled input">
+                                <input id="max_square" type="number" min="0" placeholder="До">
+                                <div class="ui basic label">
+                                    м
+                                    <sup>2</sup>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -97,36 +124,12 @@
                             <input id="min_walls" min="1" max="50" placeholder="Комнат от" type="number">
                         </div>
                         <div class="field ui input">
-                            <input id="max_walls" min="2" max="50" placeholder="Комнат до" type="number">
+                            <input id="max_walls" min="1" max="50" placeholder="Комнат до" type="number">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 min-price-wrapper">
-                <div class="ui form">
-                    <div class="two fields">
-                        <div class="field">
-                            <div class="ui right labeled input">
-                                <input id="min_square" type="text" placeholder="От">
-                                <div class="ui basic label">
-                                    м
-                                    <sup>2</sup>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <div class="ui right labeled input">
-                                <input id="max_square" type="text" placeholder="До">
-                                <div class="ui basic label">
-                                    м
-                                    <sup>2</sup>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 walls-wrapper">
                 <div class="ui form">
@@ -135,7 +138,7 @@
                             <input id="min_floor" min="1" max="50" placeholder="Этаж от" type="number">
                         </div>
                         <div class="field ui input">
-                            <input id="max_floor" min="2" max="50" placeholder="Этаж до" type="number">
+                            <input id="max_floor" min="1" max="50" placeholder="Этаж до" type="number">
                         </div>
                     </div>
                 </div>
@@ -145,13 +148,13 @@
                 <div class="ui form">
                     <div class="field">
                         <div class="ui right labeled input">
-                            <input id="min_price" type="text" placeholder="Цена от">
-                            <div class="ui dropdown label custom-label currency">
+                            <input id="min_price" type="number" min="0" placeholder="Цена от">
+                            <div class="ui dropdown label custom-label currency currency-filter">
                                 <div class="text">RUB</div>
                                 <i class="dropdown icon"></i>
                                 <div class="menu">
-                                    <div class="item">RUB</div>
-                                    <div class="item">USD</div>
+                                    <div class="item" data-value="0">RUB</div>
+                                    <div class="item" data-value="1">USD</div>
                                 </div>
                             </div>
                         </div>
@@ -159,17 +162,18 @@
                 </div>
             </div>
 
+
             <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 min-price-wrapper">
                 <div class="ui form">
                     <div class="field">
                         <div class="ui right labeled input">
-                            <input id="max_price" type="text" placeholder="Цена до">
-                            <div class="ui dropdown label custom-label currency">
+                            <input id="max_price" type="number" min="0" placeholder="Цена до">
+                            <div class="ui dropdown label custom-label currency currency-filter">
                                 <div class="text">RUB</div>
                                 <i class="dropdown icon"></i>
                                 <div class="menu">
-                                    <div class="item">RUB</div>
-                                    <div class="item">USD</div>
+                                    <div class="item" data-value="0">RUB</div>
+                                    <div class="item" data-value="1">USD</div>
                                 </div>
                             </div>
                         </div>
@@ -229,8 +233,7 @@
                         </div>
                         <div class="extra content">
                             <a>
-                                <!--todo Тут значения только ruble || dollar -->
-                                <i class="{{ post.currency }} icon"></i>
+                                <i class="{% if currency == 0 %}ruble{% elif currency == 1 %}dollar{% endif %} icon"></i>
                                 {{ post.price }}
                             </a>
                         </div>

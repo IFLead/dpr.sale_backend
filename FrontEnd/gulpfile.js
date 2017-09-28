@@ -68,10 +68,8 @@ gulp.task('html', function () {
        .pipe(gulp.dest('../templates'));
 });
 
-gulp.task('watch', ['sass', 'js', 'html'], function () {
-    gulp.watch('app/sass/**/*.sass', ['sass']);
+gulp.task('watch', ['js'], function () {
     gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-    gulp.watch('app/*.html');
 });
 
 gulp.task('imagemin', function () {
@@ -118,6 +116,11 @@ gulp.task('deploy', function () {
     return gulp.src(globs, {buffer: false})
         .pipe(conn.dest('/path/to/folder/on/server'));
 
+});
+
+gulp.task('templates-app', function () {
+    return gulp.src('../templates/**/*')
+        .pipe(gulp.dest('app/'));
 });
 
 gulp.task('rsync', function () {

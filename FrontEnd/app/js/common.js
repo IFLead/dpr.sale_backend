@@ -14,8 +14,8 @@ $(document).ready(function () {
         on: 'hover'
     });
 
-    $('.currency').click(function () {
-        $('.currency').dropdown('set text', $(this).dropdown('get text'));
+    $('.currency-filter').click(function () {
+        $('.currency-filter').dropdown('set value', $(this).dropdown('get value')).dropdown('set text', $(this).dropdown('get text'));
     });
 
     $('#profile_button').popup({
@@ -198,7 +198,7 @@ $(document).ready(function () {
                         prompt: 'Укажите тип пользователя'
                     }
                 ]
-            },
+            }
         }
     });
 
@@ -242,7 +242,7 @@ $(document).ready(function () {
                 ]
             },
             rooms: {
-                identifier: 'rooms',
+                identifier: 'rooms_count',
                 rules: [
                     {
                         type: 'empty',
@@ -268,8 +268,8 @@ $(document).ready(function () {
                     }
                 ]
             },
-            region: {
-                identifier: 'estate_region',
+            district: {
+                identifier: 'estate_district',
                 rules: [
                     {
                         type: 'empty',
@@ -280,7 +280,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#estate_currency').dropdown('set selected', 'RUB');
+    $('#estate_currency').dropdown('set selected', '0');
 
 
     $('#add_ad').click(function () {
@@ -382,9 +382,9 @@ $(document).ready(function () {
     $('#city').dropdown({
         onChange: function (value) {
 
-            $('#district-list div').remove();
+            $('#district-list div').not(':first').remove();
 
-            if (value !== '') {
+            if (value !== '' && value !== '-1') {
                 $.ajax({
                     url: '/api/districts/',
                     type: 'GET',
@@ -401,7 +401,46 @@ $(document).ready(function () {
                     }
                 });
             }
+            if (value === '-1') {
+                $('#district').addClass('disabled');
+            }
+        }
+    }).dropdown('set selected', -1);
+
+    $('#estate_city').dropdown({
+
+        onChange: function (value) {
+            console.log(value);
+
+            $('#estate_district option').remove();
+
+            if (value !== '') {
+                $.ajax({
+                    url: '/api/districts/',
+                    type: 'GET',
+                    data: {
+                        city_id: value
+                    },
+                    dataType: 'json',
+
+                    success: function (result) {
+
+                        $('#estate_district').removeClass('disabled');
+
+                        for (var i = 0; i < result.length; i++) {
+                            $('#estate_district').append($('<option>', {
+                                value: result.id,
+                                text: result.name
+                            }));
+                        }
+                    }
+                });
+            }
         }
     });
+
+    $('#district').dropdown('set selected', -1);
+    $('#category').dropdown('set selected', -1);
+    $('.currency-filter').dropdown('set selected', '0');
 
 });

@@ -5,7 +5,7 @@
                 Настройки
             </div>
         </h2>
-        <form id="settings_form" class="ui form" method="post" action="/configure_acc">
+        <form id="settings_form" class="ui form" method="post" action="/configure_acc/">
             <div class="ui segment">
                 <div class="two fields">
                     <div class="field">
@@ -98,7 +98,7 @@
                 Создание объявления
             </div>
         </h2>
-        <form id="add_ad_form" class="ui form" method="post" action="/send_request">
+        <form id="add_ad_form" class="ui form" method="post" action="/send_request/">
             <p>Заполните указанные ниже поля</p>
             <div class="field">
                 <label>Заголовок</label>
@@ -106,9 +106,9 @@
             </div>
             <div class="two fields">
                 <div class="field">
-                    <label>Рубрика</label>
+                    <label>Категория</label>
                     <select id="ad_type" name="ad_type" class="ui dropdown">
-                        <option value="">Рубрика</option>
+                        <option value="">Категория</option>
                         {% for category in categories %}
                             <option value="{{ category.id }}">{{ category.name }}</option>
                         {% endfor %}
@@ -117,7 +117,7 @@
                 <div class="field">
                     <label>Цена</label>
                     <div class="ui right labeled input">
-                        <input id="estate_price" name="estate_price" type="text" placeholder="Цена">
+                        <input id="estate_price" name="estate_price" type="number" min="0" placeholder="Цена">
                         <div id="estate_currency" class="ui dropdown label custom-label currency">
                             <div class="text"></div>
                             <i class="dropdown icon"></i>
@@ -132,17 +132,14 @@
             <div class="two fields">
                 <div class="field">
                     <label>Количество комнат</label>
-                    <select id="rooms" name="rooms" class="ui dropdown">
-                        <option value=""></option>
-                        {% for room in count_rooms %}
-                            <option value="{{ room.id }}">{{ room.count }}</option>
-                        {% endfor %}
-                    </select>
+                    <div class="ui input">
+                        <input id="rooms_count" name="rooms_count" type="number" min="1" placeholder="Площадь">
+                    </div>
                 </div>
                 <div class="field">
                     <label>Площадь</label>
                     <div class="ui right labeled input">
-                        <input id="square" name="square" type="text" placeholder="Площадь">
+                        <input id="square" name="square" type="number" min="0" placeholder="Площадь">
                         <div class="ui basic label">
                             м
                             <sup>2</sup>
@@ -151,7 +148,7 @@
                 </div>
             </div>
 
-            <div class="{% if regions %}two fields{% else %}one field{% endif %}">
+            <div class="two fields">
                 <div class="field">
                     <label>Город</label>
                     <select id="estate_city" name="estate_city" class="ui dropdown">
@@ -160,21 +157,16 @@
                             <option value="{{ city.id }}">{{ city.name }}</option>
                         {% endfor %}
                     </select>
+{#                todo Не работает евент для селекта  (с дивом работает) #}
                 </div>
-                {% if regions %}
-                    <div class="field">
-                        <label>Район</label>
-                        <select id="estate_region" name="estate_region" class="ui dropdown">
-                            <option value="">Район</option>
-                            {% for region in regions %}
-                                <option value="{{ region.id }}">{{ region.name }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                {% endif %}
+                <div class="field">
+                    <label>Район</label>
+                    <select id="estate_district" name="estate_district" class="ui dropdown disabled">
+                    </select>
+                </div>
             </div>
 
-
+{# todo Добавить кнопку для закрытия модалок #}
             <div class="field">
                 <label>Описание</label>
                 <textarea id="description"></textarea>
@@ -239,35 +231,36 @@
 </div>
 
 <div id="sign_in_modal" class="ui modal grid">
-        <div class="column">
-            <h2 class="ui image header">
-                <div class="content enter-form-header">
-                    Войдите в свой аккаунт
-                </div>
-            </h2>
-            <form id="#sign_in_form" class="ui form">
-                <div class="ui segment">
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="user icon"></i>
-                            <input id="email" type="text" name="email" placeholder="E-mail адрес">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="ui left icon input">
-                            <i class="lock icon"></i>
-                            <input id="password" type="password" name="password" placeholder="Пароль">
-                        </div>
-                    </div>
-                    <div class="buttons-wrapper-form">
-                        <div id="sign_in_button" class="ui submit button">Войти</div>
-                        <p><a href="#">Забыли пароль?</a></p>
-                    </div>
-                </div>
-                <div class="ui error message"></div>
-            </form>
-            <div class="ui message">
-                Впервые у нас? <a href="#">Регистрация</a>
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">
+                Войдите в свой аккаунт
             </div>
+        </h2>
+        <form id="#sign_in_form" class="ui form" action="/" method="post">
+            {% csrf_token %}
+            <div class="ui segment">
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input id="email" type="email" name="email" placeholder="E-mail адрес">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input">
+                        <i class="lock icon"></i>
+                        <input id="password" type="password" name="password" placeholder="Пароль">
+                    </div>
+                </div>
+                <div class="buttons-wrapper-form">
+                    <div id="sign_in_button" class="ui submit button">Войти</div>
+                    <p><a href="#">Забыли пароль?</a></p>
+                </div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+        <div class="ui message">
+            Впервые у нас? <a href="#">Регистрация</a>
         </div>
     </div>
+</div>
