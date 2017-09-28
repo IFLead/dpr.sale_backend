@@ -7,6 +7,13 @@ from filer.fields.image import FilerImageField
 class Category(models.Model):
     name = models.CharField('Название', max_length=128)
 
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+
 
 RUB = 0
 USD = 1
@@ -42,7 +49,7 @@ class District(models.Model):
 class Post(models.Model):
     category = models.ForeignKey(Category, verbose_name='Категория')
     is_top = models.BooleanField('В топе')
-    main_photo = models.ImageField('Главное изображение', upload_to='title_photos')
+    main_photo = FilerImageField(verbose_name='Главное изображение')
     title = models.CharField('Заголовок', max_length=256)
     description = models.TextField('Описание')
     price = models.DecimalField('Стоимость', decimal_places=0, max_digits=9)
@@ -58,23 +65,39 @@ class Post(models.Model):
     storeys = models.PositiveSmallIntegerField('Этажность здания', default=1)
     district = models.ForeignKey(District, verbose_name='Район')
 
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Объявление'
+        verbose_name_plural = 'Объявления'
+
 
 class Image(models.Model):
     image_file = FilerImageField()
     obj = models.ForeignKey(Post, related_name='photos')
 
 
+USUAL = 0
+REALTOR = 1
+USER_TYPES = (
+    (USUAL, 'Частное лицо'),
+    (REALTOR, 'Риэлтор'),
+)
+
+
 class CustomData(models.Model):
     user = models.OneToOneField(User, verbose_name='Пользователь', null=True, related_name='custom')
-    type = models.IntegerField('Статус', )
+    type = models.IntegerField('Статус', choices=USER_TYPES)
     phone = models.CharField('Номер телефона', blank=True, max_length=25, null=True)  # 38 050 240 92 92
     email = models.EmailField('Электронная почта', blank=True, null=True)
-
 
     def __str__(self):
         return self.user.first_name
 
     class Meta:
-        verbose_name = 'Fastoran'
-        verbose_name_plural = 'Fastoran'
+        verbose_name = 'Доп информация о пользователе'
+        verbose_name_plural = 'Доп информация о пользователе'
+
+
 

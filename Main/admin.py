@@ -1,9 +1,11 @@
 from django.contrib import admin
+from django.contrib.admin import register
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from .models import Image, Post, CustomData
+from .models import Image, Post, CustomData, City, District, Category
 
 
 @receiver(post_save, sender=User)
@@ -23,3 +25,25 @@ class ImageInline(admin.StackedInline):
 
 class PostAdmin(admin.ModelAdmin):
     inlines = [ImageInline, ]
+
+
+admin.site.register(Post, PostAdmin)
+admin.site.register(City)
+admin.site.register(District)
+admin.site.register(Category)
+
+
+class CustomDataInline(admin.StackedInline):
+    model = CustomData
+    can_delete = False
+    extra = 1
+
+
+class UserAdmin(BaseUserAdmin):
+    inlines = (CustomDataInline,)
+
+
+admin.site.unregister(User)
+admin.site.register(User, UserAdmin)
+
+admin.site.site_header = 'Первое Риэлторское Агенство'

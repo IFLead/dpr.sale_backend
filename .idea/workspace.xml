@@ -2,328 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="897dc545-a554-43c2-be3b-5b20355130e7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/easy-install.pth" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/PKG-INFO" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/SOURCES.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/dependency_links.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/entry_points.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/not-zip-safe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/requires.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/__main__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/appdirs.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/_cmd.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/adapter.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/cache.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/caches/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/caches/file_cache.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/caches/redis_cache.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/compat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/controller.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/filewrapper.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/heuristics.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/serialize.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/wrapper.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/ansi.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/ansitowin32.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/initialise.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/win32.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/winterm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/misc.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/shutil.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.cfg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/tarfile.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/compat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/database.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/index.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/locators.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/manifest.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/markers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/metadata.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/resources.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/scripts.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t32.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t64.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/util.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/version.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w32.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w64.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/wheel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distro.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_ihatexml.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_inputstream.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_tokenizer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/_base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/datrie.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/py.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/constants.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/alphabeticalattributes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/inject_meta_charset.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/lint.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/optionaltags.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/sanitizer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/whitespace.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/html5parser.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/serializer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treeadapters/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treeadapters/genshi.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treeadapters/sax.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/dom.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree_lxml.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/dom.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/etree.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/etree_lxml.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/genshi.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/ipaddress.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/linklockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/mkdirlockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/pidlockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/sqlitelockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/symlinklockfile.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/ordereddict.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/__about__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/_compat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/_structures.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/markers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/requirements.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/specifiers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/version.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/pkg_resources/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/bar.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/counter.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/helpers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/spinner.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/pyparsing.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/re-vendor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/adapters.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/api.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/auth.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/cacert.pem" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/certs.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/compat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/cookies.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/exceptions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/hooks.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/big5freq.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/big5prober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/chardetect.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/chardistribution.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/charsetgroupprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/charsetprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/codingstatemachine.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/compat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/constants.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/cp949prober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/escprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/escsm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/eucjpprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/euckrfreq.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/euckrprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/euctwfreq.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/euctwprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/gb2312freq.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/gb2312prober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/hebrewprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/jisfreq.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/jpcntx.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langbulgarianmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langcyrillicmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langgreekmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langhebrewmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langhungarianmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langthaimodel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/latin1prober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/mbcharsetprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/mbcsgroupprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/mbcssm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/sbcharsetprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/sbcsgroupprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/sjisprober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/universaldetector.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/utf8prober.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/_collections.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/connection.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/connectionpool.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/appengine.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/ntlmpool.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/socks.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/exceptions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/fields.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/filepost.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/ordered_dict.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/six.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/poolmanager.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/request.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/response.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/connection.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/request.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/response.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/retry.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/timeout.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/url.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/sessions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/status_codes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/structures.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/retrying.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/six.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/labels.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/mklabels.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/x_user_defined.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/basecommand.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/baseparser.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/cmdoptions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/check.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/completion.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/download.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/freeze.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/hash.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/help.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/install.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/list.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/search.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/show.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/uninstall.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/wheel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/compat/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/compat/dictconfig.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/download.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/exceptions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/index.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/locations.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/models/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/models/index.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/operations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/operations/check.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/operations/freeze.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/pep425tags.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/req_file.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/req_install.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/req_set.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/req_uninstall.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/status_codes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/appdirs.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/build.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/deprecation.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/encoding.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/filesystem.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/glibc.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/hashes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/logging.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/outdated.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/packaging.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/setuptools_build.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/ui.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/bazaar.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/git.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/mercurial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/subversion.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/wheel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/setuptools-28.8.0-py3.5.egg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/setuptools.pth" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Lib/tcl8.6/init.tcl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/Activate.ps1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_bz2.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_ctypes.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_ctypes_test.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_decimal.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_elementtree.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_hashlib.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_lzma.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_msi.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_multiprocessing.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_overlapped.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_socket.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_sqlite3.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_ssl.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_testbuffer.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_testcapi.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_testimportmultiple.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_testmultiphase.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_tkinter.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/activate.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/deactivate.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/easy_install-3.5-script.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/easy_install-3.5.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/easy_install-3.5.exe.manifest" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/easy_install-script.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/easy_install.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/easy_install.exe.manifest" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip-script.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip.exe.manifest" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3-script.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.5-script.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.5.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.5.exe.manifest" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.exe.manifest" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pyexpat.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/python.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/python3.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/python35.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pythonw.exe" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/select.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/sqlite3.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/tcl86t.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/tk86t.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/unicodedata.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/vcruntime140.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/winsound.pyd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/pip-selfcheck.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/RealtorEnv/pyvenv.cfg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Realtor.iml" afterPath="$PROJECT_DIR$/.idea/Realtor.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/migrations/0002_auto_20170928_1803.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/migrations/0003_auto_20170928_1810.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/migrations/0004_auto_20170928_1833.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Main/migrations/0005_auto_20170928_1913.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/admin.py" afterPath="$PROJECT_DIR$/Main/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/apps.py" afterPath="$PROJECT_DIR$/Main/apps.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/models.py" afterPath="$PROJECT_DIR$/Main/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/views.py" afterPath="$PROJECT_DIR$/Main/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realtor/settings.py" afterPath="$PROJECT_DIR$/Realtor/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realtor/urls.py" afterPath="$PROJECT_DIR$/Realtor/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ad.html" afterPath="$PROJECT_DIR$/templates/ad.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -352,8 +39,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state relative-caret-position="118">
+              <caret line="117" column="2" lean-forward="false" selection-start-line="117" selection-start-column="2" selection-end-line="117" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -381,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            <state relative-caret-position="204">
+              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -394,18 +81,20 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="52" column="63" lean-forward="false" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
-              <folding />
+            <state relative-caret-position="274">
+              <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding>
+                <marker date="1506616412000" expanded="true" signature="152:210" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="458">
+              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -447,14 +136,15 @@
       <list>
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/FrontEnd/gulpfile.js" />
-        <option value="$PROJECT_DIR$/Realtor/settings.py" />
-        <option value="$PROJECT_DIR$/Main/admin.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/Main/views.py" />
-        <option value="$PROJECT_DIR$/Main/models.py" />
         <option value="$PROJECT_DIR$/templates/ad.html" />
         <option value="$PROJECT_DIR$/Realtor/urls.py" />
+        <option value="$PROJECT_DIR$/Realtor/settings.py" />
+        <option value="$PROJECT_DIR$/Main/apps.py" />
+        <option value="$PROJECT_DIR$/Main/models.py" />
+        <option value="$PROJECT_DIR$/Main/admin.py" />
       </list>
     </option>
   </component>
@@ -556,6 +246,11 @@
               <item name="Realtor" type="b2602c69:ProjectViewProjectNode" />
               <item name="Realtor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Realtor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Realtor" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -593,18 +288,14 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/ad.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/dashboard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/heading-section.html</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/index.html</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/js/common.js</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/js/common.min.js</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/js/scripts.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/sign_up.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/gulpfile.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/css/main.min.css</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/static/js/scripts.min.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/ad.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/block-modals.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/heading-section.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/index.html</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -612,17 +303,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/block-modals.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/block-scripts.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.eot</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.svg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.ttf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.woff</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.woff2</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/footer.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/header.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/heading-section.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/js/jquery.syotimer.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/img/doneck_voennyy.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/img/svg/fit.svg</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -630,9 +312,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/add_ad.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/deadline.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/css/semantic.min.css</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -791,23 +470,30 @@
       <option name="project" value="LOCAL" />
       <updated>1506436226290</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="db connetion fixed">
+      <created>1506539482620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1506539482622</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4924357" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2065053" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2065053" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@Realtor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@Realtor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49092284" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -838,27 +524,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="56" lean-forward="false" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding />
+          <folding>
+            <marker date="1506616412000" expanded="true" signature="152:210" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -890,40 +562,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main.html" />
-    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1506616412000" expanded="true" signature="152:210" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -956,7 +597,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1506616412000" expanded="true" signature="152:210" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -989,7 +632,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1506616412000" expanded="true" signature="152:210" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Realtor/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/main.html" />
+    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1506616412000" expanded="true" signature="152:210" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1022,7 +702,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1506616412000" expanded="true" signature="152:210" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1112,36 +794,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="52" column="63" lean-forward="false" selection-start-line="52" selection-start-column="63" selection-end-line="52" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -1190,9 +846,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        <state relative-caret-position="204">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="117" column="2" lean-forward="false" selection-start-line="117" selection-start-column="2" selection-end-line="117" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RealtorEnv/Lib/site-packages/filer/fields/file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="119" column="6" lean-forward="false" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RealtorEnv/Lib/site-packages/filer/fields/image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <marker date="1506616412000" expanded="true" signature="152:210" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
