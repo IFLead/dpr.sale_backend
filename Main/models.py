@@ -88,7 +88,7 @@ USER_TYPES = (
 
 class CustomData(models.Model):
     user = models.OneToOneField(User, verbose_name='Пользователь', null=True, related_name='custom')
-    type = models.IntegerField('Статус', choices=USER_TYPES)
+    type = models.IntegerField('Статус', choices=USER_TYPES, default=USUAL)
     phone = models.CharField('Номер телефона', blank=True, max_length=25, null=True)  # 38 050 240 92 92
     email = models.EmailField('Электронная почта', blank=True, null=True)
 
