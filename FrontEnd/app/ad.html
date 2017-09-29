@@ -40,17 +40,16 @@
 <body>
 
 {% include 'block-header.html' %}
+{% include 'block-modals.html' %}
 
 <div id="main-content" class="container">
     <div id="sticky_parent" class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="gallery" style="display:none;">
                 {% for photo in post.photos.all %}
-                    <img src="{{ photo.url }}"
-                         data-image="{{ photo.url }}">
+                    <img src="{{ photo.image_file.url }}"
+                         data-image="{{ photo.image_file.url }}">
                 {% endfor %}
-{#                <img src="../uploads/img/2017/09/29/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg"#}
-{#                     data-image="../uploads/img/2017/09/29/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg">#}
             </div>
         </div>
         <div id="sticky_child" class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ui sticky">
