@@ -65,6 +65,8 @@ class Post(models.Model):
     storeys = models.PositiveSmallIntegerField('Этажность здания', default=1)
     district = models.ForeignKey(District, verbose_name='Район')
 
+    created = models.DateTimeField('Дата создания', auto_now=True, null=True)
+
     def __str__(self):
         return self.title
 
@@ -74,19 +76,17 @@ class Post(models.Model):
 
 
 class Image(models.Model):
-    image_file = FilerImageField()
+    image_file = FilerImageField(verbose_name='Изображение', )
     obj = models.ForeignKey(Post, related_name='photos')
 
 
-USUAL = 0
-REALTOR = 1
-USER_TYPES = (
-    (USUAL, 'Частное лицо'),
-    (REALTOR, 'Риэлтор'),
-)
-
-
 class CustomData(models.Model):
+    USUAL = 0
+    REALTOR = 1
+    USER_TYPES = (
+        (USUAL, 'Частное лицо'),
+        (REALTOR, 'Риэлтор'),
+    )
     user = models.OneToOneField(User, verbose_name='Пользователь', null=True, related_name='custom')
     type = models.IntegerField('Статус', choices=USER_TYPES, default=USUAL)
     phone = models.CharField('Номер телефона', blank=True, max_length=25, null=True)  # 38 050 240 92 92
@@ -98,6 +98,3 @@ class CustomData(models.Model):
     class Meta:
         verbose_name = 'Доп информация о пользователе'
         verbose_name_plural = 'Доп информация о пользователе'
-
-
-

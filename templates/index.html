@@ -36,9 +36,9 @@
 </head>
 
 <body>
-{% include 'header.html' %}
+{% include 'block-header.html' %}
 {% include 'block-modals.html' %}
-{% include 'heading-section.html' %}
+{% include 'block-heading-section.html' %}
 
 <div class="main-content">
 
@@ -219,21 +219,20 @@
                             {% endif %}
                         </div>
                         <div class="content">
-                            <a class="header" href="{{ post.link.url }}">{{ post.title }}</a>
+                            <a class="header" href="{% url 'post_view' post.id %}">{{ post.title }}</a>
                             <div class="meta">
-                                <span class="date">{{ post.category }}</span>
+                                <span class="date">{{ post.category.name }}</span>
                             </div>
                             <div class="meta">
-                                <span class="date">{{ post.city }}
-                                    {% if post.region %}{{ post.region }}{% endif %}</span>
+                                <span class="date">{{ post.district.city.name }}, {{ post.district.name }} р-н</span>
                             </div>
                             <div class="meta">
-                                <span class="date">{{ post.date }}</span>
+                                <span class="date">{{ post.created }}</span>
                             </div>
                         </div>
                         <div class="extra content">
                             <a>
-                                <i class="{% if currency == 0 %}ruble{% elif currency == 1 %}dollar{% endif %} icon"></i>
+                                <i class="{% if  post.currency == 0 %}ruble{% elif  post.currency == 1 %}dollar{% endif %} icon"></i>
                                 {{ post.price }}
                             </a>
                         </div>
@@ -259,7 +258,7 @@
 
 </div>
 
-{% include 'footer.html' %}
+{% include 'block-footer.html' %}
 {% include 'block-scripts.html' %}
 
 </body>

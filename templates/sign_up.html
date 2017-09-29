@@ -36,14 +36,14 @@
 
 <body>
 
-{% include 'header.html' %}
-{% include 'heading-section.html' %}
+{% include 'block-header.html' %}
+{% include 'block-heading-section.html' %}
 
 <div id="divider" class="ui horizontal divider custom-divider">Регистрация</div>
 
 <div id="main-signup-content" class="ui middle center aligned grid">
-    <form id="sign_up_form" class="ui form segment form-lay" method="post" action="{% url 'sign_up' %}">
-        {% csrftoken %}
+    <form id="sign_up_form" class="ui form segment form-lay" method="post" action=""> {# {% url 'sign_up' %} #}
+        {% csrf_token %}
         <p>Расскажите нам о себе</p>
         <div class="two fields">
             <div class="field">
@@ -93,7 +93,7 @@
     </form>
 </div>
 
-{% include 'footer.html' %}
+{% include 'block-footer.html' %}
 {% include 'block-scripts.html' %}
 
 </body>

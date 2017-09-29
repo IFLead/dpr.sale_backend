@@ -9,7 +9,8 @@ def index(request):
 
 
 def post_view(request, post_id):
-    return render(request, 'ad.html', {'post': Post.objects.get(pk=post_id)})
+    post = Post.objects.get(pk=post_id)
+    return render(request, 'ad.html', {'post': post, 'user_is_owner': post.owner.id == request.user.id})
 
 
 def sign_up(request):

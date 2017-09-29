@@ -107,25 +107,26 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 THUMBNAIL_PROCESSORS = (
-    'easy_thumbnails.processors.colorspace',
-    'easy_thumbnails.processors.autocrop',
-    #'easy_thumbnails.processors.scale_and_crop',
-    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
-    'easy_thumbnails.processors.filters',
+    #'easy_thumbnails.processors.colorspace',
+    # 'easy_thumbnails.processors.autocrop',
+    # #'easy_thumbnails.processors.scale_and_crop',
+    # 'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    # 'easy_thumbnails.processors.filters',
 )
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
 LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -135,3 +136,21 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/uploads/'
+
+FILER_STORAGES = {
+    'public': {
+        'main': {
+            'ENGINE': 'filer.storage.PublicFileSystemStorage',
+            'OPTIONS': {
+                'location': os.path.join(BASE_DIR, 'uploads/img'),
+                'base_url': '/uploads/img/',
+            },
+            'UPLOAD_TO': 'filer.utils.generate_filename.by_date',
+            'UPLOAD_TO_PREFIX': '',
+        },
+
+    }
+}
