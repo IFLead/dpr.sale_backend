@@ -23,8 +23,8 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-    <link rel="stylesheet" href="libs/UniteGallery/css/unite-gallery.css" type="text/css">
-    <link rel="stylesheet" href="libs/UniteGallery/themes/default/ug-theme-default.css" type="text/css">
+    <link rel="stylesheet" href="{% static 'UniteGallery/css/unite-gallery.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'UniteGallery/themes/default/ug-theme-default.css' %}" type="text/css">
 
     <style>body {
         opacity: 0;
@@ -39,16 +39,18 @@
 
 <body>
 
-{% include 'header.html' %}
+{% include 'block-header.html' %}
 
 <div id="main-content" class="container">
     <div id="sticky_parent" class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="gallery" style="display:none;">
-                {% for photo in post.photos %}
+                {% for photo in post.photos.all %}
                     <img src="{{ photo.url }}"
                          data-image="{{ photo.url }}">
                 {% endfor %}
+{#                <img src="../uploads/img/2017/09/29/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg"#}
+{#                     data-image="../uploads/img/2017/09/29/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg">#}
             </div>
         </div>
         <div id="sticky_child" class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ui sticky">
@@ -61,7 +63,7 @@
                 </div>
                 <div class="card">
                     <div class="content">
-                        <div class="header">{{ post.price }} <i class="{{ post.currency }} icon"></i></div>
+                        <div class="header">{{ post.price }} <i class="{% if  post.currency == 0 %}ruble{% elif  post.currency == 1 %}dollar{% endif %} icon"></i></div>
                         <div class="meta">Категория: {{ post.category.name }}</div>
                     </div>
                 </div>
@@ -70,7 +72,7 @@
                  data-position="bottom center" data-variation="huge">
                 <i class="call icon"></i> Показать номер телефона
             </div>
-            {% if user.is_owner %}
+            {% if user_is_owner %}
             <div id="close_ad" class="fluid ui button massive">
                 <i class="window close icon"></i> Удалить объявление
             </div>
@@ -83,9 +85,9 @@
                         <div class="header">
                             Основная информация
                         </div>
-                        <div class="meta">Создатель объявления: <label>{{ owner.type }}</label></div>
+                        <div class="meta">Создатель объявления: <label>{{ post.owner.custom.get_type_display }}</label></div>
                         <div class="meta">Количество комнат: <label>{{ post.rooms }}</label></div>
-                        <div class="meta">Количество этажей: <label>{{ post.floors }}</label></div>
+                        <div class="meta">Этажей: <label>{{ post.floor }}</label></div>
                         <div class="meta">Жилая площадь: <label>{{ post.square }} м<sup>2</sup></label></div>
                     </div>
                 </div>
