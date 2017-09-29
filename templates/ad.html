@@ -22,11 +22,9 @@
     <meta name="msapplication-navbutton-color" content="#000">
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-{% load staticfiles %}
 
-<link rel="stylesheet" href="{% static 'css/main.min.css' %}">
-{#    <link rel="stylesheet" href="libs/UniteGallery/css/unite-gallery.css" type="text/css">#}
-{#    <link rel="stylesheet" href="libs/UniteGallery/themes/default/ug-theme-default.css" type="text/css">#}
+    <link rel="stylesheet" href="{% static 'UniteGallery/css/unite-gallery.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'UniteGallery/themes/default/ug-theme-default.css' %}" type="text/css">
 
     <style>body {
         opacity: 0;
@@ -51,6 +49,8 @@
                     <img src="{{ photo.url }}"
                          data-image="{{ photo.url }}">
                 {% endfor %}
+{#                <img src="../uploads/img/2017/09/29/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg"#}
+{#                     data-image="../uploads/img/2017/09/29/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg">#}
             </div>
         </div>
         <div id="sticky_child" class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ui sticky">
