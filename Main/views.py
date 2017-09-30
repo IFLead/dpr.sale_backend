@@ -23,7 +23,7 @@ def post_view(request, post_id):
     try:
         post = Post.objects.get(pk=post_id)
         user_is_owner = post.owner.id == request.user.id
-        if post.verified or user_is_owner:
+        if post.verified or user_is_owner or request.user.is_staff:
             return render(request, 'post.html',
                           {'post': post, 'user_is_owner': user_is_owner, 'user_is_staff': request.user.is_staff})
         else:

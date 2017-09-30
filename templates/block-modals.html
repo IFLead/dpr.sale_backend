@@ -5,7 +5,7 @@
                 Настройки
             </div>
         </h2>
-        <form id="settings_form" class="ui form" method="post" action="/configure_acc/">
+        <form id="settings_form" class="ui form">
             <div class="ui segment">
                 <div class="two fields">
                     <div class="field">
@@ -76,14 +76,14 @@
                 Почему Вы решили удалить объявление?
             </div>
         </h2>
-        <form id="delete_form" class="ui form" method="post" action="/delete_post">
+        <form id="delete_form" class="ui form">
             <div class="ui segment">
                 <div class="field">
                     <label>Комментарий</label>
                     <textarea id="commentary" name="commentary"></textarea>
                 </div>
                 <div class="buttons-wrapper-form">
-                    <div id="delete-ok-button" class="ui submit button">ОК</div>
+                    <div id="confirm_post_close" class="ui submit button disabled">ОК</div>
                 </div>
             </div>
             <div class="ui error message"></div>

@@ -66,15 +66,28 @@ def unverify_post(request):
 
 
 @login_required
-def delete_post(request):
+def close_post(request):
     try:
         post = Post.objects.get(pk=request.POST['post_id'])
         if request.user.is_active and (request.user.is_staff or post.owner.id == request.user.id):
             post.closed = True
+            post.reason = request.POST['commentary']
             post.save()
             return JsonResponse({'status': 'OK', 'message': 'success'})
         else:
             return JsonResponse({'status': 'error', 'message': 'you have not access'})
+    except Post.DoesNotExist:
+        return JsonResponse({'status': 'error', 'message': 'has no this object'})
+    except Exception:
+        return JsonResponse({'status': 'error', 'message': 'unknown error'})
+
+
+@staff_member_required
+def delete_post(request):
+    try:
+        post = Post.objects.get(pk=request.POST['post_id'])
+        post.delete()
+        return JsonResponse({'status': 'OK', 'message': 'success'})
     except Post.DoesNotExist:
         return JsonResponse({'status': 'error', 'message': 'has no this object'})
     except Exception:
@@ -87,6 +100,7 @@ def verify_user(request):
         post = User.objects.get(pk=request.POST['user_id'])
         post.verified = True
         post.save()
+        # todo ПОЧЕМУ В ВЕРИФИКАЦИИ ЮЗЕРА МЫ ВЕРИФИЦИРУЕМ ОБЪЯВЛЕНИЕ????
         return JsonResponse({'status': 'OK', 'message': 'success'})
     except Post.DoesNotExist:
         return JsonResponse({'status': 'error', 'message': 'has no this object'})

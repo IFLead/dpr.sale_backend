@@ -53,7 +53,7 @@
                     <a class="item" data-tab="closed">Закрытые сделки</a>
                 </div>
                 <div class="ui tab segment active" data-tab="ad">
-                    <ul id="ad-wtrfl">
+                    <ul id="post-wtrfl">
                         {% for post in posts_not_verified %}
                             <li>
                                 <div>
@@ -73,9 +73,13 @@
                                             </div>
                                         </div>
                                         <div class="extra content">
-                                            <div class="ui two buttons">
-                                                <button class="positive ui button accept_ad_button">Принять</button>
-                                                <button class="negative ui button decline_ad_button">Удалить</button>
+                                            <div class="ui two buttons" data-post-id="{{ post.id }}">
+                                                <div
+                                                     class="green ui button huge verify_post_button">Принять
+                                                </div>
+                                                <div
+                                                     class="red ui button huge delete_post_button">Удалить
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -92,11 +96,11 @@
                                     <div class="ui card">
                                         <div class="content">
                                             <div class="header">
-                                                 {{ account.first_name }} {{ account.last_name }}
+                                                {{ account.first_name }} {{ account.last_name }}
                                             </div>
-{#                                            <div class="meta">#}
-{#                                                Тип: {{ post.owner.custom.get_type_display }}#}
-{#                                            </div>#}
+                                            {#                                            <div class="meta">#}
+                                            {#                                                Тип: {{ post.owner.custom.get_type_display }}#}
+                                            {#                                            </div>#}
                                             <div class="description">
                                                 E-mail: {{ account.email }}
                                             </div>
@@ -105,16 +109,17 @@
                                             </div>
                                         </div>
                                         <div class="extra content">
-                                            <div class="ui two buttons">
-                                                <button class="positive ui button accept_acc_button">Принять</button>
-                                                <button class="negative ui button decline_acc_button">Отклонить</button>
+                                            <div class="ui two buttons" data-account-id="{{ account.id }}">
+                                                <div class="green ui button huge verify_user_button">Принять
+                                                </div>
+                                                <div class="red ui button huge unverify_user_button">Отклонить
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                         {% endfor %}
-                        <!--todo Хранить данные в data атрибутах для быстрого доступа-->
                     </ul>
                 </div>
                 <div class="ui tab segment" data-tab="closed">

@@ -522,7 +522,6 @@ $(document).ready(function () {
             dataType: 'json',
 
             success: function (result) {
-                console.log(result.html);
 
                 $('#waterfall').attr('hidden', false);
                 $('#data_loader').removeClass('active');
@@ -537,18 +536,176 @@ $(document).ready(function () {
         var data = JSON.parse(localStorage.getItem('filters'));
         data['post_ids'] = JSON.parse(localStorage.getItem('post_ids'));
         $.ajax({
-            url: '/api/load-more/',
-            type: 'POST',
-            data:data,
+            url: '/api/load-more',
+            type: 'GET',
+            data: data,
             dataType: 'json',
 
             success: function (result) {
                 console.log(result);
                 localStorage.setItem('post_ids', JSON.stringify(result.post_ids));
-
             }
         });
 
+    });
+
+    $('#commentary').bind('input propertychange', function () {
+        if (this.value !== '') {
+            $('#confirm_post_close').removeClass('disabled');
+        }
+        else {
+            $('#confirm_post_close').addClass('disabled');
+        }
+    });
+
+    $('#confirm_post_close').click(function () {
+
+        if (confirm('Ваше объявление будет убрано из общего списка показа. Продолжить?')) {
+            $.ajax({
+                url: '/api/post/close/',
+                type: 'POST',
+                data: {
+                    post_id: $('#main-content').data('post-id'),
+                    commentary: $('#commentary').val()
+                },
+                dataType: 'json',
+
+                success: function (result) {
+                    location.href = '/';
+                }
+            });
+        }
+    });
+
+    $('#top_post').click(function () {
+
+        $.ajax({
+            url: '/api/post/top/',
+            type: 'POST',
+            data: {
+                post_id: $('#main-content').data('post-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
+    });
+
+    $('#untop_post').click(function () {
+
+        $.ajax({
+            url: '/api/post/untop/',
+            type: 'POST',
+            data: {
+                post_id: $('#main-content').data('post-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
+    });
+
+
+    $('#verify_post').click(function () {
+
+        $.ajax({
+            url: '/api/post/verify/',
+            type: 'POST',
+            data: {
+                post_id: $('#main-content').data('post-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
+    });
+
+
+    $('#unverify_post').click(function () {
+
+        $.ajax({
+            url: '/api/post/unverify/',
+            type: 'POST',
+            data: {
+                post_id: $('#main-content').data('post-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
+    });
+
+    $('.verify_post_button').click(function () {
+
+        $.ajax({
+            url: '/api/post/verify/',
+            type: 'POST',
+            data: {
+                post_id: $(this).parent().data('post-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
+    });
+
+
+    $('.delete_post_button').click (function () {
+
+        $.ajax({
+            url: '/api/post/delete/',
+            type: 'POST',
+            data: {
+                post_id: $(this).parent().data('post-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
+    });
+
+    $('.verify_user_button').click(function () {
+
+        $.ajax({
+            url: '/api/user/verify/',
+            type: 'POST',
+            data: {
+                user_id: $(this).parent().data('account-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
+    });
+
+    $('.unverify_user_button').click(function () {
+
+        $.ajax({
+            url: '/api/user/unverify/',
+            type: 'POST',
+            data: {
+                user_id: $(this).parent().data('account-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
     });
 
 });

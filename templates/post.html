@@ -43,7 +43,7 @@
 {% include 'block-modals.html' %}
 
 
-<div id="main-content" class="container">
+<div id="main-content" data-post-id="{{ post.id }}" class="container">
     <div class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="gallery" style="display:none;">
@@ -59,7 +59,9 @@
                     <div class="content">
                         <div class="header">{{ post.title }}</div>
                         <div class="meta">Город: <span id="city-sector">{{ post.district.city.name }}</span></div>
-                        {% if post.district.name %}<div class="meta">Район: <span id="district-sector">{{ post.district.name }}</span></div>{% endif %}
+                        {% if post.district.name %}
+                            <div class="meta">Район: <span id="district-sector">{{ post.district.name }}</span>
+                            </div>{% endif %}
                     </div>
                 </div>
                 <div class="card">
@@ -81,18 +83,26 @@
                 </div>
             {% endif %}
             {% if user_is_staff %}
-                <div id="top_post" class="fluid ui button massive {% if post.is_top %}hidden{% endif %}">
-                    <i class="star icon"></i> Поместить в топ
-                </div>
-                <div id="untop_post" class="fluid ui button massive {% if not post.is_top %}hidden{% endif %}">
-                    <i class="empty star icon"></i> Убрать из топа
-                </div>
-                <div id="verify_post" class="fluid ui button massive {% if post.verified %}hidden{% endif %}">
-                    <i class="checkmark icon"></i> Принять
-                </div>
-                <div id="unverify_post" class="fluid ui button massive {% if not post.verified %}hidden{% endif %}">
-                    <i class="remove icon"></i> Отклонить
-                </div>
+                {% if not post.is_top %}
+                    <div id="top_post" class="fluid ui button massive">
+                        <i class="star icon"></i> Поместить в топ
+                    </div>
+                {% endif %}
+                {% if post.is_top %}
+                    <div id="untop_post" class="fluid ui button massive">
+                        <i class="empty star icon"></i> Убрать из топа
+                    </div>
+                {% endif %}
+                {% if not post.verified %}
+                    <div id="verify_post" class="fluid ui button massive">
+                        <i class="checkmark icon"></i> Принять
+                    </div>
+                {% endif %}
+                {% if post.verified %}
+                    <div id="unverify_post" class="fluid ui button massive">
+                        <i class="remove icon"></i> Отклонить
+                    </div>
+                {% endif %}
             {% endif %}
         </div>
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
@@ -130,7 +140,6 @@
         </div>
     </div>
 </div>
-
 
 {% include 'block-footer.html' %}
 {% include 'block-scripts.html' %}
