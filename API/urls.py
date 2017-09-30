@@ -22,4 +22,12 @@ from Realtor.settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'districts/', views.districts),
+    url(r'post/verify', views.verify_post),
+    url(r'post/unverify', views.unverify_post),
+    url(r'post/top', views.top_post),
+    url(r'post/untop', views.untop_post),
+    url(r'post/delete', views.delete_post),
+
+    url(r'user/verify', views.verify_user),
+    url(r'user/unverify', views.unverify_user),
 ]

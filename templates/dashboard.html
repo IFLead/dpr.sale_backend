@@ -47,7 +47,7 @@
                 </div>
                 <div class="ui tab segment active" data-tab="ad">
                     <ul id="ad-wtrfl">
-                        {% for post in posts_not_allowed %}
+                        {% for post in posts_not_verified %}
                             <li>
                                 <div>
                                     <div class="ui card">
@@ -57,6 +57,9 @@
                                             </div>
                                             <div class="meta">
                                                 Тип: {{ post.category.name }}
+                                            </div>
+                                            <div class="meta">
+                                                Номер объявления: {{ post.id }}
                                             </div>
                                             <div class="meta">
                                                 <span class="date">{{ post.created }}</span>
@@ -76,22 +79,22 @@
                 </div>
                 <div class="ui tab segment" data-tab="account">
                     <ul id="account-wtrfl">
-                        {% for acc_request in acc_requests %}
+                        {% for account in accounts %}
                             <li>
                                 <div>
                                     <div class="ui card">
                                         <div class="content">
                                             <div class="header">
-                                                {{ acc_request.last_name }} {{ acc_request.first_name }}
+                                                 {{ account.first_name }} {{ account.last_name }}
                                             </div>
-                                            <div class="meta">
-                                                Тип: {{ acc_request.type }}
+{#                                            <div class="meta">#}
+{#                                                Тип: {{ post.owner.custom.get_type_display }}#}
+{#                                            </div>#}
+                                            <div class="description">
+                                                E-mail: {{ account.email }}
                                             </div>
                                             <div class="description">
-                                                E-mail: {{ acc_request.email }}
-                                            </div>
-                                            <div class="description">
-                                                Телефон: {{ acc_request.custom_data.phone }}
+                                                Телефон: {{ account.custom.phone }}
                                             </div>
                                         </div>
                                         <div class="extra content">
