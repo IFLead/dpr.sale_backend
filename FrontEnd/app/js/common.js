@@ -319,7 +319,8 @@ $(document).ready(function () {
 
 
     $('#gallery').unitegallery({
-        theme_enable_text_panel: false
+        theme_enable_text_panel: false,
+        slider_scale_mode: "down"
     });
 
 
@@ -327,12 +328,6 @@ $(document).ready(function () {
         on: 'click'
     });
 
-    if (window.innerWidth >= 992) {
-        $('#sticky_child').sticky({
-            context: '#sticky_parent',
-            pushing: true
-        });
-    }
 
     $('#syo').syotimer({
         lang: 'rus',
