@@ -536,14 +536,12 @@ $(document).ready(function () {
     $('#more_button').click(function () {
 
         $(this).addClass('loading disabled');
-
+        var data = JSON.parse(localStorage.getItem('filters'));
+        data['post_ids'] = JSON.parse(localStorage.getItem('post_ids'));
         $.ajax({
             url: '/api/load-more/',
             type: 'POST',
-            data: {
-                filters: JSON.parse(localStorage.getItem('filters')),
-                post_ids: JSON.parse(localStorage.getItem('post_ids'))
-            },
+            data:data,
             dataType: 'json',
 
             success: function (result) {

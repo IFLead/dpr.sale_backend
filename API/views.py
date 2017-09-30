@@ -132,5 +132,28 @@ def search(request):
                 filters['max_price'] *= 60
         filters.pop('currency')
     rename_dict_keys(filters, names)
-    posts = Post.objects.filter(is_top=True,**filters)
+    posts = Post.objects.filter(is_top=True, **filters)
     return JsonResponse({'status': 'OK', 'html': render_to_string('ajax-posts.html', {'posts': posts})})
+
+
+def more(request):
+    names = {'city': 'district__city', 'min_square': 'square__gte', 'max_square': 'square__lte',
+             'min_walls': 'rooms__gte', 'max_walls': 'rooms__lte', 'min_floor': 'floor__gte', 'max_floor': 'floor__lte',
+             'min_price': 'price__gte', 'max_price': 'price__lte', }
+
+    post_ids = request.POST.get('post_ids', [])
+    filters = {k: v for k, v in request.POST.items() if v and v != '-1'}
+    if 'min_price' not in filters and 'max_price' not in filters:
+        filters.pop('currency')
+    else:
+        if filters['currency'] == 1:
+            if 'min_price' not in filters:
+                filters['min_price'] *= 60
+            if 'max_price' not in filters:
+                filters['max_price'] *= 60
+        filters.pop('currency')
+    rename_dict_keys(filters, names)
+    posts = Post.objects.filter(is_top=False, **filters).exclude(id__in=post_ids)
+    return JsonResponse({'status': 'OK', 'posts': post_ids + [item[0] for item in posts.values_list('id')],
+                         'html': render_to_string('ajax-posts.html', {'posts': posts})})
+

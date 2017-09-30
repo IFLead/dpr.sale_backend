@@ -32,4 +32,5 @@ urlpatterns = [
     url(r'user/unverify', views.unverify_user),
 
     url(r'search', views.search),
+    url(r'more', views.more),
 ]
