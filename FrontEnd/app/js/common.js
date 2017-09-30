@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-    $('.dropdown').dropdown();
 
     $('#clear_button').click(function () {
 
@@ -31,9 +30,9 @@ $(document).ready(function () {
 
     $('#sign_in_modal').modal();
 
-    $('#ad_modal').modal();
+    $('#post_modal').modal();
 
-    $('#delete_ad_modal').modal();
+    $('#delete_post_modal').modal();
 
     $('#history_modal').modal();
 
@@ -203,7 +202,7 @@ $(document).ready(function () {
     });
 
 
-    $('#add_ad_form').form({
+    $('#add_post_form').form({
         fields: {
             title: {
                 identifier: 'title',
@@ -214,8 +213,8 @@ $(document).ready(function () {
                     }
                 ]
             },
-            ad_type: {
-                identifier: 'ad_type',
+            post_type: {
+                identifier: 'post_type',
                 rules: [
                     {
                         type: 'empty',
@@ -259,32 +258,29 @@ $(document).ready(function () {
                     }
                 ]
             },
-            city: {
+            estate_city: {
                 identifier: 'estate_city',
-                rules: [
-                    {
-                        type: 'empty',
-                        prompt: 'Выберите город'
-                    }
-                ]
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Выберите город'
+                }]
             },
-            district: {
+            estate_district: {
                 identifier: 'estate_district',
-                rules: [
-                    {
-                        type: 'empty',
-                        prompt: 'Выберите район'
-                    }
-                ]
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Выберите район'
+                }]
             }
         }
     });
 
     $('#estate_currency').dropdown('set selected', '0');
+    $('#post_type').dropdown();
 
 
-    $('#add_ad').click(function () {
-        $('#ad_modal').modal('show');
+    $('#add_post').click(function () {
+        $('#post_modal').modal('show');
     });
 
     $('#hidden-new-file1').on('change', function () {
@@ -345,7 +341,7 @@ $(document).ready(function () {
 
     $('#account-wtrfl').NewWaterfall();
     $('#closed-wtrfl').NewWaterfall();
-    $('#ad-wtrfl').NewWaterfall();
+    $('#post-wtrfl').NewWaterfall();
 
     $('#delete_form').form({
         fields: {
@@ -370,13 +366,14 @@ $(document).ready(function () {
         }
     });
 
-    $('#close_ad').click(function () {
-        $('#delete_ad_modal').modal('show');
+    $('#close_post').click(function () {
+        $('#delete_post_modal').modal('show');
     });
 
     $('#city').dropdown({
         onChange: function (value) {
 
+            $('#district').dropdown('set selected', -1);
             $('#district-list div').not(':first').remove();
 
             if (value !== '' && value !== '-1') {
@@ -391,7 +388,7 @@ $(document).ready(function () {
                     success: function (result) {
                         $('#district').removeClass('disabled');
                         for (var i = 0; i < result.length; i++) {
-                            $('#district-list').append('<div class="item" data-value=" ' + result.id + ' ">' + result.name + '</div>');
+                            $('#district-list').append('<div class="item" data-value=" ' + result[i].id + ' ">' + result[i].name + '</div>');
                         }
                     }
                 });
@@ -405,11 +402,11 @@ $(document).ready(function () {
     $('#estate_city').dropdown({
 
         onChange: function (value) {
-            console.log(value);
 
+            // $('#estate_district').dropdown('set selected', -1);
             $('#estate_district option').remove();
 
-            if (value !== '') {
+            if (value !== '' && value !== '-1') {
                 $.ajax({
                     url: '/api/districts/',
                     type: 'GET',
@@ -420,9 +417,8 @@ $(document).ready(function () {
 
                     success: function (result) {
                         $('#estate_district').removeClass('disabled');
-                        $('#estate_district').empty();
                         for (var i = 0; i < result.length; i++) {
-                            $('#estate_district').append($('<option>', {
+                            $('#estate_district').append($("<option/>", {
                                 value: result[i].id,
                                 text: result[i].name
                             }));
@@ -430,16 +426,27 @@ $(document).ready(function () {
                     }
                 });
             }
+            if (value === '-1') {
+                $('#estate_district').addClass('disabled');
+            }
         }
     });
 
     $('#district').dropdown('set selected', -1);
+    $('#post_type').dropdown('set selected', -1);
+    $('#estate_district').dropdown();
     $('#category').dropdown('set selected', -1);
     $('.currency-filter').dropdown('set selected', '0');
 
-    if(window.innerWidth >= 992){
+    if (window.innerWidth >= 992) {
         $('#sticky').stick_in_parent();
     }
+    $('#close_post_add_modal').click(function () {
+        $('#post_modal').modal('hide');
+    });
 
+    $('#dashboard-add-post').click(function () {
+        window.open('http://127.0.0.1:8000/admin/Main/post/add/');
+    });
 
 });
