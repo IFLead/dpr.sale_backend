@@ -58,7 +58,8 @@
                 <div class="card">
                     <div class="content">
                         <div class="header">{{ post.title }}</div>
-                        <div class="meta">{{ post.district.city.name }} {{ post.district.name }}</div>
+                        <div class="meta">Город: <span id="city-sector">{{ post.district.city.name }}</span></div>
+                        {% if post.district.name %}<div class="meta">Район: <span id="district-sector">{{ post.district.name }}</span></div>{% endif %}
                     </div>
                 </div>
                 <div class="card">
@@ -66,7 +67,7 @@
                         <div class="header">{{ post.price }} <i
                                 class="{% if  post.currency == 0 %}ruble{% elif post.currency == 1 %}dollar{% endif %} icon"></i>
                         </div>
-                        <div class="meta">Категория: {{ post.category.name }}</div>
+                        <div class="meta">Категория: <span id="category-sector">{{ post.category.name }}</span></div>
                     </div>
                 </div>
             </div>
@@ -121,7 +122,7 @@
                         <div class="header">
                             Описание
                         </div>
-                        <div class="meta">{{ post.description }}
+                        <div id="description-sector" class="meta">{{ post.description }}
                         </div>
                     </div>
                 </div>
