@@ -34,6 +34,7 @@ gulp.task('js', ['common-js'], function () {
         'app/libs/UniteGallery/js/unitegallery.min.js',
         'app/libs/UniteGallery/themes/default/ug-theme-default.js',
         'app/libs/syo/jquery.syotimer.min.js',
+        'app/libs/stickyjs/sticky.min.js',
         'app/js/common.min.js' // Всегда в конце
     ])
         .pipe(concat('scripts.min.js'))
