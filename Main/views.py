@@ -8,7 +8,7 @@ from Main.models import Category, Post, City
 
 def index(request):
     return render(request, 'index.html',
-                  {'categories': Category.objects.all(), 'posts': Post.objects.filter(is_top=True, verified=True),
+                  {'categories': Category.objects.all(), 'posts': Post.objects.filter(is_top=True, verified=True, closed=False),
                    'cities': City.objects.all()})
 
 
