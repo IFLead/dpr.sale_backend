@@ -23,6 +23,7 @@ from Realtor.settings import MEDIA_ROOT
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
+    url(r'^dash', views.dashboard),
     url(r'^sign_up/', views.sign_up),
     url(r'^(?P<post_id>\d+)/$', views.post_view, name='post_view'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
