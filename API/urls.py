@@ -30,4 +30,6 @@ urlpatterns = [
 
     url(r'user/verify', views.verify_user),
     url(r'user/unverify', views.unverify_user),
+
+    url(r'search', views.search),
 ]
