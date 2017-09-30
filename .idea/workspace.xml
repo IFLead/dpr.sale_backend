@@ -1,137 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="897dc545-a554-43c2-be3b-5b20355130e7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/css/unite-gallery.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/button-close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/cover-grid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/icon-link32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/icon-play32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/icon-zoom32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/lightbox-arrow-left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/lightbox-arrow-right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/lightbox-icon-close-compact.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/lightbox-icon-close-compact2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/lightbox-icon-close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-black1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-black2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-black3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-black4.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-black5.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-black6.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-black7.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-white1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-white2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-white3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-white4.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-white5.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-white6.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader-white7.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader_bright.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/loader_skype_trans.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/not_loaded.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/play-button-round.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/play-button-square.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/images/transparent.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/js/jquery-11.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/js/unitegallery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/js/unitegallery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/release_log.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/alexis.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/arrows_strip_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/arrows_strip_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/button_fullscreen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/button_playpause.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/button_zoom_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/button_zoom_minus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/button_zoom_plus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_arrow_down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_arrow_left_hortype.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_arrow_right_hortype.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_arrow_up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_handle_down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_handle_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_handle_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/grid_handle_up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/slider_arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/slider_arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/alexis/images/slider_bullets.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/arrow_grid_down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/arrow_grid_up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/arrows_strip_down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/arrows_strip_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/arrows_strip_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/arrows_strip_up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/button_fullscreen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/button_playpause.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/grid_arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/grid_arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/grid_handle_black_bottom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/grid_handle_black_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/grid_handle_black_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/grid_handle_black_top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/icon_zoom_back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/icon_zoom_minus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/icon_zoom_plus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/slider_arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/slider_arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/slider_bullets.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/tile_bullets_blue.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/tile_bullets_brown.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/tile_bullets_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/tile_bullets_green.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/tile_bullets_red.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/tile_button_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/tile_button_play_pause.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/skins/default/tile_button_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/carousel/ug-theme-carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/compact/ug-theme-compact.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/default/images/arrow_down_up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/default/images/arrows_strip_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/default/images/arrows_strip_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/default/images/button_fullscreen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/default/images/button_fullscreen_single.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/default/images/button_playpause.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/default/images/button_playpause_single.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/default/ug-theme-default.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/default/ug-theme-default.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/grid/ug-theme-grid.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/slider/ug-theme-slider.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/tiles/ug-theme-tiles.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/tilesgrid/ug-theme-tilesgrid.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/video/images/arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/video/images/arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/video/skin-bottom-text.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/video/skin-right-no-thumb.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/video/skin-right-thumb.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/video/skin-right-title-only.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/UniteGallery/themes/video/ug-theme-video.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/doneck_voennyy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/svg/fit.svg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/Symbol.png" afterPath="$PROJECT_DIR$/static/img/Symbol.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/real estate/top-attr.png" afterPath="$PROJECT_DIR$/static/img/real estate/top-attr.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/syo/timer.png" afterPath="$PROJECT_DIR$/static/img/syo/timer.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/syo/timer_long.png" afterPath="$PROJECT_DIR$/static/img/syo/timer_long.png" />
+    <list default="true" id="897dc545-a554-43c2-be3b-5b20355130e7" name="Default" comment="next commit">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/API/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/block-heading-section.html" afterPath="$PROJECT_DIR$/FrontEnd/app/block-heading-section.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/dashboard.html" afterPath="$PROJECT_DIR$/FrontEnd/app/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/sass/_media.sass" afterPath="$PROJECT_DIR$/FrontEnd/app/sass/_media.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/js/common.js" afterPath="$PROJECT_DIR$/FrontEnd/app/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/js/common.min.js" afterPath="$PROJECT_DIR$/FrontEnd/app/js/common.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/js/scripts.min.js" afterPath="$PROJECT_DIR$/FrontEnd/app/js/scripts.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/post.html" afterPath="$PROJECT_DIR$/FrontEnd/app/post.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/sass/main.sass" afterPath="$PROJECT_DIR$/FrontEnd/app/sass/main.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/gulpfile.js" afterPath="$PROJECT_DIR$/FrontEnd/gulpfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main/views.py" afterPath="$PROJECT_DIR$/Main/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realtor/settings.py" afterPath="$PROJECT_DIR$/Realtor/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Realtor/urls.py" afterPath="$PROJECT_DIR$/Realtor/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/main.min.css" afterPath="$PROJECT_DIR$/static/css/main.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/block-heading-section.html" afterPath="$PROJECT_DIR$/templates/block-heading-section.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/scripts.min.js" afterPath="$PROJECT_DIR$/static/js/scripts.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/FrontEnd/app/ad.html" afterPath="$PROJECT_DIR$/FrontEnd/app/post.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/ad.html" afterPath="$PROJECT_DIR$/templates/post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/post.html" afterPath="$PROJECT_DIR$/templates/post.html" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -160,8 +53,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="467">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -169,21 +62,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FrontEnd/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="77" column="35" lean-forward="false" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+            <state relative-caret-position="527">
+              <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="113" lean-forward="false" selection-start-line="6" selection-start-column="113" selection-end-line="6" selection-end-column="113" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FrontEnd/app/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="420" column="48" lean-forward="false" selection-start-line="420" selection-start-column="48" selection-end-line="420" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scripts.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/scripts.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-83496">
+              <caret line="0" column="65" lean-forward="false" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-527">
-              <caret line="62" column="50" lean-forward="false" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+            <state relative-caret-position="607">
+              <caret line="126" column="64" lean-forward="false" selection-start-line="126" selection-start-column="64" selection-end-line="126" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -193,8 +118,20 @@
         <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+              <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+              <folding>
+                <element signature="e#641#673#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,18 +139,18 @@
       <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+            <state relative-caret-position="427">
+              <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="230" column="34" lean-forward="true" selection-start-line="228" selection-start-column="28" selection-end-line="230" selection-end-column="34" />
+            <state relative-caret-position="314">
+              <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -234,7 +171,7 @@
       <find>ad</find>
       <find>mobile-ad</find>
       <find>.ad</find>
-      <find>ad</find>
+      <find>api/di</find>
     </findStrings>
     <replaceStrings>
       <replace>post</replace>
@@ -249,22 +186,27 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/main.html" />
-        <option value="$PROJECT_DIR$/FrontEnd/gulpfile.js" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Main/apps.py" />
         <option value="$PROJECT_DIR$/Main/admin.py" />
-        <option value="$PROJECT_DIR$/Realtor/settings.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/Main/models.py" />
         <option value="$PROJECT_DIR$/templates/sign_up.html" />
         <option value="$PROJECT_DIR$/templates/ad.html" />
         <option value="$PROJECT_DIR$/FrontEnd/app/sass/_media.sass" />
-        <option value="$PROJECT_DIR$/FrontEnd/app/sass/main.sass" />
         <option value="$PROJECT_DIR$/templates/block-heading-section.html" />
         <option value="$PROJECT_DIR$/FrontEnd/app/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
-        <option value="$PROJECT_DIR$/Realtor/urls.py" />
+        <option value="$PROJECT_DIR$/FrontEnd/app/sass/main.sass" />
+        <option value="$PROJECT_DIR$/templates/post.html" />
+        <option value="$PROJECT_DIR$/Realtor/settings.py" />
         <option value="$PROJECT_DIR$/Main/views.py" />
+        <option value="$PROJECT_DIR$/API/urls.py" />
+        <option value="$PROJECT_DIR$/Realtor/urls.py" />
+        <option value="$PROJECT_DIR$/API/views.py" />
+        <option value="$PROJECT_DIR$/FrontEnd/app/js/common.js" />
+        <option value="$PROJECT_DIR$/static/js/scripts.min.js" />
+        <option value="$PROJECT_DIR$/FrontEnd/gulpfile.js" />
       </list>
     </option>
   </component>
@@ -292,10 +234,12 @@
             <task-name>sass</task-name>
           </GulpTaskState>
           <GulpTaskState>
+            <task-name>html</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
             <dependencies>
-              <dependency value="sass" />
               <dependency value="js" />
-              <dependency value="browser-sync" />
+              <dependency value="sass" />
             </dependencies>
             <task-name>watch</task-name>
           </GulpTaskState>
@@ -304,7 +248,7 @@
           </GulpTaskState>
           <GulpTaskState>
             <dependencies>
-              <dependency value="removedist" />
+              <dependency value="removefiles" />
               <dependency value="imagemin" />
               <dependency value="sass" />
               <dependency value="js" />
@@ -315,10 +259,13 @@
             <task-name>deploy</task-name>
           </GulpTaskState>
           <GulpTaskState>
+            <task-name>templates-app</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
             <task-name>rsync</task-name>
           </GulpTaskState>
           <GulpTaskState>
-            <task-name>removedist</task-name>
+            <task-name>removefiles</task-name>
           </GulpTaskState>
           <GulpTaskState>
             <task-name>clearcache</task-name>
@@ -342,7 +289,9 @@
     <option name="width" value="1378" />
     <option name="height" value="735" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -358,28 +307,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Realtor" type="b2602c69:ProjectViewProjectNode" />
               <item name="Realtor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Realtor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Realtor" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Realtor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Realtor" type="462c0819:PsiDirectoryNode" />
-              <item name="FrontEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Realtor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Realtor" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Realtor" type="b2602c69:ProjectViewProjectNode" />
@@ -394,14 +329,13 @@
             <path>
               <item name="Realtor" type="b2602c69:ProjectViewProjectNode" />
               <item name="Realtor" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,8 +350,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Realtor\templates" />
+      <recent name="D:\Realtor\API" />
       <recent name="D:\Realtor\FrontEnd\app" />
+      <recent name="D:\Realtor\templates" />
       <recent name="D:\Realtor\FrontEnd" />
     </key>
   </component>
@@ -435,15 +370,12 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/ad.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/block-heading-section.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/sass/_fonts.sass</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/sass/_media.sass</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/sass/main.sass</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/js/common.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/js/common.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/js/scripts.min.js</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/gulpfile.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/css/main.min.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/ad.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/block-heading-section.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/js/scripts.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/post.html</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -451,6 +383,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/libs/stickyjs/sticky.min.js</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -551,23 +484,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gulp.js.Build">
+  <component name="RunManager" selected="Django server.Realtor">
     <configuration name="Build" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile>$PROJECT_DIR$/FrontEnd/gulpfile.js</gulpfile>
       <tasks>
         <task>build</task>
-      </tasks>
-      <arguments />
-      <envs />
-    </configuration>
-    <configuration name="Debug" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile>$PROJECT_DIR$/FrontEnd/gulpfile.js</gulpfile>
-      <tasks>
-        <task>debug</task>
       </tasks>
       <arguments />
       <envs />
@@ -595,6 +518,16 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
+    <configuration name="Watch" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/FrontEnd/gulpfile.js</gulpfile>
+      <tasks>
+        <task>watch</task>
+      </tasks>
+      <arguments />
+      <envs />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -603,11 +536,27 @@
       <arguments />
       <envs />
     </configuration>
-    <list size="3">
+    <configuration name="js" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/FrontEnd/gulpfile.js</gulpfile>
+      <tasks>
+        <task>js</task>
+      </tasks>
+      <arguments />
+      <envs />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Django server.Realtor" />
-      <item index="1" class="java.lang.String" itemvalue="Gulp.js.Debug" />
+      <item index="1" class="java.lang.String" itemvalue="Gulp.js.Watch" />
       <item index="2" class="java.lang.String" itemvalue="Gulp.js.Build" />
+      <item index="3" class="java.lang.String" itemvalue="Gulp.js.js" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -658,22 +607,30 @@
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.5191898" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.48880598" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.48081023" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.47654584" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.445629" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45042643" sideWeight="0.3473344" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45042643" sideWeight="0.6526656" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2065053" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@Realtor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.48880598" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@Realtor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.48454157" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -704,53 +661,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main.html" />
-    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/main.html" />
     <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -838,7 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -853,14 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -881,11 +782,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/uploads/filer_public_thumbnails/2017/09/29/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg__210x10000_q85_subsampling-2_upscale.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/uploads/filer_public_thumbnails/2017/09/29/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg__210x10000_q85_subsampling-2_upscale.jpg" />
     <entry file="file://$PROJECT_DIR$/uploads/filer_public_thumbnails/2017/09/29/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg__32x32_q85_crop_subsampling-2_upscale.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -919,26 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1181">
-          <caret line="122" column="27" lean-forward="false" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/block-header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="88" column="5" lean-forward="false" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -963,15 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -979,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -995,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="29" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,34 +877,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/app/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="49" column="35" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="35" />
+          <caret line="49" column="57" lean-forward="false" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/Main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="77" column="35" lean-forward="false" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+        <state relative-caret-position="229">
+          <caret line="59" column="10" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/post.html">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/pycharm.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="66" column="26" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="26" />
+        <state relative-caret-position="2108">
+          <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="430" column="38" lean-forward="false" selection-start-line="430" selection-start-column="38" selection-end-line="430" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="230" column="34" lean-forward="true" selection-start-line="228" selection-start-column="28" selection-end-line="230" selection-end-column="34" />
+        <state relative-caret-position="17">
+          <caret line="230" column="34" lean-forward="false" selection-start-line="228" selection-start-column="28" selection-end-line="230" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="38" column="12" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1042,25 +970,59 @@
     <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="62" column="50" lean-forward="false" selection-start-line="62" selection-start-column="50" selection-end-line="62" selection-end-column="50" />
+        <state relative-caret-position="607">
+          <caret line="126" column="64" lean-forward="false" selection-start-line="126" selection-start-column="64" selection-end-line="126" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/scripts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-83496">
+          <caret line="0" column="65" lean-forward="false" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="113" lean-forward="false" selection-start-line="6" selection-start-column="113" selection-end-line="6" selection-end-column="113" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="19" lean-forward="false" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="420" column="48" lean-forward="false" selection-start-line="420" selection-start-column="48" selection-end-line="420" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="40" column="10" lean-forward="false" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
           <folding />
         </state>
       </provider>

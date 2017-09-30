@@ -42,8 +42,10 @@
 {% include 'block-header.html' %}
 {% include 'block-modals.html' %}
 
+
+
 <div id="main-content" class="container">
-    <div id="sticky_parent" class="row">
+    <div class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="gallery" style="display:none;">
                 {% for photo in post.photos.all %}
@@ -52,7 +54,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div id="sticky_child" class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ui sticky">
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
             <div id="main-card-wrapper" class="ui cards">
                 <div class="card">
                     <div class="content">
@@ -62,7 +64,9 @@
                 </div>
                 <div class="card">
                     <div class="content">
-                        <div class="header">{{ post.price }} <i class="{% if  post.currency == 0 %}ruble{% elif  post.currency == 1 %}dollar{% endif %} icon"></i></div>
+                        <div class="header">{{ post.price }} <i
+                                class="{% if  post.currency == 0 %}ruble{% elif post.currency == 1 %}dollar{% endif %} icon"></i>
+                        </div>
                         <div class="meta">Категория: {{ post.category.name }}</div>
                     </div>
                 </div>
@@ -72,10 +76,16 @@
                 <i class="call icon"></i> Показать номер телефона
             </div>
             {% if user_is_owner %}
-            <div id="close_ad" class="fluid ui button massive">
-                <i class="window close icon"></i> Удалить объявление
-            </div>
+                <div id="close_post" class="fluid ui button massive">
+                    <i class="window close icon"></i> Удалить объявление
+                </div>
             {% endif %}
+            <div id="top_post" class="fluid ui button massive">
+                <i class="star icon"></i> Поместить в топ
+            </div>
+            <div id="untop_post" class="fluid ui button massive">
+                <i class="empty star icon"></i> Убрать из топа
+            </div>
         </div>
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="secondary-card-wrapper" class="ui cards">
@@ -84,7 +94,8 @@
                         <div class="header">
                             Основная информация
                         </div>
-                        <div class="meta">Создатель объявления: <label>{{ post.owner.custom.get_type_display }}</label></div>
+                        <div class="meta">Создатель объявления: <label>{{ post.owner.custom.get_type_display }}</label>
+                        </div>
                         <div class="meta">Количество комнат: <label>{{ post.rooms }}</label></div>
                         <div class="meta">Этажей: <label>{{ post.floor }}</label></div>
                         <div class="meta">Жилая площадь: <label>{{ post.square }} м<sup>2</sup></label></div>

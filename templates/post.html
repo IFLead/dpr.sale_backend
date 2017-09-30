@@ -43,7 +43,6 @@
 {% include 'block-modals.html' %}
 
 
-
 <div id="main-content" class="container">
     <div class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
@@ -75,17 +74,25 @@
                  data-position="bottom center" data-variation="huge">
                 <i class="call icon"></i> Показать номер телефона
             </div>
-            {% if user_is_owner %}
+            {% if user_is_owner or user_is_staff %}
                 <div id="close_post" class="fluid ui button massive">
-                    <i class="window close icon"></i> Удалить объявление
+                    <i class="window trash icon"></i> Удалить объявление
                 </div>
             {% endif %}
-            <div id="top_post" class="fluid ui button massive">
-                <i class="star icon"></i> Поместить в топ
-            </div>
-            <div id="untop_post" class="fluid ui button massive">
-                <i class="empty star icon"></i> Убрать из топа
-            </div>
+            {% if user_is_staff %}
+                <div id="top_post" class="fluid ui button massive {% if post.is_top %}hidden{% endif %}">
+                    <i class="star icon"></i> Поместить в топ
+                </div>
+                <div id="untop_post" class="fluid ui button massive {% if not post.is_top %}hidden{% endif %}">
+                    <i class="empty star icon"></i> Убрать из топа
+                </div>
+                <div id="verify_post" class="fluid ui button massive {% if post.verified %}hidden{% endif %}">
+                    <i class="checkmark icon"></i> Принять
+                </div>
+                <div id="unverify_post" class="fluid ui button massive {% if not post.verified %}hidden{% endif %}">
+                    <i class="remove icon"></i> Отклонить
+                </div>
+            {% endif %}
         </div>
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="secondary-card-wrapper" class="ui cards">

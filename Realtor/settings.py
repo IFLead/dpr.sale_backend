@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'filer',
     'mptt',
     'Main.apps.MainConfig',
+    'API.apps.ApiConfig',
 
 ]
 

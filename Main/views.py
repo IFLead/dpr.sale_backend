@@ -14,7 +14,7 @@ def index(request):
 @staff_member_required
 def dashboard(request):
     return render(request, 'dashboard.html',
-                  {'posts': Post.objects.filter(verified=False), 'cities': City.objects.all()})
+                  {'posts_not_verified': Post.objects.filter(verified=False), 'posts_closed': Post.objects.filter(closed=True), 'cities': City.objects.all()})
 
 
 def post_view(request, post_id):
@@ -22,7 +22,7 @@ def post_view(request, post_id):
         post = Post.objects.get(pk=post_id)
         user_is_owner = post.owner.id == request.user.id
         if post.verified or user_is_owner:
-            return render(request, 'post.html', {'post': post, 'user_is_owner': user_is_owner})
+            return render(request, 'post.html', {'post': post, 'user_is_owner': user_is_owner, 'user_is_staff': request.user.is_staff})
         else:
             return HttpResponseForbidden()
     except Post.DoesNotExist:

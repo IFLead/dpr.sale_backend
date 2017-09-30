@@ -419,13 +419,12 @@ $(document).ready(function () {
                     dataType: 'json',
 
                     success: function (result) {
-
                         $('#estate_district').removeClass('disabled');
-
+                        $('#estate_district').empty();
                         for (var i = 0; i < result.length; i++) {
                             $('#estate_district').append($('<option>', {
-                                value: result.id,
-                                text: result.name
+                                value: result[i].id,
+                                text: result[i].name
                             }));
                         }
                     }

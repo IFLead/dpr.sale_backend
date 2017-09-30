@@ -47,19 +47,19 @@
                 </div>
                 <div class="ui tab segment active" data-tab="ad">
                     <ul id="ad-wtrfl">
-                        {% for post in posts %}
+                        {% for post in not_verified_posts %}
                             <li>
                                 <div>
                                     <div class="ui card">
                                         <div class="content">
                                             <div class="header">
-                                                <a href="{{ ad_request.link.url }}">{{ ad_request.title }}</a>
+                                                <a href="{% url 'post_view' post.id %}">{{ post.title }}</a>
                                             </div>
                                             <div class="meta">
-                                                Тип: {{ ad_request.type }}
+                                                Тип: {{ post.category.name }}
                                             </div>
-                                            <div class="description">
-                                                {{ ad_request.date }}
+                                            <div class="meta">
+                                                <span class="date">{{ post.created }}</span>
                                             </div>
                                         </div>
                                         <div class="extra content">

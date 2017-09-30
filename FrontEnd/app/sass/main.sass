@@ -414,7 +414,7 @@ header.with-border
     border: 1px solid white
     transition: all 0.5s
 
-#close_post, #untop_post
+#close_post, #untop_post, #unverify_post
   background-color: red
   color: $main-color
   border-radius: 10px
@@ -424,7 +424,7 @@ header.with-border
   &:hover, &:focus
     background-color: darken(red, 10%)
 
-#top_post
+#top_post, #verify_post
   @extend #untop_post
   background-color: green
   &:hover, &:focus

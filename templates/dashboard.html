@@ -47,7 +47,7 @@
                 </div>
                 <div class="ui tab segment active" data-tab="ad">
                     <ul id="ad-wtrfl">
-                        {% for post in posts %}
+                        {% for post in posts_not_allowed %}
                             <li>
                                 <div>
                                     <div class="ui card">
@@ -65,7 +65,7 @@
                                         <div class="extra content">
                                             <div class="ui two buttons">
                                                 <button class="positive ui button accept_ad_button">Принять</button>
-                                                <button class="negative ui button decline_ad_button">Отклонить</button>
+                                                <button class="negative ui button decline_ad_button">Удалить</button>
                                             </div>
                                         </div>
                                     </div>
@@ -109,22 +109,22 @@
                 </div>
                 <div class="ui tab segment" data-tab="closed">
                     <ul id="closed-wtrfl">
-                        {% for closed_ad in closed_ads %}
+                        {% for post in posts_closed %}
                             <li>
                                 <div>
                                     <div class="ui card">
                                         <div class="content">
                                             <div class="header">
-                                                <a href="{{ closed_ad.link.url }}">{{ closed_ad.title }}</a>
+                                                <a href="{% url 'post_view' post.id %}">{{ post.title }}</a>
                                             </div>
                                             <div class="meta">
-                                                Статус: {{ closed_ad.status }}
+                                                Тип: {{ post.category.name }}
                                             </div>
                                             <div class="meta">
-                                                Номер объявления: {{ closed_ad.id }}
+                                                Номер объявления: {{ post.id }}
                                             </div>
                                             <div class="description">
-                                                Причина: {{ closed_ad.reason }}
+                                                Причина: {{ post.reason }}
                                             </div>
                                         </div>
                                     </div>

@@ -13,18 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+from django.conf.urls import url
 from django.conf.urls.static import static
 from django.contrib import admin
-from Main import views
+from API import views
 from Realtor import settings
 from Realtor.settings import MEDIA_ROOT
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
-    url(r'^dash', views.dashboard),
-    url(r'^sign_up/', views.sign_up),
-    url(r'^api/', include('API.urls')),
-    url(r'^(?P<post_id>\d+)/$', views.post_view, name='post_view'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'districts/', views.districts),
+]
