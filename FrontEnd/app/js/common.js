@@ -437,6 +437,10 @@ $(document).ready(function () {
     $('#district').dropdown('set selected', -1);
     $('#category').dropdown('set selected', -1);
     $('.currency-filter').dropdown('set selected', '0');
-    $('#sticky').stick_in_parent();
+
+    if(window.innerWidth >= 992){
+        $('#sticky').stick_in_parent();
+    }
+
 
 });
