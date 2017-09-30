@@ -486,18 +486,18 @@ $(document).ready(function () {
         $('#data_loader').addClass('active');
 
         var filters = {
-            category: parseInt($('#category').dropdown('get value')),
-            city: parseInt($('#city').dropdown('get value')),
-            district: parseInt($('#district').dropdown('get value')),
-            min_square: parseInt($('#min_square').val()),
-            max_square: parseInt($('#max_square').val()),
-            min_walls: parseInt($('#min_walls').val()),
-            max_walls: parseInt($('#max_walls').val()),
-            min_floor: parseInt($('#min_floor').val()),
-            max_floor: parseInt($('#max_floor').val()),
-            min_price: parseInt($('#min_price').val()),
-            max_price: parseInt($('#max_price').val()),
-            currency: parseInt($($('.currency-filter')[0]).dropdown('get value'))
+            category: $('#category').dropdown('get value'),
+            city: $('#city').dropdown('get value'),
+            district: $('#district').dropdown('get value'),
+            min_square: $('#min_square').val(),
+            max_square: $('#max_square').val(),
+            min_walls: $('#min_walls').val(),
+            max_walls: $('#max_walls').val(),
+            min_floor: $('#min_floor').val(),
+            max_floor: $('#max_floor').val(),
+            min_price: $('#min_price').val(),
+            max_price: $('#max_price').val(),
+            currency: $($('.currency-filter')[0]).dropdown('get value')
         };
 
         localStorage.setItem('filters', JSON.stringify(filters));
@@ -526,8 +526,9 @@ $(document).ready(function () {
 
                 $('#waterfall').attr('hidden', false);
                 $('#data_loader').removeClass('active');
-                $('#waterfall').append(result);
-
+                for (var i = 0; i < result.length; i ++){
+                    $('#waterfall').append(result[i].html);
+                }
             }
         });
     });
@@ -537,8 +538,8 @@ $(document).ready(function () {
         $(this).addClass('loading disabled');
 
         $.ajax({
-            url: '/api/load-more',
-            type: 'GET',
+            url: '/api/load-more/',
+            type: 'POST',
             data: {
                 filters: JSON.parse(localStorage.getItem('filters')),
                 post_ids: JSON.parse(localStorage.getItem('post_ids'))
