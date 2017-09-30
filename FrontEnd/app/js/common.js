@@ -1,5 +1,29 @@
 $(document).ready(function () {
+    function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
 
+    var csrftoken = getCookie('csrftoken');
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+
+
+    localStorage.setItem('post_ids', JSON.stringify([]));
 
     $('#clear_button').click(function () {
 
@@ -403,7 +427,6 @@ $(document).ready(function () {
 
         onChange: function (value) {
 
-            // $('#estate_district').dropdown('set selected', -1);
             $('#estate_district option').remove();
 
             if (value !== '' && value !== '-1') {
@@ -450,6 +473,28 @@ $(document).ready(function () {
     });
 
     $('#search_button').click(function () {
+
+        $('#waterfall li').remove();
+        $('#waterfall').attr('hidden', true);
+        $('#data_loader').addClass('active');
+
+        var filters = {
+            category: $('#category').dropdown('get value'),
+            city: $('#city').dropdown('get value'),
+            district: $('#district').dropdown('get value'),
+            min_square: $('#min_square').val(),
+            max_square: $('#max_square').val(),
+            min_walls: $('#min_walls').val(),
+            max_walls: $('#max_walls').val(),
+            min_floor: $('#min_floor').val(),
+            max_floor: $('#max_floor').val(),
+            min_price: $('#min_price').val(),
+            max_price: $('#max_price').val(),
+            currency: $($('.currency-filter')[0]).dropdown('get value')
+        };
+
+        localStorage.setItem('filters', JSON.stringify(filters));
+
         $.ajax({
             url: '/api/search',
             type: 'POST',
@@ -470,9 +515,36 @@ $(document).ready(function () {
             dataType: 'json',
 
             success: function (result) {
-               console.log(result);
+                console.log(result);
+
+                $('#waterfall').attr('hidden', false);
+                $('#data_loader').removeClass('active');
+                $('#waterfall').append(result);
+
             }
         });
+    });
+
+    $('#more_button').click(function () {
+
+        $(this).addClass('loading disabled');
+
+        $.ajax({
+            url: '/api/load-more',
+            type: 'GET',
+            data: {
+                filters: JSON.parse(localStorage.getItem('filters')),
+                post_ids: JSON.parse(localStorage.getItem('post_ids'))
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                console.log(result);
+                localStorage.setItem('post_ids', JSON.stringify(result.post_ids));
+
+            }
+        });
+
     });
 
 });
