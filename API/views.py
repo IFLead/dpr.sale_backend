@@ -97,10 +97,9 @@ def delete_post(request):
 @staff_member_required
 def verify_user(request):
     try:
-        post = User.objects.get(pk=request.POST['user_id'])
-        post.verified = True
-        post.save()
-        # todo ПОЧЕМУ В ВЕРИФИКАЦИИ ЮЗЕРА МЫ ВЕРИФИЦИРУЕМ ОБЪЯВЛЕНИЕ????
+        user = User.objects.get(pk=request.POST['user_id'])
+        user.verified = True
+        user.save()
         return JsonResponse({'status': 'OK', 'message': 'success'})
     except Post.DoesNotExist:
         return JsonResponse({'status': 'error', 'message': 'has no this object'})
@@ -111,9 +110,9 @@ def verify_user(request):
 @staff_member_required
 def unverify_user(request):
     try:
-        post = User.objects.get(pk=request.POST['user_id'])
-        post.verified = False
-        post.save()
+        user = User.objects.get(pk=request.POST['user_id'])
+        user.verified = False
+        user.save()
         return JsonResponse({'status': 'OK', 'message': 'success'})
     except Post.DoesNotExist:
         return JsonResponse({'status': 'error', 'message': 'has no this object'})
