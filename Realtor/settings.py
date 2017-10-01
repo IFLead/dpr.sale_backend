@@ -35,13 +35,30 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'easy_thumbnails',
     'filer',
     'mptt',
     'Main.apps.MainConfig',
     'API.apps.ApiConfig',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 
 ]
+
+# Allauth config
+SITE_ID = 1
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_LOGOUT_ON_GET = True
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_LOGIN_ON_PASSWORD_RESET = True
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_SIGNUP_FORM_CLASS = 'Main.forms.SignupForm'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -105,6 +122,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    # Default backend
+    "django.contrib.auth.backends.ModelBackend",
+    # `allauth` specific authentication methods, such as login by e-mail
+    "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
 THUMBNAIL_PROCESSORS = (

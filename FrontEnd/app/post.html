@@ -43,8 +43,7 @@
 {% include 'block-modals.html' %}
 
 
-
-<div id="main-content" class="container">
+<div id="main-content" data-post-id="{{ post.id }}" class="container">
     <div class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="gallery" style="display:none;">
@@ -54,12 +53,15 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+        <div id="sticky" class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ui sticky">
             <div id="main-card-wrapper" class="ui cards">
                 <div class="card">
                     <div class="content">
                         <div class="header">{{ post.title }}</div>
-                        <div class="meta">{{ post.district.city.name }} {{ post.district.name }}</div>
+                        <div class="meta">Город: <span id="city-sector">{{ post.district.city.name }}</span></div>
+                        {% if post.district.name %}
+                            <div class="meta">Район: <span id="district-sector">{{ post.district.name }}</span>
+                            </div>{% endif %}
                     </div>
                 </div>
                 <div class="card">
@@ -67,25 +69,41 @@
                         <div class="header">{{ post.price }} <i
                                 class="{% if  post.currency == 0 %}ruble{% elif post.currency == 1 %}dollar{% endif %} icon"></i>
                         </div>
-                        <div class="meta">Категория: {{ post.category.name }}</div>
+                        <div class="meta">Категория: <span id="category-sector">{{ post.category.name }}</span></div>
                     </div>
                 </div>
             </div>
-            <div id="get_number" class="fluid ui button massive" data-title="{{ owner.phone }}"
+            <div id="get_number" class="fluid ui button massive" data-title="{{ post.owner.custom.phone }}"
                  data-position="bottom center" data-variation="huge">
                 <i class="call icon"></i> Показать номер телефона
             </div>
-            {% if user_is_owner %}
+            {% if user_is_owner or user_is_staff %}
                 <div id="close_post" class="fluid ui button massive">
-                    <i class="window close icon"></i> Удалить объявление
+                    <i class="window trash icon"></i> Удалить объявление
                 </div>
             {% endif %}
-            <div id="top_post" class="fluid ui button massive">
-                <i class="star icon"></i> Поместить в топ
-            </div>
-            <div id="untop_post" class="fluid ui button massive">
-                <i class="empty star icon"></i> Убрать из топа
-            </div>
+            {% if user_is_staff %}
+                {% if not post.is_top %}
+                    <div id="top_post" class="fluid ui button massive">
+                        <i class="star icon"></i> Поместить в топ
+                    </div>
+                {% endif %}
+                {% if post.is_top %}
+                    <div id="untop_post" class="fluid ui button massive">
+                        <i class="empty star icon"></i> Убрать из топа
+                    </div>
+                {% endif %}
+                {% if not post.verified %}
+                    <div id="verify_post" class="fluid ui button massive">
+                        <i class="checkmark icon"></i> Принять
+                    </div>
+                {% endif %}
+                {% if post.verified %}
+                    <div id="unverify_post" class="fluid ui button massive">
+                        <i class="remove icon"></i> Отклонить
+                    </div>
+                {% endif %}
+            {% endif %}
         </div>
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="secondary-card-wrapper" class="ui cards">
@@ -107,6 +125,7 @@
                             Дополнительная информация
                         </div>
                         <div class="meta">Этажность: <label>{{ post.storeys }}</label></div>
+                        <div class="meta">Дата публикации: <label>{{ post.created }}</label></div>
                     </div>
                 </div>
                 <div class="card">
@@ -114,7 +133,7 @@
                         <div class="header">
                             Описание
                         </div>
-                        <div class="meta">{{ post.description }}
+                        <div id="description-sector" class="meta">{{ post.description }}
                         </div>
                     </div>
                 </div>
@@ -122,7 +141,6 @@
         </div>
     </div>
 </div>
-
 
 {% include 'block-footer.html' %}
 {% include 'block-scripts.html' %}

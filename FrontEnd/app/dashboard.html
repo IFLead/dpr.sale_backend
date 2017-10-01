@@ -36,18 +36,25 @@
 
 <body>
 
+{% include 'block-header.html' %}
+
+
 <div class="container">
     <div class="row">
+        <button id="dashboard-add-post" class="ui basic large button ">
+            <i class="add circle icon"></i>
+            Добавить объявление
+        </button>
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 global-page">
             <div id="global-page">
-                <div class="ui secondary menu">
+                <div id="panel_tabs" class="ui secondary menu">
                     <a class="item active" data-tab="ad">Объявления</a>
                     <a class="item" data-tab="account">Аккаунты</a>
                     <a class="item" data-tab="closed">Закрытые сделки</a>
                 </div>
                 <div class="ui tab segment active" data-tab="ad">
-                    <ul id="ad-wtrfl">
-                        {% for post in not_verified_posts %}
+                    <ul id="post-wtrfl">
+                        {% for post in posts_not_verified %}
                             <li>
                                 <div>
                                     <div class="ui card">
@@ -59,13 +66,20 @@
                                                 Тип: {{ post.category.name }}
                                             </div>
                                             <div class="meta">
+                                                Номер объявления: {{ post.id }}
+                                            </div>
+                                            <div class="meta">
                                                 <span class="date">{{ post.created }}</span>
                                             </div>
                                         </div>
                                         <div class="extra content">
-                                            <div class="ui two buttons">
-                                                <button class="positive ui button accept_ad_button">Принять</button>
-                                                <button class="negative ui button decline_ad_button">Отклонить</button>
+                                            <div class="ui two buttons" data-post-id="{{ post.id }}">
+                                                <div
+                                                     class="green ui button huge verify_post_button">Принять
+                                                </div>
+                                                <div
+                                                     class="red ui button huge delete_post_button">Удалить
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -76,55 +90,56 @@
                 </div>
                 <div class="ui tab segment" data-tab="account">
                     <ul id="account-wtrfl">
-                        {% for acc_request in acc_requests %}
+                        {% for account in accounts %}
                             <li>
                                 <div>
                                     <div class="ui card">
                                         <div class="content">
                                             <div class="header">
-                                                {{ acc_request.last_name }} {{ acc_request.first_name }}
+                                                {{ account.first_name }} {{ account.last_name }}
                                             </div>
-                                            <div class="meta">
-                                                Тип: {{ acc_request.type }}
+                                            {#                                            <div class="meta">#}
+                                            {#                                                Тип: {{ post.owner.custom.get_type_display }}#}
+                                            {#                                            </div>#}
+                                            <div class="description">
+                                                E-mail: {{ account.email }}
                                             </div>
                                             <div class="description">
-                                                E-mail: {{ acc_request.email }}
-                                            </div>
-                                            <div class="description">
-                                                Телефон: {{ acc_request.custom_data.phone }}
+                                                Телефон: {{ account.custom.phone }}
                                             </div>
                                         </div>
                                         <div class="extra content">
-                                            <div class="ui two buttons">
-                                                <button class="positive ui button accept_acc_button">Принять</button>
-                                                <button class="negative ui button decline_acc_button">Отклонить</button>
+                                            <div class="ui two buttons" data-account-id="{{ account.id }}">
+                                                <div class="green ui button huge verify_user_button">Принять
+                                                </div>
+                                                <div class="red ui button huge unverify_user_button">Отклонить
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                         {% endfor %}
-                        <!--todo Хранить данные в data атрибутах для быстрого доступа-->
                     </ul>
                 </div>
                 <div class="ui tab segment" data-tab="closed">
                     <ul id="closed-wtrfl">
-                        {% for closed_ad in closed_ads %}
+                        {% for post in posts_closed %}
                             <li>
                                 <div>
                                     <div class="ui card">
                                         <div class="content">
                                             <div class="header">
-                                                <a href="{{ closed_ad.link.url }}">{{ closed_ad.title }}</a>
+                                                <a href="{% url 'post_view' post.id %}">{{ post.title }}</a>
                                             </div>
                                             <div class="meta">
-                                                Статус: {{ closed_ad.status }}
+                                                Тип: {{ post.category.name }}
                                             </div>
                                             <div class="meta">
-                                                Номер объявления: {{ closed_ad.id }}
+                                                Номер объявления: {{ post.id }}
                                             </div>
                                             <div class="description">
-                                                Причина: {{ closed_ad.reason }}
+                                                Причина: {{ post.reason }}
                                             </div>
                                         </div>
                                     </div>

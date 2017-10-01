@@ -30,6 +30,10 @@ $(document).ready(function () {
         }
     });
 
+    function is_auth() {
+        return $('#is_autorized').val() === 'true'
+    }
+
     localStorage.setItem('post_ids', JSON.stringify([]));
 
     $('#clear_button').click(function () {
@@ -116,13 +120,13 @@ $(document).ready(function () {
         $('#profile_email').attr('readonly', true);
     });
 
-    $('#phone_number').mask('+38-(000)-000-00-00');
+    $('#phone').mask('+38-(000)-000-00-00');
     $('#profile_phone').mask('+38-(000)-000-00-00');
 
     $('#sign_in_form').form({
         fields: {
             email: {
-                identifier: 'email',
+                identifier: 'id_login',
                 rules: [
                     {
                         type: 'empty',
@@ -158,8 +162,8 @@ $(document).ready(function () {
                     }
                 ]
             },
-            second_name: {
-                identifier: 'second_name',
+            last_name: {
+                identifier: 'last_name',
                 rules: [
                     {
                         type: 'empty',
@@ -168,7 +172,7 @@ $(document).ready(function () {
                 ]
             },
             username: {
-                identifier: 'username',
+                identifier: 'id_username',
                 rules: [
                     {
                         type: 'empty',
@@ -177,7 +181,7 @@ $(document).ready(function () {
                 ]
             },
             email: {
-                identifier: 'email',
+                identifier: 'id_email',
                 rules: [
                     {
                         type: 'empty',
@@ -311,7 +315,13 @@ $(document).ready(function () {
 
 
     $('#add_post').click(function () {
-        $('#post_modal').modal('show');
+        if(is_auth()){
+            $('#post_modal').modal('show');
+        }
+        else{
+            noty('Войдите или зарегистрируйтесь');
+        }
+
     });
 
     $('#hidden-new-file1').on('change', function () {
@@ -339,7 +349,7 @@ $(document).ready(function () {
     }
 
     $('#sign_up').click(function () {
-        noty('Войдите или зарегистрируйтесь');
+        location.href = '/sign_up';
     });
 
     $('#waterfall').NewWaterfall();
@@ -660,7 +670,7 @@ $(document).ready(function () {
     });
 
 
-    $('.delete_post_button').click (function () {
+    $('.delete_post_button').click(function () {
 
         $.ajax({
             url: '/api/post/delete/',
@@ -707,5 +717,8 @@ $(document).ready(function () {
             }
         });
     });
+
+
+    $('#user_type').dropdown();
 
 });

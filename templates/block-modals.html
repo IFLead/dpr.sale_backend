@@ -1,3 +1,4 @@
+{% load account %}
 <div id="settings_modal" class="ui modal grid">
     <div class="column">
         <h2 class="ui image header">
@@ -237,30 +238,30 @@
                 Войдите в свой аккаунт
             </div>
         </h2>
-        <form id="#sign_in_form" class="ui form" action="/" method="post">
+        <form id="sign_in_form" class="ui form" method="post" action="/accounts/login/">
             {% csrf_token %}
             <div class="ui segment">
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input id="email" type="email" name="email" placeholder="E-mail адрес">
+                        <input id="id_login" type="email" name="login" placeholder="E-mail адрес">
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input id="password" type="password" name="password" placeholder="Пароль">
+                        <input id="id_password" type="password" name="password" placeholder="Пароль">
                     </div>
                 </div>
                 <div class="buttons-wrapper-form">
-                    <div id="sign_in_button" class="ui submit button">Войти</div>
-                    <p><a href="#">Забыли пароль?</a></p>
+                    <button id="sign_in_button" class="ui submit button">Войти</button>
+                    <p><a href="{%  url 'account_reset_password' %}">Забыли пароль?</a></p>
                 </div>
             </div>
             <div class="ui error message"></div>
         </form>
         <div class="ui message">
-            Впервые у нас? <a href="#">Регистрация</a>
+            Впервые у нас? <a href="/sign_up">Регистрация</a>
         </div>
     </div>
 </div>

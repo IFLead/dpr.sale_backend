@@ -1,8 +1,9 @@
 {% load staticfiles %}
+{% load account %}
 <header class="with-border">
     <div class="ui right red corner massive label">
         <p style="margin: 10px; transform: rotate(45deg);">BETA</p>
-      </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-1 col-md-1 col-lg-1 col-xs-1 symbol-wrapper">
@@ -11,22 +12,30 @@
                 </a>
             </div>
 
-            <!--<div class="col-md-2 col-md-push-6 col-lg-2 col-lg-push-6 col-sm-2 col-sm-push-6 col-xs-4 col-xs-push-2">-->
-            <!--<input id="sign_in" class="sign-in-button" type="button" value="Войти">-->
-            <!--</div>-->
-            <!--<div class="col-md-3 col-md-push-6 col-sm-3 col-sm-push-6 col-lg-3 col-lg-push-6 col-xs-5 col-xs-push-1">-->
-            <!--<input id="sign_up" class="sign-up-button" type="button" value="Регистрация">-->
-            <!--</div>-->
-
-
-            <div class="col-md-3 col-md-push-7 col-sm-3 col-sm-push-7 col-lg-3 col-lg-push-7 col-xs-7 col-xs-push-3">
-                <input id="profile_button" class="profile-button" type="button" value="Чернышов Богдан">
-                <div class="ui popup">
-                    <div class="column"><p id="settings_button" class="profile-links">Настройки</p></div>
-                    <div class="column"><p id="history_button" class="profile-links">Объявления</p></div>
-                    <div class="column"><p id="exit_button" class="profile-links">Выйти</p></div>
+            {% if not user.is_authenticated %}
+                <div class="col-md-2 col-md-push-6 col-lg-2 col-lg-push-6 col-sm-2 col-sm-push-6 col-xs-4 col-xs-push-2">
+                    <input id="sign_in" class="sign-in-button" type="button" value="Войти">
                 </div>
-            </div>
+                <div class="col-md-3 col-md-push-6 col-sm-3 col-sm-push-6 col-lg-3 col-lg-push-6 col-xs-5 col-xs-push-1">
+                    <input id="sign_up" class="sign-up-button" type="button" value="Регистрация">
+                </div>
+            {% endif %}
+            {% if user.is_authenticated %}
+                <div class="col-md-3 col-md-push-7 col-sm-3 col-sm-push-7 col-lg-3 col-lg-push-7 col-xs-7 col-xs-push-3">
+                    <input id="profile_button" class="profile-button" type="button"
+                           value="{{ user.first_name }} {{ user.last_name }}">
+                    <div class="ui popup">
+                        <div class="column"><p id="settings_button" class="profile-links">Настройки</p></div>
+                        <div class="column"><p id="history_button" class="profile-links">Объявления</p></div>
+                        <div class="column"><a href="{% url 'account_logout' %}" class="profile-links">Выйти</a></div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </div>
+    {% if user.is_authenticated %}
+        <input id="is_autorized" type="hidden" value="true">
+    {% else %}
+        <input id="is_autorized" type="hidden" value="false">
+    {% endif %}
 </header>

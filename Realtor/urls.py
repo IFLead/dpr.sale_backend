@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^dash/', views.dashboard),
     url(r'^sign_up/', views.sign_up),
     url(r'^api/', include('API.urls')),
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^(?P<post_id>\d+)/$', views.post_view, name='post_view'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

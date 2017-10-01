@@ -1,3 +1,4 @@
 django-filer
 django=latest
 psycopg2
+django-allauth

@@ -1,3 +1,4 @@
+{% load account %}
 <div id="settings_modal" class="ui modal grid">
     <div class="column">
         <h2 class="ui image header">
@@ -5,7 +6,7 @@
                 Настройки
             </div>
         </h2>
-        <form id="settings_form" class="ui form" method="post" action="/configure_acc/">
+        <form id="settings_form" class="ui form">
             <div class="ui segment">
                 <div class="two fields">
                     <div class="field">
@@ -60,30 +61,30 @@
             </div>
         </h2>
         <div id="piled_segment" class="ui piled segment">
-            {% for self_ad in self_adds %}
+            {% for self_post in self_posts %}
                 <div class="field">
-                    <a href="{{ self_ad.url }}">{{ self_ad.name }}</a>
+                    <a href="{{ self_post.url }}">{{ self_post.name }}</a>
                 </div>
             {% endfor %}
         </div>
     </div>
 </div>
 
-<div id="delete_ad_modal" class="ui modal grid">
+<div id="delete_post_modal" class="ui modal grid">
     <div class="column">
         <h2 class="ui image header">
             <div class="content enter-form-header">
                 Почему Вы решили удалить объявление?
             </div>
         </h2>
-        <form id="delete_form" class="ui form" method="post" action="/delete_ad">
+        <form id="delete_form" class="ui form">
             <div class="ui segment">
                 <div class="field">
                     <label>Комментарий</label>
                     <textarea id="commentary" name="commentary"></textarea>
                 </div>
                 <div class="buttons-wrapper-form">
-                    <div id="delete-ok-button" class="ui submit button">ОК</div>
+                    <div id="confirm_post_close" class="ui submit button disabled">ОК</div>
                 </div>
             </div>
             <div class="ui error message"></div>
@@ -91,14 +92,14 @@
     </div>
 </div>
 
-<div id="ad_modal" class="ui modal grid">
+<div id="post_modal" class="ui modal grid">
     <div class="column">
         <h2 class="ui image header">
             <div class="content enter-form-header">
                 Создание объявления
             </div>
         </h2>
-        <form id="add_ad_form" class="ui form" method="post" action="/send_request/">
+        <form id="add_post_form" class="ui form" method="post" action="/send_request/">
             <p>Заполните указанные ниже поля</p>
             <div class="field">
                 <label>Заголовок</label>
@@ -107,7 +108,7 @@
             <div class="two fields">
                 <div class="field">
                     <label>Категория</label>
-                    <select id="ad_type" name="ad_type" class="ui dropdown">
+                    <select id="post_type" name="post_type" class="ui dropdown">
                         <option value="">Категория</option>
                         {% for category in categories %}
                             <option value="{{ category.id }}">{{ category.name }}</option>
@@ -157,16 +158,15 @@
                             <option value="{{ city.id }}">{{ city.name }}</option>
                         {% endfor %}
                     </select>
-{#                todo Не работает евент для селекта  (с дивом работает) #}
                 </div>
                 <div class="field">
                     <label>Район</label>
-                    <select id="estate_district" name="estate_district" class="ui dropdown disabled">
+                    <select id="estate_district" name="estate_district" class="ui dropdown">
+                        <option value="">Район</option>
                     </select>
                 </div>
             </div>
 
-{# todo Добавить кнопку для закрытия модалок #}
             <div class="field">
                 <label>Описание</label>
                 <textarea id="description"></textarea>
@@ -224,6 +224,7 @@
                 </div>
             </div>
             <div class="ui primary submit button">Отправить на модерацию</div>
+            <div id="close_post_add_modal" class="ui primary button">Закрыть</div>
 
             <div class="ui error message"></div>
         </form>
@@ -237,30 +238,30 @@
                 Войдите в свой аккаунт
             </div>
         </h2>
-        <form id="#sign_in_form" class="ui form" action="/" method="post">
+        <form id="sign_in_form" class="ui form" method="post" action="/accounts/login/">
             {% csrf_token %}
             <div class="ui segment">
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input id="email" type="email" name="email" placeholder="E-mail адрес">
+                        <input id="id_login" type="email" name="login" placeholder="E-mail адрес">
                     </div>
                 </div>
                 <div class="field">
                     <div class="ui left icon input">
                         <i class="lock icon"></i>
-                        <input id="password" type="password" name="password" placeholder="Пароль">
+                        <input id="id_password" type="password" name="password" placeholder="Пароль">
                     </div>
                 </div>
                 <div class="buttons-wrapper-form">
-                    <div id="sign_in_button" class="ui submit button">Войти</div>
-                    <p><a href="#">Забыли пароль?</a></p>
+                    <button id="sign_in_button" class="ui submit button">Войти</button>
+                    <p><a href="{%  url 'account_reset_password' %}">Забыли пароль?</a></p>
                 </div>
             </div>
             <div class="ui error message"></div>
         </form>
         <div class="ui message">
-            Впервые у нас? <a href="#">Регистрация</a>
+            Впервые у нас? <a href="/sign_up">Регистрация</a>
         </div>
     </div>
 </div>
