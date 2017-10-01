@@ -63,7 +63,7 @@
         <div id="piled_segment" class="ui piled segment">
             {% for self_post in self_posts %}
                 <div class="field">
-                    <a href="{{ self_post.url }}">{{ self_post.name }}</a>
+                    <a href="{% url 'post_view' self_post.id %}">{{ self_post.title }}</a>
                 </div>
             {% endfor %}
         </div>
@@ -99,7 +99,8 @@
                 Создание объявления
             </div>
         </h2>
-        <form id="add_post_form" class="ui form" method="post" action="/send_request/">
+        <form id="add_post_form" class="ui form" enctype="multipart/form-data" method="post" action="/send_request/">
+        {% csrf_token %}
             <p>Заполните указанные ниже поля</p>
             <div class="field">
                 <label>Заголовок</label>
@@ -169,16 +170,16 @@
 
             <div class="field">
                 <label>Описание</label>
-                <textarea id="description"></textarea>
+                <textarea name="description" id="description"></textarea>
             </div>
 
             <div class="three fields">
                 <div class="field">
                     <label for="hidden-new-file1" class="ui icon button add-photo-button">
                         <i class="cloud icon"></i>
-                        Фотография
+                        Главное фото
                     </label>
-                    <input type="file" id="hidden-new-file1" style="display: none">
+                    <input name="main_photo" type="file" id="hidden-new-file1" style="display: none">
                 </div>
 
                 <div class="field">
@@ -186,11 +187,19 @@
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
-                    <input type="file" id="hidden-new-file2" style="display: none">
+                    <input type="file" id="hidden-new-file1" style="display: none">
                 </div>
 
                 <div class="field">
                     <label for="hidden-new-file3" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file2" style="display: none">
+                </div>
+
+                <div class="field">
+                    <label for="hidden-new-file2" class="ui icon button add-photo-button">
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
@@ -222,9 +231,18 @@
                     </label>
                     <input type="file" id="hidden-new-file6" style="display: none">
                 </div>
+                <div class="field">
+                    <label for="hidden-new-file2" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file7" style="display: none">
+                </div>
             </div>
             <div class="ui primary submit button">Отправить на модерацию</div>
             <div id="close_post_add_modal" class="ui primary button">Закрыть</div>
+
+
 
             <div class="ui error message"></div>
         </form>
