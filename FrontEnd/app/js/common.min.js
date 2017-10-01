@@ -150,7 +150,10 @@ $(document).ready(function () {
         }
     });
 
-
+    $('#acc-signin').form();
+    $('#pswd-rst').form();
+    $('#reset-from-key').form();
+    $('#pswd-change').form();
     $('#sign_up_form').form({
         fields: {
             first_name: {

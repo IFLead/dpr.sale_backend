@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+{% load staticfiles %}
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>{% block head_title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}">
     {% block extra_head %}
     {% endblock %}
 </head>
@@ -12,14 +14,15 @@
 {% block body %}
 
     {% if messages %}
-        <div>
-            <strong>Messages:</strong>
+        <div class="ui positive message" style="margin-left: 40px; margin-right: 40px; text-align: center;">
+            Сообщения:
             <ul>
                 {% for message in messages %}
                     <li>{{ message }}</li>
                 {% endfor %}
             </ul>
         </div>
+
     {% endif %}
     {% block content %}
     {% endblock %}
