@@ -154,6 +154,8 @@ $(document).ready(function () {
     $('#pswd-rst').form();
     $('#reset-from-key').form();
     $('#pswd-change').form();
+    $('#allauth_sign_up').form();
+    $('#mail_confirm').form();
     $('#sign_up_form').form({
         fields: {
             first_name: {
@@ -272,9 +274,10 @@ $(document).ready(function () {
             price: {
                 identifier: 'estate_price',
                 rules: [
+
                     {
-                        type: 'empty',
-                        prompt: 'Укажите цену'
+                        type: 'integer[1..999999999]',
+                        prompt: 'Только целые суммы'
                     }
                 ]
             },
@@ -282,8 +285,26 @@ $(document).ready(function () {
                 identifier: 'rooms_count',
                 rules: [
                     {
-                        type: 'empty',
-                        prompt: 'Укажите количество комнат'
+                        type: 'integer[1..100]',
+                        prompt: 'Укажите корректное количество комнат'
+                    }
+                ]
+            },
+            floor: {
+                identifier: 'estate_floor',
+                rules: [
+                    {
+                        type: 'integer[1..1000]',
+                        prompt: 'Укажите корректное количество этажей'
+                    }
+                ]
+            },
+             storeys: {
+                identifier: 'estate_storeys',
+                rules: [
+                    {
+                        type: 'integer[1..1000]',
+                        prompt: 'Укажите корректное количество этажности здания'
                     }
                 ]
             },
@@ -309,19 +330,33 @@ $(document).ready(function () {
                     type: 'empty',
                     prompt: 'Выберите район'
                 }]
+            },
+            estate_currency_value: {
+                identifier: 'estate_currency_value',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Ошибка выбора валюты'
+                }]
             }
         }
     });
 
-    $('#estate_currency').dropdown('set selected', '0');
+    $('#estate_currency').dropdown({
+        onChange: function () {
+            $('#estate_currency_value').val($(this).dropdown('get value'));
+        }
+    }).dropdown('set selected', '0');
+
+
+
     $('#post_type').dropdown();
 
 
     $('#add_post').click(function () {
-        if(is_auth()){
+        if (is_auth()) {
             $('#post_modal').modal('show');
         }
-        else{
+        else {
             noty('Войдите или зарегистрируйтесь');
         }
 

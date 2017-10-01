@@ -7,9 +7,8 @@
 
 {% block content %}
     <div style="text-align: center; margin-top: 30px"><h1>Авторизация</h1></div>
-    <div id="main-signup-content" class="ui middle massive form">
-
-        <form id="acc-signin" class="ui form" method="post" action="/accounts/login/">
+    <div id="main-signup-content" class="ui middle center aligned grid">
+        <form id="allauth_sign_up" class="ui form segment form-lay" method="post" action="{% url 'account_login' %}">
             {% csrf_token %}
             <div class="field">
                 <label>Ваш E-mail</label>
@@ -19,10 +18,7 @@
                 <label>Ваш пароль</label>
                 <input id="id_password" name="password" type="password" required>
             </div>
-
-
             <div class="ui primary submit button">Войти</div>
-
             <div class="ui error message"></div>
             {% if form.errors %}
                 <div class="ui error message" style="display: block;">
@@ -30,7 +26,13 @@
                         Допущены следующие ошибки
                     </div>
                     <ul class="list">
-                        {% if form.errors %}{% for e in form.errors %}<li>{{ e }}</li>{% endfor %}{% endif %}
+                        {% if form.errors %}
+                            {% for field in form %}
+                                {% for error in field.errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endif %}
                     </ul>
                 </div>
             {% endif %}

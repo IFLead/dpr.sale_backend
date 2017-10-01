@@ -1,0 +1,82 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}Регистрация{% endblock %}
+
+{% block content %}
+    <div style="text-align: center; margin-top: 30px"><h1>Регистрация</h1></div>
+    <div class="ui message" style="margin-left: 40px; margin-right: 40px; text-align: center;">Уже зарегистрированы?
+        <a href="{{ login_url }}">Войдите</a>.
+    </div>
+    <div id="main-signup-content" class="ui middle center aligned grid">
+        <form id="allauth_sign_up" class="ui form segment form-lay" method="post" action="{% url 'account_signup' %}">
+            {% csrf_token %}
+            <div class="two fields">
+                <div class="field">
+                    <label>Ваше имя</label>
+                    <input id="first_name" placeholder="Имя" name="first_name" type="text">
+                </div>
+                <div class="field">
+                    <label>Ваша фамилия</label>
+                    <input id="last_name" placeholder="Фамилия" name="last_name" type="text">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Ваш логин</label>
+                    <input id="id_username" placeholder="Логин" name="username" type="text">
+                </div>
+                <div class="field">
+                    <label>Ваш E-mail</label>
+                    <input id="id_email" placeholder="E-mail" name="email" type="text">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Ваш пароль</label>
+                    <input id="password1" name="password1" type="password">
+                </div>
+                <div class="field">
+                    <label>Повторите пароль</label>
+                    <input id="password2" name="password2" type="password">
+                </div>
+            </div>
+            <div class="field">
+                <label>Контактный номер</label>
+                <input id="phone" name="phone" type="text" placeholder="+38-(xxx)-xxx-xx-xx">
+            </div>
+            <div class="field">
+                <label>Кто вы?</label>
+                <select id="user_type" name="user_type" class="ui dropdown">
+                    <option value="">Тип пользователя</option>
+                    <option value="0">Частное лицо</option>
+                    <option value="1">Риэлтор</option>
+                </select>
+            </div>
+            <div class="ui primary submit button">Зарегистрироваться</div>
+            <div class="ui error message"></div>
+            {% if form.errors %}
+            <div class="ui error message" style="display: block;">
+                <div class="header">
+                    Допущены следующие ошибки
+                </div>
+                <ul class="list">
+                    {% if form.errors %}
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            </div>
+        {% endif %}
+        </form>
+
+    </div>
+
+
+
+
+{% endblock %}
