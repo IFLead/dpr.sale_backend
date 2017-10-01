@@ -364,8 +364,8 @@ $(document).ready(function () {
     });
 
 
-    $('#get_number').popup({
-        on: 'click'
+    $('#get_number').click(function () {
+        $(this).popup('show');
     });
 
 
