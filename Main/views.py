@@ -11,7 +11,8 @@ def index(request):
     return render(request, 'index.html',
                   {'categories': Category.objects.all(),
                    'posts': Post.objects.filter(is_top=True, verified=True, closed=False).order_by('?')[:8],
-                   'cities': City.objects.all(), 'self_posts': Post.objects.filter(owner_id__exact=request.user.id)})
+                   'cities': City.objects.all(), 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
+                   'user': request.user})
 
 
 @staff_member_required
@@ -30,7 +31,8 @@ def post_view(request, post_id):
         if post.verified or user_is_owner or request.user.is_staff:
             return render(request, 'post.html',
                           {'post': post, 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
-                           'user_is_owner': user_is_owner, 'user_is_staff': request.user.is_staff, 'user_is_verified': request.user.custom.is_verified})
+                           'user_is_owner': user_is_owner, 'user_is_staff': request.user.is_staff, })
+            # 'user_is_verified': request.user.custom.is_verified
         else:
             return HttpResponseForbidden()
     except Post.DoesNotExist:
@@ -43,11 +45,11 @@ def new_post(request):
 
         main_photo = request.FILES['main_photo']
         filename = fs.save(main_photo.name, main_photo)
-        #uploaded_file_url = fs.url(filename)
+        # uploaded_file_url = fs.url(filename)
         filenames = [filename]
         for i in range(1, 8):
-            if 'hidden-new-file'+str(i) in request.FILES:
-                photo = request.FILES['hidden-new-file'+str(i)]
+            if 'hidden-new-file' + str(i) in request.FILES:
+                photo = request.FILES['hidden-new-file' + str(i)]
                 filename = fs.save(photo.name, photo)
                 filenames.append(filename)
 
