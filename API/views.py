@@ -153,7 +153,7 @@ def search(request):
                 filters['max_price'] *= 60
         filters.pop('currency')
     rename_dict_keys(filters, names)
-    posts = Post.objects.filter(is_top=True, **filters)
+    posts = Post.objects.filter(is_top=True,verified=True, closed=False **filters)
     return JsonResponse({'status': 'OK', 'html': render_to_string('ajax-posts.html', {'posts': posts})})
 
 
@@ -174,7 +174,7 @@ def more(request):
                 filters['max_price'] *= 60
         filters.pop('currency')
     rename_dict_keys(filters, names)
-    posts = Post.objects.filter(is_top=False, **filters).exclude(id__in=post_ids)
+    posts = Post.objects.filter(is_top=False,verified=True, closed=False, **filters).exclude(id__in=post_ids).order_by('?')[:15]
     return JsonResponse({'status': 'OK', 'posts': post_ids + [item[0] for item in posts.values_list('id')],
                          'html': render_to_string('ajax-posts.html', {'posts': posts})})
 

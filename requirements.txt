@@ -1,4 +1,4 @@
 django-filer
-django=latest
+django==1.10.8
 psycopg2
 django-allauth
