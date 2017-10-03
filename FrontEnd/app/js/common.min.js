@@ -74,12 +74,22 @@ $(document).ready(function () {
     $('#settings_modal').modal(
         {
             onHidden: function () {
-                $('#profile_first_name').attr('readonly', true);
-                $('#profile_last_name').attr('readonly', true);
-                $('#profile_username').attr('readonly', true);
-                $('#profile_email').attr('readonly', true);
+
                 $('.edit-buttons').addClass('hidden');
                 $('.buttons-wrapper-form').removeClass('hidden');
+
+                $('#profile_first_name_view').attr('hidden', false);
+                $('#profile_first_name').attr('hidden', true);
+
+                $('#profile_last_name_view').attr('hidden', false);
+                $('#profile_last_name').attr('hidden', true);
+
+                $('#profile_phone_view').attr('hidden', false);
+                $('#profile_phone').attr('hidden', true);
+
+                $('#profile_email_view').attr('hidden', false);
+                $('#profile_email_view_label').css('display', 'block');
+
             }
         }
     );
@@ -101,27 +111,47 @@ $(document).ready(function () {
 
 
     $('#change_profile').click(function () {
-        $('#profile_first_name').attr('readonly', false);
-        $('#profile_last_name').attr('readonly', false);
-        $('#profile_phone').attr('readonly', false);
-        $('#profile_email').attr('readonly', false);
+
+        $('#profile_first_name_view').attr('hidden', true);
+        $('#profile_first_name').attr('hidden', false);
+
+        $('#profile_last_name_view').attr('hidden', true);
+        $('#profile_last_name').attr('hidden', false);
+
+        $('#profile_phone_view').attr('hidden', true);
+        $('#profile_phone').attr('hidden', false);
+
+        $('#profile_email_view').attr('hidden', true);
+        $('#profile_email_view_label').css('display', 'none');
+
         $('.buttons-wrapper-form').addClass('hidden');
+
         $('.edit-buttons').removeClass('hidden');
     });
 
 
-    // todo сделать отмену как на фасторане в будущем
     $('#cancel_change_profile').click(function () {
+
         $('.edit-buttons').addClass('hidden');
         $('.buttons-wrapper-form').removeClass('hidden');
-        $('#profile_first_name').attr('readonly', true);
-        $('#profile_last_name').attr('readonly', true);
-        $('#profile_phone').attr('readonly', true);
-        $('#profile_email').attr('readonly', true);
+
+        $('#profile_first_name_view').attr('hidden', false);
+        $('#profile_first_name').attr('hidden', true);
+
+        $('#profile_last_name_view').attr('hidden', false);
+        $('#profile_last_name').attr('hidden', true);
+
+        $('#profile_phone_view').attr('hidden', false);
+        $('#profile_phone').attr('hidden', true);
+
+        $('#profile_email_view').attr('hidden', false);
+        $('#profile_email_view_label').css('display', 'block');
     });
+
 
     $('#phone').mask('+38-(000)-000-00-00');
     $('#profile_phone').mask('+38-(000)-000-00-00');
+    $('#profile_phone_view').mask('+38-(000)-000-00-00');
 
     $('#sign_in_form').form({
         fields: {
@@ -151,11 +181,29 @@ $(document).ready(function () {
     });
 
     $('#acc-signin').form();
+    $('#settings_form').form();
     $('#pswd-rst').form();
     $('#reset-from-key').form();
     $('#pswd-change').form();
+    $('#email_form').form();
     $('#allauth_sign_up').form();
     $('#mail_confirm').form();
+    $('#email_btn_form').form();
+    $('#add_email').form({
+        fields: {
+            id_email: {
+                identifier: 'id_email',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Введите E-mail'
+                    }
+                ]
+            }
+        }
+
+    });
+
     $('#sign_up_form').form({
         fields: {
             first_name: {
@@ -241,7 +289,6 @@ $(document).ready(function () {
         }
     });
 
-
     $('#add_post_form').form({
         fields: {
             title: {
@@ -299,7 +346,7 @@ $(document).ready(function () {
                     }
                 ]
             },
-             storeys: {
+            storeys: {
                 identifier: 'estate_storeys',
                 rules: [
                     {
@@ -346,7 +393,6 @@ $(document).ready(function () {
             $('#estate_currency_value').val($(this).dropdown('get value'));
         }
     }).dropdown('set selected', '0');
-
 
 
     $('#post_type').dropdown();

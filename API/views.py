@@ -1,10 +1,12 @@
+import re
+
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import user_passes_test, login_required
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 
-from Main.models import District, Post
+from Main.models import District, Post, CustomData
 from django.http import JsonResponse
 
 
@@ -178,3 +180,27 @@ def more(request):
     return JsonResponse({'status': 'OK', 'posts': post_ids + [item[0] for item in posts.values_list('id')],
                          'html': render_to_string('ajax-posts.html', {'posts': posts})})
 
+
+@login_required
+def edit_profile(request):
+    if request.method == 'POST':
+        data = request.POST
+        first_name = data['profile_first_name']
+        last_name = data['profile_last_name']
+        phone = re.sub("[^\d+]", "", request.POST['profile_phone'])
+        user_data = CustomData.objects.get(user_id__exact=request.user.id)
+        if first_name != user_data.user.first_name or last_name != user_data.user.last_name or \
+                        phone != user_data.phone:
+            if first_name != user_data.user.first_name:
+                user_data.user.first_name = first_name
+            if last_name != user_data.user.last_name:
+                user_data.user.last_name = last_name
+            if phone != user_data.phone:
+                user_data.phone = phone
+            #     todo Если риелтор меняет данные, их же надо отправлять на модерацию?
+            # if user_data.type == 1:
+            #     user_data.verified = False
+            user_data.user.save()
+        return redirect('/')
+    else:
+        redirect('/')

@@ -19,6 +19,7 @@
                 <input id="id_password" name="password" type="password" required>
             </div>
             <div class="ui primary submit button">Войти</div>
+            <a href="{% url 'account_reset_password' %}">Забыли пароль?</a>
             <div class="ui error message"></div>
             {% if form.errors %}
                 <div class="ui error message" style="display: block;">
@@ -27,11 +28,7 @@
                     </div>
                     <ul class="list">
                         {% if form.errors %}
-                            {% for field in form %}
-                                {% for error in field.errors %}
-                                    <li>{{ error }}</li>
-                                {% endfor %}
-                            {% endfor %}
+                         <li>Неверный логин или пароль.</li>
                         {% endif %}
                     </ul>
                 </div>

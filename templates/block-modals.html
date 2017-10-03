@@ -6,20 +6,25 @@
                 Настройки
             </div>
         </h2>
-        <form id="settings_form" class="ui form">
+        <form id="settings_form" class="ui form" method="post" action="/api/user/edit/">
+            {% csrf_token %}
             <div class="ui segment">
                 <div class="two fields">
                     <div class="field">
                         <label>Имя</label>
                         <div class="ui input">
-                            <input id="profile_first_name" readonly type="text" name="profile_first_name"
+                            <input id="profile_first_name_view" readonly type="text"
+                                   value="{{ user.first_name }}">
+                            <input id="profile_first_name" type="text" hidden name="profile_first_name"
                                    value="{{ user.first_name }}">
                         </div>
                     </div>
                     <div class="field">
                         <label>Фамилия</label>
                         <div class="ui input">
-                            <input id="profile_last_name" readonly type="text" name="profile_last_name"
+                            <input id="profile_last_name_view" readonly type="text"
+                                   value="{{ user.last_name }}">
+                            <input id="profile_last_name" type="text" hidden name="profile_last_name"
                                    value="{{ user.last_name }}">
                         </div>
                     </div>
@@ -28,19 +33,22 @@
                 <div class="two fields">
                     <div class="field">
                         <label>Телефон</label>
-                        <input id="profile_phone" readonly value="{{ user.custom.phone }}" name="profile_phone"
+                        <input id="profile_phone_view" readonly value="{{ user.custom.phone }}"
+                               type="text">
+                        <input id="profile_phone" value="{{ user.custom.phone }}" hidden name="profile_phone"
                                type="text">
                     </div>
                     <div class="field">
-                        <label>Ваш E-mail</label>
-                        <input id="profile_email" readonly value="{{ user.email }}"
-                               name="profile_email" type="text">
+                        <label id="profile_email_view_label">Ваш E-mail</label>
+                        <input id="profile_email_view" readonly value="{{ user.email }}"
+                               type="email">
                     </div>
                 </div>
 
                 <div class="buttons-wrapper-form">
                     <div id="change_profile" class="ui button">Изменить</div>
-                    <div id="change_password" class="ui button">Сменить пароль</div>
+                    <a id="change_password" class="ui button" href="{% url 'account_change_password' %}">Сменить пароль</a>
+                    <a id="change_email" class="ui button" href="{% url 'account_email' %}">Сменить E-mail</a>
                 </div>
 
                 <div class="edit-buttons hidden">

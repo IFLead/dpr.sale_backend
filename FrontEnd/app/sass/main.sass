@@ -319,21 +319,29 @@ body
   color: darken($accent-color, 10%)
 
 .buttons-wrapper-form
-  @extend .flex-row
-  justify-content: space-between
+  display: flow-root
 
-  p
-    margin: 10px
+#change_email
+  float: right
 
+#change_password
+  float: right
 
-#sign_in_button, #change_profile, #change_password, #save_profile, #cancel_change_profile, #get_number
+#change_profile
+  float: left
+
+#sign_in_button, #change_profile, #change_password, #save_profile, #cancel_change_profile, #get_number, #change_email
   background-color: $accent-color
   border-radius: 10px
   color: $main-color
   &:hover, &:focus
     background-color: darken($accent-color, 10%)
 
-#main-signup-content
+#change_password > a
+  color: $main-color
+  text-decoration: none
+
+#main-signup-content, #main-signup-content1
   text-align: center
   padding: 40px
   margin:
@@ -448,7 +456,7 @@ header.with-border
     right: 10px
   float: right
 
-#add_post_form, #sign_in_form, #delete_form, #settings_form, #dashboard-add-post, #panel_tabs, #sign_up_form, #acc-signin, #pswd-rst, #reset-from-key, #pswd-change, #mail_confirm, #allauth_sign_up
+#add_post_form, #sign_in_form, #delete_form, #settings_form, #dashboard-add-post, #panel_tabs, #sign_up_form, #acc-signin, #pswd-rst, #reset-from-key, #pswd-change, #mail_confirm, #allauth_sign_up, #email_form, #email_btn_form, #add_email
   font-size: 1.4rem
 
 
