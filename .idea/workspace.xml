@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="frontend fixes">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FrontEnd/app/account/email.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_10_2017_3_04__Default_.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/account/login.html" afterPath="$PROJECT_DIR$/FrontEnd/app/account/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_change.html" afterPath="$PROJECT_DIR$/FrontEnd/app/account/password_change.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_reset.html" afterPath="$PROJECT_DIR$/FrontEnd/app/account/password_reset.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_reset_from_key.html" afterPath="$PROJECT_DIR$/FrontEnd/app/account/password_reset_from_key.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_set.html" afterPath="$PROJECT_DIR$/FrontEnd/app/account/password_set.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/base.html" afterPath="$PROJECT_DIR$/FrontEnd/app/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/block-modals.html" afterPath="$PROJECT_DIR$/FrontEnd/app/block-modals.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/sign_up.html" afterPath="$PROJECT_DIR$/FrontEnd/app/sign_up.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FrontEnd/app/js/scripts.min.js" afterPath="$PROJECT_DIR$/FrontEnd/app/js/scripts.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/scripts.min.js" afterPath="$PROJECT_DIR$/static/js/scripts.min.js" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +35,7 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FrontEnd/app/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
+            <state relative-caret-position="-768">
               <caret line="140" column="43" lean-forward="false" selection-start-line="140" selection-start-column="43" selection-end-line="140" selection-end-column="43" />
               <folding />
             </state>
@@ -74,19 +68,19 @@
             <state relative-caret-position="336">
               <caret line="45" column="59" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="59" />
               <folding>
-                <marker date="1506984542012" expanded="true" signature="1394:3421" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="1601:1980" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="1633:1780" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="1812:1965" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="2013:2386" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="2045:2194" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="2226:2371" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="2419:2770" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="2451:2584" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="2616:2755" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="2798:2947" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="2975:3286" ph="..." />
-                <marker date="1506984542012" expanded="true" signature="3083:3271" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="1394:3421" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="1601:1980" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="1633:1780" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="1812:1965" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="2013:2386" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="2045:2194" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="2226:2371" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="2419:2770" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="2451:2584" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="2616:2755" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="2798:2947" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="2975:3286" ph="..." />
+                <marker date="1506989048895" expanded="true" signature="3083:3271" ph="..." />
               </folding>
             </state>
           </provider>
@@ -537,229 +531,21 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/urls.py</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/API/views.py</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/js/common.js</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/js/common.min.js</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/FrontEnd/app/js/scripts.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/views.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Realtor/settings.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/requirements.txt</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/static/js/scripts.min.js</PATH>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/base.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/block-footer.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/block-heading-section.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/dashboard.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/post.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/templates/sign_up.html</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -767,41 +553,255 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/css/base.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/css/changelists.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/css/dashboard.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/css/fonts.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/css/forms.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/css/login.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/css/rtl.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/css/widgets.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/fonts/LICENSE.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/fonts/README.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/fonts/Roboto-Bold-webfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/fonts/Roboto-Light-webfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/fonts/Roboto-Regular-webfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/LICENSE</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/README.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/calendar-icons.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/gis/move_vertex_off.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-addlink.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-alert.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-calendar.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-changelink.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-clock.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-deletelink.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-no.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-unknown.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/icon-yes.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/inline-delete.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/search.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/selector-icons.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/sorting-icons.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/tooltag-add.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/SelectBox.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/SelectFilter2.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/actions.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/actions.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/calendar.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/cancel.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/change_form.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/collapse.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/collapse.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/core.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/inlines.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/inlines.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/jquery.init.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/popup_response.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/prepopulate.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/prepopulate.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/prepopulate_init.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/timeparse.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/urlify.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/css/admin_filer.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/css/maps/admin_filer.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/FontAwesome.otf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/django-filer-iconfont.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/django-filer-iconfont.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/django-filer-iconfont.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/django-filer-iconfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/django-filer-iconfont.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/fontawesome-webfont.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/fontawesome-webfont.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/fontawesome-webfont.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/fontawesome-webfont.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/fontawesome-webfont.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/src/check.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/src/remove.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/fonts/src/trash-o.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/breadcrubms_dropdown_28_28.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_128x128.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_128x128@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_16x16.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_16x16@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_256x256.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_256x256@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_32x32.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_32x32@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_48x48.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_48x48@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_64x64.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/file_64x64@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_128x128.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_128x128@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_16x16.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_16x16@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_256x256.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_256x256@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_32x32.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_32x32@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_48x48.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_48x48@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_512x512.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_512x512@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_64x64.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/image_64x64@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_128x128.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_128x128@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_16x16.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_16x16@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_256x256.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_256x256@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_32x32.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_32x32@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_48x48.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_48x48@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_512x512.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_512x512@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_64x64.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/incomplete_metadata_folder_64x64@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_128x128.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_128x128@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_16x16.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_16x16@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_256x256.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_256x256@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_32x32.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_32x32@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_48x48.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_48x48@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_512x512.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_512x512@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_64x64.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/missingfile_64x64@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_128x128.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_128x128@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_16x16.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_16x16@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_256x256.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_256x256@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_32x32.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_32x32@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_48x48.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_48x48@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_512x512.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_512x512@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_64x64.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/nofile_64x64@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_128x128.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_128x128@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_16x16.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_16x16@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_256x256.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_256x256@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_32x32.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_32x32@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_48x48.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_48x48@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_512x512.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_512x512@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_64x64.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/plainfolder_64x64@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/root_28x28.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_128x128.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_128x128@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_16x16.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_16x16@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_256x256.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_256x256@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_32x32.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_32x32@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_48x48.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_48x48@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_512x512.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_512x512@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_64x64.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/unfiled_folder_64x64@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_128x128.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_128x128@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_16x16.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_16x16@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_256x256.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_256x256@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_32x32.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_32x32@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_48x48.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_48x48@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_512x512.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_512x512@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_64x64.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/video_64x64@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_128x128.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_128x128@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_16x16.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_16x16@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_256x256.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_256x256@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_32x32.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_32x32@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_48x48.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_48x48@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_512x512.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_512x512@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_64x64.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/icons/xfile_64x64@2x.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/img/button-bg.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/img/close.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/img/icon_changelink.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/img/icon_deletelink.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/img/loading_animation.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/img/nav-bg.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/img/select_item-hover.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/img/select_item.gif</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/img/upload_button.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/copy-move-files.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/dropdown-menu.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/dropzone.init.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/focal-point.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/popup_handling.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/table-dropzone.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/toggler.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/tooltip.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/upload-button.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/addons/widget.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/base.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/libs/class.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/libs/dropzone.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/libs/fileuploader.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/libs/jquery-ui.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/libs/jquery.cookie.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/libs/jquery.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/libs/mediator.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/filer/js/libs/retina.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/img/favicon/Thumbs.db</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/mptt/arrow-move.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/mptt/disclosure-down.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/mptt/disclosure-right.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/mptt/draggable-admin.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/mptt/draggable-admin.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk_UlryGiy.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii_J6jxcbI.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii_NOyr5i5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii_Onovvio.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii_QCQswId.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii_WxQgCto.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii_bnVgWja.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii_i5OVDOK.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii_nSB7EON.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/531588804_6_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii_nrWVDEu.jpg</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -809,41 +809,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -851,41 +816,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="RESTORED" />
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
         </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
@@ -894,41 +824,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="MODIFIED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Skipped" />
@@ -936,41 +831,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="SKIPPED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Merged with conflicts" />
@@ -978,41 +838,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Merged with tree conflicts" />
@@ -1020,41 +845,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Merged with property conflicts" />
@@ -1062,41 +852,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Merged" />
@@ -1104,41 +859,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="MERGED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Not in repository" />
@@ -1146,41 +866,6 @@
         <option name="mySupportsDeletion" value="true" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="UNKNOWN" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Locally added" />
@@ -1188,41 +873,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="LOCALLY_ADDED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Locally removed" />
@@ -1230,41 +880,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="LOCALLY_REMOVED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
       <FILE-GROUP>
         <option name="myUpdateName" value="Switched" />
@@ -1272,41 +887,6 @@
         <option name="mySupportsDeletion" value="false" />
         <option name="myCanBeAbsent" value="false" />
         <option name="myId" value="SWITCHED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
       </FILE-GROUP>
     </UpdatedFiles>
   </component>
@@ -1475,7 +1055,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506988960430</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="frontend fixes">
+      <created>1506989033078</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1506989033078</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1654,19 +1241,19 @@
         <state relative-caret-position="336">
           <caret line="45" column="59" lean-forward="false" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="59" />
           <folding>
-            <marker date="1506984542012" expanded="true" signature="1394:3421" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="1601:1980" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="1633:1780" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="1812:1965" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="2013:2386" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="2045:2194" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="2226:2371" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="2419:2770" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="2451:2584" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="2616:2755" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="2798:2947" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="2975:3286" ph="..." />
-            <marker date="1506984542012" expanded="true" signature="3083:3271" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="1394:3421" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="1601:1980" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="1633:1780" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="1812:1965" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="2013:2386" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="2045:2194" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="2226:2371" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="2419:2770" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="2451:2584" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="2616:2755" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="2798:2947" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="2975:3286" ph="..." />
+            <marker date="1506989048895" expanded="true" signature="3083:3271" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1960,7 +1547,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/app/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
+        <state relative-caret-position="-768">
           <caret line="140" column="43" lean-forward="false" selection-start-line="140" selection-start-column="43" selection-end-line="140" selection-end-column="43" />
           <folding />
         </state>
