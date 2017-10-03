@@ -583,7 +583,7 @@ $(document).ready(function () {
     });
 
     $('#search_button').click(function () {
-
+        $('#sorry_bro').attr('hidden', true);
         $('#waterfall li').remove();
         $('#waterfall').attr('hidden', true);
         $('#data_loader').addClass('active');
@@ -640,7 +640,7 @@ $(document).ready(function () {
     });
 
     $('#more_button').click(function () {
-
+        $('#sorry_bro').attr('hidden', true);
         $(this).addClass('loading disabled');
         var data = JSON.parse(localStorage.getItem('filters'));
         data['post_ids'] = JSON.parse(localStorage.getItem('post_ids'));
