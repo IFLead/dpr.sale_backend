@@ -6,20 +6,25 @@
                 Настройки
             </div>
         </h2>
-        <form id="settings_form" class="ui form">
+        <form id="settings_form" class="ui form" method="post" action="/api/user/edit/">
+            {% csrf_token %}
             <div class="ui segment">
                 <div class="two fields">
                     <div class="field">
                         <label>Имя</label>
                         <div class="ui input">
-                            <input id="profile_first_name" readonly type="text" name="profile_first_name"
+                            <input id="profile_first_name_view" readonly type="text"
+                                   value="{{ user.first_name }}">
+                            <input id="profile_first_name" type="text" hidden name="profile_first_name"
                                    value="{{ user.first_name }}">
                         </div>
                     </div>
                     <div class="field">
                         <label>Фамилия</label>
                         <div class="ui input">
-                            <input id="profile_last_name" readonly type="text" name="profile_last_name"
+                            <input id="profile_last_name_view" readonly type="text"
+                                   value="{{ user.last_name }}">
+                            <input id="profile_last_name" type="text" hidden name="profile_last_name"
                                    value="{{ user.last_name }}">
                         </div>
                     </div>
@@ -28,19 +33,22 @@
                 <div class="two fields">
                     <div class="field">
                         <label>Телефон</label>
-                        <input id="profile_phone" readonly value="{{ user.custom.phone }}" name="profile_phone"
+                        <input id="profile_phone_view" readonly value="{{ user.custom.phone }}"
+                               type="text">
+                        <input id="profile_phone" value="{{ user.custom.phone }}" hidden name="profile_phone"
                                type="text">
                     </div>
                     <div class="field">
-                        <label>Ваш E-mail</label>
-                        <input id="profile_email" readonly value="{{ user.email }}"
-                               name="profile_email" type="text">
+                        <label id="profile_email_view_label">Ваш E-mail</label>
+                        <input id="profile_email_view" readonly value="{{ user.email }}"
+                               type="email">
                     </div>
                 </div>
 
                 <div class="buttons-wrapper-form">
                     <div id="change_profile" class="ui button">Изменить</div>
-                    <div id="change_password" class="ui button">Сменить пароль</div>
+                    <a id="change_password" class="ui button" href="{% url 'account_change_password' %}">Сменить пароль</a>
+                    <a id="change_email" class="ui button" href="{% url 'account_email' %}">Сменить E-mail</a>
                 </div>
 
                 <div class="edit-buttons hidden">
@@ -63,7 +71,7 @@
         <div id="piled_segment" class="ui piled segment">
             {% for self_post in self_posts %}
                 <div class="field">
-                    <a href="{{ self_post.url }}">{{ self_post.name }}</a>
+                    <a href="{% url 'post_view' self_post.id %}">{{ self_post.title }}</a>
                 </div>
             {% endfor %}
         </div>
@@ -99,7 +107,8 @@
                 Создание объявления
             </div>
         </h2>
-        <form id="add_post_form" class="ui form" method="post" action="/send_request/">
+        <form id="add_post_form" class="ui form" enctype="multipart/form-data" method="post" action="/send_request/">
+        {% csrf_token %}
             <p>Заполните указанные ниже поля</p>
             <div class="field">
                 <label>Заголовок</label>
@@ -185,16 +194,16 @@
 
             <div class="field">
                 <label>Описание</label>
-                <textarea id="description"></textarea>
+                <textarea name="description" id="description"></textarea>
             </div>
 
             <div class="three fields">
                 <div class="field">
                     <label for="hidden-new-file1" class="ui icon button add-photo-button">
                         <i class="cloud icon"></i>
-                        Фотография
+                        Главное фото
                     </label>
-                    <input type="file" id="hidden-new-file1" style="display: none">
+                    <input name="main_photo" type="file" id="hidden-new-file1" style="display: none">
                 </div>
 
                 <div class="field">
@@ -202,11 +211,19 @@
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
-                    <input type="file" id="hidden-new-file2" style="display: none">
+                    <input type="file" id="hidden-new-file1" style="display: none">
                 </div>
 
                 <div class="field">
                     <label for="hidden-new-file3" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file2" style="display: none">
+                </div>
+
+                <div class="field">
+                    <label for="hidden-new-file2" class="ui icon button add-photo-button">
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
@@ -238,9 +255,18 @@
                     </label>
                     <input type="file" id="hidden-new-file6" style="display: none">
                 </div>
+                <div class="field">
+                    <label for="hidden-new-file2" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" id="hidden-new-file7" style="display: none">
+                </div>
             </div>
             <div class="ui primary submit button">Отправить на модерацию</div>
             <div id="close_post_add_modal" class="ui primary button">Закрыть</div>
+
+
 
             <div class="ui error message"></div>
         </form>
