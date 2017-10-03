@@ -34,6 +34,10 @@ $(document).ready(function () {
         return $('#is_autorized').val() === 'true'
     }
 
+    function is_verified() {
+        return $('#is_verified').val() === 'true'
+    }
+
     localStorage.setItem('post_ids', JSON.stringify([]));
 
     $('#clear_button').click(function () {
@@ -400,7 +404,12 @@ $(document).ready(function () {
 
     $('#add_post').click(function () {
         if (is_auth()) {
-            $('#post_modal').modal('show');
+            if (is_verified()) {
+                $('#post_modal').modal('show');
+            }
+            else {
+                noty('Ваш аккаунт ещё не подтвержден');
+            }
         }
         else {
             noty('Войдите или зарегистрируйтесь');
@@ -648,7 +657,7 @@ $(document).ready(function () {
                 if (result.html) {
                     $('#waterfall').append(result.html);
                 }
-                else{
+                else {
                     noty('К сожалению, это все найденные объявления');
                 }
                 localStorage.setItem('post_ids', JSON.stringify(result.posts));
@@ -819,4 +828,15 @@ $(document).ready(function () {
 
     $('#user_type').dropdown();
 
+    // function changeImg() {
+    //     var section = $('.heading-section');
+    //
+    //     setTimeout(function () {
+    //        section.css('background', 'url(/static/img/svg/fit.svg), url(/static/img/real%20estate/1.jpg)');
+    //        section.css('background-repeat', 'no-repeat');
+    //        section.css('background-position', 'left, left bottom');
+    //     }, 2500);
+    // }
+    //
+    // setTimeout(changeImg(), 2500);
 });

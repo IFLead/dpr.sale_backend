@@ -38,4 +38,9 @@
     {% else %}
         <input id="is_autorized" type="hidden" value="false">
     {% endif %}
+    {% if user.custom.verified %}
+        <input id="is_verified" type="hidden" value="true">
+    {% else %}
+        <input id="is_verified" type="hidden" value="false">
+    {% endif %}
 </header>

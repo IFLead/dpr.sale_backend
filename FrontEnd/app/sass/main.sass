@@ -321,6 +321,13 @@ body
 .buttons-wrapper-form
   display: flow-root
 
+.buttons-wrapper-login-form
+  @extend .flex-row
+  justify-content: space-between
+
+  p
+    margin: 10px
+
 #change_email
   float: right
 
@@ -449,6 +456,8 @@ header.with-border
   border-radius: 10px
   &:hover, &:focus
     background-color: darken($accent-color, 10%)
+
+
 
 #dashboard-add-post
   margin:

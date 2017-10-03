@@ -1,20 +1,15 @@
+{% load staticfiles %}
 <section class="heading-section">
     <div class="container">
         <div class="row flex-row">
             <div class="col-md-7 col-lg-7 col-sm-7 heading-div">
                 <p>Первый</p>
-                <p>Риелторский</p>
+                <p>Риэлторский</p>
                 <p>Центр</p>
             </div>
-
             <div class="col-md-5 col-lg-5 col-sm-10 col-xs-12">
-                {% if user.custom.is_verified %}
-                    <input id="add_post" type="button" class="post mobile-post" value="Разместить объявление">
-                    {% else %}
-                    <input id="add_post" disabled type="button" class="post mobile-post" value="Аккаунт не подтвержден">
-                {% endif %}
+                <input id="add_post" type="button" class="post mobile-post" value="Разместить объявление">
             </div>
-
         </div>
     </div>
 </section>
