@@ -617,9 +617,15 @@ $(document).ready(function () {
 
             success: function (result) {
 
-                $('#waterfall').attr('hidden', false);
                 $('#data_loader').removeClass('active');
-                $('#waterfall').append(result.html);
+                if (result.html) {
+                    $('#waterfall').attr('hidden', false);
+                    $('#waterfall').append(result.html);
+                }
+                else {
+                    $('#sorry_bro').attr('hidden', false);
+                }
+
             }
         });
     });
@@ -637,7 +643,15 @@ $(document).ready(function () {
 
             success: function (result) {
                 console.log(result);
-                localStorage.setItem('post_ids', JSON.stringify(result.post_ids));
+                $('#more_button').removeClass('loading disabled');
+
+                if (result.html) {
+                    $('#waterfall').append(result.html);
+                }
+                else{
+                    noty('К сожалению, это все найденные объявления');
+                }
+                localStorage.setItem('post_ids', JSON.stringify(result.posts));
             }
         });
 
