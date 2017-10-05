@@ -57,7 +57,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = True
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_SIGNUP_FORM_CLASS = 'Main.forms.SignupForm'
 
 

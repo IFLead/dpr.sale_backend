@@ -9,7 +9,7 @@
     <meta name="description" content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}" type="image/x-icon">
     <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
@@ -51,7 +51,7 @@
                 <div id="panel_tabs" class="ui secondary menu">
                     <a class="item active" data-tab="ad">Объявления</a>
                     <a class="item" data-tab="account">Аккаунты</a>
-                    <a class="item" data-tab="closed">Закрытые сделки</a>
+                    <a id="closed_offers" class="item" data-tab="closed">Закрытые сделки</a>
                 </div>
                 <div class="ui tab segment active" data-tab="ad">
                     <ul id="post-wtrfl">

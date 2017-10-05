@@ -96,7 +96,7 @@ class CustomData(models.Model):
         if self.type != self.REALTOR:
             self.verified = True
         super(CustomData, self).save(*args, **kwargs)
-
+    # todo вот это точно работает???
     def __str__(self):
         return self.user.first_name
 

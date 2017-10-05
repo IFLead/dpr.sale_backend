@@ -574,6 +574,11 @@ $(document).ready(function () {
     if (window.innerWidth >= 992) {
         $('#sticky').stick_in_parent();
     }
+
+    if(window.innerWidth <= 370) {
+        $('#closed_offers').text('Сделки');
+    }
+
     $('#close_post_add_modal').click(function () {
         $('#post_modal').modal('hide');
     });
@@ -825,7 +830,6 @@ $(document).ready(function () {
         });
     });
 
-
     $('#user_type').dropdown();
 
     // function changeImg() {
@@ -839,4 +843,6 @@ $(document).ready(function () {
     // }
     //
     // setTimeout(changeImg(), 2500);
+
+
 });

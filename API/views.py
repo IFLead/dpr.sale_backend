@@ -99,11 +99,12 @@ def delete_post(request):
 @staff_member_required
 def verify_user(request):
     try:
-        user = User.objects.get(pk=request.POST['user_id'])
+        user = CustomData.objects.get(user_id__exact=request.POST['user_id'])
         user.verified = True
-        user.save()
+        user.user.is_staff = True
+        user.user.save()
         return JsonResponse({'status': 'OK', 'message': 'success'})
-    except Post.DoesNotExist:
+    except CustomData.DoesNotExist:
         return JsonResponse({'status': 'error', 'message': 'has no this object'})
     except Exception:
         return JsonResponse({'status': 'error', 'message': 'unknown error'})
@@ -112,11 +113,12 @@ def verify_user(request):
 @staff_member_required
 def unverify_user(request):
     try:
-        user = User.objects.get(pk=request.POST['user_id'])
+        user = CustomData.objects.get(user_id__exact=request.POST['user_id'])
         user.verified = False
-        user.save()
+        user.user.is_staff = False
+        user.user.save()
         return JsonResponse({'status': 'OK', 'message': 'success'})
-    except Post.DoesNotExist:
+    except CustomData.DoesNotExist:
         return JsonResponse({'status': 'error', 'message': 'has no this object'})
     except Exception:
         return JsonResponse({'status': 'error', 'message': 'unknown error'})
@@ -198,8 +200,9 @@ def edit_profile(request):
             if phone != user_data.phone:
                 user_data.phone = phone
             #     todo Если риелтор меняет данные, их же надо отправлять на модерацию?
-            # if user_data.type == 1:
-            #     user_data.verified = False
+            if user_data.type == 1:
+                user_data.verified = False
+                user_data.user.is_staff = False
             user_data.user.save()
         return redirect('/')
     else:
