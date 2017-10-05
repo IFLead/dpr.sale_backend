@@ -3,8 +3,13 @@ from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render, redirect
 from django.contrib.admin.views.decorators import staff_member_required
 from django.http import HttpResponseForbidden, HttpResponseNotFound, JsonResponse
+from filer.fields.image import FilerImageField
 
 from Main.models import Category, Post, City, Image
+from django.core.files import File
+from filer.models import Image as FImage
+
+from Realtor import settings
 
 
 def index(request):
@@ -41,34 +46,32 @@ def post_view(request, post_id):
 
 def new_post(request):
     if request.method == 'POST' and request.user.custom.verified:
-        fs = FileSystemStorage()
-
-        main_photo = request.FILES['main_photo']
-        filename = fs.save(main_photo.name, main_photo)
-        # uploaded_file_url = fs.url(filename)
-        filenames = [filename]
-        for i in range(1, 8):
-            if 'hidden-new-file' + str(i) in request.FILES:
-                photo = request.FILES['hidden-new-file' + str(i)]
-                filename = fs.save(photo.name, photo)
-                filenames.append(filename)
 
         post = Post()
         post.category_id = int(request.POST["post_type"][0])
-        post.main_photo = filenames.pop(0)
-        post.title = request.POST["title"][0]
-        post.description = request.POST["description"][0]
-        post.price = int(request.POST["estate_price"][0])
-        post.currency = int(request.POST["estate_currency"][0])
+
+        # my_file = File(open(filenames[0]))
+        post.main_photo = FImage.objects.create(file=request.FILES['main_photo'],
+                                                original_filename=request.FILES['main_photo'].name, owner=request.user)
+
+        post.title = request.POST["title"]
+        post.description = request.POST["description"]
+        post.price = int(request.POST["estate_price"])
+        post.currency = int(request.POST["estate_currency"])
         post.owner_id = request.user.id
 
-        post.rooms = int(request.POST["rooms_count"][0])
-        post.floor = int(request.POST["estate_floor"][0])
-        post.storeys = int(request.POST["estate_storeys"][0])
-        post.district = int(request.POST["estate_district"][0])
+        post.rooms = int(request.POST["rooms_count"])
+        post.floor = int(request.POST["estate_floor"])
+        post.storeys = int(request.POST["estate_storeys"])
+        post.district_id = int(request.POST["estate_district"])
         post.save()
-        for filename in filenames:
-            Image(image_file=filename, obj_id=post.id).save()
+        for i in range(1, 8):
+            if 'hidden-new-file' + str(i) in request.FILES:
+                fimg = FImage.objects.create(file=request.FILES['hidden-new-file' + str(i)],
+                                             original_filename=request.FILES['hidden-new-file' + str(i)].name,
+                                             owner=request.user),
+
+                Image.objects.create(image_file=fimg, obj_id=post.id)
     return JsonResponse({'url': dict(request.POST)})
 
 

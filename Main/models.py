@@ -48,7 +48,7 @@ class District(models.Model):
 
 class Post(models.Model):
     category = models.ForeignKey(Category, verbose_name='Категория')
-    is_top = models.BooleanField('В топе')
+    is_top = models.BooleanField('В топе', default=False)
     main_photo = FilerImageField(verbose_name='Главное изображение')
     title = models.CharField('Заголовок', max_length=256)
     description = models.TextField('Описание')
@@ -92,11 +92,7 @@ class CustomData(models.Model):
     phone = models.CharField('Номер телефона', blank=True, max_length=25, null=True)  # 38 050 240 92 92
     verified = models.BooleanField('Подтвержден', default=False)
 
-    def save(self, *args, **kwargs):
-        if self.type != self.REALTOR:
-            self.verified = True
-        super(CustomData, self).save(*args, **kwargs)
-    # todo вот это точно работает???
+
     def __str__(self):
         return self.user.first_name
 

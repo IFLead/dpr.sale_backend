@@ -1,7 +1,9 @@
 from django import forms
 
 from Main import models
-from .models import CustomData
+from .models import CustomData, Post
+
+
 
 
 class SignupForm(forms.Form):
@@ -17,4 +19,8 @@ class SignupForm(forms.Form):
 
         user.custom.type = self.cleaned_data['user_type']
         user.custom.phone = self.cleaned_data['phone']
+
+        if user.custom.type != models.CustomData.REALTOR:
+            user.custom.verified = True
+
         user.save()
