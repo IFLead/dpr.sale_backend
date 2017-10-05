@@ -11,7 +11,7 @@
         <form id="allauth_sign_up" class="ui form segment form-lay" method="post" action="{% url 'account_login' %}">
             {% csrf_token %}
             <div class="field">
-                <label>Ваш E-mail</label>
+                <label>Ваш логин или E-mail</label>
                 <input id="id_login" placeholder="E-mail" name="login" type="text" required>
             </div>
             <div class="field">
