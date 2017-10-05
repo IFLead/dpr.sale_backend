@@ -69,9 +69,11 @@ def new_post(request):
             if 'hidden-new-file' + str(i) in request.FILES:
                 fimg = FImage.objects.create(file=request.FILES['hidden-new-file' + str(i)],
                                              original_filename=request.FILES['hidden-new-file' + str(i)].name,
-                                             owner=request.user),
+                                             owner=request.user)
 
-                Image.objects.create(image_file=fimg, obj_id=post.id)
+                img = Image()
+                img.image_file=fimg
+                img.obj_id=post.id
     return JsonResponse({'url': dict(request.POST)})
 
 
