@@ -202,6 +202,4 @@ def edit_profile(request):
                 user_data.verified = False
                 user_data.user.is_staff = False
             user_data.user.save()
-        return redirect('/')
-    else:
-        redirect('/')
+    return redirect('/')
