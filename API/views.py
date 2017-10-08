@@ -164,8 +164,8 @@ def more(request):
              'min_walls': 'rooms__gte', 'max_walls': 'rooms__lte', 'min_floor': 'floor__gte', 'max_floor': 'floor__lte',
              'min_price': 'price__gte', 'max_price': 'price__lte', }
 
-    post_ids = request.GET.get('post_ids', [])
-    filters = {k: v for k, v in request.GET.items() if v and v != '-1'}
+    post_ids = list(map(int, request.GET.getlist('post_ids[]', [])))
+    filters = {k: v for k, v in request.GET.items() if v and v != '-1' and k != 'post_ids[]'}
     if 'min_price' not in filters and 'max_price' not in filters:
         filters.pop('currency')
     else:
@@ -202,6 +202,4 @@ def edit_profile(request):
                 user_data.verified = False
                 user_data.user.is_staff = False
             user_data.user.save()
-        return redirect('/')
-    else:
-        redirect('/')
+    return redirect('/')

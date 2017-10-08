@@ -197,13 +197,21 @@
                 <textarea name="description" id="description"></textarea>
             </div>
 
-            <div class="three fields">
+            <div class="four fields">
                 <div class="field">
-                    <label for="hidden-new-file1" class="ui icon button add-photo-button">
+                    <label for="hidden-main-photo" class="ui icon button add-photo-button">
                         <i class="cloud icon"></i>
                         Главное фото
                     </label>
-                    <input name="main_photo" type="file" id="hidden-new-file1" style="display: none">
+                    <input name="main_photo" type="file" id="hidden-main-photo" style="display: none">
+                </div>
+
+                <div class="field">
+                    <label for="hidden-new-file1" class="ui icon button add-photo-button">
+                        <i class="cloud icon"></i>
+                        Фотография
+                    </label>
+                    <input type="file" name="hidden-new-file1" id="hidden-new-file1" style="display: none">
                 </div>
 
                 <div class="field">
@@ -211,7 +219,7 @@
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
-                    <input type="file" id="hidden-new-file1" style="display: none">
+                    <input type="file" name="hidden-new-file2" id="hidden-new-file2" style="display: none">
                 </div>
 
                 <div class="field">
@@ -219,25 +227,17 @@
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
-                    <input type="file" id="hidden-new-file2" style="display: none">
-                </div>
-
-                <div class="field">
-                    <label for="hidden-new-file2" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i>
-                        Фотография
-                    </label>
-                    <input type="file" id="hidden-new-file3" style="display: none">
+                    <input type="file" name="hidden-new-file3" id="hidden-new-file3" style="display: none">
                 </div>
             </div>
 
-            <div class="three fields">
+            <div class="four fields">
                 <div class="field">
                     <label for="hidden-new-file4" class="ui icon button add-photo-button">
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
-                    <input type="file" id="hidden-new-file4" style="display: none">
+                    <input type="file" name="hidden-new-file4" id="hidden-new-file4" style="display: none">
                 </div>
 
                 <div class="field">
@@ -245,7 +245,7 @@
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
-                    <input type="file" id="hidden-new-file5" style="display: none">
+                    <input type="file" name="hidden-new-file5" id="hidden-new-file5" style="display: none">
                 </div>
 
                 <div class="field">
@@ -253,14 +253,14 @@
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
-                    <input type="file" id="hidden-new-file6" style="display: none">
+                    <input type="file" name="hidden-new-file6" id="hidden-new-file6" style="display: none">
                 </div>
                 <div class="field">
-                    <label for="hidden-new-file2" class="ui icon button add-photo-button">
+                    <label for="hidden-new-file7" class="ui icon button add-photo-button">
                         <i class="cloud icon"></i>
                         Фотография
                     </label>
-                    <input type="file" id="hidden-new-file7" style="display: none">
+                    <input type="file" name="hidden-new-file7" id="hidden-new-file7" style="display: none">
                 </div>
             </div>
             <div class="two fields">
@@ -305,7 +305,7 @@
             </div>
             <div class="ui error message"></div>
         </form>
-        <div class="ui message">
+        <div id="uimessage" class="ui message">
             Впервые у нас? <a href="/sign_up">Регистрация</a>
         </div>
     </div>
