@@ -60,6 +60,14 @@ ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_SIGNUP_FORM_CLASS = 'Main.forms.SignupForm'
 
+# Email config
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST_USER = 'noreply@dpr.sale'
+EMAIL_HOST_PASSWORD = 'restservice'
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_USE_TLS = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

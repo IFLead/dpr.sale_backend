@@ -74,7 +74,7 @@ def new_post(request):
                 img = Image()
                 img.image_file=fimg
                 img.obj_id=post.id
-    return JsonResponse({'url': dict(request.POST)})
+    return redirect('/')
 
 
 def sign_up(request):
