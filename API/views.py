@@ -156,6 +156,8 @@ def search(request):
         filters.pop('currency')
     rename_dict_keys(filters, names)
     posts = Post.objects.filter(is_top=True,verified=True, closed=False, **filters)
+    if len(posts) == 0:
+        posts = Post.objects.filter(verified=True, closed=False, **filters)[:15]
     return JsonResponse({'status': 'OK', 'html': render_to_string('ajax-posts.html', {'posts': posts})})
 
 
@@ -197,7 +199,6 @@ def edit_profile(request):
                 user_data.user.last_name = last_name
             if phone != user_data.phone:
                 user_data.phone = phone
-            #     todo Если риелтор меняет данные, их же надо отправлять на модерацию?
             if user_data.type == 1:
                 user_data.verified = False
                 user_data.user.is_staff = False
