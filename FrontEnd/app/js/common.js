@@ -666,9 +666,11 @@ $(document).ready(function () {
                 if (result.html) {
                     $('#waterfall').attr('hidden', false);
                     $('#waterfall').append(result.html);
+                    $('#more_button').removeClass('hidden');
                 }
                 else {
                     $('#sorry_bro').attr('hidden', false);
+                    $('#more_button').addClass('hidden');
                 }
             }
         });
