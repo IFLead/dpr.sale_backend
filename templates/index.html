@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-{% load staticfiles %}
+{% load staticfiles watermark %}
 <head>
 
     <meta charset="utf-8">
@@ -210,13 +210,15 @@
                 <div>
                     <div class="ui card">
                         <div class="image">
-                            <img src="{{ post.main_photo.url }}">
+
+                            <img src="{{ post.main_photo.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85"}}">
                             {% if post.is_top %}
                                 <div class="ui orange ribbon label">
                                     <i class="star icon"></i>
                                     В топе
                                 </div>
                             {% endif %}
+
                         </div>
                         <div class="content">
                             <a class="header" href="{% url 'post_view' post.id %}">{{ post.title }}</a>

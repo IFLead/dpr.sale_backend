@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-{% load staticfiles %}
+{% load staticfiles watermark %}
 <head>
 
     <meta charset="utf-8">
@@ -48,8 +48,8 @@
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="gallery" style="display:none;">
                 {% for photo in post.photos.all %}
-                    <img src="{{ photo.image_file.url }}"
-                         data-image="{{ photo.image_file.url }}">
+                    <img src="{{ photo.image_file.url}}"
+                         data-image="{{ photo.image_file.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85" }}">
                 {% endfor %}
             </div>
         </div>

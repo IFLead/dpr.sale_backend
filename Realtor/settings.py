@@ -45,14 +45,18 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-
+    'watermarker',
 ]
+
+WATERMARK_QUALITY = 95
+WATERMARK_OBSCURE_ORIGINAL = False
+WATERMARK_RANDOM_POSITION_ONCE = False
 
 # Allauth config
 SITE_ID = 2
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
 ACCOUNT_LOGOUT_ON_GET = True
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = True
@@ -67,7 +71,6 @@ EMAIL_HOST_PASSWORD = 'restservice'
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_USE_TLS = True
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -141,13 +144,12 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 THUMBNAIL_PROCESSORS = (
-    #'easy_thumbnails.processors.colorspace',
+    # 'easy_thumbnails.processors.colorspace',
     # 'easy_thumbnails.processors.autocrop',
     # #'easy_thumbnails.processors.scale_and_crop',
     # 'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     # 'easy_thumbnails.processors.filters',
 )
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -167,7 +169,7 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
