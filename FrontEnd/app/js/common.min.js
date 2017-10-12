@@ -354,7 +354,7 @@ $(document).ready(function () {
                 identifier: 'rooms_count',
                 rules: [
                     {
-                        type: 'integer[1..100]',
+                        type: 'integer[0..100]',
                         prompt: 'Укажите корректное количество комнат'
                     }
                 ]
@@ -363,7 +363,7 @@ $(document).ready(function () {
                 identifier: 'estate_floor',
                 rules: [
                     {
-                        type: 'integer[1..1000]',
+                        type: 'integer[0..1000]',
                         prompt: 'Укажите корректное количество этажей'
                     }
                 ]
@@ -372,7 +372,7 @@ $(document).ready(function () {
                 identifier: 'estate_storeys',
                 rules: [
                     {
-                        type: 'integer[1..1000]',
+                        type: 'integer[0..1000]',
                         prompt: 'Укажите корректное количество этажности здания'
                     }
                 ]
@@ -405,34 +405,6 @@ $(document).ready(function () {
                 rules: [{
                     type: 'empty',
                     prompt: 'Ошибка выбора валюты'
-                }]
-            },
-            main_photo: {
-                identifier: 'hidden-main-photo',
-                rules: [{
-                    type: 'empty',
-                    prompt: 'Выберите главное фото'
-                }]
-            },
-            photo1: {
-                identifier: 'hidden-new-file1',
-                rules: [{
-                    type: 'empty',
-                    prompt: 'Выберите фото'
-                }]
-            },
-            photo2: {
-                identifier: 'hidden-new-file2',
-                rules: [{
-                    type: 'empty',
-                    prompt: 'Выберите фото'
-                }]
-            },
-            photo3: {
-                identifier: 'hidden-new-file3',
-                rules: [{
-                    type: 'empty',
-                    prompt: 'Выберите фото'
                 }]
             }
         }
