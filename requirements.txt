@@ -3,3 +3,4 @@ django==1.10.8
 psycopg2
 django-allauth
 django-watermark-remastered
+Pillow==4.1.0

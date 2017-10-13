@@ -74,6 +74,7 @@ def new_post(request):
                 img = Image()
                 img.image_file=fimg
                 img.obj_id=post.id
+                img.save()
     return redirect('/')
 
 

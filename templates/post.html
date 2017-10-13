@@ -47,6 +47,9 @@
     <div class="row">
         <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
             <div id="gallery" style="display:none;">
+            <img src="{{ post.main_photo.url}}"
+                         data-image="{{ post.main_photo.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85" }}">
+
                 {% for photo in post.photos.all %}
                     <img src="{{ photo.image_file.url}}"
                          data-image="{{ photo.image_file.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85" }}">
