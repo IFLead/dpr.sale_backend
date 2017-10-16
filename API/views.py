@@ -113,8 +113,7 @@ def verify_user(request):
 def unverify_user(request):
     try:
         user = CustomData.objects.get(user_id__exact=request.POST['user_id'])
-        user.verified = False
-        user.user.save()
+        user.user.delete()
         return JsonResponse({'status': 'OK', 'message': 'success'})
     except CustomData.DoesNotExist:
         return JsonResponse({'status': 'error', 'message': 'has no this object'})
