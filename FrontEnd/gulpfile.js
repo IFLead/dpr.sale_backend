@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     notify = require("gulp-notify"),
     rsync = require('gulp-rsync'),
     selectors = require('gulp-selectors'),
-    stripCssComments = require('gulp-strip-css-comments');
+    criticalCss = require('gulp-critical-css');
+    htmlmin = require('gulp-htmlmin');
 
 // Скрипты проекта
 
@@ -32,6 +33,17 @@ gulp.task('clean-css', function () {
     return gulp.src(['app/**/*.css', 'app/**/*.html', 'app/**/*.js'])
         .pipe(selectors.run())
         .pipe(gulp.dest('test'));
+});
+
+gulp.task('minify-html', function() {
+  return gulp.src('../templates/**/*.html')
+    .pipe(htmlmin({
+        collapseWhitespace: true,
+        ignoreCustomFragments: [ /<%[\s\S]*?%>/, /<\?[\s\S]*?\?>/, /{({|%).*?(}|%)}/],
+        removeComments: true,
+        minifyCSS: true
+    }))
+    .pipe(gulp.dest('../templates'));
 });
 
 gulp.task('js', ['common-js'], function () {
@@ -61,6 +73,12 @@ gulp.task('browser-sync', function () {
         // tunnel: true,
         // tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
     });
+});
+
+gulp.task('critical', function () {
+    return gulp.src('../static/css/main.min.css')
+        .pipe(criticalCss())
+        .pipe(gulp.dest('test1'))
 });
 
 gulp.task('sass', function () {
