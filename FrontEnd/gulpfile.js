@@ -12,7 +12,9 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     ftp = require('vinyl-ftp'),
     notify = require("gulp-notify"),
-    rsync = require('gulp-rsync');
+    rsync = require('gulp-rsync'),
+    selectors = require('gulp-selectors'),
+    stripCssComments = require('gulp-strip-css-comments');
 
 // Скрипты проекта
 
@@ -23,6 +25,13 @@ gulp.task('common-js', function () {
         .pipe(concat('common.min.js'))
         //.pipe(uglify())
         .pipe(gulp.dest('app/js'));
+});
+
+gulp.task('clean-css', function () {
+
+    return gulp.src(['app/**/*.css', 'app/**/*.html', 'app/**/*.js'])
+        .pipe(selectors.run())
+        .pipe(gulp.dest('test'));
 });
 
 gulp.task('js', ['common-js'], function () {
@@ -38,7 +47,7 @@ gulp.task('js', ['common-js'], function () {
         'app/js/common.min.js' // Всегда в конце
     ])
         .pipe(concat('scripts.min.js'))
-        //.pipe(uglify()) // Минимизировать весь js (на выбор)
+        .pipe(uglify()) // Минимизировать весь js (на выбор)
         .pipe(gulp.dest('app/js'))
         .pipe(gulp.dest('../static/js'));
 });
@@ -141,6 +150,7 @@ gulp.task('rsync', function () {
 gulp.task('removefiles', function () {
     return del.sync(['../templates', '../static'],{ force:true});
 });
+
 gulp.task('clearcache', function () {
     return cache.clearAll();
 });

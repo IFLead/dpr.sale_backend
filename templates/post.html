@@ -54,7 +54,6 @@
                 <img src="{% static 'img/photo-404.png' %}"
                          data-image="{% static 'img/photo-404.png' %}">
             {% endif %}
-
                 {% for photo in post.photos.all %}
                     <img src="{{ photo.image_file.url}}"
                          data-image="{{ photo.image_file.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85" }}">
