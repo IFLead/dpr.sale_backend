@@ -842,16 +842,132 @@ $(document).ready(function () {
         $(this).siblings('label').css('background-color', '#b5cc18');
     });
 
-    // function changeImg() {
-    //     var section = $('.heading-section');
-    //
-    //     setTimeout(function () {
-    //        section.css('background', 'url(/static/img/svg/fit.svg), url(/static/img/real%20estate/1.jpg)');
-    //        section.css('background-repeat', 'no-repeat');
-    //        section.css('background-position', 'left, left bottom');
-    //     }, 2500);
-    // }
-    //
-    // setTimeout(changeImg(), 2500);
+    $('#commercial_filter').click(function () {
+        $('#sorry_bro').attr('hidden', true);
+        $('#waterfall li').remove();
+        $('#waterfall').attr('hidden', true);
+        $('#data_loader').addClass('active');
+
+        var data = {
+            filter: 'commercial'
+        };
+
+        $.ajax({
+            url: '/api/show',
+            type: 'GET',
+            data: data,
+            dataType: 'json',
+
+            success: function (result) {
+
+                $('#data_loader').removeClass('active');
+                if (result.html) {
+                    $('#waterfall').attr('hidden', false);
+                    $('#waterfall').append(result.html);
+                    $('#more_button').removeClass('hidden');
+                }
+                else {
+                    $('#sorry_bro').attr('hidden', false);
+                    $('#more_button').addClass('hidden');
+                }
+            }
+        });
+    });
+
+    $('#sale_filter').click(function () {
+        $('#sorry_bro').attr('hidden', true);
+        $('#waterfall li').remove();
+        $('#waterfall').attr('hidden', true);
+        $('#data_loader').addClass('active');
+
+        var data = {
+            filter: 'sale'
+        };
+
+        $.ajax({
+            url: '/api/show',
+            type: 'GET',
+            data: data,
+            dataType: 'json',
+
+            success: function (result) {
+
+                $('#data_loader').removeClass('active');
+                if (result.html) {
+                    $('#waterfall').attr('hidden', false);
+                    $('#waterfall').append(result.html);
+                    $('#more_button').removeClass('hidden');
+                }
+                else {
+                    $('#sorry_bro').attr('hidden', false);
+                    $('#more_button').addClass('hidden');
+                }
+            }
+        });
+    });
+
+    $('#rent_filter').click(function () {
+        $('#sorry_bro').attr('hidden', true);
+        $('#waterfall li').remove();
+        $('#waterfall').attr('hidden', true);
+        $('#data_loader').addClass('active');
+
+        var data = {
+            filter: 'rent'
+        };
+
+        $.ajax({
+            url: '/api/show',
+            type: 'GET',
+            data: data,
+            dataType: 'json',
+
+            success: function (result) {
+
+                $('#data_loader').removeClass('active');
+                if (result.html) {
+                    $('#waterfall').attr('hidden', false);
+                    $('#waterfall').append(result.html);
+                    $('#more_button').removeClass('hidden');
+                }
+                else {
+                    $('#sorry_bro').attr('hidden', false);
+                    $('#more_button').addClass('hidden');
+                }
+            }
+        });
+    });
+
+    $('#important_filter').click(function () {
+        $('#sorry_bro').attr('hidden', true);
+        $('#waterfall li').remove();
+        $('#waterfall').attr('hidden', true);
+        $('#data_loader').addClass('active');
+
+        var data = {
+            filter: 'important'
+        };
+
+        $.ajax({
+            url: '/api/show',
+            type: 'GET',
+            data: data,
+            dataType: 'json',
+
+            success: function (result) {
+
+                $('#data_loader').removeClass('active');
+                if (result.html) {
+                    $('#waterfall').attr('hidden', false);
+                    $('#waterfall').append(result.html);
+                    $('#more_button').removeClass('hidden');
+                }
+                else {
+                    $('#sorry_bro').attr('hidden', false);
+                    $('#more_button').addClass('hidden');
+                }
+            }
+        });
+    });
 
 });
