@@ -177,7 +177,7 @@ def more(request):
                 filters['max_price'] *= 60
         filters.pop('currency')
     rename_dict_keys(filters, names)
-    posts = Post.objects.filter(is_top=False, verified=True, closed=False, **filters).exclude(id__in=post_ids).order_by(
+    posts = Post.objects.filter(verified=True, closed=False, **filters).exclude(id__in=post_ids).order_by(
         '?')[:15]
     return JsonResponse({'status': 'OK', 'posts': post_ids + [item[0] for item in posts.values_list('id')],
                          'html': render_to_string('ajax-posts.html', {'posts': posts})})
@@ -260,3 +260,29 @@ def edit_post(request):
             return JsonResponse({'status': 'error', 'message': 'access denied'})
     else:
         return JsonResponse({'status': 'error', 'message': 'not POST'})
+
+
+@staff_member_required
+def important_post(request):
+    try:
+        post = Post.objects.get(pk=request.POST['post_id'])
+        post.is_important = True
+        post.save()
+        return JsonResponse({'status': 'OK', 'message': 'success'})
+    except Post.DoesNotExist:
+        return JsonResponse({'status': 'error', 'message': 'has no this object'})
+    except Exception:
+        return JsonResponse({'status': 'error', 'message': 'unknown error'})
+
+
+@staff_member_required
+def unimportant_post(request):
+    try:
+        post = Post.objects.get(pk=request.POST['post_id'])
+        post.is_important = False
+        post.save()
+        return JsonResponse({'status': 'OK', 'message': 'success'})
+    except Post.DoesNotExist:
+        return JsonResponse({'status': 'error', 'message': 'has no this object'})
+    except Exception:
+        return JsonResponse({'status': 'error', 'message': 'unknown error'})

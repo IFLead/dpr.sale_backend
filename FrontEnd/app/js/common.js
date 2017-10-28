@@ -884,6 +884,38 @@ $(document).ready(function () {
         });
     });
 
+    $('#important_post').click(function () {
+
+        $.ajax({
+            url: '/api/post/important/',
+            type: 'POST',
+            data: {
+                post_id: $('#main-content').data('post-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
+    });
+
+    $('#unimportant_post').click(function () {
+
+        $.ajax({
+            url: '/api/post/unimportant/',
+            type: 'POST',
+            data: {
+                post_id: $('#main-content').data('post-id')
+            },
+            dataType: 'json',
+
+            success: function (result) {
+                location.reload();
+            }
+        });
+    });
+
 
     $('#verify_post').click(function () {
 
@@ -1196,4 +1228,13 @@ $(document).ready(function () {
     }
 
     $('#edited_square').val().replace(/\,/g, '.');
+
+    $('#is_important').checkbox({
+        onChecked: function() {
+            $('#is_important_val').val('True');
+        },
+        onUnchecked: function () {
+            $('#is_important_val').val('False');
+        }
+    }).checkbox('set unchecked');
 });
