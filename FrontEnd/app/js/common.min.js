@@ -89,6 +89,8 @@ $(document).ready(function () {
 
     $('#post_modal').modal();
 
+    $('#edit_post_modal').modal();
+
     $('#delete_post_modal').modal();
 
     $('#history_modal').modal();
@@ -128,6 +130,11 @@ $(document).ready(function () {
 
     $('#history_button').click(function () {
         $('#history_modal').modal('show');
+        $('#profile_button').popup('hide');
+    });
+
+    $('#edit_post').click(function () {
+        $('#edit_post_modal').modal('show');
         $('#profile_button').popup('hide');
     });
 
@@ -409,6 +416,104 @@ $(document).ready(function () {
             }
         }
     });
+    $('#edit_post_form').form({
+        fields: {
+            title: {
+                identifier: 'edited_title',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Введите заголовок'
+                    }
+                ]
+            },
+            post_type: {
+                identifier: 'edited_post_type',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Выберите рубрику'
+                    }
+                ]
+            },
+            description: {
+                identifier: 'edited_description',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Введите описание'
+                    }
+                ]
+            },
+            price: {
+                identifier: 'edited_estate_price',
+                rules: [
+
+                    {
+                        type: 'integer[1..999999999]',
+                        prompt: 'Только целые суммы'
+                    }
+                ]
+            },
+            rooms: {
+                identifier: 'edited_rooms_count',
+                rules: [
+                    {
+                        type: 'integer[0..100]',
+                        prompt: 'Укажите корректное количество комнат'
+                    }
+                ]
+            },
+            floor: {
+                identifier: 'edited_estate_floor',
+                rules: [
+                    {
+                        type: 'integer[0..1000]',
+                        prompt: 'Укажите корректное количество этажей'
+                    }
+                ]
+            },
+            storeys: {
+                identifier: 'edited_estate_storeys',
+                rules: [
+                    {
+                        type: 'integer[0..1000]',
+                        prompt: 'Укажите корректное количество этажности здания'
+                    }
+                ]
+            },
+            square: {
+                identifier: 'edited_square',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Укажите площадь'
+                    }
+                ]
+            },
+            estate_city: {
+                identifier: 'edited_estate_city',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Выберите город'
+                }]
+            },
+            estate_district: {
+                identifier: 'edited_estate_district',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Выберите район'
+                }]
+            },
+            estate_currency_value: {
+                identifier: 'edit_estate_currency_value',
+                rules: [{
+                    type: 'empty',
+                    prompt: 'Ошибка выбора валюты'
+                }]
+            }
+        }
+    });
 
     $('#estate_currency').dropdown({
         onChange: function () {
@@ -416,8 +521,16 @@ $(document).ready(function () {
         }
     }).dropdown('set selected', '0');
 
+    $('#edited_estate_currency').dropdown({
+        onChange: function () {
+            $('#edited_estate_currency_value').val($(this).dropdown('get value'));
+        }
+    }).dropdown('set selected', $('#edited_estate_currency_value').val());
+
 
     $('#post_type').dropdown();
+    $('#edited_post_type').dropdown();
+    $('#edited_estate_district').dropdown();
 
 
     $('#add_post').click(function () {
@@ -580,6 +693,38 @@ $(document).ready(function () {
         }
     });
 
+    $('#edited_estate_city').dropdown({
+
+        onChange: function (value) {
+
+            $('#edited_estate_district option').remove();
+
+            if (value !== '' && value !== '-1') {
+                $.ajax({
+                    url: '/api/districts/',
+                    type: 'GET',
+                    data: {
+                        city_id: value
+                    },
+                    dataType: 'json',
+
+                    success: function (result) {
+                        $('#edited_estate_district').removeClass('disabled');
+                        for (var i = 0; i < result.length; i++) {
+                            $('#edited_estate_district').append($("<option/>", {
+                                value: result[i].id,
+                                text: result[i].name
+                            }));
+                        }
+                    }
+                });
+            }
+            if (value === '-1') {
+                $('#edited_estate_district').addClass('disabled');
+            }
+        }
+    });
+
     $('#district').dropdown('set selected', -1);
     $('#post_type').dropdown('set selected', -1);
     $('#estate_district').dropdown();
@@ -596,6 +741,10 @@ $(document).ready(function () {
 
     $('#close_post_add_modal').click(function () {
         $('#post_modal').modal('hide');
+    });
+
+    $('#close_post_edit_modal').click(function () {
+        $('#edit_post_modal').modal('hide');
     });
 
     $('#dashboard-add-post').click(function () {
@@ -1042,5 +1191,9 @@ $(document).ready(function () {
         }
     });
 
+    if (window.innerWidth >= 992) {
+        $('#after_sticky').css('margin-top', -$('#sticky').height() / 4.5);
+    }
 
+    $('#edited_square').val().replace(/\,/g, '.');
 });

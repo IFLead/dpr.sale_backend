@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'post/untop', views.untop_post),
     url(r'post/close', views.close_post),
     url(r'post/delete', views.delete_post),
+    url(r'post/edit', views.edit_post),
 
     url(r'user/verify', views.verify_user),
     url(r'user/unverify', views.unverify_user),

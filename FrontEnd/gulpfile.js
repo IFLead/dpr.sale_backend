@@ -84,7 +84,7 @@ gulp.task('critical', function () {
 gulp.task('sass', function () {
     return gulp.src('app/sass/**/*.sass')
         .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-        .pipe(rename({suffix: '.v1.0.min', prefix: ''}))
+        .pipe(rename({suffix: '.v1.1.min', prefix: ''}))
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleanCSS()) // Опционально, закомментировать при отладке
         .pipe(gulp.dest('app/css'))

@@ -423,6 +423,12 @@ header.with-border
   &:hover, &:focus
     background-color: darken(green, 10%)
 
+#edit_post
+  @extend #untop_post
+  background-color: orange
+  &:hover, &:focus
+    background-color: darken(orange, 10%)
+
 #confirm_post_close
   background-color: $accent-color
   color: $main-color
@@ -438,7 +444,7 @@ header.with-border
     right: 10px
   float: right
 
-#add_post_form, #sign_in_form, #delete_form, #settings_form, #dashboard-add-post, #panel_tabs, #sign_up_form, #acc-signin, #pswd-rst, #reset-from-key, #pswd-change, #mail_confirm, #allauth_sign_up, #email_form, #email_btn_form, #add_email
+#add_post_form, #sign_in_form, #delete_form, #settings_form, #dashboard-add-post, #panel_tabs, #sign_up_form, #acc-signin, #pswd-rst, #reset-from-key, #pswd-change, #mail_confirm, #allauth_sign_up, #email_form, #email_btn_form, #add_email, #edit_post_form
   font-size: 1.4rem
 
 #sorry_bro
