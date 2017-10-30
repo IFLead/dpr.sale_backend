@@ -62,9 +62,10 @@ class Post(models.Model):
 
     rooms = models.PositiveSmallIntegerField('Количество комнат', default=1)
     floor = models.PositiveSmallIntegerField('Этаж', default=1)
-    square = models.FloatField('Площадь (метры кв.)', default=1)
+    square = models.FloatField('Площадь (метры кв.)', default=1.0)
     storeys = models.PositiveSmallIntegerField('Этажность здания', default=1)
     district = models.ForeignKey(District, verbose_name='Район')
+    is_important = models.BooleanField('Срочно', default=False)
 
     created = models.DateTimeField('Дата создания', auto_now=True, null=True)
 

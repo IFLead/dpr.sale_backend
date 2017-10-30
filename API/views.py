@@ -127,7 +127,7 @@ def rename_dict_keys(d, names: dict, commercial: list, rent: list, sale: list):
             d[v] = d.pop(k)
         if 'filter' in d:
             val = d.pop('filter')
-            d['category'] = commercial if val == 'commercial' else (rent if val == 'rent' else sale)
+            d['category__in'] = commercial if val == 'commercial' else (rent if val == 'rent' else sale)
         if 'important' in d:
             val = d.pop('important').lower() == 'true'
             d['is_important'] = val
@@ -165,7 +165,7 @@ def search(request):
     if 'filter' in filters:
         filters.pop('category')
     rename_dict_keys(filters, names, commercial, rent, sale)
-    posts = Post.objects.filter(is_top=True,verified=True, closed=False, **filters)
+    posts = Post.objects.filter(is_top=True, verified=True, closed=False, **filters)
     if len(posts) == 0:
         posts = Post.objects.filter(verified=True, closed=False, **filters)[:15]
     return JsonResponse({'status': 'OK', 'html': render_to_string('ajax-posts.html', {'posts': posts})})
@@ -187,8 +187,9 @@ def more(request):
             if 'max_price' not in filters:
                 filters['max_price'] *= 60
         filters.pop('currency')
-    rename_dict_keys(filters, names)
-    posts = Post.objects.filter(is_top=False,verified=True, closed=False, **filters).exclude(id__in=post_ids).order_by('?')[:15]
+    rename_dict_keys(filters, names, [], [], [])
+    posts = Post.objects.filter(verified=True, closed=False, **filters).exclude(id__in=post_ids).order_by(
+        '?')[:15]
     return JsonResponse({'status': 'OK', 'posts': post_ids + [item[0] for item in posts.values_list('id')],
                          'html': render_to_string('ajax-posts.html', {'posts': posts})})
 
@@ -214,3 +215,85 @@ def edit_profile(request):
                 user_data.user.is_staff = False
             user_data.user.save()
     return redirect('/')
+
+
+def edit_post(request):
+    if request.method == 'POST':
+        data = request.POST
+        post_id = data['post_id']
+
+        post = Post.objects.get(id=post_id)
+
+        if request.user.is_staff or post.owner.id == request.user.id:
+            title = data['edited_title']
+            category = int(data['edited_post_type'])
+            price = int(data['edited_estate_price'])
+            currency = int(data['edited_estate_currency_value'])
+            rooms = int(data['edited_rooms_count'])
+            square = float(data['edited_square'])
+            floor = int(data['edited_estate_floor'])
+            storeys = int(data['edited_estate_storeys'])
+            city = int(data['edited_estate_city'])
+            district = int(data['edited_estate_district'])
+            description = data['edited_description']
+
+            if title != post.title or category != post.category.id or price != post.price or currency != post.currency \
+                    or rooms != post.rooms or square != post.square or floor != post.floor or storeys != post.storeys \
+                    or city != post.district.city.id or district != post.district.id or description != post.description:
+                if title != post.title:
+                    post.title = title
+                if category != post.category.id:
+                    post.category_id = category
+                if price != post.price:
+                    post.price = price
+                if currency != post.currency:
+                    post.currency = currency
+                if rooms != post.rooms:
+                    post.rooms = rooms
+                if square != post.square:
+                    post.square = square
+                if floor != post.floor:
+                    post.floor = floor
+                if storeys != post.storeys:
+                    post.storeys = storeys
+                if city != post.district.city.id:
+                    post.district.city_id = city
+                if district != post.district.id:
+                    post.district_id = district
+                if description != post.description:
+                    post.description = description
+
+                post.verified = False
+                post.save()
+
+                return redirect('/' + post_id)
+        else:
+            return JsonResponse({'status': 'error', 'message': 'access denied'})
+    else:
+        return JsonResponse({'status': 'error', 'message': 'not POST'})
+
+
+@staff_member_required
+def important_post(request):
+    try:
+        post = Post.objects.get(pk=request.POST['post_id'])
+        post.is_important = True
+        post.save()
+        return JsonResponse({'status': 'OK', 'message': 'success'})
+    except Post.DoesNotExist:
+        return JsonResponse({'status': 'error', 'message': 'has no this object'})
+    except Exception:
+        return JsonResponse({'status': 'error', 'message': 'unknown error'})
+
+
+@staff_member_required
+def unimportant_post(request):
+    try:
+        post = Post.objects.get(pk=request.POST['post_id'])
+        post.is_important = False
+        post.save()
+        return JsonResponse({'status': 'OK', 'message': 'success'})
+    except Post.DoesNotExist:
+        return JsonResponse({'status': 'error', 'message': 'has no this object'})
+    except Exception:
+        return JsonResponse({'status': 'error', 'message': 'unknown error'})
