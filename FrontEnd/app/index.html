@@ -2162,7 +2162,9 @@
         <li>
             <div>
                 <div class="ui card">
-                    <div class="image"><img src="
+
+                    <div class="image">
+                        <img src="
                             {{ post.main_photo.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85"}}">
                         {% if post.is_top %}
                             <div class="ui orange ribbon label"><i class="star icon"></i> В топе</div>
@@ -2171,6 +2173,7 @@
                             <div class="ui red right ribbon label"><i class="warning icon"></i> Срочно</div>
                         {% endif %}
                     </div>
+
                     <div class="content"><a class="header" href="{% url 'post_view' post.id %}">{{ post.title }}</a>
                         <div class="meta"><span class="date">{{ post.category.name }}</span></div>
                         <div class="meta"><span

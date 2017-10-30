@@ -93,8 +93,6 @@ $(document).ready(function () {
 
     $('#delete_post_modal').modal();
 
-    $('#history_modal').modal();
-
     $('#settings_modal').modal(
         {
             onHidden: function () {
@@ -129,8 +127,7 @@ $(document).ready(function () {
     });
 
     $('#history_button').click(function () {
-        $('#history_modal').modal('show');
-        $('#profile_button').popup('hide');
+        window.location = '/my';
     });
 
     $('#edit_post').click(function () {
@@ -1025,7 +1022,9 @@ $(document).ready(function () {
 
     var commercial_active = false, rent_active = false, sale_active = false, important_active = false;
 
-    $('#commercial_filter').click(function () {
+    $('#commercial_filter').click(function (e) {
+		e.preventDefault();
+    	e.stopImmediatePropagation();
 
         commercial_active = !commercial_active;
 
@@ -1040,21 +1039,23 @@ $(document).ready(function () {
 
         if (commercial_active === true) {
             $(this).css('background', '#fff').css('color', '#000').css('border', '1px solid #000');
-
-            $('#category').dropdown('clear');
+        }
+        else {
+            $(this).css('background', '').css('color', '').css('border', '');
+        }
+        $('#category').dropdown('clear');
             $('#sorry_bro').attr('hidden', true);
             $('#waterfall li').remove();
             $('#waterfall').attr('hidden', true);
             $('#data_loader').addClass('active');
+        var data = {
+                filter: commercial_active ? 'commercial': '',
+				important: important_active
+			};
 
-
-            var data = {
-                filter: 'commercial'
-            };
-
-            $.ajax({
-                url: '/api/show',
-                type: 'GET',
+		$.ajax({
+                url: '/api/search',
+                type: 'POST',
                 data: data,
                 dataType: 'json',
 
@@ -1072,13 +1073,11 @@ $(document).ready(function () {
                     }
                 }
             });
-        }
-        else {
-            $(this).css('background', '').css('color', '').css('border', '');
-        }
     });
 
-    $('#sale_filter').click(function () {
+    $('#sale_filter').click(function (e) {
+		e.preventDefault();
+    	e.stopImmediatePropagation();
 
         sale_active = !sale_active;
         if (commercial_active === true) {
@@ -1093,19 +1092,23 @@ $(document).ready(function () {
         if (sale_active === true) {
             $(this).css('background', '#fff').css('color', '#2185d0').css('border', '1px solid #2185d0');
 
-            $('#category').dropdown('clear');
+        }
+        else {
+            $(this).css('background', '').css('color', '').css('border', '');
+        }
+        $('#category').dropdown('clear');
             $('#sorry_bro').attr('hidden', true);
             $('#waterfall li').remove();
             $('#waterfall').attr('hidden', true);
             $('#data_loader').addClass('active');
-
-            var data = {
-                filter: 'sale'
+        var data = {
+                filter: sale_active ? 'sale': '',
+				important: important_active
             };
 
             $.ajax({
-                url: '/api/show',
-                type: 'GET',
+                url: '/api/search',
+                type: 'POST',
                 data: data,
                 dataType: 'json',
 
@@ -1122,14 +1125,13 @@ $(document).ready(function () {
                         $('#more_button').addClass('hidden');
                     }
                 }
+
             });
-        }
-        else {
-            $(this).css('background', '').css('color', '').css('border', '');
-        }
     });
 
-    $('#rent_filter').click(function () {
+    $('#rent_filter').click(function (e) {
+		e.preventDefault();
+    	e.stopImmediatePropagation();
 
         rent_active = !rent_active;
         if (commercial_active === true) {
@@ -1144,20 +1146,24 @@ $(document).ready(function () {
 
         if (rent_active === true) {
             $(this).css('background', '#fff').css('color', '#2185d0').css('border', '1px solid #2185d0');
-
-            $('#category').dropdown('clear');
+        }
+        else {
+            $(this).css('background', '').css('color', '').css('border', '');
+        }
+        $('#category').dropdown('clear');
             $('#sorry_bro').attr('hidden', true);
             $('#waterfall li').remove();
             $('#waterfall').attr('hidden', true);
             $('#data_loader').addClass('active');
 
-            var data = {
-                filter: 'rent'
+        var data = {
+                filter: rent_active ? 'rent': '',
+				important: important_active
             };
 
             $.ajax({
-                url: '/api/show',
-                type: 'GET',
+                url: '/api/search',
+                type: 'POST',
                 data: data,
                 dataType: 'json',
 
@@ -1175,31 +1181,34 @@ $(document).ready(function () {
                     }
                 }
             });
-        }
-        else {
-            $(this).css('background', '').css('color', '').css('border', '');
-        }
     });
 
-    $('#important_filter').click(function () {
+    $('#important_filter').click(function (e) {
+    	e.preventDefault();
+    	e.stopImmediatePropagation();
 
         important_active = !important_active;
 
         if (important_active === true) {
             $(this).css('background', '#fff').css('color', '#db2828').css('border', '1px solid #db2828');
 
+        }
+        else {
+            $(this).css('background', '').css('color', '').css('border', '');
+        }
+		$('#category').dropdown('clear');
             $('#sorry_bro').attr('hidden', true);
             $('#waterfall li').remove();
             $('#waterfall').attr('hidden', true);
             $('#data_loader').addClass('active');
-
-            var data = {
-                filter: 'important'
+        var data = {
+                filter: commercial_active ? 'commercial':((rent_active) ? 'rent' :(sale_active ? 'sale':'')),
+				important: important_active
             };
 
             $.ajax({
-                url: '/api/show',
-                type: 'GET',
+                url: '/api/search',
+                type: 'POST',
                 data: data,
                 dataType: 'json',
 
@@ -1217,10 +1226,6 @@ $(document).ready(function () {
                     }
                 }
             });
-        }
-        else {
-            $(this).css('background', '').css('color', '').css('border', '');
-        }
     });
 
     if (window.innerWidth >= 992) {
