@@ -137,9 +137,9 @@ def search(request):
     names = {'city': 'district__city', 'min_square': 'square__gte', 'max_square': 'square__lte',
              'min_walls': 'rooms__gte', 'max_walls': 'rooms__lte', 'min_floor': 'floor__gte', 'max_floor': 'floor__lte',
              'min_price': 'price__gte', 'max_price': 'price__lte', }
-    commercial = []
-    rent = []
-    sale= []
+    commercial = [10,11,13]
+    rent = [1,2,3,4,5]
+    sale= [6,7,8,9]
     # category: -1
     # city: 1 district__city
     # district: -1
@@ -153,16 +153,17 @@ def search(request):
     # max_price: price__lte
     # currency: 0
     filters = {k: v for k, v in request.POST.items() if v and v != '-1'}
-    if 'min_price' not in filters and 'max_price' not in filters:
-        filters.pop('currency')
-    else:
-        if filters['currency'] == 1:
-            if 'min_price' not in filters:
-                filters['min_price'] *= 60
-            if 'max_price' not in filters:
-                filters['max_price'] *= 60
-        filters.pop('currency')
-    if 'filter' in filters:
+    if 'currency' in filters:
+        if 'min_price' not in filters and 'max_price' not in filters :
+            filters.pop('currency')
+        else:
+            if filters['currency'] == 1:
+                if 'min_price' not in filters:
+                    filters['min_price'] *= 60
+                if 'max_price' not in filters:
+                    filters['max_price'] *= 60
+            filters.pop('currency')
+    if 'filter' in filters and 'category' in filters:
         filters.pop('category')
     rename_dict_keys(filters, names, commercial, rent, sale)
     posts = Post.objects.filter(is_top=True, verified=True, closed=False, **filters)

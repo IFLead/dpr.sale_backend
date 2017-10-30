@@ -46,16 +46,16 @@
         </form>
     </div>
 </div>
-<div id="history_modal" class="ui modal grid">
-    <div class="column">
-        <h2 class="ui image header">
-            <div class="content enter-form-header">Мои объявления</div>
-        </h2>
-        <div id="piled_segment" class="ui piled segment"> {% for self_post in self_posts %}
-            <div class="field"><a href="{% url 'post_view' self_post.id %}">{{ self_post.title }}</a></div> {% endfor %}
-        </div>
-    </div>
-</div>
+{#<div id="history_modal" class="ui modal grid">#}
+{#    <div class="column">#}
+{#        <h2 class="ui image header">#}
+{#            <div class="content enter-form-header">Мои объявления</div>#}
+{#        </h2>#}
+{#        <div id="piled_segment" class="ui piled segment"> {% for self_post in self_posts %}#}
+{#            <div class="field"><a href="{% url 'post_view' self_post.id %}">{{ self_post.title }}</a></div> {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
 <div id="delete_post_modal" class="ui modal grid">
     <div class="column">
         <h2 class="ui image header">

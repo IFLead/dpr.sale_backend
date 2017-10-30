@@ -17,7 +17,7 @@ def index(request):
     return render(request, 'index.html',
                   {'categories': Category.objects.all(),
                    'posts': Post.objects.filter(is_top=True, verified=True, closed=False).order_by('?')[:8],
-                   'cities': City.objects.all(), 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
+                   'cities': City.objects.all(),# 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
                    'user': request.user})
 
 
