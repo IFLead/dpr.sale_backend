@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render, redirect
@@ -28,6 +29,11 @@ def dashboard(request):
                    'accounts': User.objects.filter(custom__verified=False),
                    'self_posts': Post.objects.filter(owner_id__exact=request.user.id)})
 
+@login_required
+def my(request):
+    return render(request, 'my.html',
+                  {'posts': Post.objects.filter(owner_id__exact=request.user.id)})
+
 
 def post_view(request, post_id):
     try:
@@ -51,7 +57,8 @@ def new_post(request):
         post.category_id = int(request.POST["post_type"][0])
 
         # my_file = File(open(filenames[0]))
-        post.main_photo = FImage.objects.create(file=request.FILES['main_photo'],
+        if 'main_photo' in request.FILES:
+            post.main_photo = FImage.objects.create(file=request.FILES['main_photo'],
                                                 original_filename=request.FILES['main_photo'].name, owner=request.user)
 
         post.title = request.POST["title"]

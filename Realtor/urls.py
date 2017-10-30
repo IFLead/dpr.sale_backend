@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^dash/', views.dashboard),
+    url(r'^my/', views.my),
     url(r'^send_request/', views.new_post),
     url(r'^sign_up/', views.sign_up),
     url(r'^api/', include('API.urls')),

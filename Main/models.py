@@ -49,7 +49,8 @@ class District(models.Model):
 class Post(models.Model):
     category = models.ForeignKey(Category, verbose_name='Категория')
     is_top = models.BooleanField('В топе', default=False)
-    main_photo = FilerImageField(verbose_name='Главное изображение')
+    is_important = models.BooleanField('Срочно', default=False)
+    main_photo = FilerImageField(verbose_name='Главное изображение', null=True, blank=True)
     title = models.CharField('Заголовок', max_length=256)
     description = models.TextField('Описание')
     price = models.DecimalField('Стоимость', decimal_places=0, max_digits=9)

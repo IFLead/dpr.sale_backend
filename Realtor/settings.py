@@ -25,7 +25,7 @@ SECRET_KEY = '_qj2#%-o6_kkye*ojv@x_r)(t62ns_6ozbVzskd@r#l5y2(e!_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'dev.dpr.sale']
+ALLOWED_HOSTS = ['127.0.0.1', 'dev.dpr.sale', 'dpr.sale']
 
 # Application definition
 
@@ -56,7 +56,7 @@ WATERMARK_RANDOM_POSITION_ONCE = False
 SITE_ID = 2
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_LOGOUT_ON_GET = True
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = True

@@ -121,16 +121,25 @@ def unverify_user(request):
         return JsonResponse({'status': 'error', 'message': 'unknown error'})
 
 
-def rename_dict_keys(d, names: dict):
+def rename_dict_keys(d, names: dict, commercial: list, rent: list, sale: list):
     for k, v in names.items():
         if k in d:
             d[v] = d.pop(k)
+        if 'filter' in d:
+            val = d.pop('filter')
+            d['category'] = commercial if val == 'commercial' else (rent if val == 'rent' else sale)
+        if 'important' in d:
+            val = d.pop('important').lower() == 'true'
+            d['is_important'] = val
 
 
 def search(request):
     names = {'city': 'district__city', 'min_square': 'square__gte', 'max_square': 'square__lte',
              'min_walls': 'rooms__gte', 'max_walls': 'rooms__lte', 'min_floor': 'floor__gte', 'max_floor': 'floor__lte',
              'min_price': 'price__gte', 'max_price': 'price__lte', }
+    commercial = []
+    rent = []
+    sale= []
     # category: -1
     # city: 1 district__city
     # district: -1
@@ -153,7 +162,9 @@ def search(request):
             if 'max_price' not in filters:
                 filters['max_price'] *= 60
         filters.pop('currency')
-    rename_dict_keys(filters, names)
+    if 'filter' in filters:
+        filters.pop('category')
+    rename_dict_keys(filters, names, commercial, rent, sale)
     posts = Post.objects.filter(is_top=True,verified=True, closed=False, **filters)
     if len(posts) == 0:
         posts = Post.objects.filter(verified=True, closed=False, **filters)[:15]
