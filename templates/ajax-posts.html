@@ -1,1 +1,21 @@
-{% for post in posts %} <li><div><div class="ui card"><div class="image"><img src="{{ post.main_photo.url }}"> {% if post.is_top %} <div class="ui orange ribbon label"><i class="star icon"></i> В топе</div> {% endif %} </div><div class="content"><a class="header" href="{% url 'post_view' post.id %}">{{ post.title }}</a><div class="meta"><span class="date">{{ post.category.name }}</span></div><div class="meta"><span class="date">{{ post.district.city.name }}, {{ post.district.name }} р-н</span></div><div class="meta"><span class="date">{{ post.created }}</span></div></div><div class="extra content"><a><i class="{% if  post.currency == 0 %}ruble{% elif post.currency == 1 %}dollar{% endif %} icon"></i> {{ post.price }} </a></div></div></div></li> {% endfor %}
+{% for post in posts %}
+    <li>
+        <div>
+            <div class="ui card">
+                <div class="image"><img src="{{ post.main_photo.url }}"> {% if post.is_top %}
+                    <div class="ui orange ribbon label"><i class="star icon"></i> В топе</div> {% endif %}
+                {% if post.is_important %}
+                            <div class="ui red right ribbon label"><i class="warning icon"></i> Срочно</div>
+                        {% endif %}</div>
+                <div class="content"><a class="header" href="{% url 'post_view' post.id %}">{{ post.title }}</a>
+                    <div class="meta"><span class="date">{{ post.category.name }}</span></div>
+                    <div class="meta"><span
+                            class="date">{{ post.district.city.name }}, {{ post.district.name }} р-н</span></div>
+                    <div class="meta"><span class="date">{{ post.created }}</span></div>
+                </div>
+                <div class="extra content"><a><i
+                        class="{% if  post.currency == 0 %}ruble{% elif post.currency == 1 %}dollar{% endif %} icon"></i> {{ post.price }}
+                </a></div>
+            </div>
+        </div>
+    </li> {% endfor %}
