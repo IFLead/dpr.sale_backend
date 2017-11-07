@@ -16,7 +16,7 @@ from Realtor import settings
 def index(request):
     return render(request, 'index.html',
                   {'categories': Category.objects.all(),
-                   'posts': Post.objects.filter(is_top=True, verified=True, closed=False).order_by('?')[:8],
+                   'posts': Post.objects.filter(is_top=True, verified=True, closed=False).order_by('-created')[:20],
                    'cities': City.objects.all(),# 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
                    'user': request.user})
 
@@ -70,8 +70,10 @@ def new_post(request):
         post.owner_id = request.user.id
 
         post.rooms = int(request.POST["rooms_count"])
+        post.square = float(request.POST["estate_square"])
         post.floor = int(request.POST["estate_floor"])
         post.storeys = int(request.POST["estate_storeys"])
+        post.city_id = int(request.POST["estate_city"])
         post.district_id = int(request.POST["estate_district"])
         post.save()
         for i in range(1, 8):

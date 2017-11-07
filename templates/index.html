@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru"> {% load staticfiles watermark %}
+<html lang="ru"> {% load staticfiles watermark file_utils%}
 <head>
     <meta charset="utf-8">
     <title>Первый Риэлторский Центр</title>
@@ -2163,8 +2163,12 @@
             <div>
                 <div class="ui card">
                     <div class="image">
+                    {% if post.main_photo.url|file_exists  %}
                         <img src="
                             {{ post.main_photo.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85"}}">
+                        {% else %}
+                        <img src="/uploads/img/2017/10/25/watermarked/d6d8a17abcf4baf5de7138cf10bbc5c92e6d42aa/logotip.jpg">
+                        {% endif %}
                         {% if post.is_top %}
                             <div class="ui orange ribbon label"><i class="star icon"></i> В топе</div>
                         {% endif %}
