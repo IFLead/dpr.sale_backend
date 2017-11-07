@@ -56,7 +56,7 @@ def new_post(request):
     if request.method == 'POST' and request.user.custom.verified:
 
         post = Post()
-        post.category_id = int(request.POST["post_type"][0])
+        post.category_id = int(request.POST["post_type"])
 
         # my_file = File(open(filenames[0]))
         if 'main_photo' in request.FILES:

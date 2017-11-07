@@ -83,9 +83,14 @@
             <div class="field"><label>Заголовок</label><input id="title" placeholder="Заголовок" name="title"
                                                               type="text"></div>
             <div class="two fields">
-                <div class="field"><label>Категория</label><select id="post_type" name="post_type" class="ui dropdown">
-                    <option value="">Категория</option> {% for category in categories %}
-                    <option value="{{ category.id }}">{{ category.name }}</option> {% endfor %} </select></div>
+                <div class="field"><label>Категория</label>
+                    <select id="post_type" name="post_type" class="ui dropdown">
+                        <option value="">Категория</option>
+                        {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
                 <div class="field"><label>Цена</label>
                     <div class="ui right labeled input"><input id="estate_price" name="estate_price" type="number"
                                                                min="1" placeholder="Цена"> <input

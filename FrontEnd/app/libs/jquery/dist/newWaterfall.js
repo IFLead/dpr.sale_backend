@@ -7,7 +7,7 @@
     {
         // 参数
         var defaults = {
-            width: 360,
+            width: 300, //360
             delay: 60,
             repeatShow: false
         };
@@ -67,7 +67,7 @@
                 });
 
                 // 变量
-                var maxHeight = 0;
+                var maxHeight = 450;
                 var list = []
                 var nlist = []
 
@@ -77,7 +77,7 @@
                     list.push({
                         "index": i,
                         "bottom": 0,
-                        "height": $(lis[i]).height(),
+                        "height": $(lis[i]).height(), // -50
                     });
                 }
 

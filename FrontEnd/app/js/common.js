@@ -1228,8 +1228,10 @@ $(document).ready(function () {
             });
     });
 
-    if (window.innerWidth >= 992) {
-        $('#after_sticky').css('margin-top', -$('#sticky').height() / 4.5);
+     if (window.innerWidth >= 992) {
+    	if ($('#sticky').height() >= 500){
+    		$('#after_sticky').css('margin-top', -$('#sticky').height() / 4.5);
+		}
     }
 
     $('#edited_square').val().replace(/\,/g, '.');
