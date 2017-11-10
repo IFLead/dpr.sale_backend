@@ -794,11 +794,20 @@ $(document).ready(function () {
         });
     });
 
+    function get_filter(a, b, c){
+    	if (a) return 'commercial';
+    	else if (b) return 'sale';
+    	else if (c) return 'rent';
+    	else return '';
+	}
+
     $('#more_button').click(function () {
         $('#sorry_bro').attr('hidden', true);
         $(this).addClass('loading disabled');
         var data = JSON.parse(localStorage.getItem('filters'));
         data['post_ids'] = JSON.parse(localStorage.getItem('post_ids'));
+        data['filter'] = get_filter(commercial_active, sale_active, rent_active);
+        data['important'] = important_active;
         $.ajax({
             url: '/api/load-more',
             type: 'GET',
@@ -1244,4 +1253,5 @@ $(document).ready(function () {
             $('#is_important_val').val('False');
         }
     }).checkbox('set unchecked');
+
 });

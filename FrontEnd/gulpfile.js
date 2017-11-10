@@ -10,11 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
     autoprefixer = require('gulp-autoprefixer'),
-    ftp = require('vinyl-ftp'),
     notify = require("gulp-notify"),
-    rsync = require('gulp-rsync'),
-    selectors = require('gulp-selectors'),
-    criticalCss = require('gulp-critical-css');
     htmlmin = require('gulp-htmlmin');
 
 // Скрипты проекта
@@ -28,23 +24,6 @@ gulp.task('common-js', function () {
         .pipe(gulp.dest('app/js'));
 });
 
-gulp.task('clean-css', function () {
-
-    return gulp.src(['app/**/*.css', 'app/**/*.html', 'app/**/*.js'])
-        .pipe(selectors.run())
-        .pipe(gulp.dest('test'));
-});
-
-gulp.task('minify-html', function() {
-  return gulp.src('../templates/**/*.html')
-    .pipe(htmlmin({
-        collapseWhitespace: true,
-        ignoreCustomFragments: [ /<%[\s\S]*?%>/, /<\?[\s\S]*?\?>/, /{({|%).*?(}|%)}/],
-        removeComments: true,
-        minifyCSS: true
-    }))
-    .pipe(gulp.dest('../templates'));
-});
 
 gulp.task('js', ['common-js'], function () {
     return gulp.src([
@@ -52,39 +31,29 @@ gulp.task('js', ['common-js'], function () {
         'app/libs/semantic/dist/semantic.min.js',
         'app/libs/jquery/dist/newWaterfall.js',
         'app/libs/masked-input/jquery.mask.min.js',
-        'app/libs/UniteGallery/js/unitegallery.min.js',
-        'app/libs/UniteGallery/themes/default/ug-theme-default.js',
+        'app/libs/unite_gallery/js/unitegallery.min.js',
+        'app/libs/unite_gallery/themes/default/ug-theme-default.js',
         'app/libs/syo/jquery.syotimer.min.js',
         'app/libs/stickyjs/sticky.min.js',
-        'app/js/common.min.js' // Всегда в конце
+        'app/js/common.min.js'
     ])
         .pipe(concat('scripts.min.js'))
         //.pipe(uglify()) // Минимизировать весь js (на выбор)
-        .pipe(gulp.dest('app/js'))
         .pipe(gulp.dest('../static/js'));
 });
 
-gulp.task('browser-sync', function () {
-    browserSync({
-        server: {
-            baseDir: 'app'
-        },
-        notify: false
-        // tunnel: true,
-        // tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
-    });
-});
 
-gulp.task('critical', function () {
-    return gulp.src('../static/css/main.min.css')
-        .pipe(criticalCss())
-        .pipe(gulp.dest('test1'))
+gulp.task('browser-sync', function () {
+    browserSync.init({
+        notify: false,
+        proxy: "127.0.0.1:8000"
+    });
 });
 
 gulp.task('sass', function () {
     return gulp.src('app/sass/**/*.sass')
         .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-        .pipe(rename({suffix: '.v1.1.min', prefix: ''}))
+        .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleanCSS()) // Опционально, закомментировать при отладке
         .pipe(gulp.dest('app/css'))
@@ -92,14 +61,21 @@ gulp.task('sass', function () {
 });
 
 gulp.task('html', function () {
-   return gulp.src(['app/*.html','app/.htaccess'])
-       .pipe(gulp.dest('../templates'));
+    return gulp.src(['app/**/*.html'])
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            ignoreCustomFragments: [ /<%[\s\S]*?%>/, /<\?[\s\S]*?\?>/, /{({|%).*?(}|%)}/],
+            removeComments: true,
+            minifyCSS: true
+        }))
+        .pipe(gulp.dest('../templates'));
 });
 
-gulp.task('watch', ['js', 'sass'], function () {
-    gulp.watch(['app/libs/**/*.js', 'app/js/common.js'], ['js']);
-    gulp.watch(['app/sass/**/*.sass'], ['sass']);
-    //gulp.watch(['app/*.html'], ['html']);
+gulp.task('watch', ['js', 'sass', 'html', 'browser-sync'], function () {
+    gulp.watch(['app/**/*.html'], ['html', browserSync.reload]);
+    gulp.watch(['app/js/common.js'], ['common-js', browserSync.reload]);
+    gulp.watch(['app/sass/**/*.sass'], ['sass', browserSync.reload]);
+    gulp.watch(['app/js/common.min.js'], ['js', browserSync.reload]);
 });
 
 gulp.task('imagemin', function () {
@@ -108,114 +84,9 @@ gulp.task('imagemin', function () {
         .pipe(gulp.dest('../static/img'));
 });
 
-gulp.task('build', ['removefiles', 'imagemin', 'sass', 'js'], function () {
-
-    var buildFiles = gulp.src([
-        'app/*.html',
-        'app/.htaccess',
-    ]).pipe(gulp.dest('../templates'));
-
-    var buildCss = gulp.src([
-        'app/css/main.min.css',
-    ]).pipe(gulp.dest('../static/css'));
-
-    var buildJs = gulp.src([
-        'app/js/scripts.min.js',
-    ]).pipe(gulp.dest('../static/js'));
-
-    var buildFonts = gulp.src([
-        'app/fonts/**/*',
-    ]).pipe(gulp.dest('../static/fonts'));
-
-});
-
-gulp.task('deploy', function () {
-
-    var conn = ftp.create({
-        host: 'hostname.com',
-        user: 'username',
-        password: 'userpassword',
-        parallel: 10,
-        log: gutil.log
-    });
-
-    var globs = [
-        'dist/**',
-        'dist/.htaccess',
-    ];
-    return gulp.src(globs, {buffer: false})
-        .pipe(conn.dest('/path/to/folder/on/server'));
-
-});
-
-gulp.task('templates-app', function () {
-    return gulp.src('../templates/**/*')
-        .pipe(gulp.dest('app/'));
-});
-
-gulp.task('rsync', function () {
-    return gulp.src('dist/**')
-        .pipe(rsync({
-            root: 'dist/',
-            hostname: 'username@yousite.com',
-            destination: 'yousite/public_html/',
-            archive: true,
-            silent: false,
-            compress: true
-        }));
-});
-
-gulp.task('removefiles', function () {
-    return del.sync(['../templates', '../static'],{ force:true});
-});
 
 gulp.task('clearcache', function () {
     return cache.clearAll();
 });
 
 gulp.task('default', ['watch']);
-
-//DEBUG
-// gulp.task('debug-image', function () {
-//     return gulp.src('app/img/**/*')
-//         .pipe(gulp.dest('../static/img'));
-// });
-
-// gulp.task('debug-js', ['common-js'], function () {
-//     return gulp.src([
-//         'app/libs/jquery/dist/jquery.min.js',
-//         'app/libs/semantic/dist/semantic.min.js',
-//         'app/libs/jquery/dist/newWaterfall.js',
-//         'app/libs/masked-input/jquery.mask.min.js',
-//         'app/libs/UniteGallery/js/unitegallery.min.js',
-//         'app/libs/UniteGallery/themes/default/ug-theme-default.js',
-//         'app/libs/syo/jquery.syotimer.min.js',
-//         'app/js/common.min.js' // Всегда в конце
-//     ])
-//         .pipe(concat('scripts.min.js'))
-//         .pipe(gulp.dest('app/js'));
-// });
-
-// gulp.task('debug', ['removefiles', 'debug-image', 'sass', 'debug-js'], function () {
-//
-//     var buildFiles = gulp.src([
-//         'app/*.html',
-//         'app/.htaccess',
-//     ]).pipe(gulp.dest('../templates'));
-//
-//     var buildCss = gulp.src([
-//         'app/css/main.min.css',
-//     ]).pipe(gulp.dest('../static/css'));
-//
-//     var buildLib = gulp.src(['app/libs/UniteGallery/**/*'])
-//         .pipe(gulp.dest('../static/UniteGallery'));
-//
-//     var buildJs = gulp.src([
-//         'app/js/scripts.min.js',
-//     ]).pipe(gulp.dest('../static/js'));
-//
-//     var buildFonts = gulp.src([
-//         'app/fonts/**/*',
-//     ]).pipe(gulp.dest('../static/fonts'));
-//
-// });

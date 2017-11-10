@@ -127,7 +127,7 @@ def rename_dict_keys(d, names: dict, commercial: list, rent: list, sale: list):
             d[v] = d.pop(k)
         if 'filter' in d:
             val = d.pop('filter')
-            d['category__in'] = commercial if val == 'commercial' else (rent if val == 'rent' else sale)
+            d['category_id__in'] = commercial if val == 'commercial' else (rent if val == 'rent' else sale)
         if 'important' in d:
             val = d.pop('important').lower() == 'true'
             d['is_important'] = val
@@ -176,7 +176,9 @@ def more(request):
     names = {'city': 'district__city', 'min_square': 'square__gte', 'max_square': 'square__lte',
              'min_walls': 'rooms__gte', 'max_walls': 'rooms__lte', 'min_floor': 'floor__gte', 'max_floor': 'floor__lte',
              'min_price': 'price__gte', 'max_price': 'price__lte', }
-
+    commercial = [10, 11, 13]
+    rent = [1, 2, 3, 4, 5]
+    sale = [6, 7, 8, 9]
     post_ids = list(map(int, request.GET.getlist('post_ids[]', [])))
     filters = {k: v for k, v in request.GET.items() if v and v != '-1' and k != 'post_ids[]'}
     if 'min_price' not in filters and 'max_price' not in filters:
@@ -188,7 +190,7 @@ def more(request):
             if 'max_price' not in filters:
                 filters['max_price'] *= 60
         filters.pop('currency')
-    rename_dict_keys(filters, names, [], [], [])
+    rename_dict_keys(filters, names, commercial, rent, sale)
     posts = Post.objects.filter(verified=True, closed=False, **filters).exclude(id__in=post_ids).order_by(
         '-created')[:15]
     return JsonResponse({'status': 'OK', 'posts': post_ids + [item[0] for item in posts.values_list('id')],
