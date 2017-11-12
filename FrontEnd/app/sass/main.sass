@@ -109,7 +109,7 @@ body
 
 #add_post
   margin:
-    bottom: 10px
+    bottom: 15px
   max-width: 300px
   background-color: lighten(lightblue, 20%)
   border: 1px solid #2185d0
@@ -144,6 +144,22 @@ body
 
   div.default
     color: black !important
+
+#is_important > label
+  font-size: 14px
+
+div.ui.right.labeled > div.label
+  border: 1px solid black !important
+
+div.ui.right.labeled > input[type="number"]
+  border: 1px solid black !important
+  border-right: none !important
+
+.ui.dropdown.selection > div.default.text
+  color: black !important
+
+div.ui.input > input[type="number"]
+  border: 1px solid black !important
 
 .categories-wrapper, .regions-wrapper, .min-price-wrapper, .max-price-wrapper, .walls-wrapper, .buttons-wrapper
   padding:
@@ -182,12 +198,25 @@ body
     &:nth-child(1)
       margin-top: 10px
 
+.contact_us > p
+  margin:
+    bottom: 0
+
+.contact_us > .button
+  margin:
+    top: 15px !important
+    bottom: 10px
+
+input::-webkit-input-placeholder
+  color: black !important
 
 .offers
   width: 100%
   background-color: $main-color
   padding: 10px 0 10px 0
 
+a.header
+  word-break: break-word !important
 
 .estate-image
   img
@@ -448,6 +477,11 @@ header.with-border
   margin:
     top: 20px
 
+#data_loader
+  margin:
+    top: 20px
+    bottom: 20px
+
 #account-wtrfl, #closed-wtrfl, #post-wtrfl
   padding: 0
   li
@@ -509,8 +543,7 @@ header.with-border
 #sorry_bro
   text-align: center
   margin:
-    right: 50px
-    left: 50px
+    top: 20px
 
 #uimessage
   font-size: 1.4rem
