@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru"> {% load staticfiles watermark file_utils %}
 <head>
-    <meta charset="utf-8">
-    <title>Первый Риэлторский Центр</title>
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
-    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}">
-    <meta name="theme-color" content="#000">
-    <meta name="msapplication-navbutton-color" content="#000">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-
+    {% include 'metatags.html' %}
     {% include 'index-critical.html' %}
-
+    {% include 'yandex.html' %}
 </head>
 <body>
 {% include 'block-header.html' %}
