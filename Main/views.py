@@ -16,7 +16,7 @@ from Realtor import settings
 def index(request):
     return render(request, 'index.html',
                   {'categories': Category.objects.all(),
-                   'posts': Post.objects.filter(is_top=True, verified=True, closed=False).order_by('-created')[:20],
+                   'posts': Post.objects.filter(is_top=True, verified=True, closed=False).order_by('?')[:12],
                    'cities': City.objects.all(),# 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
                    'user': request.user})
 
@@ -75,6 +75,8 @@ def new_post(request):
         post.storeys = int(request.POST["estate_storeys"])
         post.city_id = int(request.POST["estate_city"])
         post.district_id = int(request.POST["estate_district"])
+        if request.user.is_staff:
+            post.verified = True
         post.save()
         for i in range(1, 8):
             if 'hidden-new-file' + str(i) in request.FILES:

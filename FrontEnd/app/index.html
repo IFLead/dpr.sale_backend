@@ -1,18 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru"> {% load staticfiles watermark file_utils text_utils %}
+<html lang="ru"> {% load staticfiles watermark file_utils %}
 <head>
-    <meta charset="utf-8">
-    <title>Первый Риэлторский Центр</title>
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
-    <link rel="shortcut icon" href="{% static 'img/Symbol.ico' %}">
-    <meta name="theme-color" content="#000">
-    <meta name="msapplication-navbutton-color" content="#000">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-
+    {% include 'metatags.html' %}
     {% include 'index-critical.html' %}
-
+    {% include 'yandex.html' %}
 </head>
 <body>
 {% include 'block-header.html' %}
@@ -176,49 +167,46 @@
             </div>
         </div>
     </div>
+    <ul id="waterfall"> {% for post in posts %}
+        <li>
+            <div>
+                <div class="ui card">
 
+                    <div class="image">
+                        {% if post.main_photo.url|file_exists %}
+                            <img src="{{ post.main_photo.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85"}}">
+                        {% else %}
+                            <img src="/uploads/img/2017/10/25/watermarked/d6d8a17abcf4baf5de7138cf10bbc5c92e6d42aa/logotip.jpg">
+                        {% endif %}
+                        {% if post.is_top %}
+                            <div class="ui orange ribbon label"><i class="star icon"></i> В топе</div>
+                        {% endif %}
+                        {% if post.is_important %}
+                            <div class="ui red right ribbon label"><i class="warning icon"></i> Срочно</div>
+                        {% endif %}
+                    </div>
 
-        <ul id="waterfall">
-            {% for post in posts %}
-                <li>
-                    <div>
-                        <div class="ui card">
-                            <div class="image">
-                                {% if post.main_photo.url|file_exists %}
-                                    <img src="
-                                            {{ post.main_photo.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85"}}">
-                                {% else %}
-                                    <img src="/uploads/img/2017/10/25/watermarked/d6d8a17abcf4baf5de7138cf10bbc5c92e6d42aa/logotip.jpg">
-                                {% endif %}
-                                {% if post.is_top %}
-                                    <div class="ui orange ribbon label"><i class="star icon"></i> В топе</div>
-                                {% endif %}
-                                {% if post.is_important %}
-                                    <div class="ui red right ribbon label"><i class="warning icon"></i> Срочно</div>
-                                {% endif %}
-                            </div>
-
-                            <div class="content">
-                                <a class="header" href="{% url 'post_view' post.id %}">{{ post.title }}</a>
-                                <div class="meta">
-                                    <span class="date">{{ post.category.name }}</span>
-                                </div>
-                                <div class="meta">
-                                    <span class="date">{{ post.district.city.name }}, {{ post.district.name }} р-н</span>
-                                </div>
-                                <div class="meta">
-                                    <span class="date">{{ post.created }}</span>
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <a><i class="{% if  post.currency == 0 %}ruble{% elif post.currency == 1 %}dollar{% endif %} icon"></i> {{ post.price }}
-                                </a>
-                            </div>
+                    <div class="content">
+                        <a class="header" href="{% url 'post_view' post.id %}">{{ post.title }}</a>
+                        <div class="meta">
+                            <span class="date">{{ post.category.name }}</span>
+                        </div>
+                        <div class="meta">
+                            <span class="date">{{ post.district.city.name }}, {{ post.district.name }} р-н</span>
+                        </div>
+                        <div class="meta">
+                            <span class="date">{{ post.created }}</span>
                         </div>
                     </div>
-                </li>
-            {% endfor %}
-        </ul>
+                    <div class="extra content">
+                        <a><i class="{% if  post.currency == 0 %}ruble{% elif post.currency == 1 %}dollar{% endif %} icon"></i> {{ post.price }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
     <div class="container">
         <div class="row">
             <div hidden id="sorry_bro" class="ui error message"><h2>К сожалению, мы ничего не смогли подобрать для Вас
@@ -226,17 +214,17 @@
         </div>
     </div>
     <div id="data_loader" class="ui centered inline loader"></div>
-    {#    <div class="container">#}
-    {#        <div class="row">#}
-    {#            <div class="col-md-2 col-md-push-5 col-lg-2 col-lg-push-5 col-sm-4 col-sm-push-4 col-xs-6 col-xs-push-3 buttons-wrapper">#}
-    {#                <div class="ui form">#}
-    {#                    <div class="field">#}
-    {#                        <div id="more_button" class="ui button special-buttons">Ещё</div>#}
-    {#                    </div>#}
-    {#                </div>#}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </div>#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="col-md-2 col-md-push-5 col-lg-2 col-lg-push-5 col-sm-4 col-sm-push-4 col-xs-6 col-xs-push-3 buttons-wrapper">#}
+{#                <div class="ui form">#}
+{#                    <div class="field">#}
+{#                        <div id="more_button" class="ui button special-buttons">Ещё</div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 </div>
 {% include 'block-scripts.html' %}
 </body>
