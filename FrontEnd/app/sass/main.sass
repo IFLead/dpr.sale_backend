@@ -70,7 +70,8 @@ body
     color: $main-color
 
 .heading-section
-  background-color: $secondary-color
+  background-color: lighten(lightblue, 20%)
+  border-bottom: 1px solid $secondary-color
 
 .heading-div p
   margin: 10px 0 10px 0
@@ -85,17 +86,64 @@ body
   display: flex
   align-items: center
 
+.from-footer-div
+  text-align: center
+
+#vk_group_but
+  -webkit-border-radius: 15px
+  -moz-border-radius: 15px
+  border-radius: 15px
+  max-width: 300px
+  background-color: lighten(lightblue, 20%)
+  border: 1px solid #2185d0
+  color: black
+  &:hover, &:focus
+    background-color: #2185d0
+    color: white
+  i
+    color: white
+    background-color: #2185d0
+    &:hover, &:focus
+      color: white
+
+
 #add_post
   margin:
-    bottom: 5px
+    bottom: 10px
+  max-width: 300px
+  background-color: lighten(lightblue, 20%)
+  border: 1px solid #2185d0
+  color: black
+  &:hover, &:focus
+    background-color: #2185d0
+    color: white
+  i
+    color: white
+    background-color: #2185d0
+
+.contact_us > button.labeled > i.icon
+  border-top-right-radius: 8px !important
+  border-bottom-right-radius: 8px !important
+
+.from-footer-div > button.labeled > i.icon
+  border-top-right-radius: 8px !important
+  border-bottom-right-radius: 8px !important
 
 .filters
-  background-color: $main-color
+  background-color: lighten(lightblue, 20%)
+  margin-top: 25px
+  border: 1px solid $secondary-color
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
 
 .custom-ui
-  border-color: $accent-color !important
+  border-color: black !important
   i
     outline: none
+
+  div.default
+    color: black !important
 
 .categories-wrapper, .regions-wrapper, .min-price-wrapper, .max-price-wrapper, .walls-wrapper, .buttons-wrapper
   padding:
@@ -121,16 +169,25 @@ body
     background-color: darken($accent-color, 10%)
 
 #clear_button
-  color: darken($secondary-color, 70%)
-  background-color: $secondary-color
-
+  color: black
+  background-color: lighten(lightblue, 20%)
   &:hover, &:focus
-    background-color: darken($secondary-color, 10%)
+    background-color: darkred
+    color: white
+
+
+.contact_us
+  text-align: center
+  p
+    &:nth-child(1)
+      margin-top: 10px
+
 
 .offers
   width: 100%
   background-color: $main-color
   padding: 10px 0 10px 0
+
 
 .estate-image
   img
@@ -239,7 +296,7 @@ body
   width: 100%
   height: 250px
   line-height: 30px
-  background-color: $secondary-color
+  background-color: lighten(lightblue, 20%)
 
 .footer-info
   text-align: center
@@ -384,6 +441,8 @@ header.with-border
   border-bottom: 1px solid $secondary-color
   padding:
     bottom: 1px
+  img
+    padding: 5px
 
 .global-page
   margin:
@@ -458,12 +517,23 @@ header.with-border
 
 .logo-img
   max-height: 175px
+  margin-top: 10px
 
 .prefilters-wrapper
   margin:
     top: 10px
+  background-color: lighten(lightblue, 20%)
+  border: 1px solid $secondary-color
+  -webkit-border-radius: 10px
+  -moz-border-radius: 10px
+  border-radius: 10px
+  padding:
+    top: 10px
+    right: 10px
+    left: 10px
+    bottom: 15px
 
-#commercial_filter, #sale_filter, #rent_filter, #important_filter, #add_post
+#commercial_filter, #sale_filter, #rent_filter, #important_filter, #add_post, #vk_group_but, #change_filter
   width: 100%
   border-radius: 10px
   font-family: $default-font
@@ -473,6 +543,27 @@ header.with-border
   line-height: 0.7
   margin:
     top: 5px
+
+#commercial_filter, #change_filter
+  background-color: #fbfdfe
+  color: black
+  &:hover, &:focus
+    background-color: black
+    color: white
+
+#sale_filter, #rent_filter
+  background-color: #fbfdfe
+  color: black
+  &:hover, &:focus
+    background-color: #2185d0
+    color: white
+
+#important_filter
+  background-color: #fbfdfe
+  color: black
+  &:hover, &:focus
+    background-color: darken(red, 10%)
+    color: white
 
 @import "media"
 // Всегда в конце

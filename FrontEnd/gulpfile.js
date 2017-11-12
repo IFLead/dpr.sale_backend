@@ -33,7 +33,6 @@ gulp.task('js', ['common-js'], function () {
         'app/libs/masked-input/jquery.mask.min.js',
         'app/libs/unite_gallery/js/unitegallery.min.js',
         'app/libs/unite_gallery/themes/default/ug-theme-default.js',
-        'app/libs/syo/jquery.syotimer.min.js',
         'app/libs/stickyjs/sticky.min.js',
         'app/js/common.min.js'
     ])

@@ -584,14 +584,6 @@ $(document).ready(function () {
     });
 
 
-    $('#syo').syotimer({
-        lang: 'rus',
-        year: 2017,
-        month: 10,
-        day: 7,
-        hour: 15,
-        minute: 0
-    });
 
     $('#global-page .menu .item').tab({
         context: $('#global-page')
