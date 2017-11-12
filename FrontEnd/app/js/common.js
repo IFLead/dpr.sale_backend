@@ -843,7 +843,25 @@ $(document).ready(function () {
                 dataType: 'json',
 
                 success: function (result) {
-                    location.href = '/';
+                    location.reload();
+                }
+            });
+        }
+    });
+
+    $('#restore_post').click(function () {
+
+        if (confirm('Подтвердите восстановление.')) {
+            $.ajax({
+                url: '/api/post/restore/',
+                type: 'POST',
+                data: {
+                    post_id: $('#main-content').data('post-id')
+                },
+                dataType: 'json',
+
+                success: function (result) {
+                    location.reload();
                 }
             });
         }
@@ -1260,7 +1278,7 @@ $(document).ready(function () {
         var scrollPercent = (scrollAmount / documentHeight) * 100;
 
         console.log(scrollPercent);
-        if (scrollPercent > 70 && go_next) {
+        if (scrollPercent > 50 && go_next) {
             if (!$('#data_loader').hasClass('active')) {
                 loading();
             }

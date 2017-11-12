@@ -52,6 +52,10 @@ def post_view(request, post_id):
         return HttpResponseNotFound()
 
 
+def str2bool(v):
+    return v.lower() in 'true'
+
+
 def new_post(request):
     if request.method == 'POST' and request.user.custom.verified:
 
@@ -75,6 +79,7 @@ def new_post(request):
         post.storeys = int(request.POST["estate_storeys"])
         post.city_id = int(request.POST["estate_city"])
         post.district_id = int(request.POST["estate_district"])
+        post.is_important = str2bool(request.POST["is_important"])
         if request.user.is_staff:
             post.verified = True
         post.save()

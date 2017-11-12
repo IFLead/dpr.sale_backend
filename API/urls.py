@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'post/top', views.top_post),
     url(r'post/untop', views.untop_post),
     url(r'post/close', views.close_post),
+    url(r'post/restore', views.restore_post),
     url(r'post/delete', views.delete_post),
     url(r'post/edit', views.edit_post),
     url(r'post/important', views.important_post),

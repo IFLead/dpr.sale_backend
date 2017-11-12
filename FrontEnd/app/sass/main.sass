@@ -158,6 +158,9 @@ div.ui.right.labeled > input[type="number"]
 .ui.dropdown.selection > div.default.text
   color: black !important
 
+.ui.dropdown.selection
+  border: 1px solid black !important
+
 div.ui.input > input[type="number"]
   border: 1px solid black !important
 
@@ -209,6 +212,11 @@ div.ui.input > input[type="number"]
 
 input::-webkit-input-placeholder
   color: black !important
+
+
+input[type="text"], #description
+  border: 1px solid black !important
+
 
 .offers
   width: 100%
@@ -510,7 +518,7 @@ header.with-border
   &:hover, &:focus
     background-color: darken(red, 10%)
 
-#top_post, #verify_post, #important_post
+#top_post, #verify_post, #important_post, #restore_post
   @extend #untop_post
   background-color: green
   &:hover, &:focus

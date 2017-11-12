@@ -84,6 +84,23 @@ def close_post(request):
         return JsonResponse({'status': 'error', 'message': 'unknown error'})
 
 
+@login_required
+def restore_post(request):
+    try:
+        post = Post.objects.get(pk=request.POST['post_id'])
+        if request.user.is_active and (request.user.is_staff or post.owner.id == request.user.id):
+            post.closed = False
+            post.reason = ''
+            post.save()
+            return JsonResponse({'status': 'OK', 'message': 'success'})
+        else:
+            return JsonResponse({'status': 'error', 'message': 'you have not access'})
+    except Post.DoesNotExist:
+        return JsonResponse({'status': 'error', 'message': 'has no this object'})
+    except Exception:
+        return JsonResponse({'status': 'error', 'message': 'unknown error'})
+
+
 @staff_member_required
 def delete_post(request):
     try:
