@@ -89,7 +89,8 @@
         <h2 class="ui image header">
             <div class="content enter-form-header">Создание объявления</div>
         </h2>
-        <form id="add_post_form" class="ui form" enctype="multipart/form-data" method="post" action="/send_request/">
+        <form id="add_post_form" class="ui form" enctype="multipart/form-data" method="post"
+              action="/send_request/">
             {% csrf_token %}
             <p>Заполните указанные ниже поля</p>
             <div class="field"><label>Заголовок</label>
@@ -179,81 +180,21 @@
                 <textarea name="description" id="description"></textarea>
             </div>
 
-            <div class="four fields">
-                <div class="field">
-                    <label for="hidden-main-photo" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Главное фото
-                    </label>
-                    <input name="main_photo" type="file" id="hidden-main-photo" style="display:none">
-                </div>
-                <div class="field">
-                    <label for="hidden-new-file1" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label>
-                    <input type="file" name="hidden-new-file1" id="hidden-new-file1" style="display:none">
-                </div>
-                <div class="field">
-                    <label for="hidden-new-file2" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label>
-                    <input type="file" name="hidden-new-file2" id="hidden-new-file2" style="display:none">
-                </div>
-                <div class="field">
-                    <label for="hidden-new-file3" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label>
-                    <input type="file" name="hidden-new-file3" id="hidden-new-file3" style="display:none">
-                </div>
+
+            <div class="field">
+                <label for="hidden-main-photo" class="ui icon button add-photo-button">
+                    <i class="cloud icon"></i> Главное фото
+                </label>
+                <input name="main_photo" type="file" id="hidden-main-photo" style="display:none">
             </div>
-            <div class="four fields">
-                <div class="field">
-                    <label for="hidden-new-file4" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label>
-                    <input type="file" name="hidden-new-file4" id="hidden-new-file4" style="display:none">
-                </div>
-                <div class="field">
-                    <label for="hidden-new-file5" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label>
-                    <input type="file" name="hidden-new-file5" id="hidden-new-file5" style="display:none">
-                </div>
-                <div class="field">
-                    <label for="hidden-new-file6" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label>
-                    <input type="file" name="hidden-new-file6" id="hidden-new-file6" style="display:none">
-                </div>
-                <div class="field">
-                    <label for="hidden-new-file7" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label>
-                    <input type="file" name="hidden-new-file7" id="hidden-new-file7" style="display:none">
-                </div>
-            </div>
-            <div class="four fields">
-                <div class="field">
-                    <label for="hidden-new-file8" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label>
-                    <input type="file" name="hidden-new-file8" id="hidden-new-file8" style="display:none">
-                </div>
-                <div class="field">
-                    <label for="hidden-new-file9" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label><input type="file" name="hidden-new-file9" id="hidden-new-file9" style="display:none">
-                </div>
-                <div class="field">
-                    <label for="hidden-new-file10" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label>
-                    <input type="file" name="hidden-new-file10" id="hidden-new-file10" style="display:none">
-                </div>
-                <div class="field">
-                    <label for="hidden-new-file11" class="ui icon button add-photo-button">
-                        <i class="cloud icon"></i> Фотография
-                    </label><input type="file" name="hidden-new-file11" id="hidden-new-file11" style="display:none">
-                </div>
+            <div class="field">
+                <label for="hidden-new-file" class="ui icon button add-photo-button">
+                    <i class="cloud icon"></i> Фотографии
+                </label>
+                <input type="file" multiple name="hidden-new-file" id="hidden-new-file" style="display:none">
+                <ul id="files-wrapper">
+
+                </ul>
             </div>
             <div class="two fields">
                 <div class="field">

@@ -34,11 +34,11 @@ gulp.task('js', ['common-js'], function () {
         'app/libs/unite_gallery/js/unitegallery.min.js',
         'app/libs/unite_gallery/themes/default/ug-theme-default.js',
         'app/libs/stickyjs/sticky.min.js',
-        // 'app/libs/dropzone/dropzone.js',
-        // 'app/libs/dropzone/dropzone-amd-module.js',
+        'app/libs/dropzone/dropzone.js',
+        'app/libs/dropzone/dropzone-amd-module.js',
         'app/js/common.min.js'
     ])
-        .pipe(concat('scripts.min.js'))
+        .pipe(concat('scripts.v1.7.min.js'))
         //.pipe(uglify()) // Минимизировать весь js (на выбор)
         .pipe(gulp.dest('../static/js'));
 });

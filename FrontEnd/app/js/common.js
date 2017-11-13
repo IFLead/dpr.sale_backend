@@ -1033,9 +1033,13 @@ $(document).ready(function () {
     $('#user_type').dropdown();
 
     $("input:file").change(function () {
-        var fileName = $(this).val().match(/\\([^\\]+)$/)[1];
-        $(this).siblings('label').html(fileName);
+        var files = $('#hidden-new-file').prop("files");
+        var names = $.map(files, function(val) { return val.name; });
         $(this).siblings('label').css('background-color', '#b5cc18');
+        $.each(names, function(index, value){
+            $('#files-wrapper').append('<li><p>'+ value +'</p></li>');
+        });
+
     });
 
     var commercial_active = false, rent_active = false, sale_active = false, important_active = false;
@@ -1317,5 +1321,8 @@ $(document).ready(function () {
         }
 
     });
+
+
+
 
 });
