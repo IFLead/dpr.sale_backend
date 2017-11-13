@@ -89,7 +89,7 @@ $(document).ready(function () {
 
     $('#post_modal').modal();
 
-    $('#edit_post_modal').modal();
+    // $('#edit_post_modal').modal();
 
     $('#delete_post_modal').modal();
 
@@ -131,8 +131,8 @@ $(document).ready(function () {
     });
 
     $('#edit_post').click(function () {
-        $('#edit_post_modal').modal('show');
-        $('#profile_button').popup('hide');
+        var post_id = $('#main-content').data('post-id');
+        window.open('http://dpr.sale/admin/Main/post/'+ post_id + '/change/');
     });
 
 
@@ -1032,14 +1032,32 @@ $(document).ready(function () {
 
     $('#user_type').dropdown();
 
-    $("input:file").change(function () {
+    $("#hidden-main-photo:file").change(function () {
+        try {
+            var fileName = $(this).val().match(/\\([^\\]+)$/)[1];
+            $(this).siblings('label').css('background-color', '#b5cc18');
+            $(this).siblings('label').html(fileName);
+        }
+        catch (err) {
+            $(this).siblings('label').css('background-color', '#e0e1e2 ');
+            $(this).siblings('label').html('Главная фотография');
+        }
+    });
+
+    $("#hidden-new-file:file").change(function () {
         var files = $('#hidden-new-file').prop("files");
         var names = $.map(files, function(val) { return val.name; });
-        $(this).siblings('label').css('background-color', '#b5cc18');
+        if (names.length > 0) {
+            $(this).siblings('label').css('background-color', '#b5cc18');
+        }
+        else {
+            $(this).siblings('label').css('background-color', '#e0e1e2 ');
+        }
+
+        $('#files-wrapper').empty();
         $.each(names, function(index, value){
             $('#files-wrapper').append('<li><p>'+ value +'</p></li>');
         });
-
     });
 
     var commercial_active = false, rent_active = false, sale_active = false, important_active = false;
@@ -1321,8 +1339,4 @@ $(document).ready(function () {
         }
 
     });
-
-
-
-
 });

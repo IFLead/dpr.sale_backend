@@ -1,23 +1,18 @@
+from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.core.files.storage import FileSystemStorage
+from django.http import HttpResponseForbidden, HttpResponseNotFound
 from django.shortcuts import render, redirect
-from django.contrib.admin.views.decorators import staff_member_required
-from django.http import HttpResponseForbidden, HttpResponseNotFound, JsonResponse
-from filer.fields.image import FilerImageField
-
-from Main.models import Category, Post, City, Image, District
-from django.core.files import File
 from filer.models import Image as FImage
 
-from Realtor import settings
+from Main.models import Category, Post, City, Image, District
 
 
 def index(request):
     return render(request, 'index.html',
                   {'categories': Category.objects.all(),
                    'posts': Post.objects.filter(is_top=True, verified=True, closed=False).order_by('?')[:12],
-                   'cities': City.objects.all(),# 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
+                   'cities': City.objects.all(),  # 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
                    'user': request.user})
 
 
@@ -28,6 +23,7 @@ def dashboard(request):
                    'posts_closed': Post.objects.filter(closed=True),
                    'accounts': User.objects.filter(custom__verified=False),
                    'self_posts': Post.objects.filter(owner_id__exact=request.user.id)})
+
 
 @login_required
 def my(request):
@@ -65,7 +61,8 @@ def new_post(request):
         # my_file = File(open(filenames[0]))
         if 'main_photo' in request.FILES:
             post.main_photo = FImage.objects.create(file=request.FILES['main_photo'],
-                                                original_filename=request.FILES['main_photo'].name, owner=request.user)
+                                                    original_filename=request.FILES['main_photo'].name,
+                                                    owner=request.user)
 
         post.title = request.POST["title"]
         post.description = request.POST["description"]
@@ -83,16 +80,16 @@ def new_post(request):
         if request.user.is_staff:
             post.verified = True
         post.save()
-        for i in range(1, 8):
-            if 'hidden-new-file' + str(i) in request.FILES:
-                fimg = FImage.objects.create(file=request.FILES['hidden-new-file' + str(i)],
-                                             original_filename=request.FILES['hidden-new-file' + str(i)].name,
-                                             owner=request.user)
+        files = request.FILES.getlist('hidden-new-file')
+        for file in files:
+            fimg = FImage.objects.create(file=file,
+                                         original_filename=file.name,
+                                         owner=request.user)
 
-                img = Image()
-                img.image_file=fimg
-                img.obj_id=post.id
-                img.save()
+            img = Image()
+            img.image_file = fimg
+            img.obj_id = post.id
+            img.save()
     return redirect('/')
 
 
