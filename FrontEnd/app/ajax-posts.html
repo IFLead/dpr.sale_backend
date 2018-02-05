@@ -5,7 +5,7 @@
             <div class="ui card">
                 <div class="image">
                     {% if post.main_photo.url|file_exists %}
-                        <img src="{{ post.main_photo.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85"}}">
+                        <img class="img_class" src="{{ post.main_photo.url|watermark:"dpr_sale_watermark,position=C,scale=0.1,opacity=85"}}">
                     {% else %}
                         <img src="/uploads/img/2017/10/25/watermarked/d6d8a17abcf4baf5de7138cf10bbc5c92e6d42aa/logotip.jpg">
                     {% endif %}
@@ -28,7 +28,7 @@
                         <span class="date">{{ post.created }}</span>
                     </div>
                 </div>
-                <div class="extra content">
+                <div class="extra">
                     <a>
                         <i class="{% if  post.currency == 0 %}ruble{% elif post.currency == 1 %}dollar{% endif %} icon"></i> {{ post.price }}
                     </a></div>
