@@ -38,7 +38,7 @@ gulp.task('js', ['common-js'], function () {
         // 'app/libs/dropzone/dropzone-amd-module.js',
         'app/js/common.min.js'
     ])
-        .pipe(concat('scripts.v1.7.min.js'))
+        .pipe(concat('scripts.v1.9.min.js'))
         //.pipe(uglify()) // Минимизировать весь js (на выбор)
         .pipe(gulp.dest('../static/js'));
 });
