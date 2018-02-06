@@ -72,6 +72,7 @@ class Post(models.Model):
         return self.title
 
     class Meta:
+        index_together = ['verified', 'closed']#,'is_top']
         verbose_name = 'Объявление'
         verbose_name_plural = 'Объявления'
 

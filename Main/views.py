@@ -4,16 +4,37 @@ from django.contrib.auth.models import User
 from django.http import HttpResponseForbidden, HttpResponseNotFound
 from django.shortcuts import render, redirect
 from filer.models import Image as FImage
+import time
+
+from django.views.decorators.cache import cache_page
 
 from Main.models import Category, Post, City, Image, District
 
+import logging
 
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+
+
+# fh = logging.FileHandler('/home/django/Realtor/logs/times.log')
+# fh.setLevel(logging.DEBUG)
+# logger.addHandler(fh)
+
+#@cache_page(60*5)
 def index(request):
-    return render(request, 'index.html',
-                  {'categories': Category.objects.all(),
-                   'posts': Post.objects.filter(is_top=True, verified=True, closed=False).order_by('?')[:12],
-                   'cities': City.objects.all(),  # 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
-                   'user': request.user})
+    r = render(request, 'index.html',
+               {'categories': Category.objects.all(),
+                'posts': Post.objects.filter(verified=True, closed=False, is_top=True).only('id', 'title',
+                                                                                            'currency', 'price',
+                                                                                            'created', 'is_top',
+                                                                                            'is_important',
+                                                                                            'category_id',
+                                                                                            'district_id',
+                                                                                            'main_photo_id')
+               .prefetch_related('category', 'district__city', 'main_photo').order_by('?')[:12],
+                'cities': City.objects.all(),  # 'self_posts': Post.objects.filter(owner_id__exact=request.user.id),
+                'user': request.user})
+    return r
 
 
 @staff_member_required
@@ -28,7 +49,14 @@ def dashboard(request):
 @login_required
 def my(request):
     return render(request, 'my.html',
-                  {'posts': Post.objects.filter(owner_id__exact=request.user.id)})
+                  {'posts': Post.objects.filter(owner_id__exact=request.user.id).only('id', 'title',
+                                                                                      'currency', 'price',
+                                                                                      'created', 'is_top',
+                                                                                      'is_important',
+                                                                                      'category_id',
+                                                                                      'district_id',
+                                                                                      'main_photo_id')
+                  .prefetch_related('category', 'district__city', 'main_photo')})
 
 
 def post_view(request, post_id):

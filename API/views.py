@@ -154,9 +154,9 @@ def search(request):
     names = {'city': 'district__city', 'min_square': 'square__gte', 'max_square': 'square__lte',
              'min_walls': 'rooms__gte', 'max_walls': 'rooms__lte', 'min_floor': 'floor__gte', 'max_floor': 'floor__lte',
              'min_price': 'price__gte', 'max_price': 'price__lte', }
-    commercial = [10,11,13]
-    rent = [1,2,3,4,5]
-    sale= [6,7,8,9]
+    commercial = [10, 11, 13]
+    rent = [1, 2, 3, 4, 5]
+    sale = [6, 7, 8, 9]
     # category: -1
     # city: 1 district__city
     # district: -1
@@ -171,7 +171,7 @@ def search(request):
     # currency: 0
     filters = {k: v for k, v in request.POST.items() if v and v != '-1'}
     if 'currency' in filters:
-        if 'min_price' not in filters and 'max_price' not in filters :
+        if 'min_price' not in filters and 'max_price' not in filters:
             filters.pop('currency')
         else:
             if filters['currency'] == 1:
@@ -208,8 +208,16 @@ def more(request):
                 filters['max_price'] *= 60
         filters.pop('currency')
     rename_dict_keys(filters, names, commercial, rent, sale)
-    posts = Post.objects.filter(verified=True, closed=False, **filters).exclude(id__in=post_ids).order_by(
-        '-created')[:15]
+    posts = Post.objects.filter(verified=True, closed=False, **filters).exclude(id__in=post_ids).only('id', 'title',
+                                                                                                      'currency',
+                                                                                                      'price',
+                                                                                                      'created',
+                                                                                                      'is_top',
+                                                                                                      'is_important',
+                                                                                                      'category_id',
+                                                                                                      'district_id',
+                                                                                                      'main_photo_id') \
+                .prefetch_related('category', 'district__city', 'main_photo').order_by('-created')[:15]
     return JsonResponse({'status': 'OK', 'posts': post_ids + [item[0] for item in posts.values_list('id')],
                          'html': render_to_string('ajax-posts.html', {'posts': posts})})
 
@@ -223,7 +231,7 @@ def edit_profile(request):
         phone = re.sub("[^\d+]", "", request.POST['profile_phone'])
         user_data = CustomData.objects.get(user_id__exact=request.user.id)
         if first_name != user_data.user.first_name or last_name != user_data.user.last_name or \
-                        phone != user_data.phone:
+                phone != user_data.phone:
             if first_name != user_data.user.first_name:
                 user_data.user.first_name = first_name
             if last_name != user_data.user.last_name:
