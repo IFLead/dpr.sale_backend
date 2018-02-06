@@ -30,4 +30,12 @@ urlpatterns = [
     url(r'^api/', include('API.urls')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^(?P<post_id>\d+)/$', views.post_view, name='post_view'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+
+if settings.DEBUG:
+    import debug_toolbar
+
+    urlpatterns.append(url(r'^__debug__/', include(debug_toolbar.urls)), )
+    urlpatterns += static(settings.STATIC_URL)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

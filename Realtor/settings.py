@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.dpr.sale', 'dpr.sale']
 
+INTERNAL_IPS = ['127.0.0.1', '165.227.163.99']
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'filer',
     'mptt',
+    'debug_toolbar',
     'Main.apps.MainConfig',
     'API.apps.ApiConfig',
     'allauth',
@@ -47,7 +49,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'watermarker',
 ]
-
 
 WATERMARK_QUALITY = 95
 WATERMARK_OBSCURE_ORIGINAL = False
@@ -80,8 +81,27 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+
 ]
+if DEBUG:
+    DEBUG_TOOLBAR_PANELS = [
+        'debug_toolbar.panels.versions.VersionsPanel',
+        'debug_toolbar.panels.timer.TimerPanel',
+        'debug_toolbar.panels.settings.SettingsPanel',
+        'debug_toolbar.panels.headers.HeadersPanel',
+        'debug_toolbar.panels.request.RequestPanel',
+        'debug_toolbar.panels.sql.SQLPanel',
+        'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+        'debug_toolbar.panels.templates.TemplatesPanel',
+        'debug_toolbar.panels.signals.SignalsPanel',
+        'debug_toolbar.panels.logging.LoggingPanel',
+        'debug_toolbar.panels.redirects.RedirectsPanel',
+        'debug_toolbar.panels.profiling.ProfilingPanel',
+        'debug_toolbar.panels.cache.CachePanel'
+    ]
 
 ROOT_URLCONF = 'Realtor.urls'
 
@@ -116,8 +136,31 @@ DATABASES = {
         'PASSWORD': 'e1c9fd84a6eee9da02c3aacd9c7390a4',
         'HOST': '165.227.163.99',
         'PORT': '5432',
+        'CONN_MAX_AGE': None,
     }
 }
+
+CACHES = {
+    # 'default': {
+    #     'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+    #     'LOCATION': '127.0.0.1:8000',
+    # },
+
+    # "default": {
+    #     "BACKEND": "django_redis.cache.RedisCache",
+    #     "LOCATION": [(os.environ['REDIS_HOST'], 6379)],
+    #     "OPTIONS": {
+    #         "CLIENT_CLASS": "django_redis.client.DefaultClient"
+    #     },
+    #     "KEY_PREFIX": "fastoran"
+    # }
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'realtor_cache',
+    }
+}
+CACHE_TTL = 60 * 5
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

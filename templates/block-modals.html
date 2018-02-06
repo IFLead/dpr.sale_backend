@@ -1,1 +1,260 @@
-{% load account %} <div id="settings_modal" class="ui modal grid"><div class="column"><h2 class="ui image header"><div class="content enter-form-header">Настройки</div></h2><form id="settings_form" class="ui form" method="post" action="/api/user/edit/"> {% csrf_token %} <div class="ui segment"><div class="two fields"><div class="field"><label>Имя</label><div class="ui input"><input id="profile_first_name_view" readonly="readonly" type="text" value="{{ user.first_name }}"> <input id="profile_first_name" type="text" hidden name="profile_first_name" value="{{ user.first_name }}"></div></div><div class="field"><label>Фамилия</label><div class="ui input"><input id="profile_last_name_view" readonly="readonly" type="text" value="{{ user.last_name }}"> <input id="profile_last_name" type="text" hidden name="profile_last_name" value="{{ user.last_name }}"></div></div></div><div class="two fields"><div class="field"><label>Телефон</label><input id="profile_phone_view" readonly="readonly" value="{{ user.custom.phone }}" type="text"> <input id="profile_phone" value="{{ user.custom.phone }}" hidden name="profile_phone" type="text"></div><div class="field"><label id="profile_email_view_label">Ваш E-mail</label><input id="profile_email_view" readonly="readonly" value="{{ user.email }}" type="email"></div></div><div class="buttons-wrapper-form"><div id="change_profile" class="ui button">Изменить</div><a id="change_password" class="ui button" href="{% url 'account_change_password' %}">Сменить пароль </a><a id="change_email" class="ui button" href="{% url 'account_email' %}">Сменить E-mail</a></div><div class="edit-buttons hidden"><div id="save_profile" class="ui submit button">Сохранить</div><div id="cancel_change_profile" class="ui button">Отмена</div></div></div><div class="ui error message"></div></form></div></div><div id="delete_post_modal" class="ui modal grid"><div class="column"><h2 class="ui image header"><div class="content enter-form-header">Почему Вы решили удалить объявление?</div></h2><form id="delete_form" class="ui form"><div class="ui segment"><div class="field"><label>Комментарий</label><textarea id="commentary" name="commentary"></textarea></div><div class="buttons-wrapper-form"><div id="confirm_post_close" class="ui submit button disabled">ОК</div></div></div><div class="ui error message"></div></form></div></div><div id="post_modal" class="ui modal grid"><div class="column"><h2 class="ui image header"><div class="content enter-form-header">Создание объявления</div></h2><form id="add_post_form" class="ui form" enctype="multipart/form-data" method="post" action="/send_request/"> {% csrf_token %} <p>Заполните указанные ниже поля</p><div class="field"><label>Заголовок</label><input id="title" placeholder="Заголовок" name="title" type="text"></div><div class="two fields"><div class="field"><label>Категория</label><select id="post_type" name="post_type" class="ui dropdown"><option value="">Категория</option> {% for category in categories %} <option value="{{ category.id }}">{{ category.name }}</option> {% endfor %} </select></div><div class="field"><label>Цена</label><div class="ui right labeled input"><input id="estate_price" name="estate_price" type="number" min="1" placeholder="Цена"> <input id="estate_currency_value" name="estate_currency" hidden><div id="estate_currency" class="ui dropdown label custom-label currency"><div class="text"></div><i class="dropdown icon"></i><div class="menu"><div class="item" data-value="0">RUB</div><div class="item" data-value="1">USD</div></div></div></div></div></div><div class="two fields"><div class="field"><label>Количество комнат</label><div class="ui input"><input id="rooms_count" name="rooms_count" type="number" min="0" placeholder="Количество комнат"></div></div><div class="field"><label>Площадь</label><div class="ui right labeled input"><input id="square" name="estate_square" type="number" min="0" placeholder="Площадь"><div class="ui basic label">м <sup>2</sup></div></div></div></div><div class="two fields"><div class="field"><label>Этаж</label><div class="ui input"><input id="estate_floor" name="estate_floor" type="number" min="0" placeholder="Этаж"></div></div><div class="field"><label>Этажность</label><div class="ui input"><input id="estate_storeys" name="estate_storeys" type="number" min="0" placeholder="Этажность"></div></div></div><div class="two fields"><div class="field"><label>Город</label><select id="estate_city" name="estate_city" class="ui dropdown"><option value="">Город</option> {% for city in cities %} <option value="{{ city.id }}">{{ city.name }}</option> {% endfor %} </select></div><div class="field"><label>Район</label><select id="estate_district" name="estate_district" class="ui dropdown"><option value="">Район</option></select></div></div><div class="field"><div id="is_important" class="ui checkbox"><input type="checkbox"><label>Срочно</label></div><input id="is_important_val" hidden name="is_important" value="False"></div><div class="field"><label>Описание</label><textarea name="description" id="description"></textarea></div><div class="field"><label for="hidden-main-photo" class="ui icon button add-photo-button"><i class="cloud icon"></i> Главное фото</label><input name="main_photo" type="file" id="hidden-main-photo" style="display:none"></div><div class="field"><label for="hidden-new-file" class="ui icon button add-photo-button"><i class="cloud icon"></i> Фотографии</label><input type="file" multiple="multiple" name="hidden-new-file" id="hidden-new-file" style="display:none"><ul id="files-wrapper"></ul></div><div class="two fields"><div class="field"><div class="ui primary submit button">Отправить на модерацию</div></div><div class="field"><div id="close_post_add_modal" class="ui primary button">Закрыть</div></div></div><div class="ui error message"></div></form></div></div><div id="sign_in_modal" class="ui modal grid"><div class="column"><h2 class="ui image header"><div class="content enter-form-header">Войдите в свой аккаунт</div></h2><form id="sign_in_form" class="ui form" method="post" action="/accounts/login/"> {% csrf_token %} <div class="ui segment"><div class="field"><div class="ui left icon input"><i class="user icon"></i> <input id="id_login" type="text" name="login" placeholder="Логин или E-mail адрес"></div></div><div class="field"><div class="ui left icon input"><i class="lock icon"></i> <input id="id_password" type="password" name="password" placeholder="Пароль"></div></div><div class="buttons-wrapper-login-form"><button id="sign_in_button" class="ui submit button">Войти</button><p><a href="{% url 'account_reset_password' %}">Забыли пароль?</a></p></div></div><div class="ui error message"></div></form><div id="uimessage" class="ui message">Впервые у нас? <a href="/sign_up">Регистрация</a></div></div></div><div id="edit_post_modal" class="ui modal grid"><div class="column"><h2 class="ui image header"><div class="content enter-form-header">Редактирование объявления</div></h2><form id="edit_post_form" class="ui form" method="post" action="/api/post/edit/"> {% csrf_token %} <input name="post_id" value="{{ post.id }}" hidden><div class="field"><label>Заголовок</label><input id="edited_title" name="edited_title" type="text" value="{{ post.title }}"></div><div class="two fields"><div class="field"><label>Категория</label><select id="edited_post_type" name="edited_post_type" class="ui dropdown"><option value="{{ post.category.id }}">{{ post.category.name }}</option> {% for category in categories %} {% if category.id != post.category.id %} <option value="{{ category.id }}">{{ category.name }}</option> {% endif %} {% endfor %} </select></div><div class="field"><label>Цена</label><div class="ui right labeled input"><input id="edited_estate_price" name="edited_estate_price" type="number" min="1" value="{{ post.price }}"> <input id="edited_estate_currency_value" name="edited_estate_currency_value" value="{{ post.currency }}" hidden><div id="edited_estate_currency" class="ui dropdown label custom-label currency"><div class="text"></div><i class="dropdown icon"></i><div class="menu"><div class="item" data-value="0">RUB</div><div class="item" data-value="1">USD</div></div></div></div></div></div><div class="two fields"><div class="field"><label>Количество комнат</label><div class="ui input"><input id="edited_rooms_count" name="edited_rooms_count" type="number" min="0" value="{{ post.rooms }}"></div></div><div class="field"><label>Площадь</label><div class="ui right labeled input"><input id="edited_square" name="edited_square" type="number" min="0" value="{{ post.square }}"><div class="ui basic label">м <sup>2</sup></div></div></div></div><div class="two fields"><div class="field"><label>Этаж</label><div class="ui input"><input id="edited_estate_floor" name="edited_estate_floor" type="number" min="0" value="{{ post.floor }}"></div></div><div class="field"><label>Этажность</label><div class="ui input"><input id="edited_estate_storeys" name="edited_estate_storeys" type="number" min="0" value="{{ post.storeys }}"></div></div></div><div class="two fields"><div class="field"><label>Город</label><select id="edited_estate_city" name="edited_estate_city" class="ui dropdown"><option value="{{ post.district.city.id }}">{{ post.district.city.name }}</option> {% for city in cities %} {% if city.id != post.district.city.id %} <option value="{{ city.id }}">{{ city.name }}</option> {% endif %} {% endfor %} </select></div><div class="field"><label>Район</label><select id="edited_estate_district" name="edited_estate_district" class="ui dropdown"><option value="{{ post.district.id }}">{{ post.district.name }}</option> {% for district in districts %} {% if district.id != post.district.id and district.city.id == post.district.city.id %} <option value="{{ district.id }}">{{ district.name }}</option> {% endif %} {% endfor %} </select></div></div><div class="field"><label>Описание</label><textarea name="edited_description" id="edited_description">{{ post.description }}</textarea></div><div class="two fields"><div class="field"><div class="ui primary submit button">Отправить на модерацию</div></div><div class="field"><div id="close_post_edit_modal" class="ui primary button">Закрыть</div></div></div><div class="ui error message"></div></form></div></div>
+{% load account %}
+<div id="settings_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">Настройки</div>
+        </h2>
+        <form id="settings_form" class="ui form" method="post" action="/api/user/edit/"> {% csrf_token %}
+            <div class="ui segment">
+                <div class="two fields">
+                    <div class="field"><label>Имя</label>
+                        <div class="ui input"><input id="profile_first_name_view" readonly="readonly" type="text"
+                                                     value="{{ user.first_name }}"> <input id="profile_first_name"
+                                                                                           type="text" hidden
+                                                                                           name="profile_first_name"
+                                                                                           value="{{ user.first_name }}">
+                        </div>
+                    </div>
+                    <div class="field"><label>Фамилия</label>
+                        <div class="ui input"><input id="profile_last_name_view" readonly="readonly" type="text"
+                                                     value="{{ user.last_name }}"> <input id="profile_last_name"
+                                                                                          type="text" hidden
+                                                                                          name="profile_last_name"
+                                                                                          value="{{ user.last_name }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="two fields">
+                    <div class="field"><label>Телефон</label><input id="profile_phone_view" readonly="readonly"
+                                                                    value="{{ user.custom.phone }}" type="text"> <input
+                            id="profile_phone" value="{{ user.custom.phone }}" hidden name="profile_phone" type="text">
+                    </div>
+                    <div class="field"><label id="profile_email_view_label">Ваш E-mail</label><input
+                            id="profile_email_view" readonly="readonly" value="{{ user.email }}" type="email"></div>
+                </div>
+                <div class="buttons-wrapper-form">
+                    <div id="change_profile" class="ui button">Изменить</div>
+                    <a id="change_password" class="ui button" href="{% url 'account_change_password' %}">Сменить
+                        пароль </a><a id="change_email" class="ui button" href="{% url 'account_email' %}">Сменить
+                    E-mail</a></div>
+                <div class="edit-buttons hidden">
+                    <div id="save_profile" class="ui submit button">Сохранить</div>
+                    <div id="cancel_change_profile" class="ui button">Отмена</div>
+                </div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+    </div>
+</div>
+<div id="delete_post_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">Почему Вы решили удалить объявление?</div>
+        </h2>
+        <form id="delete_form" class="ui form">
+            <div class="ui segment">
+                <div class="field"><label>Комментарий</label><textarea id="commentary" name="commentary"></textarea>
+                </div>
+                <div class="buttons-wrapper-form">
+                    <div id="confirm_post_close" class="ui submit button disabled">ОК</div>
+                </div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+    </div>
+</div>
+<div id="post_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">Создание объявления</div>
+        </h2>
+        <form id="add_post_form" class="ui form" enctype="multipart/form-data" method="post"
+              action="/send_request/"> {% csrf_token %} <p>Заполните указанные ниже поля</p>
+            <div class="field"><label>Заголовок</label><input id="title" placeholder="Заголовок" name="title"
+                                                              type="text"></div>
+            <div class="two fields">
+                <div class="field"><label>Категория</label><select id="post_type" name="post_type" class="ui dropdown">
+                    <option value="">Категория</option> {% for category in categories %}
+                    <option value="{{ category.id }}">{{ category.name }}</option> {% endfor %} </select></div>
+                <div class="field"><label>Цена</label>
+                    <div class="ui right labeled input"><input id="estate_price" name="estate_price" type="number"
+                                                               min="1" placeholder="Цена"> <input
+                            id="estate_currency_value" name="estate_currency" hidden>
+                        <div id="estate_currency" class="ui dropdown label custom-label currency">
+                            <div class="text"></div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item" data-value="0">RUB</div>
+                                <div class="item" data-value="1">USD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field"><label>Количество комнат</label>
+                    <div class="ui input"><input id="rooms_count" name="rooms_count" type="number" min="0"
+                                                 placeholder="Количество комнат"></div>
+                </div>
+                <div class="field"><label>Площадь</label>
+                    <div class="ui right labeled input"><input id="square" name="estate_square" type="number" min="0"
+                                                               placeholder="Площадь">
+                        <div class="ui basic label">м <sup>2</sup></div>
+                    </div>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field"><label>Этаж</label>
+                    <div class="ui input"><input id="estate_floor" name="estate_floor" type="number" min="0"
+                                                 placeholder="Этаж"></div>
+                </div>
+                <div class="field"><label>Этажность</label>
+                    <div class="ui input"><input id="estate_storeys" name="estate_storeys" type="number" min="0"
+                                                 placeholder="Этажность"></div>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field"><label>Город</label><select id="estate_city" name="estate_city" class="ui dropdown">
+                    <option value="">Город</option> {% for city in cities %}
+                    <option value="{{ city.id }}">{{ city.name }}</option> {% endfor %} </select></div>
+                <div class="field"><label>Район</label><select id="estate_district" name="estate_district"
+                                                               class="ui dropdown">
+                    <option value="">Район</option>
+                </select></div>
+            </div>
+            <div class="field">
+                <div id="is_important" class="ui checkbox"><input type="checkbox"><label>Срочно</label></div>
+                <input id="is_important_val" hidden name="is_important" value="False"></div>
+            <div class="field"><label>Описание</label><textarea name="description" id="description"></textarea></div>
+            <div class="field"><label for="hidden-main-photo" class="ui icon button add-photo-button"><i
+                    class="cloud icon"></i> Главное фото</label><input name="main_photo" type="file"
+                                                                       id="hidden-main-photo" style="display:none">
+            </div>
+            <div class="field"><label for="hidden-new-file" class="ui icon button add-photo-button"><i
+                    class="cloud icon"></i> Фотографии</label><input type="file" multiple="multiple"
+                                                                     name="hidden-new-file" id="hidden-new-file"
+                                                                     style="display:none">
+                <ul id="files-wrapper"></ul>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <div class="ui primary submit button">Отправить на модерацию</div>
+                </div>
+                <div class="field">
+                    <div id="close_post_add_modal" class="ui primary button">Закрыть</div>
+                </div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+    </div>
+</div>
+<div id="sign_in_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">Войдите в свой аккаунт</div>
+        </h2>
+        <form id="sign_in_form" class="ui form" method="post" action="/accounts/login/"> {% csrf_token %}
+            <div class="ui segment">
+                <div class="field">
+                    <div class="ui left icon input"><i class="user icon"></i> <input id="id_login" type="text"
+                                                                                     name="login"
+                                                                                     placeholder="Логин или E-mail адрес">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui left icon input"><i class="lock icon"></i> <input id="id_password" type="password"
+                                                                                     name="password"
+                                                                                     placeholder="Пароль"></div>
+                </div>
+                <div class="buttons-wrapper-login-form">
+                    <button id="sign_in_button" class="ui submit button">Войти</button>
+                    <p><a href="{% url 'account_reset_password' %}">Забыли пароль?</a></p></div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+        <div id="uimessage" class="ui message">Впервые у нас? <a href="/sign_up">Регистрация</a></div>
+    </div>
+</div>
+<div id="edit_post_modal" class="ui modal grid">
+    <div class="column">
+        <h2 class="ui image header">
+            <div class="content enter-form-header">Редактирование объявления</div>
+        </h2>
+        <form id="edit_post_form" class="ui form" method="post" action="/api/post/edit/"> {% csrf_token %} <input
+                name="post_id" value="{{ post.id }}" hidden>
+            <div class="field"><label>Заголовок</label><input id="edited_title" name="edited_title" type="text"
+                                                              value="{{ post.title }}"></div>
+            <div class="two fields">
+                <div class="field"><label>Категория</label><select id="edited_post_type" name="edited_post_type"
+                                                                   class="ui dropdown">
+                    <option value="{{ post.category.id }}">{{ post.category.name }}</option>
+                    {% for category in categories %}{% if category.id != post.category.id %}
+                        <option value="{{ category.id }}">{{ category.name }}</option> {% endif %} {% endfor %}
+                </select></div>
+                <div class="field"><label>Цена</label>
+                    <div class="ui right labeled input"><input id="edited_estate_price" name="edited_estate_price"
+                                                               type="number" min="1" value="{{ post.price }}"> <input
+                            id="edited_estate_currency_value" name="edited_estate_currency_value"
+                            value="{{ post.currency }}" hidden>
+                        <div id="edited_estate_currency" class="ui dropdown label custom-label currency">
+                            <div class="text"></div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item" data-value="0">RUB</div>
+                                <div class="item" data-value="1">USD</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field"><label>Количество комнат</label>
+                    <div class="ui input"><input id="edited_rooms_count" name="edited_rooms_count" type="number" min="0"
+                                                 value="{{ post.rooms }}"></div>
+                </div>
+                <div class="field"><label>Площадь</label>
+                    <div class="ui right labeled input"><input id="edited_square" name="edited_square" type="number"
+                                                               min="0" value="{{ post.square }}">
+                        <div class="ui basic label">м <sup>2</sup></div>
+                    </div>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field"><label>Этаж</label>
+                    <div class="ui input"><input id="edited_estate_floor" name="edited_estate_floor" type="number"
+                                                 min="0" value="{{ post.floor }}"></div>
+                </div>
+                <div class="field"><label>Этажность</label>
+                    <div class="ui input"><input id="edited_estate_storeys" name="edited_estate_storeys" type="number"
+                                                 min="0" value="{{ post.storeys }}"></div>
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field"><label>Город</label><select id="edited_estate_city" name="edited_estate_city"
+                                                               class="ui dropdown">
+                    <option value="{{ post.district.city.id }}">{{ post.district.city.name }}</option>
+                    {% for city in cities %}{% if city.id != post.district.city.id %}
+                        <option value="{{ city.id }}">{{ city.name }}</option> {% endif %} {% endfor %} </select></div>
+                <div class="field"><label>Район</label><select id="edited_estate_district" name="edited_estate_district"
+                                                               class="ui dropdown">
+                    <option value="{{ post.district.id }}">{{ post.district.name }}</option>
+                    {% for district in districts %}
+                        {% if district.id != post.district.id and district.city.id == post.district.city.id %}
+                            <option value="{{ district.id }}">{{ district.name }}</option> {% endif %} {% endfor %}
+                </select></div>
+            </div>
+            <div class="field"><label>Описание</label><textarea name="edited_description"
+                                                                id="edited_description">{{ post.description }}</textarea>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <div class="ui primary submit button">Отправить на модерацию</div>
+                </div>
+                <div class="field">
+                    <div id="close_post_edit_modal" class="ui primary button">Закрыть</div>
+                </div>
+            </div>
+            <div class="ui error message"></div>
+        </form>
+    </div>
+</div>
