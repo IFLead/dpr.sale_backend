@@ -28,8 +28,8 @@ gulp.task('common-js', function () {
 gulp.task('js', ['common-js'], function () {
     return gulp.src([
         'app/libs/jquery/dist/jquery.min.js',
-        'app/libs/semantic/dist/semantic.min.js',
         'app/libs/jquery/dist/newWaterfall.js',
+        'app/libs/semantic/dist/semantic.min.js',
         'app/libs/masked-input/jquery.mask.min.js',
         'app/libs/unite_gallery/js/unitegallery.min.js',
         'app/libs/unite_gallery/themes/default/ug-theme-default.js',

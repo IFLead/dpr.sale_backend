@@ -15,6 +15,8 @@ $(document).ready(function () {
         return cookieValue;
     }
 
+    $('#waterfall').NewWaterfall();
+
     var csrftoken = getCookie('csrftoken');
 
     function csrfSafeMethod(method) {
@@ -570,7 +572,7 @@ $(document).ready(function () {
         location.href = '/sign_up';
     });
 
-    $('#waterfall').NewWaterfall();
+
 
 
     $('#gallery').unitegallery({

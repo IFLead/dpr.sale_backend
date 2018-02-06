@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru"> {% load staticfiles watermark file_utils %}
 <head>
+    {% include 'block-scripts.html' %}
     {% include 'metatags.html' %}
     {% include 'index-critical.html' %}
     {% include 'yandex.html' %}
+
 </head>
 <body>
 {% include 'block-header.html' %}
 {% include 'block-modals.html' %}
 {% include 'block-heading-section.html' %}
+
 <div class="main-content">
     <div class="container prefilters-wrapper">
         <div class="row">
@@ -168,7 +171,7 @@
         </div>
     </div>
     <ul id="waterfall"> {% for post in posts %}
-        <li>
+        <li style="width:300px; display: inline-block;">
             <div>
                 <div class="ui card">
 
@@ -226,6 +229,6 @@
 {#        </div>#}
 {#    </div>#}
 </div>
-{% include 'block-scripts.html' %}
 </body>
+
 </html>
