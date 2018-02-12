@@ -1291,74 +1291,74 @@ $(document).ready(function () {
         window.open('https://vk.com/dprsale');
     });
 
-    function loading() {
-        $('#sorry_bro').attr('hidden', true);
-        $('#data_loader').addClass('active');
-        var data = JSON.parse(localStorage.getItem('filters'));
-        data['post_ids'] = JSON.parse(localStorage.getItem('post_ids'));
-        data['filter'] = get_filter(commercial_active, sale_active, rent_active);
-        data['important'] = important_active;
-        $.ajax({
-            url: '/api/load-more',
-            type: 'GET',
-            data: data,
-            dataType: 'json',
-
-            success: function (result) {
-                console.log(result);
-                $('#data_loader').removeClass('active');
-
-                if (result.html.trim().length > 0) {
-                    $('#waterfall').append(result.html);
-                    go_next = true;
-
-                }
-                else {
-                    noty('К сожалению, это все найденные объявления');
-                    go_next = false;
-                }
-                localStorage.setItem('post_ids', JSON.stringify(result.posts));
-            }
-        });
-    }
-
-    var winheight, docheight, trackLength, throttlescroll;
-
-    function getmeasurements() {
-        winheight = $(window).height();
-        docheight = $(document).height();
-        trackLength = docheight - winheight;
-    }
-
-    function amountscrolled() {
-        var scrollTop = $(window).scrollTop();
-        docheight = $(document).height();
-        trackLength = docheight - winheight;
-        var pctScrolled = Math.floor(scrollTop / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
-        console.log(pctScrolled + '% scrolled');
-        if (pctScrolled > 60 && go_next) {
-            if (!$('#data_loader').hasClass('active')) {
-                loading();
-            }
-
-        }
-    }
-
-    getmeasurements();
-
-    window.addEventListener("resize", function () {
-        getmeasurements()
-    }, false);
-
-    window.addEventListener("scroll", function () {
-        clearTimeout(throttlescroll);
-        throttlescroll = setTimeout(function () { // throttle code inside scroll to once every 50 milliseconds
-            amountscrolled()
-        }, 50)
-    }, false);
-
-
-    var go_next = true;
+    // function loading() {
+    //     $('#sorry_bro').attr('hidden', true);
+    //     $('#data_loader').addClass('active');
+    //     var data = JSON.parse(localStorage.getItem('filters'));
+    //     data['post_ids'] = JSON.parse(localStorage.getItem('post_ids'));
+    //     data['filter'] = get_filter(commercial_active, sale_active, rent_active);
+    //     data['important'] = important_active;
+    //     $.ajax({
+    //         url: '/api/load-more',
+    //         type: 'GET',
+    //         data: data,
+    //         dataType: 'json',
+    //
+    //         success: function (result) {
+    //             console.log(result);
+    //             $('#data_loader').removeClass('active');
+    //
+    //             if (result.html.trim().length > 0) {
+    //                 $('#waterfall').append(result.html);
+    //                 go_next = true;
+    //
+    //             }
+    //             else {
+    //                 noty('К сожалению, это все найденные объявления');
+    //                 go_next = false;
+    //             }
+    //             localStorage.setItem('post_ids', JSON.stringify(result.posts));
+    //         }
+    //     });
+    // }
+    //
+    // var winheight, docheight, trackLength, throttlescroll;
+    //
+    // function getmeasurements() {
+    //     winheight = $(window).height();
+    //     docheight = $(document).height();
+    //     trackLength = docheight - winheight;
+    // }
+    //
+    // function amountscrolled() {
+    //     var scrollTop = $(window).scrollTop();
+    //     docheight = $(document).height();
+    //     trackLength = docheight - winheight;
+    //     var pctScrolled = Math.floor(scrollTop / trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+    //     console.log(pctScrolled + '% scrolled');
+    //     if (pctScrolled > 60 && go_next) {
+    //         if (!$('#data_loader').hasClass('active')) {
+    //             loading();
+    //         }
+    //
+    //     }
+    // }
+    //
+    // getmeasurements();
+    //
+    // window.addEventListener("resize", function () {
+    //     getmeasurements()
+    // }, false);
+    //
+    // window.addEventListener("scroll", function () {
+    //     clearTimeout(throttlescroll);
+    //     throttlescroll = setTimeout(function () { // throttle code inside scroll to once every 50 milliseconds
+    //         amountscrolled()
+    //     }, 50)
+    // }, false);
+    //
+    //
+    // var go_next = true;
 
 
 
