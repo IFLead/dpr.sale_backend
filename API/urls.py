@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'post/edit', views.edit_post),
     url(r'post/important', views.important_post),
     url(r'post/unimportant', views.unimportant_post),
+    url(r'post/get_top_eight', views.get_top_eight),
 
     url(r'user/verify', views.verify_user),
     url(r'user/unverify', views.unverify_user),
