@@ -1,1293 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="frontend fixes">
-      <change beforePath="$PROJECT_DIR$/.idea/Realtor.iml" afterPath="$PROJECT_DIR$/.idea/Realtor.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/API/seializers.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/API/urls.py" afterPath="$PROJECT_DIR$/API/urls.py" />
       <change beforePath="$PROJECT_DIR$/API/views.py" afterPath="$PROJECT_DIR$/API/views.py" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/.bowerrc" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/.htaccess" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/email.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/email/email_confirmation_message.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/email/email_confirmation_signup_message.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/email/email_confirmation_signup_subject.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/email/email_confirmation_subject.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/email/password_reset_key_message.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/email/password_reset_key_subject.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/email_confirm.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/login.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_change.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_reset.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_reset_done.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_reset_from_key.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_reset_from_key_done.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/password_set.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/signup.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/account/verification_sent.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/ajax-posts.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/base.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/block-footer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/block-header.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/block-heading-section.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/block-modals.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/block-scripts.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/dashboard.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/LatoBold/Lato-Bold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/LatoBold/Lato-Bold.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/LatoRegular/Lato-Regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/LatoRegular/Lato-Regular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/RobotoBold/RobotoBold.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/RobotoBold/RobotoBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/RobotoBold/RobotoBold.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/RobotoRegular/RobotoRegular.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/RobotoRegular/RobotoRegular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/RobotoRegular/RobotoRegular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/fonts/icon-font/icons.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/Symbol.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/Symbol.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/dpr-sale.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/favicon/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/photo-404.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/real estate/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/real estate/2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/real estate/arena.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/real estate/top-attr.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/svg/fit.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/syo/timer.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/img/syo/timer_long.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/index-critical.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/js/common.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/js/common.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/js/scripts.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/bootstrap-grid/bootstrap-grid.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/dropzone/basic.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/dropzone/dropzone-amd-module.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/dropzone/dropzone.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/dropzone/dropzone.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/jquery/dist/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/jquery/dist/newWaterfall.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/masked-input/jquery.mask.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/accordion.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/accordion.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/ad.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/api.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/breadcrumb.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/button.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/card.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/checkbox.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/checkbox.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/comment.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/container.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/dimmer.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/dimmer.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/divider.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/dropdown.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/dropdown.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/embed.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/embed.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/feed.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/flag.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/form.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/form.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/grid.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/header.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/icon.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/image.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/input.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/item.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/label.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/list.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/loader.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/menu.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/message.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/modal.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/modal.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/nag.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/nag.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/popup.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/popup.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/progress.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/progress.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/rail.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/rating.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/rating.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/reset.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/reveal.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/search.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/search.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/segment.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/shape.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/shape.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/sidebar.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/sidebar.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/site.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/site.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/state.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/statistic.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/step.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/sticky.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/sticky.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/tab.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/tab.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/table.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/transition.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/transition.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/components/visibility.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/semantic.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/semantic.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/semantic.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/semantic.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/basic/assets/fonts/icons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/basic/assets/fonts/icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/basic/assets/fonts/icons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/basic/assets/fonts/icons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/default/assets/fonts/icons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/default/assets/fonts/icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/default/assets/fonts/icons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/default/assets/fonts/icons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/default/assets/fonts/icons.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/default/assets/images/flags.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/github/assets/fonts/octicons-local.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/github/assets/fonts/octicons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/github/assets/fonts/octicons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/github/assets/fonts/octicons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/material/assets/fonts/icons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/material/assets/fonts/icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/material/assets/fonts/icons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/material/assets/fonts/icons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/semantic/dist/themes/material/assets/fonts/icons.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/stickyjs/sticky.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/syo/jquery.syotimer.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/css/unite-gallery.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/button-close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/cover-grid.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/icon-link32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/icon-play32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/icon-zoom32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/lightbox-arrow-left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/lightbox-arrow-right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/lightbox-icon-close-compact.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/lightbox-icon-close-compact2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/lightbox-icon-close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-black1.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-black2.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-black3.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-black4.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-black5.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-black6.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-black7.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-white1.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-white2.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-white3.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-white4.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-white5.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-white6.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader-white7.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader_bright.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/loader_skype_trans.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/not_loaded.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/play-button-round.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/play-button-square.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/images/transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/js/jquery-11.0.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/js/unitegallery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/js/unitegallery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/release_log.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/alexis.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/arrows_strip_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/arrows_strip_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/button_fullscreen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/button_playpause.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/button_zoom_back.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/button_zoom_minus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/button_zoom_plus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_arrow_down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_arrow_left_hortype.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_arrow_right_hortype.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_arrow_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_handle_down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_handle_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_handle_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/grid_handle_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/slider_arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/slider_arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/alexis/images/slider_bullets.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/arrow_grid_down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/arrow_grid_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/arrows_strip_down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/arrows_strip_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/arrows_strip_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/arrows_strip_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/button_fullscreen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/button_playpause.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/grid_arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/grid_arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/grid_handle_black_bottom.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/grid_handle_black_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/grid_handle_black_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/grid_handle_black_top.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/icon_zoom_back.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/icon_zoom_minus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/icon_zoom_plus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/slider_arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/slider_arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/slider_bullets.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/tile_bullets_blue.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/tile_bullets_brown.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/tile_bullets_gray.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/tile_bullets_green.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/tile_bullets_red.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/tile_button_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/tile_button_play_pause.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/skins/default/tile_button_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/carousel/ug-theme-carousel.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/compact/ug-theme-compact.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/default/images/arrow_down_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/default/images/arrows_strip_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/default/images/arrows_strip_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/default/images/button_fullscreen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/default/images/button_fullscreen_single.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/default/images/button_playpause.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/default/images/button_playpause_single.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/default/ug-theme-default.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/default/ug-theme-default.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/grid/ug-theme-grid.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/slider/ug-theme-slider.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/tiles/ug-theme-tiles.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/tilesgrid/ug-theme-tilesgrid.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/video/images/arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/video/images/arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/video/skin-bottom-text.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/video/skin-right-no-thumb.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/video/skin-right-thumb.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/video/skin-right-title-only.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/libs/unite_gallery/themes/video/ug-theme-video.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/metatags.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/my.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/post-critical.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/post.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/sass/_fonts.sass" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/sass/_libs.sass" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/sass/_media.sass" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/sass/_mixins/_font-face.sass" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/sass/_vars.sass" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/sass/main.sass" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/sign_up.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/signup-critical.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/app/yandex.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/gulpfile.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/gulpfile.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/breadcrumb.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/breadcrumb.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/form.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/form.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/grid.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/grid.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/menu.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/menu.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/message.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/message.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/table.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/collections/table.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/container.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/container.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/divider.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/divider.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/flag.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/flag.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/header.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/header.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/icon.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/icon.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/image.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/image.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/input.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/input.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/label.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/label.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/list.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/list.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/loader.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/loader.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/rail.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/rail.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/reveal.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/reveal.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/segment.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/segment.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/step.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/elements/step.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/globals/reset.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/globals/reset.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/globals/site.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/globals/site.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/accordion.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/accordion.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/chatroom.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/chatroom.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/checkbox.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/checkbox.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/dimmer.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/dimmer.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/dropdown.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/dropdown.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/embed.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/embed.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/modal.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/modal.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/nag.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/nag.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/popup.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/popup.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/progress.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/progress.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/rating.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/rating.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/search.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/search.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/shape.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/shape.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/sidebar.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/sidebar.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/sticky.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/sticky.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/tab.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/tab.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/transition.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/modules/transition.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/ad.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/ad.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/card.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/card.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/comment.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/comment.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/feed.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/feed.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/item.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/item.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/statistic.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/out/views/statistic.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/behaviors/api.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/behaviors/colorize.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/behaviors/form.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/behaviors/state.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/behaviors/visibility.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/behaviors/visit.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/collections/breadcrumb.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/collections/form.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/collections/grid.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/collections/menu.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/collections/message.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/collections/table.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/button.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/container.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/divider.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/flag.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/header.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/icon.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/image.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/input.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/label.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/list.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/loader.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/rail.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/reveal.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/segment.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/elements/step.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/globals/reset.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/globals/site.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/globals/site.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/accordion.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/accordion.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/checkbox.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/checkbox.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/dimmer.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/dimmer.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/dropdown.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/dropdown.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/embed.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/embed.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/modal.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/modal.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/nag.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/nag.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/popup.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/popup.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/progress.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/progress.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/rating.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/rating.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/search.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/search.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/shape.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/shape.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/sidebar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/sidebar.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/sticky.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/sticky.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/tab.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/tab.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/transition.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/modules/transition.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/views/ad.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/views/card.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/views/comment.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/views/feed.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/views/item.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/definitions/views/statistic.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/semantic.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/theme.config" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/theme.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/amazon/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/amazon/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/amazon/globals/site.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/assets/fonts/icons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/assets/fonts/icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/assets/fonts/icons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/assets/fonts/icons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/collections/table.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/collections/table.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/elements/icon.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/elements/icon.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/elements/step.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/elements/step.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/globals/reset.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/globals/reset.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/modules/progress.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/modules/progress.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/views/card.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/basic/views/card.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/bookish/elements/header.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/bookish/elements/header.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/bootstrap3/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/bootstrap3/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/collections/form.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/collections/form.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/collections/menu.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/collections/menu.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/elements/header.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/elements/header.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/modules/accordion.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/modules/accordion.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/views/comment.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/chubby/views/comment.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/collections/table.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/collections/table.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/elements/header.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/elements/header.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/modules/progress.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/modules/progress.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/views/card.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/classic/views/card.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/colored/modules/checkbox.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/colored/modules/checkbox.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/assets/fonts/icons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/assets/fonts/icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/assets/fonts/icons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/assets/fonts/icons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/assets/fonts/icons.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/assets/images/flags.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/breadcrumb.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/breadcrumb.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/form.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/form.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/grid.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/grid.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/menu.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/menu.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/message.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/message.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/table.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/collections/table.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/container.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/container.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/divider.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/divider.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/flag.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/flag.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/header.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/header.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/icon.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/icon.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/image.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/image.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/input.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/input.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/label.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/label.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/list.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/list.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/loader.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/loader.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/rail.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/rail.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/reveal.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/reveal.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/segment.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/segment.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/step.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/elements/step.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/globals/reset.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/globals/reset.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/globals/site.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/globals/site.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/accordion.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/accordion.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/chatroom.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/chatroom.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/checkbox.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/checkbox.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/dimmer.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/dimmer.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/dropdown.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/dropdown.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/embed.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/embed.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/modal.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/modal.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/nag.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/nag.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/popup.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/popup.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/progress.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/progress.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/rating.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/rating.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/search.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/search.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/shape.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/shape.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/sidebar.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/sidebar.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/sticky.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/sticky.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/tab.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/tab.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/transition.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/modules/transition.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/ad.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/ad.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/card.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/card.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/comment.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/comment.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/feed.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/feed.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/item.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/item.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/statistic.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/default/views/statistic.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/duo/elements/loader.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/duo/elements/loader.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/fixed-width/collections/grid.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/fixed-width/collections/grid.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/fixed-width/modules/modal.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/fixed-width/modules/modal.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/flat/collections/form.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/flat/collections/form.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/flat/globals/site.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/flat/globals/site.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/assets/fonts/octicons-local.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/assets/fonts/octicons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/assets/fonts/octicons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/assets/fonts/octicons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/collections/breadcrumb.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/collections/form.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/collections/form.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/collections/grid.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/collections/menu.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/collections/menu.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/collections/message.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/collections/message.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/collections/table.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/header.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/icon.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/icon.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/image.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/input.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/input.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/label.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/label.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/segment.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/segment.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/step.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/elements/step.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/globals/site.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/modules/dropdown.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/modules/dropdown.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/github/modules/popup.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/gmail/collections/message.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/gmail/collections/message.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/instagram/views/card.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/instagram/views/card.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/assets/fonts/icons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/assets/fonts/icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/assets/fonts/icons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/assets/fonts/icons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/assets/fonts/icons.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/collections/menu.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/collections/menu.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/elements/header.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/elements/header.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/elements/icon.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/elements/icon.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/globals/site.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/globals/site.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/modules/dropdown.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/modules/dropdown.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/modules/modal.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/material/modules/modal.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/pulsar/elements/loader.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/pulsar/elements/loader.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/raised/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/raised/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/resetcss/globals/reset.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/resetcss/globals/reset.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/round/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/round/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/rtl/globals/site.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/rtl/globals/site.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/striped/modules/progress.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/striped/modules/progress.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/timeline/views/feed.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/timeline/views/feed.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/twitter/elements/button.overrides" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/src/themes/twitter/elements/button.variables" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/admin/components/create.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/admin/components/init.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/admin/components/update.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/admin/distributions/create.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/admin/distributions/init.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/admin/distributions/update.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/admin/publish.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/admin/register.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/admin/release.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/build.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/build/assets.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/build/css.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/build/javascript.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/check-install.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/clean.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/collections/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/collections/admin.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/collections/build.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/collections/internal.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/collections/rtl.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/github.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/oauth.example.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/release.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/templates/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/templates/bower.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/templates/component-package.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/templates/composer.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/templates/css-package.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/templates/less-package.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/admin/templates/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/defaults.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/docs.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/npm/gulpfile.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/project/config.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/project/install.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/project/release.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/tasks.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/config/user.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/docs/build.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/docs/metadata.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/docs/serve.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/install.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/rtl/build.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/rtl/watch.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/version.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/tasks/watch.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/accordion.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/accordion.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/ad.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/api.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/breadcrumb.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/button.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/card.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/checkbox.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/checkbox.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/comment.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/container.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/dimmer.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/dimmer.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/divider.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/dropdown.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/dropdown.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/embed.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/embed.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/feed.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/flag.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/form.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/form.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/grid.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/header.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/icon.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/image.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/input.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/item.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/label.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/list.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/loader.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/menu.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/message.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/modal.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/modal.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/nag.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/nag.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/popup.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/popup.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/progress.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/progress.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/rail.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/rating.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/rating.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/reset.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/reveal.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/search.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/search.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/segment.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/shape.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/shape.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/sidebar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/sidebar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/site.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/site.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/state.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/statistic.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/step.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/sticky.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/sticky.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/tab.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/tab.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/table.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/transition.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/transition.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/semantic/uncompressed-components/visibility.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Main/forms.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Main/templatetags/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Main/templatetags/file_utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Main/templatetags/text_utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Main/views.py" afterPath="$PROJECT_DIR$/Main/views.py" />
       <change beforePath="$PROJECT_DIR$/Realtor/settings.py" afterPath="$PROJECT_DIR$/Realtor/settings.py" />
-      <change beforePath="$PROJECT_DIR$/Realtor/urls.py" afterPath="$PROJECT_DIR$/Realtor/urls.py" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/easy-install.pth" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/PKG-INFO" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/SOURCES.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/dependency_links.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/entry_points.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/not-zip-safe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/requires.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/EGG-INFO/top_level.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/__main__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/appdirs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/_cmd.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/adapter.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/cache.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/caches/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/caches/file_cache.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/caches/redis_cache.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/compat.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/controller.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/filewrapper.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/heuristics.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/serialize.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/cachecontrol/wrapper.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/ansi.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/ansitowin32.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/initialise.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/win32.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/colorama/winterm.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/misc.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/shutil.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.cfg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/sysconfig.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/_backport/tarfile.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/compat.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/database.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/index.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/locators.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/manifest.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/markers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/metadata.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/resources.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/scripts.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t32.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t64.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/util.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/version.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w32.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w64.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/wheel.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distro.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_ihatexml.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_inputstream.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_tokenizer.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/_base.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/datrie.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_trie/py.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/_utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/constants.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/alphabeticalattributes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/base.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/inject_meta_charset.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/lint.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/optionaltags.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/sanitizer.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/filters/whitespace.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/html5parser.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/serializer.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treeadapters/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treeadapters/genshi.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treeadapters/sax.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/base.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/dom.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treebuilders/etree_lxml.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/base.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/dom.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/etree.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/etree_lxml.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/html5lib/treewalkers/genshi.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/ipaddress.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/linklockfile.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/mkdirlockfile.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/pidlockfile.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/sqlitelockfile.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/lockfile/symlinklockfile.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/ordereddict.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/__about__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/_compat.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/_structures.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/markers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/requirements.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/specifiers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/packaging/version.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/pkg_resources/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/bar.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/counter.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/helpers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/progress/spinner.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/pyparsing.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/re-vendor.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/adapters.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/api.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/auth.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/cacert.pem" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/certs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/compat.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/cookies.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/exceptions.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/hooks.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/models.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/big5freq.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/big5prober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/chardetect.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/chardistribution.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/charsetgroupprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/charsetprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/codingstatemachine.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/compat.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/constants.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/cp949prober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/escprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/escsm.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/eucjpprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/euckrfreq.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/euckrprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/euctwfreq.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/euctwprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/gb2312freq.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/gb2312prober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/hebrewprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/jisfreq.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/jpcntx.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langbulgarianmodel.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langcyrillicmodel.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langgreekmodel.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langhebrewmodel.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langhungarianmodel.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/langthaimodel.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/latin1prober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/mbcharsetprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/mbcsgroupprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/mbcssm.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/sbcharsetprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/sbcsgroupprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/sjisprober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/universaldetector.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/chardet/utf8prober.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/_collections.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/connection.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/connectionpool.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/appengine.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/ntlmpool.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/contrib/socks.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/exceptions.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/fields.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/filepost.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/ordered_dict.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/six.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/packages/ssl_match_hostname/_implementation.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/poolmanager.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/request.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/response.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/connection.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/request.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/response.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/retry.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/timeout.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/packages/urllib3/util/url.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/sessions.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/status_codes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/structures.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/requests/utils.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/retrying.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/six.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/labels.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/mklabels.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/tests.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/webencodings/x_user_defined.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/basecommand.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/baseparser.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/cmdoptions.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/check.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/completion.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/download.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/freeze.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/hash.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/help.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/install.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/list.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/search.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/show.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/uninstall.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/commands/wheel.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/compat/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/compat/dictconfig.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/download.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/exceptions.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/index.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/locations.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/models/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/models/index.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/operations/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/operations/check.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/operations/freeze.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/pep425tags.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/req_file.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/req_install.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/req_set.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/req/req_uninstall.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/status_codes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/appdirs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/build.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/deprecation.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/encoding.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/filesystem.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/glibc.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/hashes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/logging.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/outdated.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/packaging.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/setuptools_build.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/utils/ui.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/bazaar.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/git.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/mercurial.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/vcs/subversion.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/pip-9.0.1-py3.5.egg/pip/wheel.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/setuptools.pth" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/site-packages/watermarker/migrations/0002_auto_20171016_1602.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Lib/tcl8.6/init.tcl" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/Activate.ps1" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_bz2.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_ctypes.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_ctypes_test.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_decimal.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_elementtree.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_hashlib.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_lzma.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_msi.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_multiprocessing.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_overlapped.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_socket.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_sqlite3.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_ssl.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_testbuffer.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_testcapi.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_testimportmultiple.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_testmultiphase.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/_tkinter.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/activate.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/deactivate.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/easy_install-3.5.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/easy_install.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip-script.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip.exe.manifest" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3-script.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.5-script.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.5.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.5.exe.manifest" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pip3.exe.manifest" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pyexpat.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/python.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/python3.dll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/python35.dll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/pythonw.exe" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/select.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/sqlite3.dll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/tcl86t.dll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/tk86t.dll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/unicodedata.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/vcruntime140.dll" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/Scripts/winsound.pyd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/pip-selfcheck.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/RealtorEnv/pyvenv.cfg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.min.v2.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/LatoBold/Lato-Bold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/LatoBold/Lato-Bold.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/LatoRegular/Lato-Regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/LatoRegular/Lato-Regular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/RobotoBold/RobotoBold.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/RobotoBold/RobotoBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/RobotoBold/RobotoBold.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/RobotoRegular/RobotoRegular.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/RobotoRegular/RobotoRegular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/RobotoRegular/RobotoRegular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/icon-font/icons.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/Symbol.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/Symbol.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/dpr-sale.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/favicon/Thumbs.db" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/favicon/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/logo.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/photo-404.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/real estate/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/real estate/2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/real estate/arena.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/real estate/top-attr.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/svg/fit.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/syo/timer.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/img/syo/timer_long.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/scripts.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/scripts.v1.10.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/scripts.v1.8.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/scripts.v1.9.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/arrow-move.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/disclosure-down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/disclosure-right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/draggable-admin.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/mptt/draggable-admin.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/css/unite-gallery.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/button-close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/cover-grid.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/icon-link32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/icon-play32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/icon-zoom32.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/lightbox-arrow-left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/lightbox-arrow-right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/lightbox-icon-close-compact.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/lightbox-icon-close-compact2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/lightbox-icon-close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-black1.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-black2.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-black3.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-black4.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-black5.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-black6.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-black7.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-white1.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-white2.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-white3.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-white4.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-white5.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-white6.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader-white7.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader_bright.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/loader_skype_trans.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/not_loaded.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/play-button-round.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/play-button-square.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/images/transparent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/js/jquery-11.0.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/js/unitegallery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/js/unitegallery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/release_log.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/alexis.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/arrows_strip_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/arrows_strip_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/button_fullscreen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/button_playpause.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/button_zoom_back.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/button_zoom_minus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/button_zoom_plus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_arrow_down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_arrow_left_hortype.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_arrow_right_hortype.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_arrow_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_handle_down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_handle_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_handle_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/grid_handle_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/slider_arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/slider_arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/alexis/images/slider_bullets.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/arrow_grid_down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/arrow_grid_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/arrows_strip_down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/arrows_strip_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/arrows_strip_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/arrows_strip_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/button_fullscreen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/button_playpause.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/grid_arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/grid_arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/grid_handle_black_bottom.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/grid_handle_black_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/grid_handle_black_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/grid_handle_black_top.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/icon_zoom_back.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/icon_zoom_minus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/icon_zoom_plus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/slider_arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/slider_arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/slider_bullets.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/tile_bullets_blue.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/tile_bullets_brown.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/tile_bullets_gray.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/tile_bullets_green.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/tile_bullets_red.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/tile_button_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/tile_button_play_pause.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/skins/default/tile_button_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/carousel/ug-theme-carousel.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/compact/ug-theme-compact.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/default/images/arrow_down_up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/default/images/arrows_strip_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/default/images/arrows_strip_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/default/images/button_fullscreen.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/default/images/button_fullscreen_single.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/default/images/button_playpause.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/default/images/button_playpause_single.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/default/ug-theme-default.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/default/ug-theme-default.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/grid/ug-theme-grid.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/slider/ug-theme-slider.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/tiles/ug-theme-tiles.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/tilesgrid/ug-theme-tilesgrid.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/video/images/arrow_left.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/video/images/arrow_right.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/video/skin-bottom-text.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/video/skin-right-no-thumb.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/video/skin-right-thumb.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/video/skin-right-title-only.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/unite_gallery/themes/video/ug-theme-video.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/.htaccess" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email/email_confirmation_message.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_message.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email/email_confirmation_signup_subject.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email/email_confirmation_subject.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email/password_reset_key_message.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email/password_reset_key_subject.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/email_confirm.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/login.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_change.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_reset.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_reset_done.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_reset_from_key.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_reset_from_key_done.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/password_set.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/signup.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/account/verification_sent.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/ajax-posts.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/block-footer.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/block-header.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/block-heading-section.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/block-modals.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/block-scripts.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/index-critical.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/metatags.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/my.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/post-critical.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/post.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/sign_up.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/signup-critical.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/yandex.html" afterPath="" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
     <ignored path="D:\OneDrive\dpr-sale\Realtor\.idea\shelf/" />
@@ -1303,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1042">
-              <caret line="330" column="6" lean-forward="false" selection-start-line="330" selection-start-column="6" selection-end-line="330" selection-end-column="6" />
+            <state relative-caret-position="410">
+              <caret line="337" column="18" lean-forward="false" selection-start-line="337" selection-start-column="18" selection-end-line="337" selection-end-column="18" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -1318,8 +37,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
               </folding>
@@ -1330,8 +49,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="242">
+              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -1340,7 +59,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
+            <state relative-caret-position="-66">
               <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -1352,24 +71,43 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="172" column="0" lean-forward="false" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
+            <state relative-caret-position="492">
+              <caret line="27" column="68" lean-forward="false" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+              <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="seializers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/seializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -1386,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/FrontEnd/app/css/main.min.css" />
         <option value="D:/Python 3.5.2 x64/Lib/site-packages/watermarker/templatetags/watermark.py" />
         <option value="$PROJECT_DIR$/templates/account/email/email_confirmation_subject.txt" />
         <option value="$PROJECT_DIR$/templates/account/email/email_confirmation_message.txt" />
@@ -1430,13 +167,14 @@
         <option value="$PROJECT_DIR$/FrontEnd/app/index.html" />
         <option value="$PROJECT_DIR$/FrontEnd/gulpfile.js" />
         <option value="$PROJECT_DIR$/FrontEnd/app/js/common.js" />
-        <option value="$PROJECT_DIR$/API/urls.py" />
-        <option value="$PROJECT_DIR$/API/views.py" />
         <option value="$PROJECT_DIR$/Main/views.py" />
         <option value="$PROJECT_DIR$/Main/forms.py" />
-        <option value="$PROJECT_DIR$/Realtor/settings.py" />
         <option value="$PROJECT_DIR$/Realtor/urls.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/API/seializers.py" />
+        <option value="$PROJECT_DIR$/Realtor/settings.py" />
+        <option value="$PROJECT_DIR$/API/urls.py" />
+        <option value="$PROJECT_DIR$/API/views.py" />
       </list>
     </option>
   </component>
@@ -1471,6 +209,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1478,12 +218,20 @@
               <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="dpr.sale_backend" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dpr.sale_backend" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dpr.sale_backend" type="462c0819:PsiDirectoryNode" />
+              <item name="Realtor" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1516,8 +264,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="DJANGO_SETTINGS_MODULE" value="Realtor.settings" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Realtor.settings" />
       </envs>
       <option name="SDK_HOME" value="E:\Lenya\PureGayStuffPartTwo\dprSale_backend\dpr.sale_backend\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -1831,7 +579,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510523573949</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="project clearing">
+      <created>1522170046345</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1522170046345</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1845,12 +600,10 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3470716" sideWeight="0.47654584" order="2" side_tool="false" content_ui="tabs" x="0" y="9" width="1920" height="1017" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7326892" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.295764" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38969404" sideWeight="0.080515295" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23056443" sideWeight="0.9194847" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23801917" sideWeight="0.9194847" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2065053" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7085346" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@Realtor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21800433" sideWeight="0.48454157" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1858,12 +611,14 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36714977" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36714977" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38969404" sideWeight="0.080515295" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7085346" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.49471298" order="6" side_tool="false" content_ui="tabs" />
@@ -1931,7 +686,8 @@
     <MESSAGE value="unverify user, watermark fix, email translate" />
     <MESSAGE value="frontend optimized navernoe" />
     <MESSAGE value="frontend fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="frontend fixes" />
+    <MESSAGE value="project clearing" />
+    <option name="LAST_COMMIT_MESSAGE" value="project clearing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1946,266 +702,69 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/sign_up.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ajax-posts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4358">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/block-header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-scripts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="48" lean-forward="false" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/post-critical.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index-critical.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/post-critical.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/photo-404.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/main.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="353" column="50059" lean-forward="false" selection-start-line="353" selection-start-column="50052" selection-end-line="353" selection-end-column="50059" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/ajax-posts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/_vars.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/signup-critical.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="1663" column="5" lean-forward="true" selection-start-line="1663" selection-start-column="5" selection-end-line="1663" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/semantic.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/index-critical.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="1925" column="21" lean-forward="false" selection-start-line="1925" selection-start-column="21" selection-end-line="1925" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-heading-section.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="44" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html" />
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html" />
+    <entry file="file://$PROJECT_DIR$/templates/block-header.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-scripts.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/post-critical.html" />
+    <entry file="file://$PROJECT_DIR$/templates/index-critical.html" />
+    <entry file="file://$PROJECT_DIR$/templates/post-critical.html" />
+    <entry file="file://$PROJECT_DIR$/static/img/photo-404.png" />
+    <entry file="file://$PROJECT_DIR$/static/img/logo.png" />
+    <entry file="file://$PROJECT_DIR$/static/css/main.min.css" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/ajax-posts.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/_vars.sass" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/signup-critical.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/semantic.json" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/index-critical.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-heading-section.html" />
     <entry file="file://D:/Python 3.5.2 x64/Lib/site-packages/django/template/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-modals.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="170" column="37" lean-forward="false" selection-start-line="170" selection-start-column="25" selection-end-line="170" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="291" lean-forward="false" selection-start-line="0" selection-start-column="291" selection-end-line="0" selection-end-column="291" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="265" lean-forward="false" selection-start-line="0" selection-start-column="265" selection-end-line="0" selection-end-column="265" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-118">
-          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="332" lean-forward="false" selection-start-line="0" selection-start-column="332" selection-end-line="0" selection-end-column="332" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/my.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sign_up.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="57" lean-forward="false" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/libs/jquery/dist/newWaterfall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/templatetags/file_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/templatetags/text_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="480" column="9" lean-forward="false" selection-start-line="480" selection-start-column="9" selection-end-line="480" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-modals.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/base.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-footer.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-header.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/dashboard.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/my.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sign_up.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/libs/jquery/dist/newWaterfall.js" />
+    <entry file="file://$PROJECT_DIR$/Main/templatetags/file_utils.py" />
+    <entry file="file://$PROJECT_DIR$/Main/templatetags/text_utils.py" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/main.sass" />
     <entry file="file://$PROJECT_DIR$/FrontEnd/app/libs/wtrfall/waterfall-light.js" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/FrontEnd/gulpfile.js" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/metatags.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/yandex.html" />
+    <entry file="file://$PROJECT_DIR$/static/js/scripts.min.js" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/js/common.js" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/_media.sass" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/index.html" />
+    <entry file="file://$PROJECT_DIR$/FrontEnd/app/post.html" />
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0009_auto_20171016_1602.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        <state relative-caret-position="132">
+          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/metatags.html">
+    <entry file="file://$PROJECT_DIR$/Main/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/yandex.html">
+    <entry file="file://$PROJECT_DIR$/Main/forms.py" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="110" column="2" lean-forward="false" selection-start-line="110" selection-start-column="2" selection-end-line="110" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/scripts.min.js">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/easy_thumbnails/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114788">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2256">
-          <caret line="1266" column="0" lean-forward="false" selection-start-line="1266" selection-start-column="0" selection-end-line="1266" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/_media.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="4" column="57" lean-forward="false" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -2217,35 +776,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0009_auto_20171016_1602.py">
+    <entry file="file://$PROJECT_DIR$/API/seializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1042">
-          <caret line="330" column="6" lean-forward="false" selection-start-line="330" selection-start-column="6" selection-end-line="330" selection-end-column="6" />
+        <state relative-caret-position="176">
+          <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/views.py">
+    <entry file="file://$PROJECT_DIR$/Main/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-396">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
+        <state relative-caret-position="-66">
           <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
@@ -2253,52 +806,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="110" column="2" lean-forward="false" selection-start-line="110" selection-start-column="2" selection-end-line="110" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="172" column="0" lean-forward="false" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#641#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/easy_thumbnails/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        <state relative-caret-position="492">
+          <caret line="27" column="68" lean-forward="false" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -2306,8 +817,36 @@
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
-          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="35" column="49" lean-forward="true" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="337" column="18" lean-forward="false" selection-start-line="337" selection-start-column="18" selection-end-line="337" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

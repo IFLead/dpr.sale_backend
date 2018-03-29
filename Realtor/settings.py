@@ -25,7 +25,7 @@ SECRET_KEY = '_qj2#%-o6_kkye*ojv@x_r)(t62ns_6ozbVzskd@r#l5y2(e!_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.dpr.sale', 'dpr.sale']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.dpr.sale', 'dpr.sale', 'localhost']
 
 INTERNAL_IPS = ['127.0.0.1', '165.227.163.99']
 # Application definition

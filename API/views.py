@@ -6,8 +6,10 @@ from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.template.loader import render_to_string
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from Main.models import District, Post, CustomData
+from .seializers import PostSerializer
 
 
 def districts(request):
@@ -330,3 +332,11 @@ def unimportant_post(request):
 def get_top_eight(request):
 	# posts = [{'title': post.title}, {'price': post.price} for post in Post.objects.all()[:8]]
 	return Response(posts)
+
+
+class PostList(APIView):
+	def get(self, request):
+		posts = Post.objects.all()
+		serializer = PostSerializer(posts, many=True, context={"request": request})
+		posts = serializer.data
+		return Response(posts)
