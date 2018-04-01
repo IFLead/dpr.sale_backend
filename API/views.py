@@ -1,14 +1,26 @@
 import re
-
+from django.db.models import Q
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.template.loader import render_to_string
+from rest_framework.generics import (
+	ListAPIView,
+	RetrieveAPIView,
+	UpdateAPIView,
+	DestroyAPIView,
+	CreateAPIView
+)
+from rest_framework.permissions import (
+	IsAuthenticated,
+	IsAdminUser,
+)
 from rest_framework.response import Response
-from rest_framework.views import APIView
 
 from Main.models import District, Post, CustomData
+from .pagination import PostPageNumberPagination
+from .permissions import IsOwnerOrReadOnly
 from .seializers import PostSerializer
 
 
@@ -334,9 +346,42 @@ def get_top_eight(request):
 	return Response(posts)
 
 
-class PostList(APIView):
-	def get(self, request):
-		posts = Post.objects.all()
-		serializer = PostSerializer(posts, many=True, context={"request": request})
-		posts = serializer.data
-		return Response(posts)
+class PostList(ListAPIView):
+	queryset = Post.objects.all()
+	pagination_class = PostPageNumberPagination
+	serializer_class = PostSerializer
+
+	# permission_classes = (IsAdmin,)
+
+	def get_queryset(self, *args, **kwargs):
+		queryset_list = Post.objects.all()
+		query = self.request.GET.get("q")
+		if query:
+			queryset_list = queryset_list.filter(
+				Q(title__icontains=query) |
+				Q(description__icontains=query)
+			)
+		return queryset_list
+
+
+class PostDetail(RetrieveAPIView):
+	queryset = Post.objects.all()
+	serializer_class = PostSerializer
+
+
+class PostUpdate(UpdateAPIView):
+	permission_classes = [IsOwnerOrReadOnly, IsAdminUser]
+	queryset = Post.objects.all()
+	serializer_class = PostSerializer
+
+
+class PostDestroy(DestroyAPIView):
+	permission_classes = [IsOwnerOrReadOnly, IsAdminUser]
+	queryset = Post.objects.all()
+	serializer_class = PostSerializer
+
+
+class PostCreate(CreateAPIView):
+	permission_classes = [IsAuthenticated, IsAdminUser]
+	queryset = Post.objects.all()
+	serializer_class = PostSerializer

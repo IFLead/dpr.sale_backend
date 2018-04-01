@@ -33,7 +33,11 @@ urlpatterns = [
     url(r'post/important', views.important_post),
     url(r'post/unimportant', views.unimportant_post),
     url(r'post/get_top_eight', views.get_top_eight),
-    url(r'post/posts', views.PostList.as_view()),
+    url(r'post/get_post_list', views.PostList.as_view(), name='list'),
+    url(r'post/(?P<pk>\d+)/$', views.PostDetail.as_view(), name='detail'),
+    url(r'post/(?P<pk>\d+)/edit/$', views.PostUpdate.as_view(), name='update'),
+    url(r'post/(?P<pk>\d+)/delete/$', views.PostDestroy.as_view(), name='destroy'),
+    url(r'post/create', views.PostUpdate.as_view(), name='create'),
 
     url(r'user/verify', views.verify_user),
     url(r'user/unverify', views.unverify_user),
