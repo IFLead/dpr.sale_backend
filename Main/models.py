@@ -79,6 +79,17 @@ class Window(models.Model):
 		verbose_name_plural = 'Окна'
 
 
+class Living_space(models.Model):
+	name = models.CharField('Тип', max_length=55)
+
+	def __str__(self):
+		return self.name
+
+	class Meta:
+		verbose_name = 'Жилая площадь'
+		verbose_name_plural = 'Жилые площади'
+
+
 class Post(models.Model):
 	category = models.ForeignKey(Category, verbose_name='Категория')
 	is_top = models.BooleanField('В топе', default=False)
@@ -103,6 +114,7 @@ class Post(models.Model):
 	balcony = models.NullBooleanField('Балкон застеклён')
 	window = models.ForeignKey(Window, verbose_name='Окно')
 	state = models.ForeignKey(State, verbose_name='Состояние')
+	living_space = models.ForeignKey(Living_space, verbose_name='Жилая площадь')
 
 	created = models.DateTimeField('Дата создания', auto_now=True, null=True)
 
