@@ -21,7 +21,7 @@ from rest_framework.response import Response
 from Main.models import District, Post, CustomData
 from .pagination import PostPageNumberPagination
 from .permissions import IsOwnerOrReadOnly
-from .seializers import PostSerializer
+from .seializers import PostSerializer, PostUpdateSerializer
 
 
 def districts(request):
@@ -366,7 +366,7 @@ class PostList(ListAPIView):
 
 class PostDetail(RetrieveAPIView):
     queryset = Post.objects.all()
-    serializer_class = PostSerializer
+    serializer_class = PostUpdateSerializer
 
 
 class PostUpdate(UpdateAPIView):
