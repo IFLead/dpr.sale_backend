@@ -1,6 +1,6 @@
 django-filer
 django==1.11.11
-psycopg2
+psycopg2-binary
 django-allauth
 django-watermark-remastered
 Pillow==5.0.0
