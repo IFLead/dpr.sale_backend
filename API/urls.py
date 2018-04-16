@@ -34,9 +34,9 @@ urlpatterns = [
     # url(r'post/unimportant', views.unimportant_post),
     # url(r'post/get_top_eight', views.get_top_eight),
     url(r'posts', views.PostList.as_view(), name='list'),
-    url(r'posts/(?P<pk>\d+)/$', views.PostDetail.as_view(), name='detail'),
-    url(r'posts/(?P<pk>\d+)/edit/$', views.PostUpdate.as_view(), name='update'),
-    url(r'posts/(?P<pk>\d+)/delete/$', views.PostDestroy.as_view(), name='destroy'),
+    url(r'(?P<pk>\d+)/$', views.PostDetail.as_view(), name='detail'),
+    url(r'(?P<pk>\d+)/edit/', views.PostUpdate.as_view(), name='update'),
+    url(r'(?P<pk>\d+)/delete/', views.PostDestroy.as_view(), name='destroy'),
     url(r'posts/create', views.PostUpdate.as_view(), name='create'),
 
     # url(r'user/verify', views.verify_user),

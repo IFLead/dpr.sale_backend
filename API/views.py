@@ -14,6 +14,7 @@ from rest_framework.generics import (
 )
 from rest_framework.permissions import (
     IsAuthenticated,
+    IsAuthenticatedOrReadOnly,
     IsAdminUser,
 )
 from rest_framework.response import Response
@@ -346,10 +347,10 @@ def get_top_eight(request):
     return Response(posts)
 
 
-class PostList(ListAPIView):
+class PostList(ListAPIView):                       # 28, 29, 31
     queryset = Post.objects.all()
     pagination_class = PostPageNumberPagination
-    serializer_class = PostSerializer
+    serializer_class = PostUpdateSerializer
 
     # permission_classes = (IsAdmin,)
 
@@ -370,13 +371,13 @@ class PostDetail(RetrieveAPIView):
 
 
 class PostUpdate(UpdateAPIView):
-    permission_classes = [IsOwnerOrReadOnly, IsAdminUser]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
 
 class PostDestroy(DestroyAPIView):
-    permission_classes = [IsOwnerOrReadOnly, IsAdminUser]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
