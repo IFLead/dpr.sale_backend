@@ -37,7 +37,7 @@ urlpatterns = [
     url(r'(?P<pk>\d+)/$', views.PostDetail.as_view(), name='detail'),
     url(r'(?P<pk>\d+)/edit/', views.PostUpdate.as_view(), name='update'),
     url(r'(?P<pk>\d+)/delete/', views.PostDestroy.as_view(), name='destroy'),
-    url(r'posts/create', views.PostUpdate.as_view(), name='create'),
+    url(r'create/', views.PostCreate.as_view(), name='create'),
 
     # url(r'user/verify', views.verify_user),
     # url(r'user/unverify', views.unverify_user),

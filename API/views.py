@@ -383,6 +383,6 @@ class PostDestroy(DestroyAPIView):
 
 
 class PostCreate(CreateAPIView):
-    permission_classes = [IsAuthenticated, IsAdminUser]
+    permission_classes = [IsAuthenticated]
     queryset = Post.objects.all()
     serializer_class = PostSerializer
