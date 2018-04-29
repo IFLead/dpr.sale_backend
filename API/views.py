@@ -350,7 +350,7 @@ def get_top_eight(request):
 class PostList(ListAPIView):                       # 28, 29, 31
     queryset = Post.objects.all()
     pagination_class = PostPageNumberPagination
-    serializer_class = PostUpdateSerializer
+    serializer_class = PostSerializer
 
     # permission_classes = (IsAdmin,)
 

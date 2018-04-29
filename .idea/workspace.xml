@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
     <ignored path="D:\OneDrive\dpr-sale\Realtor\.idea\shelf/" />
@@ -24,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="388" lean-forward="true" selection-start-line="388" selection-end-line="388" />
+              <caret line="349" column="44" selection-start-line="349" selection-start-column="44" selection-end-line="349" selection-end-column="44" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="39" column="63" lean-forward="true" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+            <state relative-caret-position="392">
+              <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
               </folding>
@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/API/permissions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="242">
-              <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -56,8 +56,8 @@
       <file leaf-file-name="seializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/seializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="286">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -101,8 +101,17 @@
       <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            <state relative-caret-position="176">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2448">
+              <caret line="172" selection-start-line="172" selection-end-line="172" />
             </state>
           </provider>
         </entry>
@@ -175,7 +184,6 @@
         <option value="$PROJECT_DIR$/Main/views.py" />
         <option value="$PROJECT_DIR$/Main/forms.py" />
         <option value="$PROJECT_DIR$/Realtor/urls.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Realtor/settings.py" />
         <option value="$PROJECT_DIR$/API/pagination.py" />
         <option value="$PROJECT_DIR$/API/seializers.py" />
@@ -184,8 +192,9 @@
         <option value="$PROJECT_DIR$/Main/models.py" />
         <option value="$PROJECT_DIR$/Main/admin.py" />
         <option value="$PROJECT_DIR$/API/permissions.py" />
-        <option value="$PROJECT_DIR$/API/views.py" />
         <option value="$PROJECT_DIR$/API/urls.py" />
+        <option value="$PROJECT_DIR$/API/views.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -196,7 +205,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
+    <option name="x" value="915" />
+    <option name="y" value="111" />
     <option name="width" value="960" />
     <option name="height" value="1036" />
   </component>
@@ -240,7 +250,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="G:/семестр  ментального угнетения/ПКС/лаба 4/another one/my_turn-master" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -649,10 +659,10 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4826284" weight="0.21195652" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3286334" />
-      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.47654584" visible="true" weight="0.34673914" />
+      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.47654584" visible="true" weight="0.34673914" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.7326892" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.295764" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.16347177" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.16666667" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.2065053" />
       <window_info anchor="right" id="SciView" order="4" />
@@ -841,24 +851,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/easy_thumbnails/utils.py" />
-    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3784">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/pagination.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -907,8 +903,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/seializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="286">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -918,27 +914,41 @@
     <entry file="file://$PROJECT_DIR$/API/permissions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="388" lean-forward="true" selection-start-line="388" selection-end-line="388" />
+          <caret line="349" column="44" selection-start-line="349" selection-start-column="44" selection-end-line="349" selection-end-column="44" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/urls.py">
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="39" column="63" lean-forward="true" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
-          <folding>
-            <element signature="e#641#673#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="176">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="172" selection-start-line="172" selection-end-line="172" />
         </state>
       </provider>
     </entry>
