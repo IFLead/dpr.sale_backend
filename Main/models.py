@@ -15,6 +15,18 @@ class Category(models.Model):
         verbose_name_plural = 'Категории'
 
 
+class Currency(models.Model):
+    name = models.CharField('Название', max_length=128)
+    symbol = models.CharField('Символ', max_length=2)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Валюта'
+        verbose_name_plural = 'Валюты'
+
+
 RUB = 0
 USD = 1
 CURRENCIES = (
@@ -97,7 +109,7 @@ class Post(models.Model):
     main_photo = FilerImageField(verbose_name='Главное изображение', null=True, blank=True)
     title = models.CharField('Заголовок', max_length=256)
     description = models.TextField('Описание')
-    price = models.DecimalField('Стоимость', decimal_places=0, max_digits=9)
+    price = models.DecimalField('Стоимость', null=True, blank=True, decimal_places=0, max_digits=9)
     currency = models.IntegerField('Валюта', choices=CURRENCIES)
     owner = models.ForeignKey(User, verbose_name='Владелец')
     verified = models.BooleanField('Подтвержден', default=False)

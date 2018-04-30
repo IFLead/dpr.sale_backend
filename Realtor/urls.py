@@ -21,7 +21,6 @@ from django.contrib import admin
 from .settings import DEBUG, STATIC_URL, MEDIA_ROOT, MEDIA_URL
 
 urlpatterns = [
-	url(r'^admin/', admin.site.urls),
 	url(r'^api/', include('API.urls'))
 ]
 

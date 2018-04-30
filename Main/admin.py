@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from .models import Image, Post, CustomData, City, District, Category, Living_space, Window, Material, State
+from .models import Image, Post, CustomData, City, District, Category, Living_space, Window, Material, State, Currency
 
 
 @receiver(post_save, sender=User)
@@ -35,6 +35,7 @@ admin.site.register(Living_space)
 admin.site.register(Window)
 admin.site.register(Material)
 admin.site.register(State)
+admin.site.register(Currency)
 
 
 class CustomDataInline(admin.StackedInline):

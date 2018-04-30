@@ -80,6 +80,7 @@ MIDDLEWARE = [
 	'debug_toolbar.middleware.DebugToolbarMiddleware',
 
 ]
+
 if DEBUG:
 	DEBUG_TOOLBAR_PANELS = [
 		'debug_toolbar.panels.versions.VersionsPanel',
@@ -96,7 +97,9 @@ if DEBUG:
 		'debug_toolbar.panels.profiling.ProfilingPanel',
 		'debug_toolbar.panels.cache.CachePanel'
 	]
-
+CSRF_COOKIE_SECURE = False
+if DEBUG:
+	CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'Realtor.urls'
 
 TEMPLATES = [

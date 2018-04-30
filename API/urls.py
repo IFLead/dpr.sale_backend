@@ -14,35 +14,35 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from django.conf.urls.static import static
 from django.contrib import admin
+
 from API import views
-from Realtor import settings
-from Realtor.settings import MEDIA_ROOT
 
 urlpatterns = [
-    # url(r'districts/', views.districts),
-    # url(r'post/verify', views.verify_post),
-    # url(r'post/unverify', views.unverify_post),
-    # url(r'post/top', views.top_post),
-    # url(r'post/untop', views.untop_post),
-    # url(r'post/close', views.close_post),
-    # url(r'post/restore', views.restore_post),
-    # url(r'post/delete', views.delete_post),
-    # url(r'post/edit', views.edit_post),
-    # url(r'post/important', views.important_post),
-    # url(r'post/unimportant', views.unimportant_post),
-    # url(r'post/get_top_eight', views.get_top_eight),
-    url(r'posts', views.PostList.as_view(), name='list'),
-    url(r'(?P<pk>\d+)/$', views.PostDetail.as_view(), name='detail'),
-    url(r'(?P<pk>\d+)/edit/', views.PostUpdate.as_view(), name='update'),
-    url(r'(?P<pk>\d+)/delete/', views.PostDestroy.as_view(), name='destroy'),
-    url(r'create/', views.PostCreate.as_view(), name='create'),
+	# url(r'districts/', views.districts),
+	# url(r'post/verify', views.verify_post),
+	# url(r'post/unverify', views.unverify_post),
+	# url(r'post/top', views.top_post),
+	# url(r'post/untop', views.untop_post),
+	# url(r'post/close', views.close_post),
+	# url(r'post/restore', views.restore_post),
+	# url(r'post/delete', views.delete_post),
+	# url(r'post/edit', views.edit_post),
+	# url(r'post/important', views.important_post),
+	# url(r'post/unimportant', views.unimportant_post),
+	# url(r'post/get_top_eight', views.get_top_eight),
+	url(r'^admin/', admin.site.urls),
+	url(r'categories', views.CategoryList.as_view(), name='list'),
+	url(r'posts', views.PostList.as_view(), name='list'),
+	url(r'(?P<pk>\d+)/$', views.PostDetail.as_view(), name='detail'),
+	url(r'(?P<pk>\d+)/edit/', views.PostUpdate.as_view(), name='update'),
+	url(r'(?P<pk>\d+)/delete/', views.PostDestroy.as_view(), name='destroy'),
+	url(r'create/', views.PostCreate.as_view(), name='create'),
 
-    # url(r'user/verify', views.verify_user),
-    # url(r'user/unverify', views.unverify_user),
-    # url(r'user/edit', views.edit_profile),
-    #
-    # url(r'search', views.search),
-    # url(r'more', views.more),
+	# url(r'user/verify', views.verify_user),
+	# url(r'user/unverify', views.unverify_user),
+	# url(r'user/edit', views.edit_profile),
+	#
+	# url(r'search', views.search),
+	# url(r'more', views.more),
 ]
