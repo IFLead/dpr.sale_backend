@@ -21,7 +21,7 @@ from rest_framework.response import Response
 from Main.models import District, Post, CustomData, Category, Currency
 from .pagination import PostPageNumberPagination
 from .permissions import IsOwnerOrReadOnly
-from .seializers import PostSerializer, PostUpdateSerializer, CategorySerializer
+from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer
 
 
 def districts(request):

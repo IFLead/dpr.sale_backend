@@ -25,8 +25,7 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.AlterField(
-            model_name='post',
-            name='price',
+            model_name='post',            name='price',
             field=models.DecimalField(blank=True, decimal_places=0, max_digits=9, null=True, verbose_name='Стоимость'),
         ),
     ]
