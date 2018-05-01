@@ -18,10 +18,11 @@ from rest_framework.permissions import (
 )
 from rest_framework.response import Response
 
-from Main.models import District, Post, CustomData, Category, Currency
+from Main.models import District, Post, CustomData, Category, Currency, TreeCategory
 from .pagination import PostPageNumberPagination
 from .permissions import IsOwnerOrReadOnly
-from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer, CurrencySerializer
+from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer, CurrencySerializer, TreeCategorySerializer
+from mptt.templatetags.mptt_tags import cache_tree_children
 
 
 def districts(request):
@@ -407,3 +408,26 @@ class CurrencyList(ListAPIView):  # 28, 29, 31
 		serializer = self.get_serializer(queryset, many=True)
 		queryset_list = {obj['id']: obj['symbol'] for obj in serializer.data}
 		return Response({'results': queryset_list})
+
+
+def recursive_node_to_dict(node):
+	result = {
+		'id': node.pk,
+		'name': node.name,
+	}
+	children = [recursive_node_to_dict(c) for c in node.get_children()]
+	if children:
+		result['children'] = children
+	return result
+
+
+class TreeCategoryList(ListAPIView):
+	queryset = TreeCategory.objects.all()
+	serializer_class = TreeCategorySerializer
+
+	def list(self, request, *args, **kwargs):
+		root_nodes = cache_tree_children(self.get_queryset())
+		dicts = []
+		for n in root_nodes:
+			dicts.append(recursive_node_to_dict(n))
+		return Response({'results': dicts})

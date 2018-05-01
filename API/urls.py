@@ -32,6 +32,7 @@ urlpatterns = [
 	# url(r'post/unimportant', views.unimportant_post),
 	# url(r'post/get_top_eight', views.get_top_eight),
 	url(r'^admin/', admin.site.urls),
+	url(r'tree', views.TreeCategoryList.as_view(), name='tree'),
 	url(r'currency', views.CurrencyList.as_view(), name='currency list'),
 	url(r'categories', views.CategoryList.as_view(), name='categories list'),
 	url(r'posts', views.PostList.as_view(), name='post list'),
