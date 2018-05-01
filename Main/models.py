@@ -111,6 +111,7 @@ class Post(models.Model):
     description = models.TextField('Описание')
     price = models.DecimalField('Стоимость', null=True, blank=True, decimal_places=0, max_digits=9)
     # currency = models.ForeignKey(Currency, verbose_name='Валюта', default=1)
+    currency_type = models.ForeignKey(Currency, verbose_name='Валюта', default=1)
     owner = models.ForeignKey(User, verbose_name='Владелец')
     verified = models.BooleanField('Подтвержден', default=False)
     closed = models.BooleanField('Закрыт', default=False)

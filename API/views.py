@@ -361,7 +361,7 @@ class PostList(ListAPIView):  # 28, 29, 31
 				Q(title__icontains=query) |
 				Q(description__icontains=query)
 			)
-		return queryset_list.order_by('currency')
+		return queryset_list.order_by('currency_type').reverse()
 
 
 class PostDetail(RetrieveAPIView):

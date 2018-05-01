@@ -6,7 +6,7 @@ from Main.models import Post, Category, Currency
 class PostSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Post
-		fields = ('title', 'price', 'created', 'category', 'main_photo', 'currency')
+		fields = ('title', 'price', 'created', 'category', 'main_photo', 'currency_type')
 
 
 class PostUpdateSerializer(serializers.ModelSerializer):
