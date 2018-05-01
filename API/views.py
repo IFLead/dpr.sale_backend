@@ -21,7 +21,7 @@ from rest_framework.response import Response
 from Main.models import District, Post, CustomData, Category, Currency
 from .pagination import PostPageNumberPagination
 from .permissions import IsOwnerOrReadOnly
-from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer
+from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer, CurrencySerializer
 
 
 def districts(request):
@@ -361,7 +361,7 @@ class PostList(ListAPIView):  # 28, 29, 31
 				Q(title__icontains=query) |
 				Q(description__icontains=query)
 			)
-		return queryset_list
+		return queryset_list.order_by('currency')
 
 
 class PostDetail(RetrieveAPIView):
@@ -399,11 +399,11 @@ class CategoryList(ListAPIView):  # 28, 29, 31
 
 
 class CurrencyList(ListAPIView):  # 28, 29, 31
-	queryset = Category.objects.all()
-	serializer_class = CategorySerializer
+	queryset = Currency.objects.all()
+	serializer_class = CurrencySerializer
 
 	def list(self, request, *args, **kwargs):
 		queryset = self.filter_queryset(self.get_queryset())
 		serializer = self.get_serializer(queryset, many=True)
-		queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+		queryset_list = {obj['id']: obj['symbol'] for obj in serializer.data}
 		return Response({'results': queryset_list})
