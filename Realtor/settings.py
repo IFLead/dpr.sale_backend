@@ -56,6 +56,10 @@ WATERMARK_QUALITY = 95
 WATERMARK_OBSCURE_ORIGINAL = False
 WATERMARK_RANDOM_POSITION_ONCE = False
 
+REST_FRAMEWORK = {
+	'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+}
+
 # Allauth config
 SITE_ID = 2
 
