@@ -1,13 +1,13 @@
 import re
 
-from rest_framework import filters
-import django_filters.rest_framework
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.template.loader import render_to_string
 from mptt.templatetags.mptt_tags import cache_tree_children
+from rest_framework import filters
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.generics import (
 	ListAPIView,
 	RetrieveAPIView,
@@ -21,6 +21,7 @@ from rest_framework.permissions import (
 from rest_framework.response import Response
 
 from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData
+from .filters import PostCategoryFilter, DistrictsFilter
 from .pagination import PostPageNumberPagination
 from .permissions import IsOwnerOrReadOnly
 from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer, CurrencySerializer, \
@@ -351,24 +352,29 @@ def get_top_eight(request):
 
 
 class PostList(ListAPIView):  # 28, 29, 31
-	queryset = Post.objects.all().filter(closed=False).order_by('-created')
+	queryset = Post.objects.filter(closed=False)
 	pagination_class = PostPageNumberPagination
 	serializer_class = PostSerializer
-	filter_backends = (filters.SearchFilter,)
-	search_fields = ('=id', 'title', 'description')
+	filter_backends = (filters.SearchFilter, DjangoFilterBackend, PostCategoryFilter)  # PostCategoryFilter
+	search_fields = ('=id', 'title', 'description')  # toDo: ловеркейсить всё
+	filter_fields = (
+	'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony',
+	'loggia', 'district', 'material', 'window', 'state')
+	ordering = ('-created',)
 
-	# permission_classes = (IsAdmin,)
 
-	# def get_queryset(self, *args, **kwargs):
-	# 	queryset_list = Post.objects.all()
-	# 	# query = self.request.GET.get("q")
-	# 	# if query:
-	# 	# 	queryset_list = queryset_list.filter(
-	# 	# 		Q(id__icontains=query) |
-	# 	# 		Q(title__icontains=query) |
-	# 	# 		Q(description__icontains=query)
-	# 	# 	)
-	# 	return queryset_list
+# permission_classes = (IsAdmin,)
+
+# def get_queryset(self, *args, **kwargs):
+# 	queryset_list = Post.objects.all()
+# 	# query = self.request.GET.get("q")
+# 	# if query:
+# 	# 	queryset_list = queryset_list.filter(
+# 	# 		Q(id__icontains=query) |
+# 	# 		Q(title__icontains=query) |
+# 	# 		Q(description__icontains=query)
+# 	# 	)
+# 	return queryset_list
 
 
 class PostDetail(RetrieveAPIView):
@@ -449,17 +455,6 @@ class MaterialList(ListAPIView):
 		return Response({'results': queryset_list})
 
 
-class CitiesList(ListAPIView):
-	queryset = City.objects.all()
-	serializer_class = CitySerializer
-
-	def list(self, request, *args, **kwargs):
-		queryset = self.filter_queryset(self.get_queryset())
-		serializer = self.get_serializer(queryset, many=True)
-		queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-		return Response({'results': queryset_list})
-
-
 class UsersList(ListAPIView):
 	queryset = CustomData.objects.all()
 	serializer_class = UserSerializer
@@ -469,26 +464,32 @@ class UsersList(ListAPIView):
 		serializer = self.get_serializer(queryset, many=True)
 		queryset_list = {
 			obj['user_id']: {'first_name': obj['first_name'], 'last_name': obj['last_name'], 'phone': obj['phone']} for
-		obj in
+			obj in
 			serializer.data}
 		return Response({'results': queryset_list})
+
+
+class CitiesList(ListAPIView):
+	queryset = City.objects.all()
+	serializer_class = CitySerializer
+
+	# def list(self, request, *args, **kwargs):
+	# 	queryset = self.filter_queryset(self.get_queryset())
+	# 	serializer = self.get_serializer(queryset, many=True)
+	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+	# 	return Response(queryset_list)
 
 
 class DistrictsList(ListAPIView):
 	queryset = District.objects.all()
 	serializer_class = DistrictSerializer
+	filter_backends = (DistrictsFilter, )
 
-	def list(self, request, *args, **kwargs):
-		queryset = self.filter_queryset(self.get_queryset())
-		serializer = self.get_serializer(queryset, many=True)
-		# queryset_list = {}
-		# for obj in serializer.data:
-		# 	if obj['city'] not in queryset_list:
-		# 		queryset_list[obj['city']] = []
-		# 	else:
-		# 		queryset_list[obj['city']].append(obj['name'])
-		queryset_list = {obj['id']: {'name': obj['name'], 'city': obj['city']} for obj in serializer.data}
-		return Response({'results': queryset_list})
+	# def list(self, request, *args, **kwargs):
+	# 	queryset = self.filter_queryset(self.get_queryset())
+	# 	serializer = self.get_serializer(queryset, many=True)
+	# 	queryset_list = {obj['id']: {'name': obj['name'], 'city': obj['city']} for obj in serializer.data}
+	# 	return Response(queryset_list)
 
 
 def recursive_node_to_dict(node):
@@ -511,4 +512,4 @@ class TreeCategoryList(ListAPIView):
 		dicts = []
 		for n in root_nodes:
 			dicts.append(recursive_node_to_dict(n))
-		return Response({'results': dicts})
+		return Response(dicts)

@@ -102,6 +102,22 @@ class Living_space(models.Model):
 		verbose_name_plural = 'Жилые площади'
 
 
+class TreeCategory(MPTTModel):
+	name = models.CharField(max_length=50)
+	parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
+
+	def __str__(self):
+		# if self.is_leaf_node():
+		return self.get_level() * '-' + self.name
+
+	class Meta:
+		verbose_name = 'Дерево категорий'
+		verbose_name_plural = 'Деревья категорий'
+
+	class MPTTMeta:
+		order_insertion_by = ['name']
+
+
 class Post(models.Model):
 	category = models.ForeignKey(Category, verbose_name='Категория')
 	is_top = models.BooleanField('Рекомендованное', default=False)
@@ -131,6 +147,7 @@ class Post(models.Model):
 	window = models.ForeignKey(Window, verbose_name='Окно', blank=True, null=True)
 	state = models.ForeignKey(State, verbose_name='Состояние', blank=True, null=True)
 	created = models.DateTimeField('Дата создания', auto_now=True, null=True)
+	category_tree = models.ForeignKey(TreeCategory, verbose_name='Дерево состояний', blank=True, null=True)
 	# term = models.DateField
 
 	# hidden
@@ -163,6 +180,7 @@ class CustomData(models.Model):
 	user = models.OneToOneField(User, verbose_name='Пользователь', null=True, related_name='custom')
 	# type = models.IntegerField('Статус', choices=USER_TYPES, default=USUAL)
 	phone = models.CharField('Номер телефона', blank=True, max_length=25, null=True)  # 38 050 240 92 92
+
 	# verified = models.BooleanField('Подтвержден', default=False)
 
 	def __str__(self):
@@ -171,18 +189,3 @@ class CustomData(models.Model):
 	class Meta:
 		verbose_name = 'Доп информация о пользователе'
 		verbose_name_plural = 'Доп информация о пользователе'
-
-
-class TreeCategory(MPTTModel):
-	name = models.CharField(max_length=50)
-	parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
-
-	def __str__(self):
-		return self.name
-
-	class Meta:
-		verbose_name = 'Дерево категорий'
-		verbose_name_plural = 'Деревья категорий'
-
-	class MPTTMeta:
-		order_insertion_by = ['name']
