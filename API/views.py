@@ -404,69 +404,69 @@ class CategoryList(ListAPIView):  # 28, 29, 31
 	queryset = Category.objects.all()
 	serializer_class = CategorySerializer
 
-	def list(self, request, *args, **kwargs):
-		queryset = self.filter_queryset(self.get_queryset())
-		serializer = self.get_serializer(queryset, many=True)
-		queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-		return Response({'results': queryset_list})
+	# def list(self, request, *args, **kwargs):
+	# 	queryset = self.filter_queryset(self.get_queryset())
+	# 	serializer = self.get_serializer(queryset, many=True)
+	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+	# 	return Response({'results': queryset_list})
 
 
 class CurrencyList(ListAPIView):  # 28, 29, 31
 	queryset = Currency.objects.all()
 	serializer_class = CurrencySerializer
 
-	def list(self, request, *args, **kwargs):
-		queryset = self.filter_queryset(self.get_queryset())
-		serializer = self.get_serializer(queryset, many=True)
-		queryset_list = {obj['id']: obj['symbol'] for obj in serializer.data}
-		return Response({'results': queryset_list})
+	# def list(self, request, *args, **kwargs):
+	# 	queryset = self.filter_queryset(self.get_queryset())
+	# 	serializer = self.get_serializer(queryset, many=True)
+	# 	queryset_list = {obj['id']: obj['symbol'] for obj in serializer.data}
+	# 	return Response({'results': queryset_list})
 
 
 class StatesList(ListAPIView):
 	queryset = State.objects.all()
 	serializer_class = StateSerializer
 
-	def list(self, request, *args, **kwargs):
-		queryset = self.filter_queryset(self.get_queryset())
-		serializer = self.get_serializer(queryset, many=True)
-		queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-		return Response({'results': queryset_list})
+	# def list(self, request, *args, **kwargs):
+	# 	queryset = self.filter_queryset(self.get_queryset())
+	# 	serializer = self.get_serializer(queryset, many=True)
+	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+	# 	return Response({'results': queryset_list})
 
 
 class WindowList(ListAPIView):
 	queryset = Window.objects.all()
 	serializer_class = WindowSerializer
 
-	def list(self, request, *args, **kwargs):
-		queryset = self.filter_queryset(self.get_queryset())
-		serializer = self.get_serializer(queryset, many=True)
-		queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-		return Response({'results': queryset_list})
+	# def list(self, request, *args, **kwargs):
+	# 	queryset = self.filter_queryset(self.get_queryset())
+	# 	serializer = self.get_serializer(queryset, many=True)
+	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+	# 	return Response({'results': queryset_list})
 
 
 class MaterialList(ListAPIView):
 	queryset = Material.objects.all()
 	serializer_class = MaterialSerializer
 
-	def list(self, request, *args, **kwargs):
-		queryset = self.filter_queryset(self.get_queryset())
-		serializer = self.get_serializer(queryset, many=True)
-		queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-		return Response({'results': queryset_list})
+	# def list(self, request, *args, **kwargs):
+	# 	queryset = self.filter_queryset(self.get_queryset())
+	# 	serializer = self.get_serializer(queryset, many=True)
+	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+	# 	return Response({'results': queryset_list})
 
 
 class UsersList(ListAPIView):
 	queryset = CustomData.objects.all()
 	serializer_class = UserSerializer
 
-	def list(self, request, *args, **kwargs):
-		queryset = self.filter_queryset(self.get_queryset())
-		serializer = self.get_serializer(queryset, many=True)
-		queryset_list = {
-			obj['user_id']: {'first_name': obj['first_name'], 'last_name': obj['last_name'], 'phone': obj['phone']} for
-			obj in
-			serializer.data}
-		return Response({'results': queryset_list})
+	# def list(self, request, *args, **kwargs):
+	# 	queryset = self.filter_queryset(self.get_queryset())
+	# 	serializer = self.get_serializer(queryset, many=True)
+	# 	queryset_list = {
+	# 		obj['user_id']: {'first_name': obj['first_name'], 'last_name': obj['last_name'], 'phone': obj['phone']} for
+	# 		obj in
+	# 		serializer.data}
+	# 	return Response({'results': queryset_list})
 
 
 class CitiesList(ListAPIView):

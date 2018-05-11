@@ -6,7 +6,7 @@ from Main.models import Post, Category, Currency, TreeCategory, State, Window, M
 class PostSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Post
-		fields = ('id', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type')
+		fields = ('id', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'main_photo')
 
 
 class SinglePostSerializer(serializers.ModelSerializer):
@@ -69,17 +69,15 @@ class DistrictSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = CustomData
-		fields = ('user_id', 'first_name', 'last_name', 'phone')
+		fields = ('id', 'first_name', 'last_name', 'phone')
 		related_fields = ['user']
 
 	first_name = serializers.CharField(source='user.first_name')
 	last_name = serializers.CharField(source='user.last_name')
-	user_id = serializers.IntegerField(source='user.id')
+	id = serializers.IntegerField(source='user.id')
 
 
 class TreeCategorySerializer(serializers.ModelSerializer):
 	class Meta:
 		model = TreeCategory
 		fields = '__all__'
-
-
