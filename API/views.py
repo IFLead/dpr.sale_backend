@@ -366,15 +366,21 @@ class PostList(ListAPIView):  # 28, 29, 31
 
 	def list(self, request, *args, **kwargs):
 		queryset = self.filter_queryset(self.get_queryset())
+
+		page = self.paginate_queryset(queryset)
+		if page is not None:
+			serializer = self.get_serializer(page, many=True)
+			new_data = []
+			for obj in serializer.data:
+				new_obj = obj
+				photo_id = obj['main_photo']
+				if photo_id:
+					new_obj['main_photo'] = File.objects.get(id=photo_id).url
+				new_data.append(new_obj)
+			return self.get_paginated_response(new_data)
 		serializer = self.get_serializer(queryset, many=True)
-		new_data = []
-		for obj in serializer.data:
-			new_obj = obj
-			photo_id = obj['main_photo']
-			if photo_id:
-				new_obj['main_photo'] = File.objects.get(id=photo_id).url
-			new_data.append(new_obj)
-		return Response(new_data)
+		return Response(serializer.data)
+
 
 
 # permission_classes = (IsAdmin,)
