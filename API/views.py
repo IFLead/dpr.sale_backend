@@ -15,6 +15,8 @@ from rest_framework.generics import (
 	DestroyAPIView,
 	CreateAPIView
 )
+from filer.models import File
+from django.contrib.sites.models import Site
 from rest_framework.permissions import (
 	IsAuthenticated,
 )
@@ -361,6 +363,18 @@ class PostList(ListAPIView):  # 28, 29, 31
 	'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony',
 	'loggia', 'district', 'material', 'window', 'state')
 	ordering = ('-created',)
+
+	def list(self, request, *args, **kwargs):
+		queryset = self.filter_queryset(self.get_queryset())
+		serializer = self.get_serializer(queryset, many=True)
+		new_data = []
+		for obj in serializer.data:
+			new_obj = obj
+			photo_id = obj['main_photo']
+			if photo_id:
+				new_obj['main_photo'] = File.objects.get(id=photo_id).url
+			new_data.append(new_obj)
+		return Response(new_data)
 
 
 # permission_classes = (IsAdmin,)

@@ -1,12 +1,11 @@
 from rest_framework import serializers
-
-from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, User, CustomData
+from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData
 
 
 class PostSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Post
-		fields = ('id', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'main_photo')
+		fields = ('id', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type')
 
 
 class SinglePostSerializer(serializers.ModelSerializer):
