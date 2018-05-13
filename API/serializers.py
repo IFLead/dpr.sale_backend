@@ -1,20 +1,30 @@
 from rest_framework import serializers
-from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData
+from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, Image
+
+
+class MyImageSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Image
+		fields = '__all__'
 
 
 class PostSerializer(serializers.ModelSerializer):
+	images = serializers.StringRelatedField(many=True)
+
 	class Meta:
 		model = Post
-		fields = ('id', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type')
+		fields = ('id', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'images')
 
 
 class SinglePostSerializer(serializers.ModelSerializer):
+	images = MyImageSerializer(many=True)
+
 	class Meta:
 		model = Post
 		fields = ('id', 'is_top', 'title', 'description', 'price', 'closed', 'rooms', 'floor', 'storeys', 'landmark',
 		'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia', 'created',
 		'category', 'main_photo', 'currency_type', 'owner', 'district', 'material',
-		'window', 'state')
+		'window', 'state', 'images')
 
 
 class PostUpdateSerializer(serializers.ModelSerializer):

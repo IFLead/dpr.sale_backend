@@ -1,13 +1,15 @@
 import re
 
+import json
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.template.loader import render_to_string
+from django_filters.rest_framework import DjangoFilterBackend
+from filer.models import File
 from mptt.templatetags.mptt_tags import cache_tree_children
 from rest_framework import filters
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.generics import (
 	ListAPIView,
 	RetrieveAPIView,
@@ -15,8 +17,6 @@ from rest_framework.generics import (
 	DestroyAPIView,
 	CreateAPIView
 )
-from filer.models import File
-from django.contrib.sites.models import Site
 from rest_framework.permissions import (
 	IsAuthenticated,
 )
@@ -360,8 +360,8 @@ class PostList(ListAPIView):  # 28, 29, 31
 	filter_backends = (filters.SearchFilter, DjangoFilterBackend, PostCategoryFilter)  # PostCategoryFilter
 	search_fields = ('=id', 'title', 'description')  # toDo: ловеркейсить всё
 	filter_fields = (
-	'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony',
-	'loggia', 'district', 'material', 'window', 'state')
+		'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony',
+		'loggia', 'district', 'material', 'window', 'state')
 	ordering = ('-created',)
 
 	def list(self, request, *args, **kwargs):
@@ -382,7 +382,6 @@ class PostList(ListAPIView):  # 28, 29, 31
 		return Response(serializer.data)
 
 
-
 # permission_classes = (IsAdmin,)
 
 # def get_queryset(self, *args, **kwargs):
@@ -395,8 +394,6 @@ class PostList(ListAPIView):  # 28, 29, 31
 # 	# 		Q(description__icontains=query)
 # 	# 	)
 # 	return queryset_list
-
-
 class PostDetail(RetrieveAPIView):
 	queryset = Post.objects.all()
 	serializer_class = SinglePostSerializer
@@ -424,92 +421,92 @@ class CategoryList(ListAPIView):  # 28, 29, 31
 	queryset = Category.objects.all()
 	serializer_class = CategorySerializer
 
-	# def list(self, request, *args, **kwargs):
-	# 	queryset = self.filter_queryset(self.get_queryset())
-	# 	serializer = self.get_serializer(queryset, many=True)
-	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-	# 	return Response({'results': queryset_list})
+# def list(self, request, *args, **kwargs):
+# 	queryset = self.filter_queryset(self.get_queryset())
+# 	serializer = self.get_serializer(queryset, many=True)
+# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+# 	return Response({'results': queryset_list})
 
 
 class CurrencyList(ListAPIView):  # 28, 29, 31
 	queryset = Currency.objects.all()
 	serializer_class = CurrencySerializer
 
-	# def list(self, request, *args, **kwargs):
-	# 	queryset = self.filter_queryset(self.get_queryset())
-	# 	serializer = self.get_serializer(queryset, many=True)
-	# 	queryset_list = {obj['id']: obj['symbol'] for obj in serializer.data}
-	# 	return Response({'results': queryset_list})
+# def list(self, request, *args, **kwargs):
+# 	queryset = self.filter_queryset(self.get_queryset())
+# 	serializer = self.get_serializer(queryset, many=True)
+# 	queryset_list = {obj['id']: obj['symbol'] for obj in serializer.data}
+# 	return Response({'results': queryset_list})
 
 
 class StatesList(ListAPIView):
 	queryset = State.objects.all()
 	serializer_class = StateSerializer
 
-	# def list(self, request, *args, **kwargs):
-	# 	queryset = self.filter_queryset(self.get_queryset())
-	# 	serializer = self.get_serializer(queryset, many=True)
-	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-	# 	return Response({'results': queryset_list})
+# def list(self, request, *args, **kwargs):
+# 	queryset = self.filter_queryset(self.get_queryset())
+# 	serializer = self.get_serializer(queryset, many=True)
+# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+# 	return Response({'results': queryset_list})
 
 
 class WindowList(ListAPIView):
 	queryset = Window.objects.all()
 	serializer_class = WindowSerializer
 
-	# def list(self, request, *args, **kwargs):
-	# 	queryset = self.filter_queryset(self.get_queryset())
-	# 	serializer = self.get_serializer(queryset, many=True)
-	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-	# 	return Response({'results': queryset_list})
+# def list(self, request, *args, **kwargs):
+# 	queryset = self.filter_queryset(self.get_queryset())
+# 	serializer = self.get_serializer(queryset, many=True)
+# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+# 	return Response({'results': queryset_list})
 
 
 class MaterialList(ListAPIView):
 	queryset = Material.objects.all()
 	serializer_class = MaterialSerializer
 
-	# def list(self, request, *args, **kwargs):
-	# 	queryset = self.filter_queryset(self.get_queryset())
-	# 	serializer = self.get_serializer(queryset, many=True)
-	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-	# 	return Response({'results': queryset_list})
+# def list(self, request, *args, **kwargs):
+# 	queryset = self.filter_queryset(self.get_queryset())
+# 	serializer = self.get_serializer(queryset, many=True)
+# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+# 	return Response({'results': queryset_list})
 
 
 class UsersList(ListAPIView):
 	queryset = CustomData.objects.all()
 	serializer_class = UserSerializer
 
-	# def list(self, request, *args, **kwargs):
-	# 	queryset = self.filter_queryset(self.get_queryset())
-	# 	serializer = self.get_serializer(queryset, many=True)
-	# 	queryset_list = {
-	# 		obj['user_id']: {'first_name': obj['first_name'], 'last_name': obj['last_name'], 'phone': obj['phone']} for
-	# 		obj in
-	# 		serializer.data}
-	# 	return Response({'results': queryset_list})
+# def list(self, request, *args, **kwargs):
+# 	queryset = self.filter_queryset(self.get_queryset())
+# 	serializer = self.get_serializer(queryset, many=True)
+# 	queryset_list = {
+# 		obj['user_id']: {'first_name': obj['first_name'], 'last_name': obj['last_name'], 'phone': obj['phone']} for
+# 		obj in
+# 		serializer.data}
+# 	return Response({'results': queryset_list})
 
 
 class CitiesList(ListAPIView):
 	queryset = City.objects.all()
 	serializer_class = CitySerializer
 
-	# def list(self, request, *args, **kwargs):
-	# 	queryset = self.filter_queryset(self.get_queryset())
-	# 	serializer = self.get_serializer(queryset, many=True)
-	# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
-	# 	return Response(queryset_list)
+# def list(self, request, *args, **kwargs):
+# 	queryset = self.filter_queryset(self.get_queryset())
+# 	serializer = self.get_serializer(queryset, many=True)
+# 	queryset_list = {obj['id']: obj['name'] for obj in serializer.data}
+# 	return Response(queryset_list)
 
 
 class DistrictsList(ListAPIView):
 	queryset = District.objects.all()
 	serializer_class = DistrictSerializer
-	filter_backends = (DistrictsFilter, )
+	filter_backends = (DistrictsFilter,)
 
-	# def list(self, request, *args, **kwargs):
-	# 	queryset = self.filter_queryset(self.get_queryset())
-	# 	serializer = self.get_serializer(queryset, many=True)
-	# 	queryset_list = {obj['id']: {'name': obj['name'], 'city': obj['city']} for obj in serializer.data}
-	# 	return Response(queryset_list)
+# def list(self, request, *args, **kwargs):
+# 	queryset = self.filter_queryset(self.get_queryset())
+# 	serializer = self.get_serializer(queryset, many=True)
+# 	queryset_list = {obj['id']: {'name': obj['name'], 'city': obj['city']} for obj in serializer.data}
+# 	return Response(queryset_list)
 
 
 def recursive_node_to_dict(node):
@@ -533,3 +530,12 @@ class TreeCategoryList(ListAPIView):
 		for n in root_nodes:
 			dicts.append(recursive_node_to_dict(n))
 		return Response(dicts)
+
+
+def get_mail_data(request):
+	# body_unicode = request.body.decode('utf-8')
+	# body = json.loads(body_unicode)
+	name = request.POST['name']
+	phone = request.POST['phone']
+	services = request.POST['services']
+	description = request.POST['description']

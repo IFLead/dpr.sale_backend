@@ -167,7 +167,7 @@ class Post(models.Model):
 
 class Image(models.Model):
 	image_file = FilerImageField(verbose_name='Изображение', )
-	obj = models.ForeignKey(Post, related_name='photos')
+	obj = models.ForeignKey(Post, related_name='images')
 
 
 class CustomData(models.Model):

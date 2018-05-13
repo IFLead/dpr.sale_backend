@@ -31,6 +31,7 @@ from .views import (
 	PostUpdate,
 	PostCreate,
 	PostDestroy,
+	get_mail_data,
 )
 
 urlpatterns = [
@@ -47,6 +48,7 @@ urlpatterns = [
 	# url(r'post/unimportant', views.unimportant_post),
 	# url(r'post/get_top_eight', views.get_top_eight),
 	url(r'^admin/', admin.site.urls),
+	url(r'maildata/', get_mail_data),
 	url(r'tree', TreeCategoryList.as_view(), name='tree'),
 	url(r'currency', CurrencyList.as_view(), name='currency list'),
 	url(r'users', UsersList.as_view(), name='currency list'),
