@@ -3,17 +3,18 @@ from Main.models import Post, Category, Currency, TreeCategory, State, Window, M
 
 
 class MyImageSerializer(serializers.ModelSerializer):
+	url = serializers.CharField(source='image_file.url')
 	class Meta:
 		model = Image
-		fields = '__all__'
+		fields = ('id','url')
+		related_fields = ['image_file']
 
 
 class PostSerializer(serializers.ModelSerializer):
-	images = serializers.StringRelatedField(many=True)
 
 	class Meta:
 		model = Post
-		fields = ('id', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'images')
+		fields = ('id', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type')
 
 
 class SinglePostSerializer(serializers.ModelSerializer):

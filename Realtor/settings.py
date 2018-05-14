@@ -25,7 +25,7 @@ SECRET_KEY = '_qj2#%-o6_kkye*ojv@x_r)(t62ns_6ozbVzskd@r#l5y2(e!_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.dpr.sale', 'dpr.sale', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.dpr.sale', 'dpr.sale', 'localhost', 'dev.dpr.sale']
 
 INTERNAL_IPS = ['127.0.0.1', '165.227.163.99']
 # Application definition
@@ -197,13 +197,13 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/api/static/'
 
-STATICFILES_DIRS = [
-	os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS = [
+# 	os.path.join(BASE_DIR, 'static'),
+# ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'

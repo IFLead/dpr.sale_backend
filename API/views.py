@@ -358,8 +358,8 @@ class PostList(ListAPIView):  # 28, 29, 31
 	pagination_class = PostPageNumberPagination
 	serializer_class = PostSerializer
 	filter_backends = (filters.SearchFilter, DjangoFilterBackend, PostCategoryFilter)  # PostCategoryFilter
-	search_fields = ('=id', 'title', 'description')  # toDo: ловеркейсить всё
-	filter_fields = (
+	search_fields = ('=id',)# 'title', 'description')  # toDo: ловеркейсить всё
+	filter_fields = ('id',
 		'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony',
 		'loggia', 'district', 'material', 'window', 'state')
 	ordering = ('-created',)
@@ -375,7 +375,7 @@ class PostList(ListAPIView):  # 28, 29, 31
 				new_obj = obj
 				photo_id = obj['main_photo']
 				if photo_id:
-					new_obj['main_photo'] = File.objects.get(id=photo_id).url
+					new_obj['main_photo'] = request.build_absolute_uri('/')[:-1] + File.objects.get(id=photo_id).url
 				new_data.append(new_obj)
 			return self.get_paginated_response(new_data)
 		serializer = self.get_serializer(queryset, many=True)
@@ -532,7 +532,7 @@ class TreeCategoryList(ListAPIView):
 		return Response(dicts)
 
 
-def get_mail_data(request):
+def get_request(request):
 	# body_unicode = request.body.decode('utf-8')
 	# body = json.loads(body_unicode)
 	name = request.POST['name']

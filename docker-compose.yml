@@ -1,0 +1,11 @@
+version: '2'
+services:
+  dprsaleapi:
+    build: .
+    container_name: dpr.sale_api
+    command: python manage.py runserver 0.0.0.0:8002
+    ports:
+      - 8002:8002
+    volumes:
+      - /home/django/Realtor/uploads:/drpsale/uploads
+    env_file: .env
