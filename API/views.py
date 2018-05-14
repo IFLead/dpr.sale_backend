@@ -1,8 +1,8 @@
 import re
 
-import json
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.template.loader import render_to_string
@@ -421,6 +421,7 @@ class CategoryList(ListAPIView):  # 28, 29, 31
 	queryset = Category.objects.all()
 	serializer_class = CategorySerializer
 
+
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
 # 	serializer = self.get_serializer(queryset, many=True)
@@ -431,6 +432,7 @@ class CategoryList(ListAPIView):  # 28, 29, 31
 class CurrencyList(ListAPIView):  # 28, 29, 31
 	queryset = Currency.objects.all()
 	serializer_class = CurrencySerializer
+
 
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
@@ -443,6 +445,7 @@ class StatesList(ListAPIView):
 	queryset = State.objects.all()
 	serializer_class = StateSerializer
 
+
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
 # 	serializer = self.get_serializer(queryset, many=True)
@@ -453,6 +456,7 @@ class StatesList(ListAPIView):
 class WindowList(ListAPIView):
 	queryset = Window.objects.all()
 	serializer_class = WindowSerializer
+
 
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
@@ -465,6 +469,7 @@ class MaterialList(ListAPIView):
 	queryset = Material.objects.all()
 	serializer_class = MaterialSerializer
 
+
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
 # 	serializer = self.get_serializer(queryset, many=True)
@@ -475,6 +480,7 @@ class MaterialList(ListAPIView):
 class UsersList(ListAPIView):
 	queryset = CustomData.objects.all()
 	serializer_class = UserSerializer
+
 
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
@@ -490,6 +496,7 @@ class CitiesList(ListAPIView):
 	queryset = City.objects.all()
 	serializer_class = CitySerializer
 
+
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
 # 	serializer = self.get_serializer(queryset, many=True)
@@ -501,6 +508,7 @@ class DistrictsList(ListAPIView):
 	queryset = District.objects.all()
 	serializer_class = DistrictSerializer
 	filter_backends = (DistrictsFilter,)
+
 
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
@@ -533,9 +541,18 @@ class TreeCategoryList(ListAPIView):
 
 
 def get_mail_data(request):
-	# body_unicode = request.body.decode('utf-8')
-	# body = json.loads(body_unicode)
 	name = request.POST['name']
 	phone = request.POST['phone']
 	services = request.POST['services']
 	description = request.POST['description']
+	send_mail(
+		'Some data',
+		""" name: {0}
+			phone: {1}
+			services: {2}
+			description: {3}
+		""".format(name, phone, services, description),
+		'leo2598@yandex.ua',
+		['igos.321@gmail.com'],
+		fail_silently=False,
+	)
