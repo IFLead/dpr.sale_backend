@@ -5,6 +5,8 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.shortcuts import redirect
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.decorators import api_view
 from django.template.loader import render_to_string
 from django_filters.rest_framework import DjangoFilterBackend
 from filer.models import File
@@ -540,6 +542,8 @@ class TreeCategoryList(ListAPIView):
 		return Response(dicts)
 
 
+@csrf_exempt
+@api_view(['POST'])
 def get_request(request):
 	name = request.POST['name']
 	phone = request.POST['phone']

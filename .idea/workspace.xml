@@ -23,10 +23,7 @@
         <entry file="file://$PROJECT_DIR$/API/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="682">
-              <caret line="50" column="18" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="18" />
-              <folding>
-                <element signature="e#641#673#0" expanded="true" />
-              </folding>
+              <caret line="50" column="33" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -34,8 +31,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="557" column="5" lean-forward="true" selection-start-line="557" selection-start-column="5" selection-end-line="557" selection-end-column="5" />
+            <state relative-caret-position="30">
+              <caret line="544" selection-start-line="544" selection-end-line="544" selection-end-column="12" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -46,8 +43,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="154">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -212,7 +209,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
+    <option name="x" value="915" />
+    <option name="y" value="111" />
     <option name="width" value="960" />
     <option name="height" value="1036" />
   </component>
@@ -273,6 +271,148 @@
       <recent name="D:\OneDrive\dpr-sale\Realtor" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/Realtor.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/serializers.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/urls.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/views.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Realtor/settings.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Dockerfile</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/docker-compose.yml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/28b83ee6d1282ac66a2a09be29e0fa0653217f58/531588804_3_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-vtorichnyy-rynok.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/2d089dbea43f4fc59f7927324e3094989c488810.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/403d4828c1e659f2cf3164b4795527c03ce38c52/531588804_2_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/45bc0dfadd3024e12f2fcc8d13467441dbdaf050/531588804_2_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/57b94082f5a069dbf98abf77a0ae62a23bfecb5b/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/66913531d2caa23bcfe1a82e0b7955e866a6415d.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/6727b0490d0baf20ffc29984214da2401bfe99de/531588804_5_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetskaya-oblast.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/6afb7ec14d73b80e4753e785cca80ed43d6a2642/531588804_2_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/87ae100a5be922fadefa63b92077bbb870cf2ea0/531588804_3_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-vtorichnyy-rynok.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/9196474d954bb1924878daea3bddcd8eb1926384/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/97dce34149d7d261dbe059318d9c3ca49dc2d1fb/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/a39a35b7172711ae22849ffcc062a4576b475b81/531588804_2_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/a58f17db014773b37b334a7c772d559fc43acbf5/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/a78f72911905cac8ea72730d01093c53958b6954/531588804_5_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetskaya-oblast.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/a8d55c183934686c408f99b38e03a94b81bb8640/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/ae8330431f14ec4355dff3d98f9e1e2812f6035f/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/aed1ac2f16fc47ff170c7ddf888fa7b8fa052213/531588804_3_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-vtorichnyy-rynok.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/b534214b4cdfab8670e13fe04eee6ed1fb3d8f88/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/c370cf0b542cb0bfd44a7a1320875aece62f8630/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/cc2103a6c5752dbc4152b62d583f298472f8a77a/531588804_5_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetskaya-oblast.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/d766ad3c91b9dfa2d0de117be84faeedc70b82e8.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/d93691cf75a6d5b6495c823367516dd9e5143290/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/ed43163f9c66eb06c344a23b3bb4019deb6442e5.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/ef9981d1e5ce2a406b4a71f5a06ae5b43487445d/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/efe90db8b0e0ba45217dcfa4052f06382315238a/531588804_3_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-vtorichnyy-rynok.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/f942ebff064370b7674d2a8cdff10f8f8ea7ddce/531588804_5_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetskaya-oblast.jpg</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -321,13 +461,6 @@
       <option name="presentableId" value="Default" />
       <updated>1504603151262</updated>
       <workItem from="1507742145689" duration="34000" />
-    </task>
-    <task id="LOCAL-00010" summary="frontend fixes">
-      <created>1506989121216</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1506989121216</updated>
     </task>
     <task id="LOCAL-00011" summary="frontend fixes">
       <created>1506991139992</created>
@@ -665,7 +798,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526248072300</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="email sending">
+      <created>1526319403222</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1526319403223</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -677,7 +817,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4826284" weight="0.21195652" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32826087" />
-      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.77902025" weight="0.34565216" />
+      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.77902025" visible="true" weight="0.34565216" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.5576087" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.20553781" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
@@ -787,7 +927,8 @@
     <MESSAGE value="hz" />
     <MESSAGE value="photo url" />
     <MESSAGE value="unfinished" />
-    <option name="LAST_COMMIT_MESSAGE" value="unfinished" />
+    <MESSAGE value="email sending" />
+    <option name="LAST_COMMIT_MESSAGE" value="email sending" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -989,16 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="18" />
-          <folding>
-            <element signature="e#641#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/filters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -1021,18 +1152,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="154">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="50" column="33" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="557" column="5" lean-forward="true" selection-start-line="557" selection-start-column="5" selection-end-line="557" selection-end-column="5" />
+        <state relative-caret-position="30">
+          <caret line="544" selection-start-line="544" selection-end-line="544" selection-end-column="12" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
