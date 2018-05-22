@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/views.py" afterDir="false" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
@@ -28,13 +30,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="544" selection-start-line="544" selection-end-line="544" selection-end-column="12" />
+            <state relative-caret-position="-42">
+              <caret line="539" column="38" lean-forward="true" selection-start-line="539" selection-start-column="38" selection-end-line="539" selection-end-column="38" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filters.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API/filters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,8 +57,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="198">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -55,22 +69,10 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3652">
-              <caret line="169" column="54" selection-start-line="169" selection-start-column="54" selection-end-line="169" selection-end-column="54" />
+            <state relative-caret-position="-680">
+              <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/filters.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -194,11 +196,11 @@
         <option value="$PROJECT_DIR$/Main/admin.py" />
         <option value="$PROJECT_DIR$/Realtor/settings.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/API/filters.py" />
         <option value="$PROJECT_DIR$/API/urls.py" />
         <option value="$PROJECT_DIR$/Main/models.py" />
         <option value="$PROJECT_DIR$/API/serializers.py" />
         <option value="$PROJECT_DIR$/API/views.py" />
+        <option value="$PROJECT_DIR$/API/filters.py" />
       </list>
     </option>
   </component>
@@ -259,7 +261,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="G:/семестр  ментального угнетения/ПКС/лаба 6/xmpp-master" />
+    <property name="last_opened_file_path" value="G:/семестр  ментального угнетения/ПКС/лаба 6" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -285,11 +287,10 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/Realtor.iml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/API/serializers.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/urls.py</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/API/views.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Realtor/settings.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/models.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/requirements.txt</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -297,8 +298,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Dockerfile</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docker-compose.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0023_auto_20180519_1143.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0024_currency_prefix.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0025_auto_20180519_1540.py</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -306,32 +308,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/28b83ee6d1282ac66a2a09be29e0fa0653217f58/531588804_3_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-vtorichnyy-rynok.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/2d089dbea43f4fc59f7927324e3094989c488810.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/403d4828c1e659f2cf3164b4795527c03ce38c52/531588804_2_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/45bc0dfadd3024e12f2fcc8d13467441dbdaf050/531588804_2_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/57b94082f5a069dbf98abf77a0ae62a23bfecb5b/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/66913531d2caa23bcfe1a82e0b7955e866a6415d.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/6727b0490d0baf20ffc29984214da2401bfe99de/531588804_5_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetskaya-oblast.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/6afb7ec14d73b80e4753e785cca80ed43d6a2642/531588804_2_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/87ae100a5be922fadefa63b92077bbb870cf2ea0/531588804_3_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-vtorichnyy-rynok.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/9196474d954bb1924878daea3bddcd8eb1926384/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/97dce34149d7d261dbe059318d9c3ca49dc2d1fb/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/a39a35b7172711ae22849ffcc062a4576b475b81/531588804_2_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-fotografii.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/a58f17db014773b37b334a7c772d559fc43acbf5/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/a78f72911905cac8ea72730d01093c53958b6954/531588804_5_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetskaya-oblast.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/a8d55c183934686c408f99b38e03a94b81bb8640/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/ae8330431f14ec4355dff3d98f9e1e2812f6035f/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/aed1ac2f16fc47ff170c7ddf888fa7b8fa052213/531588804_3_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-vtorichnyy-rynok.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/b534214b4cdfab8670e13fe04eee6ed1fb3d8f88/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/c370cf0b542cb0bfd44a7a1320875aece62f8630/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/cc2103a6c5752dbc4152b62d583f298472f8a77a/531588804_5_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetskaya-oblast.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/d766ad3c91b9dfa2d0de117be84faeedc70b82e8.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/d93691cf75a6d5b6495c823367516dd9e5143290/531588804_1_1000x700_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetsk.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/ed43163f9c66eb06c344a23b3bb4019deb6442e5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/ef9981d1e5ce2a406b4a71f5a06ae5b43487445d/531588804_4_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-nedvizhimost.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/efe90db8b0e0ba45217dcfa4052f06382315238a/531588804_3_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-vtorichnyy-rynok.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/uploads/img/2017/09/29/watermarked/f942ebff064370b7674d2a8cdff10f8f8ea7ddce/531588804_5_644x461_srochno-prodam-3k-kvartiru-v-voroshilovskom-rayone-donetskaya-oblast.jpg</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -461,13 +437,6 @@
       <option name="presentableId" value="Default" />
       <updated>1504603151262</updated>
       <workItem from="1507742145689" duration="34000" />
-    </task>
-    <task id="LOCAL-00011" summary="frontend fixes">
-      <created>1506991139992</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1506991139992</updated>
     </task>
     <task id="LOCAL-00012" summary="frontend fixes">
       <created>1507014205817</created>
@@ -805,7 +774,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526319403223</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="stuff">
+      <created>1526328086074</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1526328086074</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -817,15 +793,15 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4826284" weight="0.21195652" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.32826087" />
-      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.77902025" visible="true" weight="0.34565216" />
+      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.77902025" weight="0.34565216" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.5576087" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.20553781" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.21192758" />
       <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.2065053" />
       <window_info anchor="right" id="SciView" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840257" weight="0.4478261" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49840257" visible="true" weight="0.4478261" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Remote Host" order="5" weight="0.29552716" />
@@ -841,33 +817,33 @@
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32903227" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326087" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5173716" side_tool="true" weight="0.66505635" />
       <window_info anchor="bottom" id="Gulp" order="15" sideWeight="0.080515295" weight="0.38969404" />
       <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.47654584" visible="true" weight="0.34565216" />
       <window_info anchor="right" id="Remote Host" order="5" weight="0.29552716" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Data View" order="4" weight="0.3290469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49471298" weight="0.32903227" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4826284" weight="0.21195652" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32826087" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="manage.py@Realtor" order="13" sideWeight="0.48454157" weight="0.35" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32903227" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5173716" side_tool="true" weight="0.66505635" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="manage.py@Realtor" order="13" sideWeight="0.48454157" weight="0.35" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.17944622" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32934782" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326087" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32826087" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4826284" weight="0.21195652" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="3" weight="0.2065053" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.17944622" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32903227" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -922,74 +898,77 @@
     <MESSAGE value="на всякий" />
     <MESSAGE value="currency" />
     <MESSAGE value="happy little trees" />
-    <MESSAGE value="stuff" />
     <MESSAGE value="filterinos" />
     <MESSAGE value="hz" />
     <MESSAGE value="photo url" />
     <MESSAGE value="unfinished" />
     <MESSAGE value="email sending" />
-    <option name="LAST_COMMIT_MESSAGE" value="email sending" />
+    <MESSAGE value="stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="[branch.id for branch in TreeCategory.objects.all().filter(id=7).get_descendants(include_self=True)]" language="Python" />
         <watch expression="request.POST" language="Python" />
+        <watch expression="Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).filter(price__gte=summ_unexchanged)" language="Python" />
+        <watch expression="Currency.objects.filter(symbol=symbol).values()[0]" language="Python" />
+        <watch expression="Currency.objects.get(symbol=symbol)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>request.POST</expression-string>
+        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).filter(price__gte=summ_unexchanged)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.GET</expression-string>
+        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).objects.filter(price__gte=summ_unexchanged)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>request.data</expression-string>
+        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[branch.id for branch in TreeCategory.objects.all().filter(id=7).get_descendants(include_self=True)]</expression-string>
+        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).values()[0]['price']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[branch.id for branch in TreeCategory.objects.all().filter(id=1).get_descendants(include_self=True)]</expression-string>
+        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()])['price']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[branch.id for branch in 			TreeCategory.objects.all().filter(id=1).get_descendants(include_self=True)]</expression-string>
+        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()])[0]['price']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>1 in [branch.id for branch in TreeCategory.objects.all().filter(id=1).get_descendants(include_self=True)]</expression-string>
+        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).values()['price']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>1 in [ranch.id for branch in TreeCategory.objects.all().filter(id=1).get_descendants(include_self=True)]</expression-string>
+        <expression-string>Post.objects.get(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).values()['price']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>1 in TreeCategory.objects.all().filter(id=1).get_descendants(include_self=True)</expression-string>
+        <expression-string>Post.objects.get(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()])['price']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>len(TreeCategory.objects.all().filter(id=1).get_descendants(include_self=True))</expression-string>
+        <expression-string>Currency.objects.filter(symbol=symbol).values()[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1130,36 +1109,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3652">
-          <caret line="169" column="54" selection-start-line="169" selection-start-column="54" selection-end-line="169" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
@@ -1167,12 +1116,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="544" selection-start-line="544" selection-end-line="544" selection-end-column="12" />
+        <state relative-caret-position="-42">
+          <caret line="539" column="38" lean-forward="true" selection-start-line="539" selection-start-column="38" selection-end-line="539" selection-end-column="38" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -4,9 +4,10 @@ from Main.models import Post, Category, Currency, TreeCategory, State, Window, M
 
 class MyImageSerializer(serializers.ModelSerializer):
 	url = serializers.CharField(source='image_file.url')
+
 	class Meta:
 		model = Image
-		fields = ('id','url')
+		fields = ('id', 'url')
 		related_fields = ['image_file']
 
 
