@@ -362,7 +362,7 @@ class PostList(ListAPIView):  # 28, 29, 31
 	pagination_class = PostPageNumberPagination
 	serializer_class = PostSerializer
 	filter_backends = (filters.SearchFilter, DjangoFilterBackend, PostCategoryFilter, DjangoUrlFilterBackend,
-	PostCurrencyFilter)  # PostCategoryFilter
+	PostCurrencyFilter, CategoryTreeFilter)  # PostCategoryFilter
 	search_fields = ('title', 'description')  # toDo: ловеркейсить всё
 	filter_fields = ('id',
 	'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square', 'corner',
@@ -537,7 +537,6 @@ def recursive_node_to_dict(node):
 class TreeCategoryList(ListAPIView):
 	queryset = TreeCategory.objects.all()
 	serializer_class = TreeCategorySerializer
-	filter_backends = (CategoryTreeFilter, )
 
 	def list(self, request, *args, **kwargs):
 		root_nodes = cache_tree_children(self.get_queryset())

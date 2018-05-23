@@ -42,9 +42,11 @@ class PostCurrencyFilter(filters.BaseFilterBackend):
 			return queryset
 		summ_unexchanged = float(summ_unexchanged)
 		sum_exchanged = summ_unexchanged * float(exchange)
-		first_posts = Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).filter(
+		first_posts = Post.objects.filter(
+			currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).filter(
 			price__gte=summ_unexchanged)
-		second_posts = Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.exclude(symbol=symbol).values()]).filter(
+		second_posts = Post.objects.filter(
+			currency_type__in=[cur['id'] for cur in Currency.objects.exclude(symbol=symbol).values()]).filter(
 			price__gte=sum_exchanged)
 		queryset = list(chain(first_posts, second_posts))
 		return queryset
@@ -53,7 +55,9 @@ class PostCurrencyFilter(filters.BaseFilterBackend):
 class CategoryTreeFilter(filters.BaseFilterBackend):
 	def filter_queryset(self, request, queryset, view):
 		node = request.GET.get('node', default='all')
-		node_in = request.GET.get('node', default='all')
-		if node == 'all' or node_in == 'all':
+		if node == 'all':
 			return queryset
+		node = int(node)
+		queryset = Post.objects.filter(category_tree__in=[tree.id for tree in
+			TreeCategory.objects.filter(id=node).get_descendants(include_self=True)])
 		return queryset

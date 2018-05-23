@@ -15,7 +15,7 @@ class PostSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Post
-		fields = ('id', 'is_top', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type')
+		fields = ('id', 'is_top', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'category_tree')
 
 
 class SinglePostSerializer(serializers.ModelSerializer):
@@ -25,7 +25,7 @@ class SinglePostSerializer(serializers.ModelSerializer):
 		model = Post
 		fields = ('id', 'is_top', 'title', 'description', 'price', 'closed', 'rooms', 'floor', 'storeys', 'landmark',
 		'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia', 'created',
-		'category', 'main_photo', 'currency_type', 'owner', 'district', 'material',
+		'category_tree', 'main_photo', 'currency_type', 'owner', 'district', 'material',
 		'window', 'state', 'images')
 
 
