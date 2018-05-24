@@ -25,8 +25,8 @@ class ImageInline(admin.StackedInline):
 
 class PostAdmin(admin.ModelAdmin):
 	inlines = [ImageInline, ]
-	list_display = ('id', 'is_top', 'title', 'price', 'currency_type', 'category_tree', 'created', 'main_photo')
-	list_editable = ('is_top', 'title', 'price', 'currency_type', 'category_tree', 'main_photo')
+	list_display = ('id', 'is_top', 'title', 'price', 'currency_type', 'category_tree', 'created')
+	list_editable = ('is_top', 'title', 'price', 'currency_type', 'category_tree')
 
 
 class CityAdmin(admin.ModelAdmin):
