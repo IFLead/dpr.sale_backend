@@ -35,18 +35,20 @@ class DistrictsFilter(filters.BaseFilterBackend):
 
 class PostCurrencyFilter(filters.BaseFilterBackend):
 	def filter_queryset(self, request, queryset, view):
-		symbol = request.GET.get('symbol', default='all')
-		exchange = request.GET.get('exchange', default='all')
-		summ_unexchanged = request.GET.get('summ', default='all')
-		if symbol == 'all' or exchange == 'all' or summ_unexchanged == 'all':
+		cur_id = request.GET.get('id', default=None)
+		exchange = request.GET.get('exchange', default=None)
+		summ_unexchanged = request.GET.get('summ', default=None)
+		if not cur_id or not exchange or not summ_unexchanged:
 			return queryset
 		summ_unexchanged = float(summ_unexchanged)
 		sum_exchanged = summ_unexchanged * float(exchange)
-		first_posts = Post.objects.filter(
-			currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).filter(
+		posts = Post.objects
+		currency = Currency.objects
+		first_posts = posts.filter(
+			currency_type__in=[cur['id'] for cur in currency.filter(id=cur_id).values()]).filter(
 			price__gte=summ_unexchanged)
-		second_posts = Post.objects.filter(
-			currency_type__in=[cur['id'] for cur in Currency.objects.exclude(symbol=symbol).values()]).filter(
+		second_posts = posts.filter(
+			currency_type__in=[cur['id'] for cur in currency.exclude(id=cur_id).values()]).filter(
 			price__gte=sum_exchanged)
 		queryset = list(chain(first_posts, second_posts))
 		return queryset
@@ -54,8 +56,8 @@ class PostCurrencyFilter(filters.BaseFilterBackend):
 
 class CategoryTreeFilter(filters.BaseFilterBackend):
 	def filter_queryset(self, request, queryset, view):
-		node = request.GET.get('node', default='all')
-		if node == 'all':
+		node = request.GET.get('node', default=None)
+		if not node:
 			return queryset
 		node = int(node)
 		queryset = Post.objects.filter(category_tree__in=[tree.id for tree in
