@@ -1,30 +1,36 @@
 from django.contrib import admin
-from django.contrib.admin import register
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from .models import Image, Post, CustomData, City, District, Category, Living_space, Window, Material, State, Currency, TreeCategory
+from .models import Image, Post, CustomData, City, District, Category, Living_space, Window, Material, State, Currency, \
+	TreeCategory
 
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        CustomData.objects.create(user=instance)
+	if created:
+		CustomData.objects.create(user=instance)
 
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
-    instance.custom.save()
+	instance.custom.save()
 
 
 class ImageInline(admin.StackedInline):
-    model = Image
+	model = Image
 
 
 class PostAdmin(admin.ModelAdmin):
-    inlines = [ImageInline, ]
+	inlines = [ImageInline, ]
+	list_display = ('id', 'is_top', 'title', 'price', 'currency_type', 'category_tree', 'created', 'main_photo')
+	list_editable = ('is_top', 'title', 'price', 'currency_type', 'category_tree', 'main_photo')
+
+
+class CityAdmin(admin.ModelAdmin):
+	pass
 
 
 admin.site.register(Post, PostAdmin)
@@ -40,13 +46,13 @@ admin.site.register(TreeCategory)
 
 
 class CustomDataInline(admin.StackedInline):
-    model = CustomData
-    can_delete = False
-    extra = 1
+	model = CustomData
+	can_delete = False
+	extra = 1
 
 
 class UserAdmin(BaseUserAdmin):
-    inlines = (CustomDataInline,)
+	inlines = (CustomDataInline,)
 
 
 admin.site.unregister(User)
