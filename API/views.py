@@ -2,6 +2,7 @@ import re
 
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.shortcuts import redirect
@@ -29,10 +30,10 @@ from Main.models import Post, Category, Currency, TreeCategory, State, Window, M
 from Realtor import settings
 from .filters import PostCategoryFilter, DistrictsFilter, PostCurrencyFilter, CategoryTreeFilter
 from .pagination import PostPageNumberPagination
-from .permissions import IsOwnerOrReadOnly
+from .permissions import IsOwnerOrReadOnly, AdminRealtor, SimpleRealtor
 from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer, CurrencySerializer, \
 	TreeCategorySerializer, WindowSerializer, MaterialSerializer, StateSerializer, SinglePostSerializer, CitySerializer, \
-	DistrictSerializer, UserSerializer
+	DistrictSerializer, UserSerializer, DefaultUserSerializer
 
 
 def districts(request):
@@ -406,13 +407,13 @@ class PostDetail(RetrieveAPIView):
 
 
 class PostUpdate(UpdateAPIView):
-	permission_classes = [IsOwnerOrReadOnly]
+	permission_classes = IsOwnerOrReadOnly
 	queryset = Post.objects.all()
 	serializer_class = PostSerializer
 
 
 class PostDestroy(DestroyAPIView):
-	permission_classes = [IsOwnerOrReadOnly]
+	permission_classes = IsOwnerOrReadOnly
 	queryset = Post.objects.all()
 	serializer_class = PostSerializer
 
@@ -421,6 +422,12 @@ class PostCreate(CreateAPIView):
 	permission_classes = [IsAuthenticated]
 	queryset = Post.objects.all()
 	serializer_class = PostUpdateSerializer
+
+
+class UserCreate(CreateAPIView):
+	permission_classes = AdminRealtor
+	queryset = User.objects.all()
+	serializer_class = DefaultUserSerializer
 
 
 class CategoryList(ListAPIView):  # 28, 29, 31

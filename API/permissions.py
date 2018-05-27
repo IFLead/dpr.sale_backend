@@ -12,3 +12,13 @@ class IsOwnerOrReadOnly(BasePermission):
 		if request.method in self.my_safe_methods:
 			return True
 		return obj.user == request.user
+
+
+class AdminRealtor(BasePermission):
+	def has_permission(self, request, view):
+		return request.user.user_type == 'realtor_admin'
+
+
+class SimpleRealtor(BasePermission):
+	def has_permission(self, request, view):
+		return request.user.user_type == 'realtor' or request.user.user_type == 'realtor_admin'
