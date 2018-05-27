@@ -35,7 +35,7 @@ class DistrictsFilter(filters.BaseFilterBackend):
 
 class PostCurrencyFilter(filters.BaseFilterBackend):
 	def filter_queryset(self, request, queryset, view):
-		cur_id = request.GET.get('id', default=None)
+		cur_id = request.GET.get('currency_type', default=None)
 		exchange = request.GET.get('exchange', default=None)
 		summ_unexchanged = request.GET.get('summ', default=None)
 		if not cur_id or not exchange or not summ_unexchanged:
@@ -56,7 +56,7 @@ class PostCurrencyFilter(filters.BaseFilterBackend):
 
 class CategoryTreeFilter(filters.BaseFilterBackend):
 	def filter_queryset(self, request, queryset, view):
-		node = request.GET.get('node', default=None)
+		node = request.GET.get('category', default=None)
 		if not node:
 			return queryset
 		node = int(node)

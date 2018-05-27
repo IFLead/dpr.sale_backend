@@ -12,18 +12,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='Currency',
-            fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=128, verbose_name='Название')),
-                ('symbol', models.CharField(max_length=2, verbose_name='Символ')),
-            ],
-            options={
-                'verbose_name': 'Валюта',
-                'verbose_name_plural': 'Валюты',
-            },
-        ),
         migrations.AlterField(
             model_name='post',            name='price',
             field=models.DecimalField(blank=True, decimal_places=0, max_digits=9, null=True, verbose_name='Стоимость'),

@@ -28,14 +28,6 @@ class Currency(models.Model):
         verbose_name_plural = 'Валюты'
 
 
-RUB = 0
-USD = 1
-CURRENCIES = (
-    (RUB, 'Рубль'),
-    (USD, 'Доллар'),
-)
-
-
 class City(models.Model):
     name = models.CharField('Название', max_length=55)
 
@@ -92,15 +84,15 @@ class Window(models.Model):
         verbose_name_plural = 'Окна'
 
 
-class Living_space(models.Model):
-    name = models.CharField('Тип', max_length=55)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = 'Жилая площадь'
-        verbose_name_plural = 'Жилые площади'
+# class Living_space(models.Model):
+#     name = models.CharField('Тип', max_length=55)
+#
+#     def __str__(self):
+#         return self.name
+#
+#     class Meta:
+#         verbose_name = 'Жилая площадь'
+#         verbose_name_plural = 'Жилые площади'
 
 
 class TreeCategory(MPTTModel):
