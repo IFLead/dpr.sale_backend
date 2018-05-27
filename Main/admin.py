@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from .models import Image, Post, CustomData, City, District, Category, Living_space, Window, Material, State, Currency, \
+from .models import Image, Post, CustomData, City, District, Category, Window, Material, State, Currency, \
 	TreeCategory
 
 
@@ -26,7 +26,10 @@ class ImageInline(admin.StackedInline):
 class PostAdmin(admin.ModelAdmin):
 	inlines = [ImageInline, ]
 	list_display = ('id', 'is_top', 'title', 'price', 'currency_type', 'category_tree', 'created')
-	list_editable = ('is_top', 'title', 'price', 'currency_type', 'category_tree')
+	list_select_related = ('currency_type', 'category_tree')
+	#list_editable = ('is_top', 'title', 'price', 'currency_type', 'category_tree')
+
+	list_per_page = 30
 
 
 class CityAdmin(admin.ModelAdmin):
@@ -37,7 +40,7 @@ admin.site.register(Post, PostAdmin)
 admin.site.register(City)
 admin.site.register(District)
 admin.site.register(Category)
-admin.site.register(Living_space)
+# admin.site.register(Living_space)
 admin.site.register(Window)
 admin.site.register(Material)
 admin.site.register(State)

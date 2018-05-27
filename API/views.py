@@ -366,7 +366,7 @@ class PostList(ListAPIView):  # 28, 29, 31
 	PostCurrencyFilter, CategoryTreeFilter)  # PostCategoryFilter
 	search_fields = ('title', 'description')  # toDo: ловеркейсить всё
 	filter_fields = ('id',
-	'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square', 'corner',
+	'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square',
 	'balcony',
 	'loggia', 'district', 'material', 'window', 'state')
 	ordering = ('-created',)

@@ -4,11 +4,29 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 
+def forwards_func(apps, schema_editor):
+    # We get the model from the versioned app registry;
+    # if we directly import it, it'll be the wrong version
+    Currency = apps.get_model("Main", "Currency")
+    db_alias = schema_editor.connection.alias
+    Currency.objects.using(db_alias).bulk_create([
+        Currency(pk=1, name="RUB", symbol="\u20bd", is_prefix=False),
+        Currency(pk=2, name="USD", symbol="$", is_prefix=True),
+    ])
+
+def reverse_func(apps, schema_editor):
+    # forwards_func() creates two Country instances,
+    # so reverse_func() should delete them.
+    Currency = apps.get_model("Main", "Currency")
+    db_alias = schema_editor.connection.alias
+    Currency.objects.using(db_alias).get(name="RUB",).delete()
+    Currency.objects.using(db_alias).filter(name="USD").delete()
+
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Main', '0013_delete_currency'),
+        ('Main', '0012_auto_20180430_1829'),
     ]
 
     operations = [
@@ -17,11 +35,14 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=128, verbose_name='Название')),
-                ('symbol', models.CharField(max_length=2, verbose_name='Символ')),
+                ('symbol', models.CharField(max_length=3, verbose_name='Символ')),
+                ('is_prefix', models.BooleanField(default=False, verbose_name='Префиксный символ')),
+
             ],
             options={
                 'verbose_name': 'Валюта',
                 'verbose_name_plural': 'Валюты',
             },
         ),
+        migrations.RunPython(forwards_func, reverse_func),
     ]

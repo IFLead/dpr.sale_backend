@@ -133,12 +133,12 @@ WSGI_APPLICATION = 'Realtor.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': 'dpr.sale',
+		'NAME': 'test',
 		'USER': 'django',
 		'PASSWORD': 'e1c9fd84a6eee9da02c3aacd9c7390a4',
 		'HOST': '165.227.163.99',
 		'PORT': '5432',
-		'CONN_MAX_AGE': None,
+		'CONN_MAX_AGE': 0,
 	}
 }
 
@@ -162,6 +162,7 @@ CACHES = {
 	}
 }
 CACHE_TTL = 60 * 5
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

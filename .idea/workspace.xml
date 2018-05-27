@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="">
+    <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="project clearing">
+      <change afterPath="$PROJECT_DIR$/Main/migrations/0025_old_categories_to_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/migrations/0026_merge_20180527_1610.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/permissions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/migrations/0012_auto_20180430_1829.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/migrations/0012_auto_20180430_1829.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/migrations/0013_delete_currency.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/migrations/0024_delete_living_space.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/migrations/0014_currency.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/migrations/0014_currency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/migrations/0024_currency_prefix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/migrations/0025_auto_20180519_1540.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Realtor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Realtor/settings.py" afterDir="false" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
     <ignored path="D:\OneDrive\dpr-sale\Realtor\.idea\shelf/" />
@@ -28,7 +36,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -36,67 +49,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="405" column="43" selection-start-line="405" selection-start-column="43" selection-end-line="405" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/API/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3432">
+            <state relative-caret-position="336">
+              <caret line="142" column="17" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="17" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#860#1046#0" />
+                <element signature="e#1083#1350#0" />
+                <element signature="e#1384#1577#0" />
+                <element signature="e#1614#1806#0" />
+                <element signature="e#1841#2024#0" />
+                <element signature="e#5464#5579#0" />
+                <element signature="e#5618#6283#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/filters.py">
+      <file leaf-file-name="0025_old_categories_to_new.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/migrations/0025_old_categories_to_new.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="340">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="0026_merge_20180527_1610.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/migrations/0026_merge_20180527_1610.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+            <state relative-caret-position="340">
+              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -104,29 +94,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="permissions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/permissions.py">
+      <file leaf-file-name="0012_auto_20180430_1829.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/migrations/0012_auto_20180430_1829.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
+            <state relative-caret-position="187">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
+      <file leaf-file-name="0014_currency.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/migrations/0014_currency.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="136">
+              <caret line="10" column="45" lean-forward="true" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -134,10 +115,15 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="44" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="44" />
+            <state relative-caret-position="87">
+              <caret line="97" column="38" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="38" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="0024_delete_living_space.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/migrations/0024_delete_living_space.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -156,18 +142,14 @@
       <find>'filer'</find>
       <find>filer.</find>
       <find>filer</find>
-      <find>time</find>
-      <find>datetime</find>
-      <find>Timezone.</find>
-      <find>dat</find>
-      <find>curr</find>
-      <find>phone</find>
-      <find>rest_fra</find>
-      <find>list</find>
-      <find>def list</find>
-      <find>descend</find>
-      <find>user</find>
+      <find>default=</find>
+      <find>Living_space</find>
+      <find>TEMPLATE_LOADERS</find>
+      <find>TEMPLATE</find>
     </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -175,9 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/block-heading-section.html" />
-        <option value="$PROJECT_DIR$/templates/ajax-posts.html" />
-        <option value="$PROJECT_DIR$/static/js/scripts.v1.0.min.js" />
         <option value="$PROJECT_DIR$/templates/block-modals.html" />
         <option value="$PROJECT_DIR$/static/js/scripts.v1.3.min.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -212,20 +191,23 @@
         <option value="$PROJECT_DIR$/FrontEnd/app/js/common.js" />
         <option value="$PROJECT_DIR$/Main/views.py" />
         <option value="$PROJECT_DIR$/Main/forms.py" />
-        <option value="$PROJECT_DIR$/API/pagination.py" />
-        <option value="$PROJECT_DIR$/Main/migrations/0011_auto_20180403_2332.py" />
-        <option value="$PROJECT_DIR$/Main/migrations/0012_auto_20180405_2247.py" />
         <option value="$PROJECT_DIR$/Realtor/urls.py" />
         <option value="$PROJECT_DIR$/API/seializers.py" />
-        <option value="$PROJECT_DIR$/Realtor/settings.py" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/API/urls.py" />
-        <option value="$PROJECT_DIR$/Main/admin.py" />
-        <option value="$PROJECT_DIR$/API/filters.py" />
-        <option value="$PROJECT_DIR$/Main/models.py" />
-        <option value="$PROJECT_DIR$/API/permissions.py" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/API/serializers.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/API/views.py" />
-        <option value="$PROJECT_DIR$/API/serializers.py" />
+        <option value="$PROJECT_DIR$/API/filters.py" />
+        <option value="$PROJECT_DIR$/Main/migrations/0024_currency_prefix.py" />
+        <option value="$PROJECT_DIR$/Main/migrations/0012_auto_20180430_1829.py" />
+        <option value="$PROJECT_DIR$/Main/migrations/0014_currency.py" />
+        <option value="$PROJECT_DIR$/Main/models.py" />
+        <option value="$PROJECT_DIR$/Main/fixtures/fixture.json" />
+        <option value="$PROJECT_DIR$/Main/migrations/0025_old_categories_to_new.py" />
+        <option value="$PROJECT_DIR$/Realtor/settings.py" />
+        <option value="$PROJECT_DIR$/Main/admin.py" />
       </list>
     </option>
   </component>
@@ -235,11 +217,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="915" />
-    <option name="y" value="111" />
-    <option name="width" value="960" />
-    <option name="height" value="1036" />
+    <option name="x" value="399" />
+    <option name="y" value="1407" />
+    <option name="width" value="1016" />
+    <option name="height" value="549" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -260,12 +245,13 @@
             <path>
               <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="dpr.sale_backend" type="462c0819:PsiDirectoryNode" />
-              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="dpr.sale_backend" type="462c0819:PsiDirectoryNode" />
               <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
@@ -280,22 +266,21 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="G:/семестр  ментального угнетения/ПКС/лаба 7/WiFiManager-master" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../light-remote-desktop-master" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Main/fixtures" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="D:\OneDrive\dpr-sale\Realtor\FrontEnd\app\libs\wtrfall" />
       <recent name="D:\OneDrive\dpr-sale\Realtor\static\img" />
       <recent name="D:\OneDrive\dpr-sale\Realtor\FrontEnd\app\img" />
       <recent name="D:\OneDrive\dpr-sale\Realtor\FrontEnd\app" />
-      <recent name="D:\OneDrive\dpr-sale\Realtor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -319,9 +304,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="Realtor.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
@@ -346,6 +331,118 @@
       <option name="presentableId" value="Default" />
       <updated>1504603151262</updated>
       <workItem from="1507742145689" duration="34000" />
+    </task>
+    <task id="LOCAL-00001" summary="db connetion fixed">
+      <created>1506436226290</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1506436226290</updated>
+    </task>
+    <task id="LOCAL-00002" summary="db connetion fixed">
+      <created>1506539482620</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1506539482622</updated>
+    </task>
+    <task id="LOCAL-00003" summary="next commit">
+      <created>1506616559231</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1506616559231</updated>
+    </task>
+    <task id="LOCAL-00004" summary="first fix">
+      <created>1506617016471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1506617016472</updated>
+    </task>
+    <task id="LOCAL-00005" summary="next commit">
+      <created>1506713382190</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1506713382215</updated>
+    </task>
+    <task id="LOCAL-00006" summary="frontend fixes">
+      <created>1506805476715</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1506805476715</updated>
+    </task>
+    <task id="LOCAL-00007" summary="frontend fixes">
+      <created>1506806122769</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1506806122769</updated>
+    </task>
+    <task id="LOCAL-00008" summary="frontend fixes">
+      <created>1506988960430</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1506988960430</updated>
+    </task>
+    <task id="LOCAL-00009" summary="frontend fixes">
+      <created>1506989033078</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1506989033078</updated>
+    </task>
+    <task id="LOCAL-00010" summary="frontend fixes">
+      <created>1506989121216</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1506989121216</updated>
+    </task>
+    <task id="LOCAL-00011" summary="frontend fixes">
+      <created>1506991139992</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1506991139992</updated>
+    </task>
+    <task id="LOCAL-00012" summary="frontend fixes">
+      <created>1507014205817</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1507014205817</updated>
+    </task>
+    <task id="LOCAL-00013" summary="frontend fixes">
+      <created>1507030029943</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1507030029943</updated>
+    </task>
+    <task id="LOCAL-00014" summary="frontend fixes">
+      <created>1507218465581</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1507218465581</updated>
+    </task>
+    <task id="LOCAL-00015" summary="frontend fixes">
+      <created>1507220832441</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1507220832441</updated>
+    </task>
+    <task id="LOCAL-00016" summary="frontend fixes">
+      <created>1507221801888</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1507221801888</updated>
     </task>
     <task id="LOCAL-00017" summary="frontend fixes">
       <created>1507236251632</created>
@@ -522,238 +619,94 @@
       <option name="project" value="LOCAL" />
       <updated>1522170046345</updated>
     </task>
-    <task id="LOCAL-00042" summary="post list">
-      <created>1522349067760</created>
+    <task id="LOCAL-00042" summary="migrations">
+      <created>1523559871333</created>
       <option name="number" value="00042" />
       <option name="presentableId" value="LOCAL-00042" />
       <option name="project" value="LOCAL" />
-      <updated>1522349067760</updated>
+      <updated>1523559871333</updated>
     </task>
-    <task id="LOCAL-00043" summary="some rest framework stuff">
-      <created>1522605208977</created>
+    <task id="LOCAL-00043" summary="fixed migrations">
+      <created>1523811724575</created>
       <option name="number" value="00043" />
       <option name="presentableId" value="LOCAL-00043" />
       <option name="project" value="LOCAL" />
-      <updated>1522605208977</updated>
+      <updated>1523811724575</updated>
     </task>
-    <task id="LOCAL-00044" summary="fixed fields">
-      <created>1522606663137</created>
+    <task id="LOCAL-00044" summary="fixed migrations (2)">
+      <created>1523815092835</created>
       <option name="number" value="00044" />
       <option name="presentableId" value="LOCAL-00044" />
       <option name="project" value="LOCAL" />
-      <updated>1522606663137</updated>
+      <updated>1523815092836</updated>
     </task>
-    <task id="LOCAL-00045" summary="add models">
-      <created>1522787581624</created>
+    <task id="LOCAL-00045" summary="project clearing">
+      <created>1525126072052</created>
       <option name="number" value="00045" />
       <option name="presentableId" value="LOCAL-00045" />
       <option name="project" value="LOCAL" />
-      <updated>1522787581625</updated>
+      <updated>1525126072052</updated>
     </task>
-    <task id="LOCAL-00046" summary="add model">
-      <created>1522957660107</created>
+    <task id="LOCAL-00046" summary="Another one commit">
+      <created>1526319939197</created>
       <option name="number" value="00046" />
       <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1522957660107</updated>
+      <updated>1526319939212</updated>
     </task>
-    <task id="LOCAL-00047" summary="hz che eto">
-      <created>1523813936314</created>
+    <task id="LOCAL-00047" summary="next commit">
+      <created>1526749214346</created>
       <option name="number" value="00047" />
       <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1523813936314</updated>
+      <updated>1526749214347</updated>
     </task>
-    <task id="LOCAL-00048" summary="views methods fixed">
-      <created>1523914083420</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1523914083420</updated>
-    </task>
-    <task id="LOCAL-00049" summary="crossdomain enabled">
-      <created>1525022659564</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1525022659564</updated>
-    </task>
-    <task id="LOCAL-00050" summary="тупое говно тупово говна">
-      <created>1525102302326</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1525102302326</updated>
-    </task>
-    <task id="LOCAL-00051" summary="на всякий">
-      <created>1525168294377</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1525168294377</updated>
-    </task>
-    <task id="LOCAL-00052" summary="currency">
-      <created>1525170860109</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1525170860109</updated>
-    </task>
-    <task id="LOCAL-00053" summary="happy little trees">
-      <created>1525182532016</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1525182532017</updated>
-    </task>
-    <task id="LOCAL-00054" summary="stuff">
-      <created>1525609825718</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1525609825719</updated>
-    </task>
-    <task id="LOCAL-00055" summary="filterinos">
-      <created>1526046618446</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1526046618448</updated>
-    </task>
-    <task id="LOCAL-00056" summary="hz">
-      <created>1526068405867</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1526068405867</updated>
-    </task>
-    <task id="LOCAL-00057" summary="photo url">
-      <created>1526116130774</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1526116130776</updated>
-    </task>
-    <task id="LOCAL-00058" summary="unfinished">
-      <created>1526248072298</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1526248072300</updated>
-    </task>
-    <task id="LOCAL-00059" summary="email sending">
-      <created>1526319403222</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1526319403223</updated>
-    </task>
-    <task id="LOCAL-00060" summary="stuff">
-      <created>1526328086074</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1526328086074</updated>
-    </task>
-    <task id="LOCAL-00061" summary="currency filter">
-      <created>1527026200171</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1527026200171</updated>
-    </task>
-    <task id="LOCAL-00062" summary="trees filter">
-      <created>1527100264389</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1527100264390</updated>
-    </task>
-    <task id="LOCAL-00063" summary="adminka">
-      <created>1527175163106</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1527175163107</updated>
-    </task>
-    <task id="LOCAL-00064" summary="adminka lastovaya">
-      <created>1527179108776</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1527179108776</updated>
-    </task>
-    <task id="LOCAL-00065" summary="moneyz">
-      <created>1527188368770</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1527188368771</updated>
-    </task>
-    <option name="localTasksCounter" value="66" />
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
+    <frame x="-1" y="789" width="1922" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49471298" weight="0.32903227" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.22097977" side_tool="true" weight="0.13695653" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49318182" weight="0.32792208" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.28975454" side_tool="true" visible="true" weight="0.27145922" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4826284" weight="0.21195652" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32826087" />
-      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.77902025" visible="true" weight="0.34565216" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.5576087" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.23748669" />
-      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="6" weight="0.20607029" />
-      <window_info anchor="right" id="SciView" order="5" />
+      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7102455" visible="true" weight="0.27145922" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47972253" weight="0.32081544" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4994664" weight="0.32832617" />
+      <window_info anchor="bottom" id="Code Review" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326892" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.295764" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.17342582" />
+      <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.078441836" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
+      <window_info anchor="right" id="SciView" order="5" weight="0.32977587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
+      <window_info anchor="bottom" id="manage.py@Realtor" order="14" sideWeight="0.47812167" weight="0.48819742" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49786553" weight="0.32939914" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840257" weight="0.4478261" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Remote Host" order="4" weight="0.29552716" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" weight="0.3290469" />
-      <window_info anchor="bottom" id="manage.py@Realtor" order="12" sideWeight="0.48454157" weight="0.35" />
-      <window_info anchor="bottom" id="Gulp" order="14" sideWeight="0.080515295" weight="0.38969404" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="File Transfer" order="11" weight="0.36714977" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="13" weight="0.32903227" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Gulp" order="15" sideWeight="0.080515295" weight="0.38969404" />
-      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.2065053" />
-      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.47654584" visible="true" weight="0.34565216" />
-      <window_info anchor="right" id="Remote Host" order="5" weight="0.29552716" />
       <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
-      <window_info anchor="right" id="Data View" order="4" weight="0.3290469" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49471298" weight="0.32903227" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="manage.py@Realtor" order="13" sideWeight="0.48454157" weight="0.35" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.17944622" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326087" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32826087" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4826284" weight="0.21195652" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5173716" side_tool="true" weight="0.66505635" />
-      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Data View" order="4" weight="0.3290469" />
+      <window_info anchor="bottom" id="Gulp" order="16" sideWeight="0.080515295" weight="0.38969404" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32934782" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32903227" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-    </layout-to-restore>
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="18" sideWeight="0.4994664" weight="0.32939914" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" weight="0.32903227" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -788,144 +741,48 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="db connetion fixed" />
+    <MESSAGE value="first fix" />
+    <MESSAGE value="unverify user, watermark fix, email translate" />
+    <MESSAGE value="frontend optimized navernoe" />
     <MESSAGE value="frontend fixes" />
+    <MESSAGE value="migrations" />
+    <MESSAGE value="fixed migrations" />
+    <MESSAGE value="fixed migrations (2)" />
     <MESSAGE value="project clearing" />
-    <MESSAGE value="post list" />
-    <MESSAGE value="some rest framework stuff" />
-    <MESSAGE value="fixed fields" />
-    <MESSAGE value="add models" />
-    <MESSAGE value="add model" />
-    <MESSAGE value="hz che eto" />
-    <MESSAGE value="views methods fixed" />
-    <MESSAGE value="crossdomain enabled" />
-    <MESSAGE value="тупое говно тупово говна" />
-    <MESSAGE value="на всякий" />
-    <MESSAGE value="currency" />
-    <MESSAGE value="happy little trees" />
-    <MESSAGE value="filterinos" />
-    <MESSAGE value="hz" />
-    <MESSAGE value="photo url" />
-    <MESSAGE value="unfinished" />
-    <MESSAGE value="email sending" />
-    <MESSAGE value="stuff" />
-    <MESSAGE value="currency filter" />
-    <MESSAGE value="trees filter" />
-    <MESSAGE value="adminka" />
-    <MESSAGE value="adminka lastovaya" />
-    <MESSAGE value="moneyz" />
-    <option name="LAST_COMMIT_MESSAGE" value="moneyz" />
+    <MESSAGE value="Another one commit" />
+    <MESSAGE value="next commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="next commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="40" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
-        <watch expression="[branch.id for branch in TreeCategory.objects.all().filter(id=7).get_descendants(include_self=True)]" language="Python" />
+        <watch expression="post_ids" />
+        <watch expression="request.GET.items()" />
         <watch expression="request.POST" language="Python" />
-        <watch expression="Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).filter(price__gte=summ_unexchanged)" language="Python" />
-        <watch expression="Currency.objects.filter(symbol=symbol).values()[0]" language="Python" />
-        <watch expression="Currency.objects.get(symbol=symbol)" language="Python" />
+        <watch expression="request.META" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).filter(price__gte=summ_unexchanged)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).objects.filter(price__gte=summ_unexchanged)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()])</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).values()[0]['price']</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()])['price']</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()])[0]['price']</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Post.objects.filter(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).values()['price']</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Post.objects.get(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()]).values()['price']</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Post.objects.get(currency_type__in=[cur['id'] for cur in Currency.objects.filter(symbol=symbol).values()])['price']</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Currency.objects.filter(symbol=symbol).values()[0]</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-    <expressions id="setValue">
-      <expression>
-        <expression-string>&lt;WSGIRequest: GET '/api/maildata/'&gt;</expression-string>
+        <expression-string>request.META</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/main.min.css" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/ajax-posts.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/_vars.sass" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/signup-critical.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/semantic.json" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/index-critical.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-heading-section.html" />
-    <entry file="file://D:/Python 3.5.2 x64/Lib/site-packages/django/template/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-modals.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/base.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-footer.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/block-header.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/dashboard.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/my.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sign_up.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/libs/jquery/dist/newWaterfall.js" />
-    <entry file="file://$PROJECT_DIR$/Main/templatetags/file_utils.py" />
-    <entry file="file://$PROJECT_DIR$/Main/templatetags/text_utils.py" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/main.sass" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/libs/wtrfall/waterfall-light.js" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/gulpfile.js" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/metatags.html" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/app/yandex.html" />
     <entry file="file://$PROJECT_DIR$/static/js/scripts.min.js" />
     <entry file="file://$PROJECT_DIR$/FrontEnd/app/js/common.js" />
     <entry file="file://$PROJECT_DIR$/FrontEnd/app/sass/_media.sass" />
     <entry file="file://$PROJECT_DIR$/FrontEnd/app/index.html" />
     <entry file="file://$PROJECT_DIR$/FrontEnd/app/post.html" />
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0009_auto_20171016_1602.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/forms.py" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -935,131 +792,247 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/easy_thumbnails/utils.py" />
-    <entry file="file://$PROJECT_DIR$/API/pagination.py">
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0013_auto_20180412_2152.py" />
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/filer/fields/file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="241">
+          <caret line="114" column="6" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0011_auto_20180403_2332.py" />
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0012_auto_20180405_2247.py" />
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/permissions.py">
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="153">
+          <caret line="9" column="53" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/seializers.py" />
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/filer/fields/image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/filer/models/filemodels.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="270" column="8" selection-start-line="270" selection-start-column="8" selection-end-line="270" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/core/mail/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/apps/registry.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="965" selection-start-line="965" selection-end-line="965" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="404" selection-start-line="404" selection-end-line="404" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="95" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
+        <state relative-caret-position="323">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="64" column="34" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+        <state relative-caret-position="561">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="18" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="das://360ed3e4-a66c-4059-8456-7752ceb93cc5/database/dpr.sale/schema/public/table/auth_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0023_auto_20180519_1143.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="170">
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/admin.py">
+    <entry file="file://$PROJECT_DIR$/API/filters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="405" column="43" selection-start-line="405" selection-start-column="43" selection-end-line="405" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3432">
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="425">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        <state relative-caret-position="68">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="404" column="43" lean-forward="true" selection-start-line="404" selection-start-column="43" selection-end-line="404" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0025_auto_20180519_1540.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0024_currency_prefix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="86" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="87" column="58" selection-start-line="87" selection-start-column="58" selection-end-line="87" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0002_auto_20170928_1803.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0003_auto_20170928_1810.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0004_auto_20170928_1833.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0005_auto_20170928_1913.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0006_auto_20170929_2000.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0007_auto_20170930_1636.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0008_auto_20171006_0043.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0009_auto_20171016_1602.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0009_post_is_important.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0010_merge_20180204_1627.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0011_auto_20180415_1959.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0015_remove_post_currency.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0016_post_currency_type.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0013_delete_currency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0012_auto_20180430_1829.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/fixtures/fixture.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0024_delete_living_space.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0014_currency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="45" lean-forward="true" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0022_post_category_tree.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0025_old_categories_to_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/migrations/0026_merge_20180527_1610.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="97" column="38" selection-start-line="97" selection-start-column="30" selection-end-line="97" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="142" column="17" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="17" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#860#1046#0" />
+            <element signature="e#1083#1350#0" />
+            <element signature="e#1384#1577#0" />
+            <element signature="e#1614#1806#0" />
+            <element signature="e#1841#2024#0" />
+            <element signature="e#5464#5579#0" />
+            <element signature="e#5618#6283#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
