@@ -11,11 +11,18 @@ RUN groupadd -r ${APP_USER} \
 
 WORKDIR ${APP_ROOT}
 
-ADD . ${APP_ROOT}
+COPY . ${APP_ROOT}
+
+
+# ADD . ${APP_ROOT}
 
 RUN pip install -r requirements.txt
 
+#RUN mkdir uploads
+
 #RUN chmod -R 777 uploads
+
+#RUN mkdir static
 
 RUN chmod -R 777 static
 

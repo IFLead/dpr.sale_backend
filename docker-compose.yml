@@ -7,5 +7,6 @@ services:
     ports:
       - 8002:8002
     volumes:
-      - /home/django/Realtor/uploads:/drpsale/uploads
+      - /home/django/RealtorNew/uploads:/dprsale/uploads
+      #- /home/django/RealtorNew/static:./static
     env_file: .env

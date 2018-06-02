@@ -86,6 +86,9 @@ MIDDLEWARE = [
 
 ]
 
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 if DEBUG:
 	DEBUG_TOOLBAR_PANELS = [
 		'debug_toolbar.panels.versions.VersionsPanel',
@@ -133,7 +136,7 @@ WSGI_APPLICATION = 'Realtor.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': 'test',
+		'NAME': 'realtor',
 		'USER': 'django',
 		'PASSWORD': 'e1c9fd84a6eee9da02c3aacd9c7390a4',
 		'HOST': '165.227.163.99',

@@ -22,7 +22,7 @@ class PostSerializer(serializers.ModelSerializer):
 class SinglePostSerializer(serializers.ModelSerializer):
 	images = MyImageSerializer(many=True)
 	related_fields = ['main_photo']
-	main_photo_url = serializers.CharField(source='main_photo.url')
+	main_photo_url = serializers.CharField(source='main_photo.url', allow_blank=True, required=False,)
 
 	class Meta:
 		model = Post

@@ -35,6 +35,8 @@ from .serializers import PostSerializer, PostUpdateSerializer, CategorySerialize
 	TreeCategorySerializer, WindowSerializer, MaterialSerializer, StateSerializer, SinglePostSerializer, CitySerializer, \
 	DistrictSerializer, UserSerializer, DefaultUserSerializer
 
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 
 def districts(request):
 	return JsonResponse(list(District.objects.filter(city_id__exact=request.GET['city_id']).values('id', 'name')),
@@ -353,13 +355,8 @@ def unimportant_post(request):
 		return JsonResponse({'status': 'error', 'message': 'unknown error'})
 
 
-def get_top_eight(request):
-	# posts = [{'title': post.title}, {'price': post.price} for post in Post.objects.all()[:8]]
-	return Response(posts)
-
-
 class PostList(ListAPIView):  # 28, 29, 31
-	queryset = Post.objects.filter(closed=False)
+	queryset = Post.objects.filter(closed=False).order_by('-created')
 	pagination_class = PostPageNumberPagination
 	serializer_class = PostSerializer
 	filter_backends = (filters.SearchFilter, DjangoFilterBackend, PostCategoryFilter, DjangoUrlFilterBackend,
@@ -382,7 +379,7 @@ class PostList(ListAPIView):  # 28, 29, 31
 				new_obj = obj
 				photo_id = obj['main_photo']
 				if photo_id:
-					new_obj['main_photo'] = request.build_absolute_uri('/')[:-1] + File.objects.get(id=photo_id).url
+					new_obj['main_photo'] = File.objects.get(id=photo_id).url
 				new_data.append(new_obj)
 			return self.get_paginated_response(new_data)
 		serializer = self.get_serializer(queryset, many=True)
@@ -434,6 +431,10 @@ class CategoryList(ListAPIView):  # 28, 29, 31
 	queryset = Category.objects.all()
 	serializer_class = CategorySerializer
 
+	@method_decorator(cache_page(3600))
+	def dispatch(self, *args, **kwargs):
+		return super(CategoryList, self).dispatch(*args, **kwargs)
+
 
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
@@ -445,6 +446,10 @@ class CategoryList(ListAPIView):  # 28, 29, 31
 class CurrencyList(ListAPIView):  # 28, 29, 31
 	queryset = Currency.objects.all()
 	serializer_class = CurrencySerializer
+
+	@method_decorator(cache_page(3600))
+	def dispatch(self, *args, **kwargs):
+		return super(CurrencyList, self).dispatch(*args, **kwargs)
 
 
 # def list(self, request, *args, **kwargs):
@@ -458,6 +463,10 @@ class StatesList(ListAPIView):
 	queryset = State.objects.all()
 	serializer_class = StateSerializer
 
+	@method_decorator(cache_page(3600))
+	def dispatch(self, *args, **kwargs):
+		return super(StatesList, self).dispatch(*args, **kwargs)
+
 
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
@@ -470,6 +479,10 @@ class WindowList(ListAPIView):
 	queryset = Window.objects.all()
 	serializer_class = WindowSerializer
 
+	@method_decorator(cache_page(3600))
+	def dispatch(self, *args, **kwargs):
+		return super(WindowList, self).dispatch(*args, **kwargs)
+
 
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
@@ -481,6 +494,10 @@ class WindowList(ListAPIView):
 class MaterialList(ListAPIView):
 	queryset = Material.objects.all()
 	serializer_class = MaterialSerializer
+
+	@method_decorator(cache_page(3600))
+	def dispatch(self, *args, **kwargs):
+		return super(MaterialList, self).dispatch(*args, **kwargs)
 
 
 # def list(self, request, *args, **kwargs):
@@ -509,6 +526,12 @@ class CitiesList(ListAPIView):
 	queryset = City.objects.all()
 	serializer_class = CitySerializer
 
+	@method_decorator(cache_page(1800))
+	def dispatch(self, *args, **kwargs):
+		return super(CitiesList, self).dispatch(*args, **kwargs)
+
+
+
 
 # def list(self, request, *args, **kwargs):
 # 	queryset = self.filter_queryset(self.get_queryset())
@@ -521,6 +544,10 @@ class DistrictsList(ListAPIView):
 	queryset = District.objects.all()
 	serializer_class = DistrictSerializer
 	filter_backends = (DistrictsFilter,)
+
+	@method_decorator(cache_page(1800))
+	def dispatch(self, *args, **kwargs):
+		return super(DistrictsList, self).dispatch(*args, **kwargs)
 
 
 # def list(self, request, *args, **kwargs):
