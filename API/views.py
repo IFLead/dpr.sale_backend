@@ -28,7 +28,7 @@ from url_filter.integrations.drf import DjangoFilterBackend as DjangoUrlFilterBa
 
 from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData
 from Realtor import settings
-from .filters import PostCategoryFilter, DistrictsFilter, PostCurrencyFilter, CategoryTreeFilter
+from .filters import PostCategoryFilter, DistrictsFilter, PostCurrencyFilter, CategoryTreeFilter, CitiesFilter
 from .pagination import PostPageNumberPagination
 from .permissions import IsOwnerOrReadOnly, AdminRealtor, SimpleRealtor
 from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer, CurrencySerializer, \
@@ -525,6 +525,7 @@ class UsersList(ListAPIView):
 class CitiesList(ListAPIView):
 	queryset = City.objects.all()
 	serializer_class = CitySerializer
+	filter_backends = (CitiesFilter, )
 
 	@method_decorator(cache_page(1800))
 	def dispatch(self, *args, **kwargs):

@@ -2,7 +2,7 @@ from itertools import chain
 
 from rest_framework import filters
 
-from Main.models import TreeCategory, District, Post, Currency
+from Main.models import TreeCategory, District, Post, Currency, City
 
 
 class PostCategoryFilter(filters.BaseFilterBackend):
@@ -30,6 +30,14 @@ class DistrictsFilter(filters.BaseFilterBackend):
 		parameter = request.GET.get('city', default='all')
 		if parameter != 'all':
 			return District.objects.filter(city=parameter)
+		return queryset
+
+
+class CitiesFilter(filters.BaseFilterBackend):
+	def filter_queryset(self, request, queryset, view):
+		parameter = request.GET.get('city', default=None)
+		if parameter:
+			return City.objects.filter(id=int(parameter))
 		return queryset
 
 
