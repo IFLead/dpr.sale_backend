@@ -104,8 +104,8 @@ class TreeCategory(MPTTModel):
         return self.get_level() * '-' + self.name
 
     class Meta:
-        verbose_name = 'Дерево категорий'
-        verbose_name_plural = 'Деревья категорий'
+        verbose_name = 'Тип недвижимости'
+        verbose_name_plural = 'Типы недвижимости'
 
     class MPTTMeta:
         order_insertion_by = ['name']
@@ -122,7 +122,7 @@ class Post(models.Model):
     currency_type = models.ForeignKey(Currency, verbose_name='Валюта', default=1)
     owner = models.ForeignKey(User, verbose_name='Владелец')
     # verified = models.BooleanField('Подтвержден', default=False)
-    closed = models.BooleanField('Закрыт', default=False)
+    closed = models.BooleanField('Открыт', default=False)
     # reason = models.TextField('Причина', null=True, blank=True)  # налфото(скрытое)
 
     rooms = models.PositiveSmallIntegerField('Количество комнат', blank=True, null=True)
@@ -140,7 +140,7 @@ class Post(models.Model):
     window = models.ForeignKey(Window, verbose_name='Окно', blank=True, null=True)
     state = models.ForeignKey(State, verbose_name='Состояние', blank=True, null=True)
     created = models.DateTimeField('Дата создания', auto_now=True, null=True)
-    category_tree = models.ForeignKey(TreeCategory, verbose_name='Дерево состояний', blank=True, null=True)
+    category_tree = models.ForeignKey(TreeCategory, verbose_name='Тип недвижимости', blank=True, null=True)
     # term = models.DateField
 
     # hidden

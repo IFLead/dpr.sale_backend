@@ -23,11 +23,17 @@ class ImageInline(admin.StackedInline):
 	model = Image
 
 
+# toDo: риелтор, район, категории, активность
+
 class PostAdmin(admin.ModelAdmin):
 	inlines = [ImageInline, ]
-	list_display = ('id', 'is_top', 'title', 'price', 'currency_type', 'category_tree', 'created')
+	list_display = ('id', 'category_tree', 'is_top', 'title', 'price', 'currency_type', 'created', 'district', 'owner')
 	list_select_related = ('currency_type', 'category_tree')
-	#list_editable = ('is_top', 'title', 'price', 'currency_type', 'category_tree')
+	list_filter = (
+		'owner', 'district', 'category_tree', 'closed'
+	)
+
+	# list_editable = ('is_top', 'title', 'price', 'currency_type', 'category_tree')
 
 	list_per_page = 30
 
