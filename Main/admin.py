@@ -5,7 +5,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from .models import Image, Post, CustomData, City, District, Category, Window, Material, State, Currency, \
-	TreeCategory
+	TreeCategory, MiniImage
 
 
 @receiver(post_save, sender=User)
@@ -22,8 +22,6 @@ def save_user_profile(sender, instance, **kwargs):
 class ImageInline(admin.StackedInline):
 	model = Image
 
-
-# toDo: риелтор, район, категории, активность
 
 class PostAdmin(admin.ModelAdmin):
 	inlines = [ImageInline, ]
@@ -52,6 +50,7 @@ admin.site.register(Material)
 admin.site.register(State)
 admin.site.register(Currency)
 admin.site.register(TreeCategory)
+admin.site.register(MiniImage)
 
 
 class CustomDataInline(admin.StackedInline):

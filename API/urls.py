@@ -32,6 +32,7 @@ from .views import (
 	PostCreate,
 	PostDestroy,
     get_request,
+	get_photoes,
 )
 
 urlpatterns = [
@@ -49,6 +50,7 @@ urlpatterns = [
 	# url(r'post/get_top_eight', views.get_top_eight),
 	url(r'^admin/', admin.site.urls),
 	url(r'request/$', get_request),
+	url(r'photoes/$', get_photoes),
 	url(r'tree/$', TreeCategoryList.as_view(), name='tree'),
 	url(r'currency/$', CurrencyList.as_view(), name='currency list'),
 	url(r'users/$', UsersList.as_view(), name='currency list'),

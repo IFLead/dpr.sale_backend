@@ -15,6 +15,18 @@ class Category(models.Model):
 		verbose_name_plural = 'Категории'
 
 
+class MiniImage(models.Model):
+	name = models.CharField('Название', max_length=128)
+	main_photo = FilerImageField(verbose_name='Главное изображение', null=True, blank=True)
+
+	class Meta:
+		verbose_name = 'Пикча для теста'
+		verbose_name_plural = 'Пикчи для теста'
+
+	def __str__(self):
+		return self.name
+
+
 class Currency(models.Model):
 	name = models.CharField('Название', max_length=128)
 	symbol = models.CharField('Символ', max_length=3)

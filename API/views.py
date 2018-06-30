@@ -1,5 +1,7 @@
 import re
 
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -7,9 +9,12 @@ from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.template.loader import render_to_string
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import csrf_exempt
 from django_filters.rest_framework import DjangoFilterBackend
-from filer.models import File
+import os
+from filer.models import File, Image
 from mptt.templatetags.mptt_tags import cache_tree_children
 from rest_framework import filters
 from rest_framework.decorators import api_view
@@ -26,17 +31,15 @@ from rest_framework.permissions import (
 from rest_framework.response import Response
 from url_filter.integrations.drf import DjangoFilterBackend as DjangoUrlFilterBackend
 
-from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData
+from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, MiniImage
 from Realtor import settings
 from .filters import PostCategoryFilter, DistrictsFilter, PostCurrencyFilter, CategoryTreeFilter, CitiesFilter
 from .pagination import PostPageNumberPagination
-from .permissions import IsOwnerOrReadOnly, AdminRealtor, SimpleRealtor
+from .permissions import IsOwnerOrReadOnly, AdminRealtor
 from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer, CurrencySerializer, \
 	TreeCategorySerializer, WindowSerializer, MaterialSerializer, StateSerializer, SinglePostSerializer, CitySerializer, \
 	DistrictSerializer, UserSerializer, DefaultUserSerializer
 
-from django.utils.decorators import method_decorator
-from django.views.decorators.cache import cache_page
 
 def districts(request):
 	return JsonResponse(list(District.objects.filter(city_id__exact=request.GET['city_id']).values('id', 'name')),
@@ -404,19 +407,19 @@ class PostDetail(RetrieveAPIView):
 
 
 class PostUpdate(UpdateAPIView):
-	permission_classes = IsOwnerOrReadOnly
+	# permission_classes = IsOwnerOrReadOnly
 	queryset = Post.objects.all()
 	serializer_class = PostSerializer
 
 
 class PostDestroy(DestroyAPIView):
-	permission_classes = IsOwnerOrReadOnly
+	# permission_classes = IsOwnerOrReadOnly
 	queryset = Post.objects.all()
 	serializer_class = PostSerializer
 
 
 class PostCreate(CreateAPIView):
-	permission_classes = [IsAuthenticated]
+	# permission_classes = [IsAuthenticated]
 	queryset = Post.objects.all()
 	serializer_class = PostUpdateSerializer
 
@@ -525,13 +528,11 @@ class UsersList(ListAPIView):
 class CitiesList(ListAPIView):
 	queryset = City.objects.all()
 	serializer_class = CitySerializer
-	filter_backends = (CitiesFilter, )
+	filter_backends = (CitiesFilter,)
 
 	@method_decorator(cache_page(1800))
 	def dispatch(self, *args, **kwargs):
 		return super(CitiesList, self).dispatch(*args, **kwargs)
-
-
 
 
 # def list(self, request, *args, **kwargs):
@@ -599,4 +600,18 @@ def get_request(request):
 		['igos.321@gmail.com'],
 		fail_silently=False,
 	)
+	return JsonResponse({'status': 'OK'})
+
+
+@csrf_exempt
+@api_view(['POST'])
+def get_photoes(request):
+	file = request.FILES['file']
+	name = file.name
+	path = default_storage.save(name, ContentFile(file.read()))
+	tmp_file = os.path.join(settings.MEDIA_ROOT, path)
+	image = Image.objects.create(original_filename=name,
+		file=tmp_file)
+	MiniImage.objects.create(name=name, main_photo=image)
+
 	return JsonResponse({'status': 'OK'})
