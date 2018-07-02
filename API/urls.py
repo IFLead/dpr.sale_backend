@@ -31,6 +31,7 @@ from .views import (
 	PostUpdate,
 	PostCreate,
 	PostDestroy,
+	PostAll,
     get_request,
 	get_photoes,
 )
@@ -65,6 +66,7 @@ urlpatterns = [
 	url(r'posts/(?P<pk>\d+)/edit/$', PostUpdate.as_view(), name='update'),
 	url(r'posts/(?P<pk>\d+)/delete/$', PostDestroy.as_view(), name='destroy'),
 	url(r'posts/create/', PostCreate.as_view(), name='create'),
+	url(r'posts/all/', PostAll.as_view(), name='create'),
 
 	# url(r'user/verify', views.verify_user),
 	# url(r'user/unverify', views.unverify_user),

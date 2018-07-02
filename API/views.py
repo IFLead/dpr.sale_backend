@@ -424,6 +424,11 @@ class PostCreate(CreateAPIView):
 	serializer_class = PostUpdateSerializer
 
 
+class PostAll(ListAPIView):
+	queryset = Post.objects.all()
+	serializer_class = PostUpdateSerializer
+
+
 class UserCreate(CreateAPIView):
 	permission_classes = AdminRealtor
 	queryset = User.objects.all()
