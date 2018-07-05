@@ -5,7 +5,6 @@ from rest_framework import filters
 from Main.models import TreeCategory, District, Post, Currency, City
 
 
-
 class PostCategoryFilter(filters.BaseFilterBackend):
 	def filter_queryset(self, request, queryset, view):
 		parameter = request.GET.get('quick_filter', default='all')
@@ -14,15 +13,15 @@ class PostCategoryFilter(filters.BaseFilterBackend):
 		elif parameter == 'sale':
 			return queryset.filter(
 				category_tree__in=[branch.id for branch in
-					TreeCategory.objects.filter(id=1).get_descendants(include_self=True)])
+					queryset.filter(id=1).get_descendants(include_self=True)])
 		elif parameter == 'rent':
 			return queryset.filter(
 				category_tree__in=[branch.id for branch in
-					TreeCategory.objects.filter(id=7).get_descendants(include_self=True)])
+					queryset.filter(id=7).get_descendants(include_self=True)])
 		elif parameter == 'commercial':
 			return queryset.filter(
 				category_tree__in=[branch.id for branch in
-					TreeCategory.objects.filter(id=13).get_descendants(include_self=True)])
+					queryset.filter(id=13).get_descendants(include_self=True)])
 		return queryset
 
 
@@ -30,7 +29,7 @@ class DistrictsFilter(filters.BaseFilterBackend):
 	def filter_queryset(self, request, queryset, view):
 		parameter = request.GET.get('city', default='all')
 		if parameter != 'all':
-			return District.objects.filter(city=parameter)
+			return queryset.filter(city=parameter)
 		return queryset
 
 
@@ -38,7 +37,7 @@ class CitiesFilter(filters.BaseFilterBackend):
 	def filter_queryset(self, request, queryset, view):
 		parameter = request.GET.get('city', default=None)
 		if parameter:
-			return City.objects.filter(id=int(parameter))
+			return queryset.filter(id=int(parameter))
 		return queryset
 
 
@@ -51,8 +50,8 @@ class PostCurrencyFilter(filters.BaseFilterBackend):
 			return queryset
 		summ_unexchanged = float(summ_unexchanged)
 		sum_exchanged = summ_unexchanged * float(exchange)
-		posts = Post.objects
-		currency = Currency.objects
+		posts = queryset
+		currency = queryset
 		first_posts = posts.filter(
 			currency_type__in=[cur['id'] for cur in currency.filter(id=cur_id).values()]).filter(
 			price__gte=summ_unexchanged)
@@ -69,6 +68,6 @@ class CategoryTreeFilter(filters.BaseFilterBackend):
 		if not node:
 			return queryset
 		node = int(node)
-		queryset = Post.objects.filter(category_tree__in=[tree.id for tree in
+		queryset = queryset.filter(category_tree__in=[tree.id for tree in
 			TreeCategory.objects.filter(id=node).get_descendants(include_self=True)])
 		return queryset

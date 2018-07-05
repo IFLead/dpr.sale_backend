@@ -1,6 +1,8 @@
-from rest_framework import serializers
-from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, Image
 from django.contrib.auth.models import User
+from rest_framework import serializers
+
+from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, \
+	Image
 
 
 class MyImageSerializer(serializers.ModelSerializer):
@@ -13,16 +15,17 @@ class MyImageSerializer(serializers.ModelSerializer):
 
 
 class PostSerializer(serializers.ModelSerializer):
-
 	class Meta:
 		model = Post
-		fields = ('id', 'is_top', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'category_tree')
+		fields = (
+		'id', 'is_top', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'category_tree',
+		'district')
 
 
 class SinglePostSerializer(serializers.ModelSerializer):
 	images = MyImageSerializer(many=True)
 	related_fields = ['main_photo']
-	main_photo_url = serializers.CharField(source='main_photo.url', allow_blank=True, required=False,)
+	main_photo_url = serializers.CharField(source='main_photo.url', allow_blank=True, required=False, )
 
 	class Meta:
 		model = Post

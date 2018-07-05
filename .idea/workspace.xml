@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="">
+    <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="все посты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/views.py" afterDir="false" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
@@ -37,8 +38,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="426" column="10" selection-start-line="426" selection-start-column="10" selection-end-line="426" selection-end-column="10" />
+            <state relative-caret-position="968">
+              <caret line="400" lean-forward="true" selection-start-line="400" selection-end-line="400" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -46,11 +47,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="filters.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API/filters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1166">
+              <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+            <state relative-caret-position="511">
+              <caret line="62" column="20" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="20" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
               </folding>
@@ -61,8 +74,11 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+            <state relative-caret-position="484">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,18 +90,6 @@
               <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/filters.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,6 +168,7 @@
       <find>debug</find>
       <find>import setting</find>
       <find>media_root</find>
+      <find>DistrictsFilter</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/</dir>
@@ -213,7 +218,6 @@
         <option value="$PROJECT_DIR$/API/seializers.py" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="$PROJECT_DIR$/API/serializers.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/Main/migrations/0024_currency_prefix.py" />
         <option value="$PROJECT_DIR$/Main/migrations/0012_auto_20180430_1829.py" />
@@ -221,11 +225,12 @@
         <option value="$PROJECT_DIR$/Main/fixtures/fixture.json" />
         <option value="$PROJECT_DIR$/Main/migrations/0025_old_categories_to_new.py" />
         <option value="$PROJECT_DIR$/Realtor/settings.py" />
-        <option value="$PROJECT_DIR$/API/filters.py" />
         <option value="$PROJECT_DIR$/Main/admin.py" />
         <option value="$PROJECT_DIR$/Main/models.py" />
-        <option value="$PROJECT_DIR$/API/views.py" />
         <option value="$PROJECT_DIR$/API/urls.py" />
+        <option value="$PROJECT_DIR$/API/serializers.py" />
+        <option value="$PROJECT_DIR$/API/views.py" />
+        <option value="$PROJECT_DIR$/API/filters.py" />
       </list>
     </option>
   </component>
@@ -293,15 +298,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Main/fixtures" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="D:\OneDrive\dpr-sale\Realtor\FrontEnd\app\libs\wtrfall" />
       <recent name="D:\OneDrive\dpr-sale\Realtor\static\img" />
       <recent name="D:\OneDrive\dpr-sale\Realtor\FrontEnd\app\img" />
       <recent name="D:\OneDrive\dpr-sale\Realtor\FrontEnd\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Main/fixtures" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -352,13 +357,6 @@
       <option name="presentableId" value="Default" />
       <updated>1504603151262</updated>
       <workItem from="1507742145689" duration="34000" />
-    </task>
-    <task id="LOCAL-00003" summary="next commit">
-      <created>1506616559231</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1506616559231</updated>
     </task>
     <task id="LOCAL-00004" summary="first fix">
       <created>1506617016471</created>
@@ -696,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530353150835</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="все посты">
+      <created>1530546137919</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1530546137919</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TodoView">
@@ -710,16 +715,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49318182" weight="0.32792208" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29233226" side_tool="true" visible="true" weight="0.4826087" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29286474" side_tool="true" visible="true" weight="0.18152174" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47972253" weight="0.32081544" />
       <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49893504" weight="0.32826087" />
-      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7076677" visible="true" weight="0.4826087" />
+      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.70713526" visible="true" weight="0.18152174" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326892" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.295764" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.094249204" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.12460064" />
       <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" weight="0.07827476" />
       <window_info anchor="right" id="SciView" order="5" weight="0.32977587" />
@@ -727,8 +733,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49574015" weight="0.20326087" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="18" sideWeight="0.4994664" weight="0.32939914" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Code Review" order="10" />
@@ -737,38 +743,38 @@
       <window_info anchor="bottom" id="Gulp" order="16" sideWeight="0.080515295" weight="0.38969404" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
+      <window_info anchor="bottom" id="Database Console" order="18" sideWeight="0.4994664" weight="0.32939914" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" weight="0.32903227" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Gulp" order="15" sideWeight="0.080515295" weight="0.38969404" />
       <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Remote Host" order="5" weight="0.29552716" />
+      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
       <window_info anchor="right" id="Data View" order="4" weight="0.3290469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49471298" weight="0.32903227" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4826284" weight="0.21195652" />
       <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.47654584" visible="true" weight="0.34565216" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32826087" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
       <window_info anchor="bottom" id="manage.py@Realtor" order="13" sideWeight="0.48454157" weight="0.35" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.17944622" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32934782" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326087" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5173716" side_tool="true" weight="0.66505635" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4826284" weight="0.21195652" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="6" />
-      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="3" weight="0.2065053" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" weight="0.32903227" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32826087" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -820,7 +826,8 @@
     <MESSAGE value="adminka" />
     <MESSAGE value="хелп" />
     <MESSAGE value="картинка с дропзоны" />
-    <option name="LAST_COMMIT_MESSAGE" value="картинка с дропзоны" />
+    <MESSAGE value="все посты" />
+    <option name="LAST_COMMIT_MESSAGE" value="все посты" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1226,16 +1233,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1271,29 +1268,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="62" column="20" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="20" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+        <state relative-caret-position="484">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="426" column="10" selection-start-line="426" selection-start-column="10" selection-end-line="426" selection-end-column="10" />
+        <state relative-caret-position="968">
+          <caret line="400" lean-forward="true" selection-start-line="400" selection-end-line="400" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/urls.py">
+    <entry file="file://$PROJECT_DIR$/API/filters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+        <state relative-caret-position="1166">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
           <folding>
-            <element signature="e#641#673#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>

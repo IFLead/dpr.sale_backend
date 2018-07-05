@@ -1,10 +1,11 @@
+import os
 import re
 
-from django.core.files.storage import default_storage
-from django.core.files.base import ContentFile
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.core.files.base import ContentFile
+from django.core.files.storage import default_storage
 from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.shortcuts import redirect
@@ -13,7 +14,6 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import csrf_exempt
 from django_filters.rest_framework import DjangoFilterBackend
-import os
 from filer.models import File, Image
 from mptt.templatetags.mptt_tags import cache_tree_children
 from rest_framework import filters
@@ -25,17 +25,15 @@ from rest_framework.generics import (
 	DestroyAPIView,
 	CreateAPIView
 )
-from rest_framework.permissions import (
-	IsAuthenticated,
-)
 from rest_framework.response import Response
 from url_filter.integrations.drf import DjangoFilterBackend as DjangoUrlFilterBackend
 
-from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, MiniImage
+from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, \
+	MiniImage
 from Realtor import settings
 from .filters import PostCategoryFilter, DistrictsFilter, PostCurrencyFilter, CategoryTreeFilter, CitiesFilter
 from .pagination import PostPageNumberPagination
-from .permissions import IsOwnerOrReadOnly, AdminRealtor
+from .permissions import AdminRealtor
 from .serializers import PostSerializer, PostUpdateSerializer, CategorySerializer, CurrencySerializer, \
 	TreeCategorySerializer, WindowSerializer, MaterialSerializer, StateSerializer, SinglePostSerializer, CitySerializer, \
 	DistrictSerializer, UserSerializer, DefaultUserSerializer
@@ -365,10 +363,8 @@ class PostList(ListAPIView):  # 28, 29, 31
 	filter_backends = (filters.SearchFilter, DjangoFilterBackend, PostCategoryFilter, DjangoUrlFilterBackend,
 	PostCurrencyFilter, CategoryTreeFilter)  # PostCategoryFilter
 	search_fields = ('title', 'description')  # toDo: ловеркейсить всё
-	filter_fields = ('id',
-	'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square',
-	'balcony',
-	'loggia', 'district', 'material', 'window', 'state')
+	filter_fields = ('id', 'price', 'rooms', 'floor', 'storeys', 'total_square', 'living_square', 'kitchen_square',
+	'balcony', 'loggia', 'district', 'material', 'window', 'state')
 	ordering = ('-created',)
 
 	def list(self, request, *args, **kwargs):
@@ -391,16 +387,18 @@ class PostList(ListAPIView):  # 28, 29, 31
 
 # permission_classes = (IsAdmin,)
 
-# def get_queryset(self, *args, **kwargs):
-# 	queryset_list = Post.objects.all()
-# 	# query = self.request.GET.get("q")
-# 	# if query:
-# 	# 	queryset_list = queryset_list.filter(
-# 	# 		Q(id__icontains=query) |
-# 	# 		Q(title__icontains=query) |
-# 	# 		Q(description__icontains=query)
-# 	# 	)
-# 	return queryset_list
+def get_queryset(self, *args, **kwargs):
+	queryset_list = Post.objects.all()
+	query = self.request.GET.get("q")
+	if query:
+		queryset_list = queryset_list.filter(
+			Q(id__icontains=query) |
+			Q(title__icontains=query) |
+			Q(description__icontains=query)
+		)
+	return queryset_list
+
+
 class PostDetail(RetrieveAPIView):
 	queryset = Post.objects.all()
 	serializer_class = SinglePostSerializer
