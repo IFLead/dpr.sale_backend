@@ -31,26 +31,26 @@ INTERNAL_IPS = ['127.0.0.1', '165.227.163.99']
 # Application definition
 
 INSTALLED_APPS = [
-	'django.contrib.admin',
-	'django.contrib.auth',
-	'django.contrib.contenttypes',
-	'django.contrib.sessions',
-	'django.contrib.messages',
-	'django.contrib.staticfiles',
-	'django.contrib.sites',
-	'django_filters',
-	'easy_thumbnails',
-	'filer',
-	'mptt',
-	'debug_toolbar',
-	'Main.apps.MainConfig',
-	'API.apps.ApiConfig',
-	'corsheaders',
-	# 'allauth',
-	# 'allauth.account',
-	# 'allauth.socialaccount',
-	'watermarker',
-	'rest_framework',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django_filters',
+    'easy_thumbnails',
+    'filer',
+    'mptt',
+    'debug_toolbar',
+    'Main.apps.MainConfig',
+    'API.apps.ApiConfig',
+    'corsheaders',
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
+    'watermarker',
+    'rest_framework',
 ]
 
 WATERMARK_QUALITY = 95
@@ -58,7 +58,7 @@ WATERMARK_OBSCURE_ORIGINAL = False
 WATERMARK_RANDOM_POSITION_ONCE = False
 
 REST_FRAMEWORK = {
-	'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
 }
 
 # Allauth config
@@ -73,59 +73,58 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_USE_TLS = True
 
 MIDDLEWARE = [
-	'django.middleware.security.SecurityMiddleware',
-	'django.contrib.sessions.middleware.SessionMiddleware',
-	'django.middleware.common.CommonMiddleware',
-	'django.middleware.csrf.CsrfViewMiddleware',
-	'django.contrib.auth.middleware.AuthenticationMiddleware',
-	'django.contrib.messages.middleware.MessageMiddleware',
-	'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	'corsheaders.middleware.CorsMiddleware',
-	'django.middleware.common.CommonMiddleware',
-	'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 
 ]
-
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 if DEBUG:
-	DEBUG_TOOLBAR_PANELS = [
-		'debug_toolbar.panels.versions.VersionsPanel',
-		'debug_toolbar.panels.timer.TimerPanel',
-		'debug_toolbar.panels.settings.SettingsPanel',
-		'debug_toolbar.panels.headers.HeadersPanel',
-		'debug_toolbar.panels.request.RequestPanel',
-		'debug_toolbar.panels.sql.SQLPanel',
-		'debug_toolbar.panels.staticfiles.StaticFilesPanel',
-		'debug_toolbar.panels.templates.TemplatesPanel',
-		'debug_toolbar.panels.signals.SignalsPanel',
-		'debug_toolbar.panels.logging.LoggingPanel',
-		'debug_toolbar.panels.redirects.RedirectsPanel',
-		'debug_toolbar.panels.profiling.ProfilingPanel',
-		'debug_toolbar.panels.cache.CachePanel'
-	]
+    DEBUG_TOOLBAR_PANELS = [
+        'debug_toolbar.panels.versions.VersionsPanel',
+        'debug_toolbar.panels.timer.TimerPanel',
+        'debug_toolbar.panels.settings.SettingsPanel',
+        'debug_toolbar.panels.headers.HeadersPanel',
+        'debug_toolbar.panels.request.RequestPanel',
+        'debug_toolbar.panels.sql.SQLPanel',
+        'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+        'debug_toolbar.panels.templates.TemplatesPanel',
+        'debug_toolbar.panels.signals.SignalsPanel',
+        'debug_toolbar.panels.logging.LoggingPanel',
+        'debug_toolbar.panels.redirects.RedirectsPanel',
+        'debug_toolbar.panels.profiling.ProfilingPanel',
+        'debug_toolbar.panels.cache.CachePanel'
+    ]
 CSRF_COOKIE_SECURE = False
 if DEBUG:
-	CORS_ORIGIN_ALLOW_ALL = True
+    CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'Realtor.urls'
 
 TEMPLATES = [
-	{
-		'BACKEND': 'django.template.backends.django.DjangoTemplates'
-		,
-		'DIRS': [os.path.join(BASE_DIR, 'templates')]
-		,
-		'APP_DIRS': True,
-		'OPTIONS': {
-			'context_processors': [
-				'django.template.context_processors.debug',
-				'django.template.context_processors.request',
-				'django.contrib.auth.context_processors.auth',
-				'django.contrib.messages.context_processors.messages',
-			],
-		},
-	},
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates'
+        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        ,
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
 ]
 
 WSGI_APPLICATION = 'Realtor.wsgi.application'
@@ -134,55 +133,54 @@ WSGI_APPLICATION = 'Realtor.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': 'realtor',
-		'USER': 'django',
-		'PASSWORD': 'e1c9fd84a6eee9da02c3aacd9c7390a4',
-		'HOST': '165.227.163.99',
-		'PORT': '5432',
-		'CONN_MAX_AGE': 0,
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'realtor',
+        'USER': 'django',
+        'PASSWORD': 'e1c9fd84a6eee9da02c3aacd9c7390a4',
+        'HOST': '165.227.163.99',
+        'PORT': '5432',
+        'CONN_MAX_AGE': 0,
+    }
 }
 
 CACHES = {
-	# 'default': {
-	#     'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-	#     'LOCATION': '127.0.0.1:8000',
-	# },
+    # 'default': {
+    #     'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+    #     'LOCATION': '127.0.0.1:8000',
+    # },
 
-	# "default": {
-	#     "BACKEND": "django_redis.cache.RedisCache",
-	#     "LOCATION": [(os.environ['REDIS_HOST'], 6379)],
-	#     "OPTIONS": {
-	#         "CLIENT_CLASS": "django_redis.client.DefaultClient"
-	#     },
-	#     "KEY_PREFIX": "fastoran"
-	# }
-	'default': {
-		'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-		'LOCATION': 'realtor_cache',
-	}
+    # "default": {
+    #     "BACKEND": "django_redis.cache.RedisCache",
+    #     "LOCATION": [(os.environ['REDIS_HOST'], 6379)],
+    #     "OPTIONS": {
+    #         "CLIENT_CLASS": "django_redis.client.DefaultClient"
+    #     },
+    #     "KEY_PREFIX": "fastoran"
+    # }
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'realtor_cache',
+    }
 }
 CACHE_TTL = 60 * 5
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-	{
-		'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-	},
-	{
-		'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-	},
-	{
-		'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-	},
-	{
-		'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-	},
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
 ]
 
 # Internationalization
@@ -213,16 +211,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
 
 FILER_STORAGES = {
-	'public': {
-		'main': {
-			'ENGINE': 'filer.storage.PublicFileSystemStorage',
-			'OPTIONS': {
-				'location': os.path.join(BASE_DIR, 'uploads/img'),
-				'base_url': '/uploads/img/',
-			},
-			'UPLOAD_TO': 'filer.utils.generate_filename.by_date',
-			'UPLOAD_TO_PREFIX': '',
-		},
+    'public': {
+        'main': {
+            'ENGINE': 'filer.storage.PublicFileSystemStorage',
+            'OPTIONS': {
+                'location': os.path.join(BASE_DIR, 'uploads/img'),
+                'base_url': '/uploads/img/',
+            },
+            'UPLOAD_TO': 'filer.utils.generate_filename.by_date',
+            'UPLOAD_TO_PREFIX': '',
+        },
 
-	}
+    }
 }

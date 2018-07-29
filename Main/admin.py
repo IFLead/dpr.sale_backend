@@ -28,7 +28,7 @@ class PostAdmin(admin.ModelAdmin):
 	list_display = ('id', 'category_tree', 'is_top', 'title', 'price', 'currency_type', 'created', 'district', 'owner')
 	list_select_related = ('currency_type', 'category_tree')
 	list_filter = (
-		'owner', 'district', 'category_tree', 'closed'
+		'closed', 'owner', 'district', 'category_tree'
 	)
 
 	# list_editable = ('is_top', 'title', 'price', 'currency_type', 'category_tree')

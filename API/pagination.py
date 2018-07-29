@@ -8,3 +8,8 @@ class PostLimitOffsetPagination(LimitOffsetPagination):
 
 class PostPageNumberPagination(PageNumberPagination):
 	page_size = 8
+
+class PostPageAdminPagination(PageNumberPagination):
+	page_size = 20
+	page_size_query_param = 'limit'
+	max_page_size = 300

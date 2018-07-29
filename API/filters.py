@@ -51,12 +51,11 @@ class PostCurrencyFilter(filters.BaseFilterBackend):
 		summ_unexchanged = float(summ_unexchanged)
 		sum_exchanged = summ_unexchanged * float(exchange)
 		posts = queryset
-		currency = queryset
 		first_posts = posts.filter(
-			currency_type__in=[cur['id'] for cur in currency.filter(id=cur_id).values()]).filter(
+			currency_type__in=[cur['id'] for cur in Currency.objects.filter(id=cur_id).values()]).filter(
 			price__gte=summ_unexchanged)
 		second_posts = posts.filter(
-			currency_type__in=[cur['id'] for cur in currency.exclude(id=cur_id).values()]).filter(
+			currency_type__in=[cur['id'] for cur in Currency.objects.exclude(id=cur_id).values()]).filter(
 			price__gte=sum_exchanged)
 		queryset = list(chain(first_posts, second_posts))
 		return queryset

@@ -21,6 +21,12 @@ class PostSerializer(serializers.ModelSerializer):
 		'id', 'is_top', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'category_tree',
 		'district')
 
+class AllPostSerializer(serializers.ModelSerializer):
+
+	class Meta:
+		model = Post
+		fields = '__all__'
+
 
 class SinglePostSerializer(serializers.ModelSerializer):
 	images = MyImageSerializer(many=True)
