@@ -34,7 +34,7 @@ from .permissions import AdminRealtor
 from .serializers import AllPostSerializer, PostSerializer, PostUpdateSerializer, CategorySerializer, \
 	CurrencySerializer, \
 	TreeCategorySerializer, WindowSerializer, MaterialSerializer, StateSerializer, SinglePostSerializer, CitySerializer, \
-	DistrictSerializer, UserSerializer, DefaultUserSerializer
+	DistrictSerializer, UserSerializer, DefaultUserSerializer, PostCreateSerializer
 
 
 class PostList(ListAPIView):  # 28, 29, 31
@@ -169,7 +169,10 @@ class PostDestroy(DestroyAPIView):
 class PostCreate(CreateAPIView):
 	# permission_classes = [IsAuthenticated]
 	queryset = Post.objects.all()
-	serializer_class = PostUpdateSerializer
+	serializer_class = PostCreateSerializer
+
+	def perform_create(self, serializer):
+		serializer.save(owner=self.request.user)
 
 
 class PostAll(ListAPIView):

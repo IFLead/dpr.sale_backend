@@ -18,8 +18,8 @@ class PostSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Post
 		fields = (
-		'id', 'is_top', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'category_tree',
-		'district')
+			'id', 'is_top', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'category_tree',
+			'district')
 
 
 class AllPostSerializer(serializers.ModelSerializer):
@@ -47,6 +47,15 @@ class PostUpdateSerializer(serializers.ModelSerializer):
 		fields = ('id', 'is_top', 'title', 'description', 'price', 'closed', 'rooms', 'floor', 'storeys', 'landmark',
 		'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia', 'created',
 		'category_tree', 'currency_type', 'owner', 'district', 'material',
+		'window', 'state', 'is_archive', 'closed')
+
+
+class PostCreateSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Post
+		fields = ('is_top', 'title', 'description', 'price', 'closed', 'rooms', 'floor', 'storeys', 'landmark',
+		'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia',
+		'category_tree', 'currency_type', 'district', 'material',
 		'window', 'state', 'is_archive', 'closed')
 
 

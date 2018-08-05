@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Main/migrations/0033_auto_20180805_2032.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/models.py" afterDir="false" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
     <ignored path="D:\OneDrive\dpr-sale\Realtor\.idea\shelf/" />
@@ -29,12 +26,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -45,7 +37,7 @@
       <file leaf-file-name="filters.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/filters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="22">
               <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -57,8 +49,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state relative-caret-position="291">
+              <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
               </folding>
@@ -69,8 +61,11 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+            <state relative-caret-position="426">
+              <caret line="173" column="4" selection-start-line="173" selection-start-column="6" selection-end-line="174" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,8 +73,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+            <state relative-caret-position="293">
+              <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -90,7 +85,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="2772">
               <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
@@ -158,6 +153,8 @@
       <find>main_ph</find>
       <find>deta</find>
       <find>auth</find>
+      <find>owne</find>
+      <find>owner</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/</dir>
@@ -216,10 +213,10 @@
         <option value="$PROJECT_DIR$/API/filters.py" />
         <option value="$PROJECT_DIR$/API/pagination.py" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/API/serializers.py" />
         <option value="$PROJECT_DIR$/API/urls.py" />
-        <option value="$PROJECT_DIR$/API/views.py" />
         <option value="$PROJECT_DIR$/Main/models.py" />
+        <option value="$PROJECT_DIR$/API/serializers.py" />
+        <option value="$PROJECT_DIR$/API/views.py" />
       </list>
     </option>
   </component>
@@ -304,131 +301,6 @@
       <recent name="D:\OneDrive\dpr-sale\Realtor\FrontEnd\app" />
     </key>
   </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/filters.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/pagination.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/serializers.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/urls.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/views.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/admin.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/models.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Realtor/settings.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/docker-compose.yml</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0027_auto_20180619_0827.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0028_merge_20180715_1439.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0029_auto_20180715_1456.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0030_auto_20180715_1458.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0031_auto_20180715_1502.py</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0032_auto_20180715_1514.py</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -496,13 +368,6 @@
       <option name="presentableId" value="Default" />
       <updated>1504603151262</updated>
       <workItem from="1507742145689" duration="34000" />
-    </task>
-    <task id="LOCAL-00001" summary="db connetion fixed">
-      <created>1506436226290</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1506436226290</updated>
     </task>
     <task id="LOCAL-00002" summary="db connetion fixed">
       <created>1506539482620</created>
@@ -840,7 +705,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527927874548</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="posts editing">
+      <created>1533493285619</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1533493285620</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -853,84 +725,69 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
+    <frame x="-4" y="-4" width="1928" height="1044" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49318182" weight="0.32792208" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29392973" side_tool="true" weight="0.25195095" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29669157" side_tool="true" weight="0.28755364" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7060703" visible="true" weight="0.25195095" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47972253" weight="0.32081544" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49893504" weight="0.32826087" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4994664" weight="0.32832617" />
+      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7033084" weight="0.38127092" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326892" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.295764" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.12779553" />
-      <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="6" weight="0.07827476" />
-      <window_info anchor="right" id="SciView" order="5" weight="0.32977587" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
-      <window_info anchor="bottom" id="manage.py@Realtor" order="14" sideWeight="0.47483766" weight="0.3277592" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49574015" weight="0.20326087" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49786553" weight="0.32939914" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="17" sideWeight="0.49839914" weight="0.2167382" />
-      <window_info anchor="bottom" id="Database Console" order="18" sideWeight="0.4935065" weight="0.32832617" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.29464287" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.13820705" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.13951011" />
+      <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" sideWeight="0.49839914" weight="0.2167382" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.11341853" />
       <window_info anchor="right" id="SciView" order="5" weight="0.32954547" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49786553" visible="true" weight="0.32887402" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49318182" weight="0.32792208" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47972253" weight="0.32081544" />
-      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7033084" visible="true" weight="0.2864807" />
       <window_info anchor="bottom" id="Code Review" order="10" />
       <window_info anchor="right" id="Data View" order="4" weight="0.3290469" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="manage.py@Realtor" order="14" sideWeight="0.47483766" weight="0.3277592" />
       <window_info anchor="bottom" id="Gulp" order="16" sideWeight="0.080515295" weight="0.38969404" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20757738" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29669157" side_tool="true" weight="0.28755364" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
+      <window_info anchor="bottom" id="Database Console" order="18" sideWeight="0.4935065" weight="0.32832617" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326892" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" weight="0.32903227" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4994664" weight="0.32832617" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="17" sideWeight="0.49839914" weight="0.2167382" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47972253" weight="0.32081544" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7033084" visible="true" weight="0.2864807" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.29464287" />
-      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.13820705" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49318182" weight="0.32792208" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Code Review" order="10" />
-      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7033084" visible="true" weight="0.2864807" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
       <window_info anchor="right" id="Data View" order="4" weight="0.3290469" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49786553" weight="0.32939914" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4994664" weight="0.32832617" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
       <window_info anchor="bottom" id="manage.py@Realtor" order="14" sideWeight="0.47483766" weight="0.32832617" />
       <window_info anchor="bottom" id="Gulp" order="16" sideWeight="0.080515295" weight="0.38969404" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20757738" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326892" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49786553" weight="0.32939914" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47972253" weight="0.32081544" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29669157" side_tool="true" weight="0.28755364" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="SciView" order="5" weight="0.32954547" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="18" sideWeight="0.4935065" weight="0.32832617" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20757738" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" weight="0.32903227" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4994664" weight="0.32832617" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.13820705" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -980,23 +837,32 @@
     <MESSAGE value="next commit" />
     <MESSAGE value="ready to deploy" />
     <MESSAGE value="deployed version" />
-    <option name="LAST_COMMIT_MESSAGE" value="deployed version" />
+    <MESSAGE value="posts editing" />
+    <option name="LAST_COMMIT_MESSAGE" value="posts editing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
-        <watch expression="post_ids" />
-        <watch expression="request.GET.items()" />
-        <watch expression="request.POST" language="Python" />
-        <watch expression="request.META" language="Python" />
+        <watch expression="owner" language="Python" />
+        <watch expression="self.request.user" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>self.request.user</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>owner</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>request.META</expression-string>
         <language-id>Python</language-id>
@@ -1245,7 +1111,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/filters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="22">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
@@ -1253,10 +1119,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/serializers.py">
+    <entry file="file://$PROJECT_DIR$/Main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+        <state relative-caret-position="2772">
+          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -1265,18 +1131,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        <state relative-caret-position="291">
+          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
           <folding>
             <element signature="e#641#673#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/models.py">
+    <entry file="file://$PROJECT_DIR$/API/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+        <state relative-caret-position="293">
+          <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -1285,8 +1151,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        <state relative-caret-position="426">
+          <caret line="173" column="4" selection-start-line="173" selection-start-column="6" selection-end-line="174" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
