@@ -21,15 +21,15 @@ class PostSerializer(serializers.ModelSerializer):
 		'id', 'is_top', 'title', 'price', 'created', 'category', 'main_photo', 'currency_type', 'category_tree',
 		'district')
 
-class AllPostSerializer(serializers.ModelSerializer):
 
+class AllPostSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Post
 		fields = '__all__'
 
 
 class SinglePostSerializer(serializers.ModelSerializer):
-	images = MyImageSerializer(many=True)
+	images = MyImageSerializer(many=True, read_only=True)
 	related_fields = ['main_photo']
 	main_photo_url = serializers.CharField(source='main_photo.url', allow_blank=True, required=False, )
 
@@ -44,7 +44,10 @@ class SinglePostSerializer(serializers.ModelSerializer):
 class PostUpdateSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Post
-		fields = '__all__'
+		fields = ('id', 'is_top', 'title', 'description', 'price', 'closed', 'rooms', 'floor', 'storeys', 'landmark',
+		'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia', 'created',
+		'category_tree', 'currency_type', 'owner', 'district', 'material',
+		'window', 'state', 'is_archive', 'closed')
 
 
 class DefaultUserSerializer(serializers.ModelSerializer):

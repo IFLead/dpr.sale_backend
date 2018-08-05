@@ -124,7 +124,7 @@ class TreeCategory(MPTTModel):
 
 
 class Post(models.Model):
-    category = models.ForeignKey(Category, verbose_name='Категория')
+    # category = models.ForeignKey(Category, verbose_name='Категория')
     is_top = models.BooleanField('Рекомендованное', default=False)
     closed = models.BooleanField('Закрыто', default=False)
     is_archive = models.BooleanField('В архиве', default=False)

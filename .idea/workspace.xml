@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6333b02-ff57-49d6-9d3f-f06de624759f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Main/migrations/0027_auto_20180619_0827.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/migrations/0028_merge_20180715_1439.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/migrations/0029_auto_20180715_1456.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/migrations/0030_auto_20180715_1458.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/migrations/0031_auto_20180715_1502.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/migrations/0032_auto_20180715_1514.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/migrations/0033_auto_20180805_2032.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/pagination.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/pagination.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/API/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Realtor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Realtor/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <ignored path="D:\Realtor\.idea\shelf/" />
     <ignored path="D:\OneDrive\dpr-sale\Realtor\.idea\shelf/" />
@@ -52,38 +42,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
+      <file leaf-file-name="filters.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/filters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="80" column="59" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Main/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="155" column="11" selection-start-line="155" selection-start-column="11" selection-end-line="155" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="110">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,8 +57,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="70" column="32" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="32" />
+            <state relative-caret-position="633">
+              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
               </folding>
@@ -100,23 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="80" column="70" selection-start-line="80" selection-start-column="70" selection-end-line="80" selection-end-column="70" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="22">
+              <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -124,8 +78,54 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="413">
+              <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+                <marker date="1533483730710" expanded="true" signature="922:989" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4598">
+              <caret line="209" column="10" selection-start-line="209" selection-start-column="10" selection-end-line="209" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -155,6 +155,9 @@
       <find>PostAll</find>
       <find>closed</find>
       <find>Pagin</find>
+      <find>main_ph</find>
+      <find>deta</find>
+      <find>auth</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/</dir>
@@ -209,14 +212,14 @@
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/360ed3e4-a66c-4059-8456-7752ceb93cc5/console.sql" />
         <option value="$PROJECT_DIR$/Main/admin.py" />
-        <option value="$PROJECT_DIR$/API/serializers.py" />
         <option value="$PROJECT_DIR$/Realtor/settings.py" />
         <option value="$PROJECT_DIR$/API/filters.py" />
-        <option value="$PROJECT_DIR$/API/urls.py" />
         <option value="$PROJECT_DIR$/API/pagination.py" />
-        <option value="$PROJECT_DIR$/Main/models.py" />
-        <option value="$PROJECT_DIR$/API/views.py" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/API/serializers.py" />
+        <option value="$PROJECT_DIR$/API/urls.py" />
+        <option value="$PROJECT_DIR$/API/views.py" />
+        <option value="$PROJECT_DIR$/Main/models.py" />
       </list>
     </option>
   </component>
@@ -230,10 +233,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
-    <option name="y" value="21" />
-    <option name="width" value="1922" />
-    <option name="height" value="1060" />
+    <option name="x" value="960" />
+    <option name="width" value="960" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -255,12 +257,22 @@
             <path>
               <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="dpr.sale_backend" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dpr.sale_backend" type="462c0819:PsiDirectoryNode" />
               <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="dpr.sale_backend" type="462c0819:PsiDirectoryNode" />
               <item name="Realtor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dpr.sale_backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dpr.sale_backend" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,7 +289,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="DDL Data Source" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PIK Digital Day" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -291,6 +303,131 @@
       <recent name="D:\OneDrive\dpr-sale\Realtor\FrontEnd\app\img" />
       <recent name="D:\OneDrive\dpr-sale\Realtor\FrontEnd\app" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/filters.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/pagination.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/serializers.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/urls.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/API/views.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/admin.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/models.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Realtor/settings.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/docker-compose.yml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0027_auto_20180619_0827.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0028_merge_20180715_1439.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0029_auto_20180715_1456.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0030_auto_20180715_1458.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0031_auto_20180715_1502.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Main/migrations/0032_auto_20180715_1514.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -313,9 +450,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="Realtor.settings" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
@@ -716,39 +853,85 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="21" width="1922" height="1060" extended-state="6" />
+    <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49318182" weight="0.32792208" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29669157" side_tool="true" weight="0.28755364" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29392973" side_tool="true" weight="0.25195095" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7060703" visible="true" weight="0.25195095" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47972253" weight="0.32081544" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4994664" weight="0.32832617" />
-      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7033084" visible="true" weight="0.2864807" />
-      <window_info anchor="bottom" id="Code Review" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.49893504" weight="0.32826087" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326892" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.29464287" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.13820705" />
-      <window_info anchor="bottom" id="Docker" order="17" sideWeight="0.49839914" weight="0.2167382" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20757738" />
-      <window_info anchor="right" id="SciView" order="5" weight="0.32954547" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.295764" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.12779553" />
+      <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="6" weight="0.07827476" />
+      <window_info anchor="right" id="SciView" order="5" weight="0.32977587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
+      <window_info anchor="bottom" id="manage.py@Realtor" order="14" sideWeight="0.47483766" weight="0.3277592" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49574015" weight="0.20326087" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49786553" weight="0.32939914" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="17" sideWeight="0.49839914" weight="0.2167382" />
       <window_info anchor="bottom" id="Database Console" order="18" sideWeight="0.4935065" weight="0.32832617" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.29464287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.13820705" />
+      <window_info anchor="right" id="SciView" order="5" weight="0.32954547" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49318182" weight="0.32792208" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47972253" weight="0.32081544" />
+      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7033084" visible="true" weight="0.2864807" />
+      <window_info anchor="bottom" id="Code Review" order="10" />
       <window_info anchor="right" id="Data View" order="4" weight="0.3290469" />
-      <window_info anchor="bottom" id="manage.py@Realtor" order="14" sideWeight="0.47483766" weight="0.32832617" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Gulp" order="16" sideWeight="0.080515295" weight="0.38969404" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20757738" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29669157" side_tool="true" weight="0.28755364" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326892" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" weight="0.32903227" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4994664" weight="0.32832617" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="17" sideWeight="0.49839914" weight="0.2167382" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.47972253" weight="0.32081544" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.29464287" />
+      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.36714977" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9194847" visible="true" weight="0.13820705" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49318182" weight="0.32792208" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Code Review" order="10" />
+      <window_info anchor="bottom" x="0" y="9" width="1920" height="1017" id="Run" order="2" sideWeight="0.7033084" visible="true" weight="0.2864807" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4978678" weight="0.7085346" />
+      <window_info anchor="right" id="Data View" order="4" weight="0.3290469" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49786553" weight="0.32939914" />
+      <window_info anchor="bottom" id="manage.py@Realtor" order="14" sideWeight="0.47483766" weight="0.32832617" />
+      <window_info anchor="bottom" id="Gulp" order="16" sideWeight="0.080515295" weight="0.38969404" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.20757738" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7326892" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.29669157" side_tool="true" weight="0.28755364" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="5" weight="0.32954547" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" order="18" sideWeight="0.4935065" weight="0.32832617" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" weight="0.32903227" />
+      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4994664" weight="0.32832617" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -824,7 +1007,86 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="220">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1533483730710" expanded="true" signature="922:989" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4642">
+          <caret line="211" column="10" selection-start-line="211" selection-end-line="211" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="389" column="40" selection-start-line="389" selection-start-column="40" selection-end-line="389" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
         </state>
       </provider>
@@ -838,9 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0009_post_is_important.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/migrations/0010_merge_20180204_1627.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -853,12 +1112,6 @@
         <state relative-caret-position="-1153" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0015_remove_post_currency.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0016_post_currency_type.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/migrations/0013_delete_currency.py" />
     <entry file="file://$PROJECT_DIR$/Main/migrations/0012_auto_20180430_1829.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -867,24 +1120,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/fixtures/fixture.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0024_delete_living_space.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/migrations/0014_currency.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="45" lean-forward="true" selection-end-line="48" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0022_post_category_tree.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/migrations/0025_old_categories_to_new.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -900,23 +1141,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/utils/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/views/decorators/cache.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/utils/decorators.py" />
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/views/decorators/cache.py" />
     <entry file="file://$PROJECT_DIR$/.dockerignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -967,9 +1193,6 @@
         <state relative-caret-position="-158" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main/migrations/0008_auto_20171006_0043.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
@@ -978,38 +1201,24 @@
       </provider>
     </entry>
     <entry file="das://360ed3e4-a66c-4059-8456-7752ceb93cc5/database/dpr.sale/schema/public/table/auth_user" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/360ed3e4-a66c-4059-8456-7752ceb93cc5/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://825ec6e6-0446-497a-9ae5-0a74aa7e945a/database/realtor/schema/public/table/account_emailaddress">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/generics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="194" column="6" selection-start-line="194" selection-start-column="6" selection-end-line="194" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/360ed3e4-a66c-4059-8456-7752ceb93cc5/console.sql" />
+    <entry file="das://825ec6e6-0446-497a-9ae5-0a74aa7e945a/database/realtor/schema/public/table/account_emailaddress" />
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/rest_framework/generics.py" />
     <entry file="file://$PROJECT_DIR$/Main/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        <state relative-caret-position="990">
+          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1533483730710" expanded="true" signature="922:989" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Realtor/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="59" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="59" />
+        <state relative-caret-position="4598">
+          <caret line="209" column="10" selection-start-line="209" selection-start-column="10" selection-end-line="209" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1020,23 +1229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="70" column="32" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="32" />
-          <folding>
-            <element signature="e#641#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Realtor/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1044,34 +1236,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="413">
+          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="633">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="155" column="11" selection-start-line="155" selection-start-column="11" selection-end-line="155" selection-end-column="11" />
+        <state relative-caret-position="253">
+          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="80" column="70" selection-start-line="80" selection-start-column="70" selection-end-line="80" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="22">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
         </state>
       </provider>
     </entry>
