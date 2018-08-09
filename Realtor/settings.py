@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'mptt',
     'filer',
-    'multiupload',
     'debug_toolbar',
     'Main.apps.MainConfig',
     'API.apps.ApiConfig',
