@@ -28,6 +28,9 @@ from .views import (
 	CategoryList,
 	PostList,
 	PostDetail,
+	ClientDetail,
+	ClientList,
+	ClientCreate,
 
 	PostCreate,
 	PostDestroy,
@@ -65,7 +68,9 @@ urlpatterns = [
 	url(r'posts/all/$', PostListAll.as_view(), name='admin post list'),
 	url(r'posts/$', PostList.as_view(), name='post list'),
 	url(r'posts/(?P<pk>\d+)/$', PostDetail.as_view(), name='detail'),
-
+	url(r'clients/(?P<pk>\d+)/$', ClientDetail.as_view(), name='detail'),
+	url(r'clients/create/$', ClientCreate.as_view(), name='create'),
+	url(r'clients/$', ClientList.as_view(), name='detail'),
 	url(r'posts/(?P<pk>\d+)/delete/$', PostDestroy.as_view(), name='destroy'),
 	url(r'posts/create/', PostCreate.as_view(), name='create'),
 	# url(r'posts/all/', PostAll.as_view(), name='create'),

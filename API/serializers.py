@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 
 from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, \
-    Image
+    Image, Client
 
 
 class MyImageSerializer(serializers.ModelSerializer):
@@ -84,6 +84,18 @@ class StateSerializer(serializers.ModelSerializer):
     class Meta:
         model = State
         fields = '__all__'
+
+
+class ClientSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Client
+        fields = '__all__'
+
+
+class ClientUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Client
+        fields = ('name', 'decription', 'phone_one', 'phone_two', 'phone_three', 'phone_four')
 
 
 class MaterialSerializer(serializers.ModelSerializer):

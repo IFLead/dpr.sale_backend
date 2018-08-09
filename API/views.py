@@ -25,7 +25,7 @@ from rest_framework.generics import (
 from rest_framework.response import Response
 from url_filter.integrations.drf import DjangoFilterBackend as DjangoUrlFilterBackend
 
-from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData
+from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, Client
 from Realtor import settings
 from .filters import PostCategoryFilter, DistrictsFilter, PostCurrencyFilter, CategoryTreeFilter, CitiesFilter, \
     PostOnlyVisibleFilter, PostAllUsersFilter
@@ -34,7 +34,7 @@ from .permissions import AdminRealtor
 from .serializers import AllPostSerializer, PostSerializer, PostUpdateSerializer, CategorySerializer, \
     CurrencySerializer, \
     TreeCategorySerializer, WindowSerializer, MaterialSerializer, StateSerializer, SinglePostSerializer, CitySerializer, \
-    DistrictSerializer, UserSerializer, DefaultUserSerializer, PostCreateSerializer
+    DistrictSerializer, UserSerializer, DefaultUserSerializer, PostCreateSerializer, ClientSerializer, ClientUpdateSerializer
 
 
 class PostList(ListAPIView):
@@ -252,6 +252,46 @@ class DistrictsList(ListAPIView):
     queryset = District.objects.all()
     serializer_class = DistrictSerializer
     filter_backends = (DistrictsFilter,)
+
+
+class ClientList(ListAPIView):
+    queryset = Client.objects.all()
+    serializer_class = ClientSerializer
+
+
+class ClientCreate(CreateAPIView):
+    permission_classes = [IsAuthenticated]
+    queryset = Client.objects.all()
+    serializer_class = ClientSerializer
+
+
+class ClientDetail(APIView):
+    queryset = Client.objects.all()
+    serializer_class = ClientUpdateSerializer
+
+    def get_object(self, pk):
+        try:
+            return Client.objects.get(pk=pk)
+        except Client.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        cleint_data = self.get_object(pk)
+        serializer = ClientUpdateSerializer(cleint_data)
+        return Response(serializer.data)
+
+    def put(self, request, pk, format=None):
+        cleint_data = self.get_object(pk)
+        serializer = ClientUpdateSerializer(cleint_data, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, format=None):
+        cleint_data = self.get_object(pk)
+        cleint_data.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
 # def list(self, request, *args, **kwargs):

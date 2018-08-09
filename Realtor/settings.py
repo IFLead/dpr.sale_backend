@@ -9,8 +9,9 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-import environ
 import os
+
+import environ
 
 env = environ.Env()
 
@@ -161,11 +162,11 @@ DATABASES = {
 CACHEOPS_REDIS = env('REDIS_URL')
 
 CACHEOPS_DEFAULTS = {
-    'timeout': 60*60
+    'timeout': 60 * 60
 }
 
 CACHEOPS = {
-    'auth.user': {'ops': 'get', 'timeout': 60*15},
+    'auth.user': {'ops': 'get', 'timeout': 60 * 15},
     'auth.*': {'ops': ('fetch', 'get')},
     'auth.permission': {'ops': 'all'},
     '*.*': {},

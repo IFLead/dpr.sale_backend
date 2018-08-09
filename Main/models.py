@@ -109,6 +109,22 @@ class Window(models.Model):
 #         verbose_name_plural = 'Жилые площади'
 
 
+class Client(models.Model):
+    name = models.CharField('Имя', max_length=55)
+    decription = models.TextField('Описание', max_length=256)
+    phone_one = models.CharField('Первый номер телефона', blank=True, max_length=25, null=True)
+    phone_two = models.CharField('Второй номер телефона', blank=True, max_length=25, null=True)
+    phone_three = models.CharField('Третий номер телефона', blank=True, max_length=25, null=True)
+    phone_four = models.CharField('Четвёртый номер телефона', blank=True, max_length=25, null=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Клиент'
+        verbose_name_plural = 'Клиенты'
+
+
 class TreeCategory(MPTTModel):
     name = models.CharField(max_length=50)
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
@@ -149,7 +165,7 @@ class Post(models.Model):
     total_square = models.FloatField('Общая площадь (метры кв.)', blank=True, null=True)
     living_square = models.FloatField('Жилая площадь (метры кв.)', blank=True, null=True)
     kitchen_square = models.FloatField('Кухонная площадь (метры кв.)', blank=True, null=True)
-    district = models.ForeignKey(District, verbose_name='Район', null=True, on_delete=models.CASCADE )
+    district = models.ForeignKey(District, verbose_name='Район', null=True, on_delete=models.CASCADE)
     corner = models.BooleanField('Угловая', default=False, )
     material = models.ForeignKey(Material, verbose_name='Материал', null=True, blank=True, on_delete=models.SET_NULL)
     balcony = models.NullBooleanField('Балкон застеклён', blank=True, null=True)
@@ -159,6 +175,7 @@ class Post(models.Model):
     # todo: rename  to changed
     created = models.DateTimeField('Дата изменения', auto_now=True, null=True)
     category_tree = models.ForeignKey(TreeCategory, verbose_name='Тип недвижимости', blank=True, null=True, on_delete=models.SET_NULL)
+    customer = models.ForeignKey(Client, verbose_name='Клиент', blank=True, null=True, on_delete=models.SET_NULL)
     # term = models.DateField
 
     # hidden
