@@ -9,7 +9,6 @@ import filer.fields.image
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.FILER_IMAGE_MODEL),
         ('Main', '0026_merge_20180527_1610'),
@@ -21,7 +20,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=128, verbose_name='Название')),
-                ('main_photo', filer.fields.image.FilerImageField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.FILER_IMAGE_MODEL, verbose_name='Главное изображение')),
+                ('main_photo',
+                 filer.fields.image.FilerImageField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                                    to=settings.FILER_IMAGE_MODEL, verbose_name='Главное изображение')),
             ],
         ),
         migrations.AlterModelOptions(
@@ -36,7 +37,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='category_tree',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.TreeCategory', verbose_name='Тип недвижимости'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    to='Main.TreeCategory', verbose_name='Тип недвижимости'),
         ),
         migrations.AlterField(
             model_name='post',
@@ -46,11 +48,13 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='contacts',
-            field=models.TextField(blank=True, help_text='Не отображается на сайте', null=True, verbose_name='Контакты'),
+            field=models.TextField(blank=True, help_text='Не отображается на сайте', null=True,
+                                   verbose_name='Контакты'),
         ),
         migrations.AlterField(
             model_name='post',
             name='private_description',
-            field=models.TextField(blank=True, help_text='Не отображается на сайте', null=True, verbose_name='Комментарии от риелтора'),
+            field=models.TextField(blank=True, help_text='Не отображается на сайте', null=True,
+                                   verbose_name='Комментарии от риелтора'),
         ),
     ]

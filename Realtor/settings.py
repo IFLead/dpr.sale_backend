@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/1.11/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
-
+import environ
 import os
+
+env = environ.Env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,10 +22,10 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '_qj2#%-o6_kkye*ojv@x_r)(t62ns_6ozbVzskd@r#l5y2(e!_'
+SECRET_KEY = env('DJANGO_SECRET_KEY', default='_qj2#%-o6_kkye*ojv@x_r)(t62ns_6ozbVzskd@r#l5y2(e!_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DJANGO_DEBUG', True)
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.dpr.sale', 'dpr.sale', 'localhost', 'dev.dpr.sale']
 
@@ -40,25 +42,24 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django_filters',
     'easy_thumbnails',
-    'filer',
     'mptt',
+    'filer',
+    'multiupload',
     'debug_toolbar',
     'Main.apps.MainConfig',
     'API.apps.ApiConfig',
     'corsheaders',
-    # 'allauth',
-    # 'allauth.account',
-    # 'allauth.socialaccount',
-    'watermarker',
+    'cacheops',
     'rest_framework',
 ]
 
-WATERMARK_QUALITY = 95
-WATERMARK_OBSCURE_ORIGINAL = False
-WATERMARK_RANDOM_POSITION_ONCE = False
-
 REST_FRAMEWORK = {
-    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    )
 }
 
 # Allauth config
@@ -135,7 +136,7 @@ WSGI_APPLICATION = 'Realtor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'realtor',
+        'NAME': 'realtor_copy3',  # 'realtor',
         'USER': 'django',
         'PASSWORD': 'e1c9fd84a6eee9da02c3aacd9c7390a4',
         'HOST': '165.227.163.99',
@@ -144,26 +145,32 @@ DATABASES = {
     }
 }
 
-CACHES = {
-    # 'default': {
-    #     'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-    #     'LOCATION': '127.0.0.1:8000',
-    # },
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': env('REDIS_URL'),
+#         'OPTIONS': {
+#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#             # Mimicing memcache behavior.
+#             # http://niwinz.github.io/django-redis/latest/#_memcached_exceptions_behavior
+#             'IGNORE_EXCEPTIONS': True,
+#         },
+#         'KEY_PREFIX': 'realtor'
+#     }
+# }
 
-    # "default": {
-    #     "BACKEND": "django_redis.cache.RedisCache",
-    #     "LOCATION": [(os.environ['REDIS_HOST'], 6379)],
-    #     "OPTIONS": {
-    #         "CLIENT_CLASS": "django_redis.client.DefaultClient"
-    #     },
-    #     "KEY_PREFIX": "fastoran"
-    # }
-    'default': {
-        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
-        'LOCATION': 'realtor_cache',
-    }
+CACHEOPS_REDIS = env('REDIS_URL')
+
+CACHEOPS_DEFAULTS = {
+    'timeout': 60*60
 }
-CACHE_TTL = 60 * 5
+
+CACHEOPS = {
+    'auth.user': {'ops': 'get', 'timeout': 60*15},
+    'auth.*': {'ops': ('fetch', 'get')},
+    'auth.permission': {'ops': 'all'},
+    '*.*': {},
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

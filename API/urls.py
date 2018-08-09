@@ -28,12 +28,13 @@ from .views import (
 	CategoryList,
 	PostList,
 	PostDetail,
+
 	PostCreate,
 	PostDestroy,
     PostListAll,
-# PostAll,
+    # PostAll,
     get_request,
-	get_photoes,
+    get_photoes,
 )
 
 urlpatterns = [
@@ -64,14 +65,15 @@ urlpatterns = [
 	url(r'posts/all/$', PostListAll.as_view(), name='admin post list'),
 	url(r'posts/$', PostList.as_view(), name='post list'),
 	url(r'posts/(?P<pk>\d+)/$', PostDetail.as_view(), name='detail'),
+
 	url(r'posts/(?P<pk>\d+)/delete/$', PostDestroy.as_view(), name='destroy'),
 	url(r'posts/create/', PostCreate.as_view(), name='create'),
 	# url(r'posts/all/', PostAll.as_view(), name='create'),
 
-	# url(r'user/verify', views.verify_user),
-	# url(r'user/unverify', views.unverify_user),
-	# url(r'user/edit', views.edit_profile),
-	#
-	# url(r'search', views.search),
-	# url(r'more', views.more),
+    # url(r'user/verify', views.verify_user),
+    # url(r'user/unverify', views.unverify_user),
+    # url(r'user/edit', views.edit_profile),
+    #
+    # url(r'search', views.search),
+    # url(r'more', views.more),
 ]

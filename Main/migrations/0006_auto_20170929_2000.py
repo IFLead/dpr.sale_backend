@@ -8,7 +8,6 @@ import filer.fields.image
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('Main', '0005_auto_20170928_1913'),
     ]
@@ -31,6 +30,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='image',
             name='image_file',
-            field=filer.fields.image.FilerImageField(on_delete=django.db.models.deletion.CASCADE, to='filer.Image', verbose_name='Изображение'),
+            field=filer.fields.image.FilerImageField(on_delete=django.db.models.deletion.CASCADE, to='filer.Image',
+                                                     verbose_name='Изображение'),
         ),
     ]

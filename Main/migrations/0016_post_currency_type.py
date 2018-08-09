@@ -7,7 +7,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('Main', '0015_remove_post_currency'),
     ]
@@ -16,6 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='post',
             name='currency_type',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='Main.Currency', verbose_name='Валюта'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='Main.Currency',
+                                    verbose_name='Валюта'),
         ),
     ]

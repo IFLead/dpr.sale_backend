@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 
+
 def forwards_func(apps, schema_editor):
     # We get the model from the versioned app registry;
     # if we directly import it, it'll be the wrong version
@@ -14,8 +15,8 @@ def forwards_func(apps, schema_editor):
     Post.objects.filter(category=6).update(category_tree=4)
     Post.objects.filter(category=7).update(category_tree=2)
 
-class Migration(migrations.Migration):
 
+class Migration(migrations.Migration):
     dependencies = [
         ('Main', '0022_post_category_tree'),
     ]

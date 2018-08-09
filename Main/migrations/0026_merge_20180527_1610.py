@@ -6,7 +6,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('Main', '0025_old_categories_to_new'),
         ('Main', '0024_delete_living_space'),

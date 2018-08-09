@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 
+
 def forwards_func(apps, schema_editor):
     # We get the model from the versioned app registry;
     # if we directly import it, it'll be the wrong version
@@ -14,17 +15,17 @@ def forwards_func(apps, schema_editor):
         Currency(pk=2, name="USD", symbol="$", is_prefix=True),
     ])
 
+
 def reverse_func(apps, schema_editor):
     # forwards_func() creates two Country instances,
     # so reverse_func() should delete them.
     Currency = apps.get_model("Main", "Currency")
     db_alias = schema_editor.connection.alias
-    Currency.objects.using(db_alias).get(name="RUB",).delete()
+    Currency.objects.using(db_alias).get(name="RUB", ).delete()
     Currency.objects.using(db_alias).filter(name="USD").delete()
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('Main', '0012_auto_20180430_1829'),
     ]

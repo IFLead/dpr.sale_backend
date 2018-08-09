@@ -9,7 +9,6 @@ import filer.fields.image
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -43,7 +42,9 @@ class Migration(migrations.Migration):
                 ('type', models.IntegerField(verbose_name='Статус')),
                 ('phone', models.CharField(blank=True, max_length=25, null=True, verbose_name='Номер телефона')),
                 ('email', models.EmailField(blank=True, max_length=254, null=True, verbose_name='Электронная почта')),
-                ('user', models.OneToOneField(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='custom', to=settings.AUTH_USER_MODEL, verbose_name='Пользователь')),
+                ('user',
+                 models.OneToOneField(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='custom',
+                                      to=settings.AUTH_USER_MODEL, verbose_name='Пользователь')),
             ],
             options={
                 'verbose_name_plural': 'Fastoran',
@@ -55,7 +56,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=55, verbose_name='Название')),
-                ('city', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.City', verbose_name='Город')),
+                ('city', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.City',
+                                           verbose_name='Город')),
             ],
             options={
                 'verbose_name_plural': 'Районы',
@@ -66,7 +68,8 @@ class Migration(migrations.Migration):
             name='Image',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image_file', filer.fields.image.FilerImageField(on_delete=django.db.models.deletion.CASCADE, to='filer.Image')),
+                ('image_file',
+                 filer.fields.image.FilerImageField(on_delete=django.db.models.deletion.CASCADE, to='filer.Image')),
             ],
         ),
         migrations.CreateModel(
@@ -86,9 +89,12 @@ class Migration(migrations.Migration):
                 ('floor', models.PositiveSmallIntegerField(default=1, verbose_name='Этаж')),
                 ('square', models.FloatField(default=1, verbose_name='Площадь (метры кв.)')),
                 ('storeys', models.PositiveSmallIntegerField(default=1, verbose_name='Этажность здания')),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Main.Category', verbose_name='Категория')),
-                ('district', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Main.District', verbose_name='Район')),
-                ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Владелец')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Main.Category',
+                                               verbose_name='Категория')),
+                ('district', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Main.District',
+                                               verbose_name='Район')),
+                ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL,
+                                            verbose_name='Владелец')),
             ],
         ),
         migrations.AddField(

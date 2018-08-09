@@ -7,7 +7,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('Main', '0026_merge_20180527_1610'),
     ]
@@ -25,7 +24,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='category_tree',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.TreeCategory', verbose_name='Тип недвижимости'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    to='Main.TreeCategory', verbose_name='Тип недвижимости'),
         ),
         migrations.AlterField(
             model_name='post',
@@ -35,17 +35,20 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='contacts',
-            field=models.TextField(blank=True, help_text='Не отображается на сайте', null=True, verbose_name='Контакты'),
+            field=models.TextField(blank=True, help_text='Не отображается на сайте', null=True,
+                                   verbose_name='Контакты'),
         ),
         migrations.AlterField(
             model_name='post',
             name='material',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.Material', verbose_name='Материал'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    to='Main.Material', verbose_name='Материал'),
         ),
         migrations.AlterField(
             model_name='post',
             name='private_description',
-            field=models.TextField(blank=True, help_text='Не отображается на сайте', null=True, verbose_name='Комментарии от риелтора'),
+            field=models.TextField(blank=True, help_text='Не отображается на сайте', null=True,
+                                   verbose_name='Комментарии от риелтора'),
         ),
         migrations.AlterField(
             model_name='post',

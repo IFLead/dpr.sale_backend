@@ -7,7 +7,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('Main', '0010_merge_20180204_1627'),
     ]
@@ -70,7 +69,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='district',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.District', verbose_name='Район'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.District',
+                                    verbose_name='Район'),
         ),
         migrations.AlterField(
             model_name='post',
@@ -80,22 +80,26 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='post',
             name='living_space',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.Living_space', verbose_name='Жилая площадь'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.Living_space',
+                                    verbose_name='Жилая площадь'),
         ),
         migrations.AddField(
             model_name='post',
             name='material',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.Material', verbose_name='Материал'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.Material',
+                                    verbose_name='Материал'),
         ),
         migrations.AddField(
             model_name='post',
             name='state',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.State', verbose_name='Состояние'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.State',
+                                    verbose_name='Состояние'),
         ),
         migrations.AddField(
             model_name='post',
             name='window',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.Window', verbose_name='Окно'),
+            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.Window',
+                                    verbose_name='Окно'),
         ),
         migrations.AlterIndexTogether(
             name='post',

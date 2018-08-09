@@ -7,7 +7,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('Main', '0019_auto_20180505_1234'),
     ]
@@ -71,12 +70,14 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='state',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.State', verbose_name='Состояние'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.State',
+                                    verbose_name='Состояние'),
         ),
         migrations.AlterField(
             model_name='post',
             name='window',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='Main.Window', verbose_name='Окно'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE,
+                                    to='Main.Window', verbose_name='Окно'),
         ),
         migrations.AlterIndexTogether(
             name='post',

@@ -6,7 +6,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('Main', '0009_auto_20171016_1602'),
         ('Main', '0009_post_is_important'),

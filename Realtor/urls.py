@@ -21,12 +21,12 @@ from django.contrib import admin
 from .settings import DEBUG, STATIC_URL, MEDIA_ROOT, MEDIA_URL
 
 urlpatterns = [
-	url(r'^api/', include('API.urls'))
+    url(r'^api/', include('API.urls'))
 ]
 
 if DEBUG:
-	import debug_toolbar
+    import debug_toolbar
 
-	urlpatterns.append(url(r'^__debug__/', include(debug_toolbar.urls)), )
-	urlpatterns += static(STATIC_URL)
-	urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
+    urlpatterns.append(url(r'^__debug__/', include(debug_toolbar.urls)), )
+    urlpatterns += static(STATIC_URL)
+    urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)

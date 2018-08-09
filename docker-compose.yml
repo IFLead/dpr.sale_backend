@@ -15,6 +15,7 @@ services:
   redis:
     container_name: redis
     image: redis:latest
+    command: redis-server --requirepass yourpassword
     ports:
       - 6379:6379
     restart: always

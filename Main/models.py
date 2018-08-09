@@ -2,6 +2,8 @@ from django.contrib.auth.models import User
 from django.db import models
 from filer.fields.image import FilerImageField
 from mptt.models import MPTTModel, TreeForeignKey
+from django.contrib.postgres.fields import ArrayField, DateRangeField
+from django.db.models import F, Max
 
 
 class Category(models.Model):
@@ -15,16 +17,16 @@ class Category(models.Model):
         verbose_name_plural = 'Категории'
 
 
-class MiniImage(models.Model):
-    name = models.CharField('Название', max_length=128)
-    main_photo = FilerImageField(verbose_name='Главное изображение', null=True, blank=True)
-
-    class Meta:
-        verbose_name = 'Пикча для теста'
-        verbose_name_plural = 'Пикчи для теста'
-
-    def __str__(self):
-        return self.name
+# class MiniImage(models.Model):
+#     name = models.CharField('Название', max_length=128)
+#     main_photo = FilerImageField(verbose_name='Главное изображение', null=True, blank=True)
+#
+#     class Meta:
+#         verbose_name = 'Пикча для теста'
+#         verbose_name_plural = 'Пикчи для теста'
+#
+#     def __str__(self):
+#         return self.name
 
 
 class Currency(models.Model):
@@ -52,7 +54,7 @@ class City(models.Model):
 
 
 class District(models.Model):
-    city = models.ForeignKey(City, verbose_name="Город", null=True, blank=False)
+    city = models.ForeignKey(City, verbose_name="Город", null=True, blank=False, on_delete=models.CASCADE)
     name = models.CharField('Название', max_length=55)
 
     def __str__(self):
@@ -124,17 +126,18 @@ class TreeCategory(MPTTModel):
 
 
 class Post(models.Model):
-    # category = models.ForeignKey(Category, verbose_name='Категория')
+    category = models.ForeignKey(Category, verbose_name='Категория', null=True, on_delete=models.CASCADE)
     is_top = models.BooleanField('Рекомендованное', default=False)
     closed = models.BooleanField('Закрыто', default=False)
     is_archive = models.BooleanField('В архиве', default=False)
     # is_important = models.BooleanField('Срочно', default=False)
-    main_photo = FilerImageField(verbose_name='Главное изображение', null=True, blank=True)
+    # main_photo = FilerImageField(verbose_name='Главное изображение', null=True, blank=True)
     title = models.CharField('Заголовок', max_length=256)
     description = models.TextField('Описание')
     price = models.DecimalField('Стоимость', null=True, blank=True, decimal_places=0, max_digits=9)
-    currency_type = models.ForeignKey(Currency, verbose_name='Валюта', default=1)
-    owner = models.ForeignKey(User, verbose_name='Владелец')
+    currency_type = models.ForeignKey(Currency, verbose_name='Валюта', default=1, on_delete=models.SET_DEFAULT)
+    owner = models.ForeignKey(User, verbose_name='Владелец', on_delete=models.SET(43))
+    calendar = ArrayField(DateRangeField(), blank=True, null=True)
     # verified = models.BooleanField('Подтвержден', default=False)
 
     # reason = models.TextField('Причина', null=True, blank=True)  # налфото(скрытое)
@@ -146,16 +149,16 @@ class Post(models.Model):
     total_square = models.FloatField('Общая площадь (метры кв.)', blank=True, null=True)
     living_square = models.FloatField('Жилая площадь (метры кв.)', blank=True, null=True)
     kitchen_square = models.FloatField('Кухонная площадь (метры кв.)', blank=True, null=True)
-    district = models.ForeignKey(District, verbose_name='Район', null=True, )
+    district = models.ForeignKey(District, verbose_name='Район', null=True, on_delete=models.CASCADE )
     corner = models.BooleanField('Угловая', default=False, )
-    material = models.ForeignKey(Material, verbose_name='Материал', null=True, blank=True, )
+    material = models.ForeignKey(Material, verbose_name='Материал', null=True, blank=True, on_delete=models.SET_NULL)
     balcony = models.NullBooleanField('Балкон застеклён', blank=True, null=True)
     loggia = models.NullBooleanField('Лоджия застеклена', blank=True, null=True)
-    window = models.ForeignKey(Window, verbose_name='Окно', blank=True, null=True)
-    state = models.ForeignKey(State, verbose_name='Состояние', blank=True, null=True)
+    window = models.ForeignKey(Window, verbose_name='Окно', blank=True, null=True, on_delete=models.SET_NULL)
+    state = models.ForeignKey(State, verbose_name='Состояние', blank=True, null=True, on_delete=models.SET_NULL)
     # todo: rename  to changed
     created = models.DateTimeField('Дата изменения', auto_now=True, null=True)
-    category_tree = models.ForeignKey(TreeCategory, verbose_name='Тип недвижимости', blank=True, null=True)
+    category_tree = models.ForeignKey(TreeCategory, verbose_name='Тип недвижимости', blank=True, null=True, on_delete=models.SET_NULL)
     # term = models.DateField
 
     # hidden
@@ -174,9 +177,40 @@ class Post(models.Model):
         verbose_name_plural = 'Объявления'
 
 
-class Image(models.Model):
-    image_file = FilerImageField(verbose_name='Изображение', )
-    obj = models.ForeignKey(Post, related_name='images')
+class SortableModel(models.Model):
+    sort_order = models.PositiveIntegerField(editable=False, db_index=True)
+
+    class Meta:
+        abstract = True
+
+    def get_ordering_queryset(self):
+        raise NotImplementedError('Unknown ordering queryset')
+
+    def save(self, *args, **kwargs):
+        if self.sort_order is None:
+            qs = self.get_ordering_queryset()
+            existing_max = qs.aggregate(Max('sort_order'))
+            existing_max = existing_max.get('sort_order__max')
+            self.sort_order = 0 if existing_max is None else existing_max + 1
+        super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):
+        qs = self.get_ordering_queryset()
+        qs.filter(sort_order__gt=self.sort_order).update(
+            sort_order=F('sort_order') - 1)
+        super().delete(*args, **kwargs)
+
+
+class Image(SortableModel):
+    image_file = models.ImageField(verbose_name='Изображение',  upload_to='img/%Y/%m/%d', max_length=255)
+    product = models.ForeignKey(Post, related_name='images', on_delete=models.CASCADE)
+    sort_order = models.PositiveIntegerField(editable=False, db_index=True)
+
+    class Meta:
+        ordering = ('sort_order',)
+
+    def get_ordering_queryset(self):
+        return self.product.images.all()
 
 
 class CustomData(models.Model):
