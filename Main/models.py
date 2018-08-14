@@ -1,9 +1,8 @@
 from django.contrib.auth.models import User
-from django.db import models
-from filer.fields.image import FilerImageField
-from mptt.models import MPTTModel, TreeForeignKey
 from django.contrib.postgres.fields import ArrayField, DateRangeField
+from django.db import models
 from django.db.models import F, Max
+from mptt.models import MPTTModel, TreeForeignKey
 
 
 class Category(models.Model):
@@ -54,7 +53,7 @@ class City(models.Model):
 
 
 class District(models.Model):
-    city = models.ForeignKey(City, verbose_name="Город", null=True, blank=False, on_delete=models.CASCADE)
+    city = models.ForeignKey(City, related_name='district', verbose_name="Город", null=True, blank=False, on_delete=models.CASCADE)
     name = models.CharField('Название', max_length=55)
 
     def __str__(self):
@@ -165,7 +164,8 @@ class Post(models.Model):
     total_square = models.FloatField('Общая площадь (метры кв.)', blank=True, null=True)
     living_square = models.FloatField('Жилая площадь (метры кв.)', blank=True, null=True)
     kitchen_square = models.FloatField('Кухонная площадь (метры кв.)', blank=True, null=True)
-    district = models.ForeignKey(District, verbose_name='Район', null=True, on_delete=models.CASCADE)
+    district = models.ForeignKey(District, verbose_name='Район', null=True, on_delete=models.CASCADE,
+        related_name='post')
     corner = models.BooleanField('Угловая', default=False, )
     material = models.ForeignKey(Material, verbose_name='Материал', null=True, blank=True, on_delete=models.SET_NULL)
     balcony = models.NullBooleanField('Балкон застеклён', blank=True, null=True)
@@ -174,7 +174,8 @@ class Post(models.Model):
     state = models.ForeignKey(State, verbose_name='Состояние', blank=True, null=True, on_delete=models.SET_NULL)
     # todo: rename  to changed
     created = models.DateTimeField('Дата изменения', auto_now=True, null=True)
-    category_tree = models.ForeignKey(TreeCategory, verbose_name='Тип недвижимости', blank=True, null=True, on_delete=models.SET_NULL)
+    category_tree = models.ForeignKey(TreeCategory, verbose_name='Тип недвижимости', blank=True, null=True,
+        on_delete=models.SET_NULL)
     customer = models.ForeignKey(Client, verbose_name='Клиент', blank=True, null=True, on_delete=models.SET_NULL)
     # term = models.DateField
 
@@ -182,7 +183,7 @@ class Post(models.Model):
 
     contacts = models.TextField('Контакты', null=True, blank=True, help_text='Не отображается на сайте')
     private_description = models.TextField('Комментарии от риелтора', null=True, blank=True,
-                                           help_text='Не отображается на сайте')
+        help_text='Не отображается на сайте')
     address = models.TextField('Адрес', null=True, blank=True, help_text='Не отображается на сайте')
 
     def __str__(self):
@@ -219,7 +220,7 @@ class SortableModel(models.Model):
 
 
 class Image(SortableModel):
-    image_file = models.ImageField(verbose_name='Изображение',  upload_to='img/%Y/%m/%d', max_length=255)
+    image_file = models.ImageField(verbose_name='Изображение', upload_to='img/%Y/%m/%d', max_length=255)
     product = models.ForeignKey(Post, related_name='images', on_delete=models.CASCADE)
     sort_order = models.PositiveIntegerField(editable=False, db_index=True)
 
@@ -238,7 +239,7 @@ class CustomData(models.Model):
     # 	(REALTOR, 'Риэлтор'),
     # )
     user = models.OneToOneField(User, verbose_name='Пользователь', null=True, related_name='custom',
-                                on_delete=models.CASCADE)
+        on_delete=models.CASCADE)
     # type = models.IntegerField('Статус', choices=USER_TYPES, default=USUAL)
     phone = models.CharField('Номер телефона', blank=True, max_length=25, null=True)  # 38 050 240 92 92
 
