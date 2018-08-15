@@ -1,6 +1,9 @@
 import graphene
-
 import API.schema
+
+
+class Mutation(graphene.ObjectType):
+    create_or_update_city = API.schema.CityCreateUpdateMutation.Field()  # CityCreateUpdateMutationInput
 
 
 class Query(API.schema.Query, graphene.ObjectType):
@@ -9,4 +12,7 @@ class Query(API.schema.Query, graphene.ObjectType):
     pass
 
 
-schema = graphene.Schema(query=Query)
+schema = graphene.Schema(
+    query=Query,
+    mutation=Mutation
+)
