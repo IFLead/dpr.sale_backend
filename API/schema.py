@@ -4,12 +4,17 @@ from django.core.exceptions import ValidationError
 from Main.models import City, District
 from graphene_django.rest_framework.mutation import SerializerMutation
 from .serializers import CitySerializer
+from django.db.models import Q
+from graphene_django.filter import DjangoFilterConnectionField
 
 
 class CityNode(DjangoObjectType):
     class Meta:
         model = City
-        filter_fields = ['name']
+        filter_fields = {
+            'name': ['exact', 'istartswith'],
+            'id': ['exact'],
+        }
         interfaces = (graphene.relay.Node,)
 
 
@@ -23,6 +28,7 @@ class DistrictNode(DjangoObjectType):
 class CityType(DjangoObjectType):
     class Meta:
         model = City
+        filter_fields = ['id', 'name']
 
 
 class DistrictType(DjangoObjectType):
@@ -36,6 +42,7 @@ class Query(graphene.ObjectType):
         name=graphene.String())
     all_cities = graphene.List(
         CityType,
+        id=graphene.Int(),
         search=graphene.String(),
         first=graphene.Int(),
         skip=graphene.Int(),
@@ -45,12 +52,17 @@ class Query(graphene.ObjectType):
         name=graphene.String())
     all_districts = graphene.List(DistrictType)
 
+    node_cities = graphene.relay.Node.Field(CityNode)
+    node_districts = graphene.relay.Node.Field(DistrictNode)
+
+
     def resolve_all_cities(self, info, search=None, first=None, skip=None, **kwargs):
         qs = City.objects.all()
 
         if search:
             filter = (
-                Q(name__icontains=search)
+                Q(name__icontains=search) |
+                Q(id__gt=search)
             )
             qs = qs.filter(filter)
 

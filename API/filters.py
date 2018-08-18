@@ -2,7 +2,7 @@ from itertools import chain
 
 from rest_framework import filters
 
-from Main.models import TreeCategory, District, Post, Currency, City
+from Main.models import TreeCategory, Currency
 
 
 class PostCategoryFilter(filters.BaseFilterBackend):
@@ -13,15 +13,15 @@ class PostCategoryFilter(filters.BaseFilterBackend):
         elif parameter == 'sale':
             return queryset.filter(
                 category_tree__in=[branch.id for branch in
-                                   queryset.filter(id=1).get_descendants(include_self=True)])
+                    TreeCategory.objects.filter(id=1).get_descendants(include_self=True)])
         elif parameter == 'rent':
             return queryset.filter(
                 category_tree__in=[branch.id for branch in
-                                   queryset.filter(id=7).get_descendants(include_self=True)])
+                    TreeCategory.objects.filter(id=7).get_descendants(include_self=True)])
         elif parameter == 'commercial':
             return queryset.filter(
                 category_tree__in=[branch.id for branch in
-                                   queryset.filter(id=13).get_descendants(include_self=True)])
+                    TreeCategory.objects.filter(id=13).get_descendants(include_self=True)])
         return queryset
 
 
@@ -84,6 +84,6 @@ class CategoryTreeFilter(filters.BaseFilterBackend):
             return queryset
         node = int(node)
         queryset = queryset.filter(category_tree__in=[tree.id for tree in
-                                                      TreeCategory.objects.filter(id=node).get_descendants(
-                                                          include_self=True)])
+            TreeCategory.objects.filter(id=node).get_descendants(
+                include_self=True)])
         return queryset
