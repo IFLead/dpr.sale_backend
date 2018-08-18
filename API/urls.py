@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from graphene_django.views import GraphQLView
+from schema import schema
 from .views import (
     TreeCategoryList,
     CurrencyList,
@@ -36,7 +37,7 @@ from .views import (
     PostDestroy,
     PostListAll,
     # PostAll,
-FileUploadView,
+    FileUploadView,
     get_request,
     get_photoes,
 )
@@ -75,7 +76,7 @@ urlpatterns = [
     url(r'posts/(?P<pk>\d+)/delete/$', PostDestroy.as_view(), name='destroy'),
     url(r'posts/create/', PostCreate.as_view(), name='create'),
     # url(r'posts/all/', PostAll.as_view(), name='create'),
-
+    url(r'graphql', GraphQLView.as_view(graphiql=True, schema=schema)),
     # url(r'user/verify', views.verify_user),
     # url(r'user/unverify', views.unverify_user),
     # url(r'user/edit', views.edit_profile),

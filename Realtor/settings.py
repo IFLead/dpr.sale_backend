@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'cacheops',
     'rest_framework',
+    'graphene_django',
 ]
 
 REST_FRAMEWORK = {
@@ -231,3 +232,8 @@ FILER_STORAGES = {
 
     }
 }
+
+
+# GRAPHENE = {
+#     'SCHEMA': 'Realtor.schema.schema'  # Where your Graphene schema lives
+# }
