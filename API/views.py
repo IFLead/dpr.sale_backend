@@ -23,6 +23,8 @@ from rest_framework.generics import (
     CreateAPIView,
 )
 from rest_framework.response import Response
+from rest_framework.parsers import FileUploadParser
+
 from url_filter.integrations.drf import DjangoFilterBackend as DjangoUrlFilterBackend
 
 from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, Client
@@ -38,7 +40,8 @@ from .serializers import AllPostSerializer, PostSerializer, PostUpdateSerializer
 
 
 class PostList(ListAPIView):
-    queryset = Post.objects.filter(closed=False, is_archive=False).prefetch_related('images').order_by('-created')
+    queryset = Post.objects.filter(closed=False, is_archive=False).prefetch_related(
+        'images').order_by('-created')
     pagination_class = PostPageNumberPagination
     serializer_class = PostSerializer
     filter_backends = (filters.SearchFilter, DjangoFilterBackend, PostCategoryFilter, DjangoUrlFilterBackend,
@@ -58,7 +61,8 @@ class PostListAll(ListAPIView):
     serializer_class = AllPostSerializer
     # filter_backends = (filters.SearchFilter, DjangoFilterBackend, PostCategoryFilter, DjangoUrlFilterBackend,
     # PostCurrencyFilter, CategoryTreeFilter)  # PostCategoryFilter
-    filter_backends = (filters.OrderingFilter, DjangoUrlFilterBackend, PostOnlyVisibleFilter, PostAllUsersFilter)
+    filter_backends = (filters.OrderingFilter, DjangoUrlFilterBackend,
+                       PostOnlyVisibleFilter, PostAllUsersFilter, PostCategoryFilter)
     filter_fields = ('id',)
     # search_fields = ('title', 'description')
     # filter_fields = ('id',
@@ -116,7 +120,8 @@ class PostDetail(APIView):
 
     def put(self, request, pk, format=None):
         posts_data = self.get_object(pk)
-        serializer = PostUpdateSerializer(posts_data, data=request.data, partial=True)
+        serializer = PostUpdateSerializer(
+            posts_data, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -282,7 +287,8 @@ class ClientDetail(APIView):
 
     def put(self, request, pk, format=None):
         cleint_data = self.get_object(pk)
-        serializer = ClientUpdateSerializer(cleint_data, data=request.data, partial=True)
+        serializer = ClientUpdateSerializer(
+            cleint_data, data=request.data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
@@ -324,6 +330,18 @@ class TreeCategoryList(ListAPIView):
         return Response(dicts)
 
 
+class FileUploadView(APIView):
+    parser_classes = (FileUploadParser,)
+
+    def put(self, request, filename, format=None):
+        file_obj = request.data['file']
+        m = Image()
+        m.image_file = file_obj
+        # m.product = obj
+        m.save()
+        return JsonResponse({'status': 'OK', 'id': m.id, 'url': m.url})
+
+
 @csrf_exempt
 @api_view(['POST'])
 def get_request(request):
@@ -346,7 +364,6 @@ def get_request(request):
 
 
 @csrf_exempt
-@api_view(['POST'])
 def get_photoes(request):
     file = request.FILES['file']
     name = file.name

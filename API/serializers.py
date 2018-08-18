@@ -4,13 +4,12 @@ from rest_framework import serializers
 from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, \
     Image, Client
 
-
 class MyImageSerializer(serializers.ModelSerializer):
     url = serializers.CharField(source='image_file.url')
 
     class Meta:
         model = Image
-        fields = ('id', 'url')
+        fields = ('id', 'url', 'sort_order' )
         related_fields = ['image_file']
 
 

@@ -87,6 +87,7 @@ class ImageInline(admin.StackedInline):
 #         obj.delete()
 
 class PostAdmin(admin.ModelAdmin):
+    change_form_template = 'admin/main/post/change_form.html'
     inlines = [ImageInline, ]
     list_display = ('id', 'category_tree', 'is_top', 'title', 'price', 'currency_type', 'created', 'district', 'owner')
     list_select_related = ('currency_type', 'category_tree')
@@ -100,9 +101,13 @@ class PostAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.save()
+        from django.core.files.images import ImageFile
 
         for afile in request.FILES.getlist('photos_multiple'):
-            obj.images.create(image=afile)
+            m = Image()
+            m.image_file = afile
+            m.product = obj
+            m.save()
 
 
 class CityAdmin(admin.ModelAdmin):
