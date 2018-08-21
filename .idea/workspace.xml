@@ -310,6 +310,18 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API/filters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main/models.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -607,13 +619,6 @@
       <option name="presentableId" value="Default" />
       <updated>1504603151262</updated>
       <workItem from="1507742145689" duration="34000" />
-    </task>
-    <task id="LOCAL-00004" summary="first fix">
-      <created>1506617016471</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1506617016472</updated>
     </task>
     <task id="LOCAL-00005" summary="next commit">
       <created>1506713382190</created>
@@ -951,7 +956,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533831097666</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="some graphql">
+      <created>1534335838516</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1534335838616</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1382,18 +1394,17 @@
         <state relative-caret-position="2865">
           <caret line="196" column="14" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="14" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <marker date="1534334233847" expanded="true" signature="3410:3412" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/schema.py">
+    <entry file="file://$PROJECT_DIR$/API/filters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+        <state relative-caret-position="506">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
