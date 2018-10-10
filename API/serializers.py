@@ -4,12 +4,13 @@ from rest_framework import serializers
 from Main.models import Post, Category, Currency, TreeCategory, State, Window, Material, City, District, CustomData, \
     Image, Client
 
+
 class MyImageSerializer(serializers.ModelSerializer):
     url = serializers.CharField(source='image_file.url')
 
     class Meta:
         model = Image
-        fields = ('id', 'url', 'sort_order' )
+        fields = ('id', 'url', 'sort_order')
         related_fields = ['image_file']
 
 
@@ -23,6 +24,17 @@ class PostSerializer(serializers.ModelSerializer):
             'district')
 
 
+class SinglePostSerializer(serializers.ModelSerializer):
+    images = MyImageSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Post
+        fields = ('id', 'is_top', 'title', 'description', 'price', 'closed', 'rooms', 'floor', 'storeys', 'landmark',
+                  'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia', 'created',
+                  'category_tree', 'currency_type', 'owner', 'district', 'material',
+                  'window', 'state', 'images')
+
+
 class AllPostSerializer(serializers.ModelSerializer):
     images = MyImageSerializer(many=True)
 
@@ -31,33 +43,24 @@ class AllPostSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class SinglePostSerializer(serializers.ModelSerializer):
+class PostUpdateSerializer(serializers.ModelSerializer):
     images = MyImageSerializer(many=True, read_only=True)
 
     class Meta:
         model = Post
         fields = ('id', 'is_top', 'title', 'description', 'price', 'closed', 'rooms', 'floor', 'storeys', 'landmark',
-        'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia', 'created',
-        'category_tree', 'currency_type', 'owner', 'district', 'material',
-        'window', 'state', 'images')
-
-
-class PostUpdateSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Post
-        fields = ('id', 'is_top', 'title', 'description', 'price', 'closed', 'rooms', 'floor', 'storeys', 'landmark',
-        'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia', 'created',
-        'category_tree', 'currency_type', 'owner', 'district', 'material',
-        'window', 'state', 'is_archive', 'closed')
+                  'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia', 'created',
+                  'category_tree', 'currency_type', 'owner', 'district', 'material',
+                  'window', 'state', 'is_archive', 'closed', 'images')
 
 
 class PostCreateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ('is_top', 'title', 'description', 'price', 'closed', 'rooms', 'floor', 'storeys', 'landmark',
-        'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia',
-        'category_tree', 'currency_type', 'district', 'material',
-        'window', 'state', 'is_archive', 'closed')
+                  'total_square', 'living_square', 'kitchen_square', 'corner', 'balcony', 'loggia',
+                  'category_tree', 'currency_type', 'district', 'material',
+                  'window', 'state', 'is_archive', 'closed')
 
 
 class DefaultUserSerializer(serializers.ModelSerializer):
