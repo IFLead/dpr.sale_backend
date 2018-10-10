@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.7
 
 ENV APP_USER dprsale
 ENV APP_ROOT /dprsale
@@ -14,7 +14,8 @@ WORKDIR ${APP_ROOT}
 COPY . ${APP_ROOT}
 
 
-# ADD . ${APP_ROOT}
+#ADD . ${APP_ROOT}
+#COPY .env ${APP_ROOT}
 
 RUN pip install -r requirements.txt
 

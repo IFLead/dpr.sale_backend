@@ -26,7 +26,7 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = env('DJANGO_SECRET_KEY', default='_qj2#%-o6_kkye*ojv@x_r)(t62ns_6ozbVzskd@r#l5y2(e!_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DJANGO_DEBUG', True)
+DEBUG = env.bool('DJANGO_DEBUG', default=True)
 
 ALLOWED_HOSTS = ['127.0.0.1', 'www.dpr.sale', 'dpr.sale', 'localhost', 'dev.dpr.sale']
 
@@ -137,7 +137,8 @@ WSGI_APPLICATION = 'Realtor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'realtor_temp',  # 'realtor',
+        # 'NAME': 'realtor_copy3',
+        'NAME': 'realtor_temp',
         'USER': 'django',
         'PASSWORD': 'e1c9fd84a6eee9da02c3aacd9c7390a4',
         'HOST': '165.227.163.99',
@@ -160,7 +161,7 @@ DATABASES = {
 #     }
 # }
 
-CACHEOPS_REDIS = env('REDIS_URL')
+CACHEOPS_REDIS = env('REDIS_URL', default='redis://165.227.163.99:6379/0')
 
 CACHEOPS_DEFAULTS = {
     'timeout': 60 * 60
